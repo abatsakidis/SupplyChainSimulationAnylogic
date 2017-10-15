@@ -1,0 +1,25 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro Imprime uma célula de um Subselect.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_pdf_print_sub_sel(Array)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Imprime uma c&eacute;lula de um subselect. Usado internamente pelo scriptcase. Um array com par&acirc;metros de configura&ccedil;&atilde;o deve ser definido primeiramente.</p>
+<p>Ex. 1:<br />$cell_itens_PedidoID = array('posx' =&gt; 30, 'posy' =&gt; 50, 'data' =&gt; {itens_PedidoID}, 'width' =&gt; 0, 'align' =&gt; 'L', 'font_type' =&gt; 'Times', 'font_size' =&gt; 12, 'color_r' =&gt; '0', 'color_g' =&gt; '0', 'color_b' =&gt; '0', 'font_style' =&gt; '');<br /><br />$cell_itens_ProdutoID = array('posx' =&gt; 50, 'posy' =&gt; 50, 'data' =&gt; {itens_ProdutoID}, 'width' =&gt; 0, 'align' =&gt; 'L', 'font_type' =&gt; 'Times', 'font_size' =&gt; 12, 'color_r' =&gt; '0', 'color_g' =&gt; '0', 'color_b' =&gt; '0', 'font_style' =&gt; '');<br /><br />$cell_itens_PrecoUnit = array('posx' =&gt; 70, 'posy' =&gt; 50, 'data' =&gt; {itens_PrecoUnit}, 'width' =&gt; 0, 'align' =&gt; 'L', 'font_type' =&gt; 'Times', 'font_size' =&gt; 12, 'color_r' =&gt; '0', 'color_g' =&gt; '0', 'color_b' =&gt; '0', 'font_style' =&gt; '');</p>
+<p><br />foreach ({itens} as $NM_ind =&gt; $Dados)<br />{<br />sc_pdf_print_sub_sel($cell_itens_PedidoID[$NM_ind]);<br />sc_pdf_print_sub_sel($cell_itens_ProdutoID[$NM_ind]);<br />sc_pdf_print_sub_sel($cell_itens_PrecoUnit[$NM_ind]);<br />sc_pdf_ln(20);<br />}</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

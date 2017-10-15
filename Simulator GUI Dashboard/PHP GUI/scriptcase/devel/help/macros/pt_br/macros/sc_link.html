@@ -1,0 +1,72 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro cria dinamicamente um link para outra aplicação.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_link(Coluna, Aplicação, Parâmetros, "Hint", "Target", "Opção", Altura, Largura)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Esta macro cria ou alterar liga&ccedil;&otilde;es com outras aplica&ccedil;&otilde;es, nas aplica&ccedil;&otilde;es de consulta, de forma din&acirc;mica.</span></p>
+<p class="corpo1"><strong>Coluna</strong>: &Eacute; o nome do campo, da coluna da grid, para o qual ser&aacute; gerado o link de liga&ccedil;&atilde;o.<br /><strong>Aplica&ccedil;&atilde;o</strong>: Nome da aplica&ccedil;&atilde;o para a qual queremos estabelecer o link.<br /><strong>Par&acirc;metros</strong>: Par&acirc;metros necess&aacute;rios para que a aplica&ccedil;&atilde;o chamada possa funcionar.<br /> <br />Devem ser informados o nome do par&acirc;metro, o sinal de atribui&ccedil;&atilde;o "=" e o valor ou vari&aacute;vel a ser atribu&iacute;do. Havendo mais de um par&acirc;metro, estes dever&atilde;o ser separados por ";" (ponto e v&iacute;rgula).<br /><br /><strong>Hint</strong>: Observa&ccedil;&atilde;o ou dica que ser&aacute; apresentada quando o cursor do mouse passar sobre o link.</p>
+<p class="corpo1"><strong>Target</strong>: Local onde a aplica&ccedil;&atilde;o chamada ir&aacute; funcionar, podendo ser:</p>
+<p class="corpo1"><br /> 
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Target<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"_self"</td>
+<td class="corpo1" align="left" valign="top">Para execu&ccedil;&atilde;o na mesma p&aacute;gina (sobrep&otilde;e a consulta);</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"_blank"</td>
+<td class="corpo1" align="left" valign="top">Para execu&ccedil;&atilde;o em outra p&aacute;gina (pop-up);</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"iframeT"</td>
+<td class="corpo1" align="left" valign="top">Para execu&ccedil;&atilde;o em um iframe, acima da consulta (Top);</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"iframeL"</td>
+<td class="corpo1" align="left" valign="top">Para execu&ccedil;&atilde;o em um iframe, a esquerda da consulta (Left);</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"iframeR"</td>
+<td class="corpo1" align="left" valign="top">Para execu&ccedil;&atilde;o em um iframe, a direita da consulta (Right);</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"iframeB"</td>
+<td class="corpo1" align="left" valign="top">Para execu&ccedil;&atilde;o em um iframe, abaixo da consulta (Bot);</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"modal"</td>
+<td class="corpo1" align="left" valign="top">Abre uma nova janela e bloqueia qualquer intera&ccedil;&atilde;o na janela principal;</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p><strong>Op&ccedil;&atilde;o:</strong><br />"<strong>E</strong>" - S&oacute; redireciona se n&atilde;o houver mensagem de erro (default).<br />"<strong>F</strong>" - For&ccedil;a o redirecionamento.</p>
+<p><br />No caso de target modal, existem dois par&acirc;metros opcionais*:&nbsp;</p>
+<p><strong>*Altura:</strong> Defina a altura da janela modal (default 440);<br /><strong>*Largura:</strong> Defina a largura da janela modal (default 630);</p>
+<p><br /><strong>Obs:</strong> Se omitido, ser&aacute; atribu&iacute;do o valor "_self".</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>Criando um link para a aplica&ccedil;&atilde;o dados_cli.php, no campo cpf, passando a vari&aacute;vel global [glo_emp] como empresa e o campo (vari&aacute;vel local) {cpf} para a aplica&ccedil;&atilde;o dados_cli.php:</strong><br />sc_link (cpf,dados_cli.php,empresa=[glo_emp];cpf={cpf},"Dados individuais do Cliente ", "_blank");</p>
+<p><br /><br /><strong>Ex. 2:</strong> <strong>Criando um link din&acirc;mico para uma ou outra aplica&ccedil;&atilde;o dependendo do valor no campo {tp_cli} e abrindo uma janela modal:</strong><br />if ({tp_cli} == "F") {<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_link (tpcli, fisica.php, empresa=[glo_emp]; cpf={cpf}," Pessoa F&iacute;sica ", "modal", 500, 700);<br />}<br />else{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_link (tpcli, juridica.php, empresa=[glo_emp]; cnpj={cnpj}," Pessoa Jur&iacute;dica ", "iframeR");<br />}</p>
+<p><br /><br /><strong>Ex. 3:</strong> - <strong>Criando um link para uma URL: neste caso, "par&acirc;metro e target" n&atilde;o t&ecirc;m efeito. Ser&aacute; executado um redirecionamento para a URL informada.</strong><br />sc_link (minha_coluna, http://www.scriptcase.com.br, ,"hint do link");</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

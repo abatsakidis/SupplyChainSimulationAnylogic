@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php echo CNF_APPNAME; ?></title>
+<link rel="shortcut icon" href="<?php echo URL::to(''); ?>/logo.ico" type="image/x-icon">
+		<?php echo HTML::style('sximo/js/plugins/bootstrap/css/bootstrap.css'); ?>
+		<?php echo HTML::style('sximo/fonts/awesome/css/font-awesome.min.css'); ?>
+		<?php echo HTML::style('sximo/js/plugins/bootstrap.summernote/summernote.css'); ?>
+		<?php echo HTML::style('sximo/js/plugins/datepicker/css/bootstrap-datetimepicker.min.css'); ?>
+		<?php echo HTML::style('sximo/js/plugins/bootstrap.datetimepicker/css/bootstrap-datetimepicker.min.css'); ?>
+		<?php echo HTML::style('sximo/js/plugins/select2/select2.css'); ?>
+		<?php echo HTML::style('sximo/js/plugins/iCheck/skins/square/green.css'); ?>
+		<?php echo HTML::style('sximo/js/plugins/fancybox/jquery.fancybox.css'); ?>
+		<?php echo HTML::style('sximo/css/sximo.css'); ?>			
+		<?php echo HTML::style('sximo/css/icons.min.css'); ?>
+		
+
+
+
+		<?php echo HTML::script('sximo/js/plugins/jquery.min.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/jquery.cookie.js'); ?>			
+		<?php echo HTML::script('sximo/js/plugins/jquery-ui.min.js'); ?>				
+		<?php echo HTML::script('sximo/js/plugins/iCheck/icheck.min.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/select2/select2.min.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/fancybox/jquery.fancybox.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/prettify.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/parsley.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/datepicker/js/bootstrap-datetimepicker.min.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/switch.min.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/bootstrap.datetimepicker/js/bootstrap-datetimepicker.min.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/bootstrap/js/bootstrap.js'); ?>
+		<?php echo HTML::script('sximo/js/sximo.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/jquery.jCombo.min.js'); ?>
+		<?php echo HTML::script('sximo/js/plugins/bootstrap.summernote/summernote.min.js'); ?>
+		<?php echo SiteHelpers::initMarkitUp(); ?>
+
+
+
+<?php echo HTML::script('sximo/js/plugins/ajax/ajaxSximo.js'); ?>
+<?php echo HTML::script('sximo/js/plugins/ajax/jquery.form.js'); ?>
+<?php echo HTML::style('sximo/js/plugins/ajax/ajaxSximo.css'); ?> 
+
+
+
+
+
+		 <script src="//use.edgefonts.net/source-sans-pro.js"></script>
+
+		<script language="javascript">
+		jQuery(document).ready(function($)	{
+		   $('.markItUp').markItUp(mySettings );
+		});
+		</script>
+		
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->	
+
+		
+	
+  	</head>
+
+<body class="sxim-init" >
+<div id="wrapper">
+	<?php echo $__env->make('layouts/sidemenu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>	
+	<div class="gray-bg " id="page-wrapper">
+		<?php echo $__env->make('layouts/headmenu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>	
+		<?php echo $content; ?>		
+	</div>
+
+</div>
+
+<div class="modal fade" id="sximo-modal" tabindex="-1" role="dialog">
+<div class="modal-dialog">
+  <div class="modal-content">
+	<div class="modal-header bg-default">
+		
+		<button type="button " class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 class="modal-title">Modal title</h4>
+	</div>
+	<div class="modal-body" id="sximo-modal-content">
+
+	</div>
+
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function ($) {
+
+    $('#sidemenu').sximMenu();
+
+
+		
+});	
+	
+	
+</script>
+ 
+</body> 
+</html>

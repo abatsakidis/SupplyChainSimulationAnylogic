@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro modify dynamically a field that will be recovered in the grid.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select_field({Field})<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">This macro modify dynamically the SELECT:<br />Is possible to modify dynamically the grid fields through the dynamic modification of the original select.</span></p>
+<p><span class="corpo1"><br /><strong>Ex. 1:</strong><br />A table with the columns year and the months from January to December is used to create a grid using a parameter, displays the years and only a specific month. Passing the parameter as a global variable named "show_month", in the application is found the following structure:<br /><br /><strong>Select Clause:</strong> select year, pair_month from table<br /></span></p>
+<p>sc_select_field(pair_month) = [show_month];<br />sc_label(pair_month) = [show_month];<br />Modify the select, and the grip column label.<span class="corpo1"><br /><br />It is possible, during the grid execution time, modify the grid ORDER BY clause.<br />At least one ORDER BY is required in the original grid SQL command to allow the substitution execution during the grid time.</span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 2:</strong> Select Clause: select code, name, value from table order by code. To change the order, from code to name, use: sc_select_order("code") = "name";<br /><span style="color: #3300cc;"><span style="color: #000000;"><br /><strong>Note:</strong><em> This command must be in the context of&nbsp; the evento "onInit";</em></span><em><br /></em></span></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

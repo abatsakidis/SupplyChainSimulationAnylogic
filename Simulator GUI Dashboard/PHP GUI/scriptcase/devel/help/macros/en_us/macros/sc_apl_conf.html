@@ -1,0 +1,138 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro modify the application execution property.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_apl_conf("Application", "Property", "Value")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">This macro allows to modify the property of the application. The user can determine if a Form will start in insert mode, or a Grid starts by filter, etc.<br /> <br /> This macro can be used by one application to modify the properties of another application.</span></p>
+<p><br /><strong class="corpo1">Properties for Form applications</strong></p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Property </strong></td>
+<td width="10%" align="left" valign="top"><strong class="corpo1">Value </strong></td>
+<td width="75%" align="left" valign="top"><strong class="corpo1">Description </strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">start</td>
+<td class="corpo1" align="left" valign="top">new</td>
+<td class="corpo1" align="left" valign="top">Forces the form to start in the insert mode in order to add new records.<br /></td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">insert</td>
+<td class="corpo1 corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1 corpo1" align="left" valign="top">Qualifies (on) or unqualifies (off) the "add new" button to allow the addtion of new records.</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">update</td>
+<td class="corpo1 corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1 corpo1" align="left" valign="top">Qualifies (on) or unqualifies (off) the "save" button on the form.</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">delete</td>
+<td class="corpo1 corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1 corpo1" align="left" valign="top">Qualifies (on) or unqualifies (off) the "delete" button on the form.</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">field_display_off</td>
+<td class="corpo1 corpo1" align="left" valign="top">field</td>
+<td class="corpo1 corpo1" align="left" valign="top">Dinamically hides a field.</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">field_display_on</td>
+<td class="corpo1 corpo1" align="left" valign="top">field</td>
+<td class="corpo1 corpo1" align="left" valign="top">Dinamically shows a field.</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">field_readonly<br /></td>
+<td class="corpo1 corpo1" align="left" valign="top">field</td>
+<td class="corpo1 corpo1" align="left" valign="top">Dinamically set the "readonly" attribute in order to select the field.<br /></td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">rows</td>
+<td class="corpo1 corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1 corpo1" align="left" valign="top">Forces the number of lines for each page (only for form of multiple records).</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">rows_ins</td>
+<td class="corpo1 corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1 corpo1" align="left" valign="top">Forces the number of lines for insert (only for form of multiple records).</td>
+</tr>
+</tbody>
+</table>
+<p><strong class="corpo1"><br /></strong><span class="corpo1"><strong>Property for Consult applications</strong> </span></p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Property </strong></td>
+<td width="10%" align="left" valign="top"><strong class="corpo1">Value </strong></td>
+<td width="75%" align="left" valign="top"><strong class="corpo1">Description </strong></td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">start</td>
+<td class="corpo1 corpo1" align="left" valign="top">filter</td>
+<td class="corpo1 corpo1" align="left" valign="top">Forces the Grid to start by the filter.</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">cols</td>
+<td class="corpo1 corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1 corpo1" align="left" valign="top">Forces the number of columns. (vertical and slide kind)</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">rows</td>
+<td class="corpo1 corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1 corpo1" align="left" valign="top">Forces the number of lines per page.</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">lig_edit</td>
+<td class="corpo1 corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1 corpo1" align="left" valign="top">Qualifies (on) or unqualifies (off) the record edition. (the pencil icon)</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong class="corpo1">Property for all applications</strong></p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td><strong class="corpo1">Property</strong></td>
+<td><strong class="corpo1">Value</strong></td>
+<td><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="center">exit</td>
+<td class="corpo1 corpo1" align="center">apl/url</td>
+<td class="corpo1 corpo1" align="left">Forces application to exit to a specified location.</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ex. 1: Forces the "my_form" application to start in the addition mode.<br /></strong>sc_apl_conf("my_form", "start", "new");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ex. 2: Doesn't allow the "my_form" application make addition of new registers.<br /></strong>sc_apl_conf("my_form", "add", "off");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ex. 3: Sets "my_field" on the application "my_form" (readonly attribute) to "true" dinamically.<br /></strong>sc_apl_conf("my_form", "field_display_off", "my_field");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ex. 4: Shows "my_field" on the application "my_form" dinamically.<br /></strong>sc_apl_conf("my_form", "field_display_on", "my_field");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ex. 5: Forces the "my_grid" application to start by filter.<br /></strong>sc_apl_conf("my_grid", "start", "filter");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ex. 6: Forces the "my_grid" application to show 20 lines.</strong><br />sc_apl_conf("my_grid", "rows", "20");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ex. 7: Hides "my_field" on the application "my_form" dinamically</strong>.<br />sc_apl_conf("my_form", "field_display_off", "my_field");</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

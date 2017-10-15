@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro configura a variável que contem a mensagem de erro do banco de dados que pode ocorrer durante a exclusão de um registro.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_error_delete<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta vari&aacute;vel retorna uma string contendo qualquer mensagem de erro do banco de dados, que ocorra ao se tentar excluir um registro. &Eacute; utilizada quando precisamos tratar estas mensagens. Por exemplo, no caso valida&ccedil;&otilde;es feitas no banco de dados via triggers ou procedures que retornam mensagem.</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1:</strong> Conte&uacute;do da vari&aacute;vel <strong>{sc_erro_delete}</strong>, retornando uma mensagem de erro gerada por uma triger do banco de dados usando MsSQL.</p>
+<p class="corpo1">&ldquo;[Microsoft][ODBC SQL Server Driver][SQL Server] Voc&ecirc; n&atilde;o pode apagar este registro.&rdquo;</p>
+<p class="corpo1">OBS: Para ter acesso ao retorno do erro do banco, veja a macro "<strong>sc_error_continue</strong>".</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

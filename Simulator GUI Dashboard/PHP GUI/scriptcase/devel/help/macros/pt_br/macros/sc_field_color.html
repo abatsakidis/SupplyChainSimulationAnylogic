@@ -1,0 +1,33 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro altera a cor do texto de um determinado campo.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_field_color("Campo", "Cor")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro tem por objetivo, de forma din&acirc;mica, alterar/restaurar a cor do texto de determinado campo da <strong>consulta</strong>.</p>
+<p class="corpo1"><strong><br /></strong></p>
+<p class="corpo1"><strong>Ex. 1: Altera em definitivo a cor de texto do campo "clienteid" da consulta.</strong><br />sc_field_color ("clienteid", "#33FF66");</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2: Altera a cor de texto do campo "valor_pedido", se o valor for maior que 1000. Caso contr&aacute;rio, mantem a cor padr&atilde;o.</strong><br />if ({valor_pedido} &gt; 1000)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_field_color ("valor_pedido", "#33FF66");<br />}<br />else <br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_field_color ("valor_pedido", "");<br />}</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 3: Utilizando uma vari&aacute;vel local.</strong><br />sc_field_color ("clienteid", {cmp_cor});</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 4: Utilizando uma vari&aacute;vel global.</strong><br />sc_field_color ("clienteid", [cor_global]);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

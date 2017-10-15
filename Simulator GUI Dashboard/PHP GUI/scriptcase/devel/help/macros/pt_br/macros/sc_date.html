@@ -1,0 +1,64 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro calcula e retorna incrementos e decrementos em datas.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date(Data, "Formato", "Operador", D, M, A)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro tem por objetivo o c&aacute;lculo do incremento ou decremento de datas. Para sua utiliza&ccedil;&atilde;o s&atilde;o necess&aacute;rios alguns par&acirc;metros, conforme a seguir:</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro <br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Data</td>
+<td class="corpo1" align="left" valign="top">Campo de data que cont&eacute;m a data a ser modificada.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Formato</td>
+<td class="corpo1" align="left" valign="top">Formata&ccedil;&atilde;o em que o campo de data se encontra.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Operador</td>
+<td class="corpo1" align="left" valign="top">"+" para incremento e "-" para decremento.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">D</td>
+<td class="corpo1" align="left" valign="top">N&uacute;mero de dias a incrementar ou decrementar.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">M</td>
+<td class="corpo1" align="left" valign="top">N&uacute;mero de meses a incrementar ou decrementar.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">A</td>
+<td class="corpo1" align="left" valign="top">N&uacute;mero de anos a incrementar ou decrementar.<br /></td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1:</strong><br />{datanasc} = sc_date({datanasc}, "dd/mm/aaaa", "+ ", 30, 0, 0);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2:</strong><br />$nova_data = sc_date({datanasc}, "aaaa-mm-dd", "-", 15, 3, 2);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 3:</strong><br />{dt_inclusao} = sc_date(date('Ymd'), "aaaammdd", "-", 0, 1, 1);</p>
+<p>&nbsp;</p>
+<p class="corpo1"><strong>OBS: </strong><em>Para certificar-se do formato da data, antes de utilizar a fun&ccedil;&atilde;o, ponha seu comando em algum evento: <br />echo "form_data = " . {nome do campo de data};</em></p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

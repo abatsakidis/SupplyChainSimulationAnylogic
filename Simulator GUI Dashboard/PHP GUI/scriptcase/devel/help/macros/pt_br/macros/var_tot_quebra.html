@@ -1,0 +1,59 @@
+<HTML>
+	<HEAD>
+		<TITLE>Variáveis especiais que contêm todos os totais por quebra. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">var_tot_quebraVariáveis de Totalizacao (quebras)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1"><span class="corpo1">Durante o processamento das quebras, o Scriptcase disponibiliza todas as vari&aacute;veis de totaliza&ccedil;&atilde;o, a n&iacute;vel geral e a n&iacute;vel da quebra que estiver sendo processada.<br /><br />Supondo uma aplica&ccedil;&atilde;o que tenha dois n&iacute;veis de quebra (<strong>estado e cidade</strong>) e que totaliza dois campos (<strong>parcela e saldo</strong>).<br /><br />Considerando que as f&oacute;rmulas, definidas para serem processadas no evenro "<strong>onGroupBy</strong>" estar&atilde;o atuando para os v&aacute;rios n&iacute;veis de quebra, as vari&aacute;veis especiais de totaliza&ccedil;&atilde;o, neste escopo, s&atilde;o referenciadas substituindo-se o nome da quebra pela palavra chave "<strong>quebra</strong>", ou seja:</span></p>
+<p class="corpo1"><span class="corpo1"> 
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Vari&aacute;veis<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_ger}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m a quantidade total dos registros</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_parcela}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o somat&oacute;rio geral do campo "parcela"</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_saldo}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o somat&oacute;rio geral do campo "saldo"</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_quebra}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m a quantidade total dos registros, da quebra que estiver sendo processada</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_quebra_parcela}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o somat&oacute;rio do campo "parcela", da quebra que estiver sendo processada</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_quebra_saldo}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o somat&oacute;rio do campo "saldo", da quebra que estiver sendo processada</span>.<br /></td>
+</tr>
+</tbody>
+</table>
+<br /></span><span class="corpo1"><strong></strong></span></p>
+<p class="corpo1"><span class="corpo1"><strong>Ex. 1: Em uma</strong></span><span class="corpo1"><span style="color: #000000;"><strong> aplica&ccedil;&atilde;o que tenha quebras por </strong><strong>estado e </strong><strong>cidade e que totalize um campo de </strong><strong>saldo, e nos totais das quebras, desejamos exibir a m&eacute;dia em substitui&ccedil;&atilde;o ao </strong><strong>saldo. <br /></strong><br /></span><span style="color: #000000;">{sum_quebra_saldo} = {sum_quebra_saldo} / {count_quebra};</span></span></p>
+<p class="corpo1 corpo1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,17 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre após uma inclusão.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p class="titulo1">&nbsp;</p>
+<p class="corpo1">Este evento ocorre ap&oacute;s a inser&ccedil;&atilde;o de registro no form.</p>
+<p class="corpo1">Exemplo , ap&oacute;s a inclus&atilde;o de um registro no banco de dados queremos gravar numa tabela de log a opera&ccedil;&atilde;o de inclus&atilde;o.</p>
+<p class="corpo1">basta no evento incluir um bloco php semelhante a este</p>
+<p class="corpo1">sc_exec_sql(" insert into log values ([glo_usuario],'tabela alvo','insercao',{campo_chave}) ");</p>
+<p class="corpo1">//inserimos o id do usu&aacute;rio que estava armazenado em uma vari&aacute;vel de sess&atilde;o [glo_usuario] e a chave do&nbsp;registro rec&eacute;m inclu&iacute;do&nbsp;{campo_chave}.</p>
+			</body>
+			
+</HTML>

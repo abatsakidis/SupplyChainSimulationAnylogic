@@ -1,0 +1,17 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre na exibição do cabeçalho.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p class="titulo1">&nbsp;</p>
+<p class="corpo1">Este evento &eacute; executado imediatamente antes da exibi&ccedil;&atilde;o do cabe&ccedil;alho da consulta, podemos utilizar este evento por exemplo quando precisarmos imprimir algum valor calculado no cabe&ccedil;alho.</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">Por exemplo, precisamos no cabe&ccedil;alho de uma consulta de pedidos por cliente exibir o total geral dos pedidos deste;</p>
+<p class="corpo1">Criamos um campo , ou um atributo chamado total_compras , em seguida dentro do evento onHeader da consulta montamos um bloco php para carregar o valor no campo / atributo.</p>
+<p class="corpo1">sc_lookup(peds," select sum(valor) from pedidos where cliente='{cpo_cliente}' ");</p>
+			</body>
+			
+</HTML>

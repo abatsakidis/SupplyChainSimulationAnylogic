@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre quando o menu é carregado.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p class="titulo1">&nbsp;</p>
+<p class="corpo1">Este evento ocorre na carga de um menu horizontal/vertical.</p>
+<p class="corpo1">Podemos nesse evento rodar alguma diretiva de seguran&ccedil;a , por exemplo se houver uma tentativa de acesso direto ao menu, sem antes se passar por um form de login , podemos atrav&eacute;s do teste de uma vari&aacute;vel de sess&atilde;o definida no form de login , redirecionar o fluxo para a aplica&ccedil;&atilde;o inicial.</p>
+<p class="corpo1">if(!isset([var_id_usu]) or empty([var_id_usu]))</p>
+<p class="corpo1">{</p>
+<p class="corpo1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sc_redirect("login.php");</p>
+<p class="corpo1">}</p>
+			</body>
+			
+</HTML>

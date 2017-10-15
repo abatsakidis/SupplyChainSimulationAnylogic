@@ -1,0 +1,23 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro its used to redirects to other application or URL.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_redir(Application, Parameter01; Parameter02; Target, Error)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><br />This macro its used to redirect the processing to other application or URL.<br /><br /><br />If the redir uses parameters, these must be passed in the following format:<br /><strong>1) </strong>After the name of the application, use the comma delimiter (,) then<br /><strong>2)</strong> = (equal sign)&nbsp; .<br /><strong>3)</strong> More than one parameter,&nbsp; must be separated by semicolon (;)<br /><strong>4)</strong> The target&nbsp; determine which application is opened (default=_self): _self, _parent or _blank.<br /><strong>5)</strong> Optional parameter to set error messages redirection in the application: "F" redirects if there is error in the application (default value) and "E" does not redirect.<br />&nbsp;<br /><br /><br /><strong>Ex. 1:</strong> <strong>Application without parameters nor target.</strong><br />if ([global_user] == "test")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(application_x.php);<br />}<br /><br /><strong>Ex. 2:</strong> <strong>Application with parameters and without target.</strong><br />if ([global_user] == "test")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(application_x, parm1={var_test}; parm2="xxx");<br />}<br /><br /><strong>Ex. 3: Application without parameters and with target.</strong><br />if ([global_user] == "test")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(application_x, "", "_parent");<br />}<br /><br /><strong>Ex. 4: Application with parameter and target.</strong><br />if ([global_user] == "test")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(application_x, parm1={var_test}; parm2="xxx", "_blank");<br />}<br /><br /><strong>Ex. 5: URL.</strong><br />if ([global_user] == "test")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(http://www.my_page.com);<br />}</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

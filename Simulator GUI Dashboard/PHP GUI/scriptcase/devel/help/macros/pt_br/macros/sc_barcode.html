@@ -1,0 +1,177 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro gera códigos de barra dinamicamente.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_barcode_opção(Dados_Ent, Dados_Saida, Gerar_Tag, Altura_Img, Escala, Angulo, DPI, Tp_Img, Tp_Fonte, Tam_Fonte, CKS);<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Esta macro tem como objetivo gerar c&oacute;digos de barra de forma din&acirc;mica.</p>
+<p>Segue abaixo os tipos de c&oacute;digo de barra junto com sua descri&ccedil;&atilde;o:</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Op&ccedil;&atilde;o<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_abar</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo ABAR.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_11</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo CODE11.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_39</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo CODE39.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_39extended</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo CODE39 Extendido.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_93</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo CODE93.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_128</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo CODE128.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_128a</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo CODE128A.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_128b</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo CODE128B.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_128c</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo CODE128C.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_ean8</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo EAN8.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_ean13</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo EAN13.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_gs1128a</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo GS1 128A.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_gs1128b</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo GS1 128B.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_gs1128d</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo GS1 128C.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_ibsn</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo ISBN.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_i25</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo 2 de 5 Intercalado.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_s25</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo 2 de 5 Standard.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_msi</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo MSI.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_upca&nbsp; <br /></td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo UPCA.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_upce</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo UPCE.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_upcext2</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo UPCEXT2.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_upcext5</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo UPCEXT5.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_barcode_postnet</td>
+<td class="corpo1" align="left" valign="top">Cria o c&oacute;digo de barras do tipo POSTNET.</td>
+</tr>
+</tbody>
+</table>
+<p>Segue na tabela abaixo os par&acirc;metros e sua descri&ccedil;&atilde;o:</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Dados_Ent</td>
+<td class="corpo1" align="left" valign="top">Vari&aacute;vel ou string com os dados de entrada.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Dados_Saida</td>
+<td class="corpo1" align="left" valign="top">Vari&aacute;vel para obter os dados de saida (endere&ccedil;o da imagem gerada).<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Gerar_Tag</td>
+<td class="corpo1" align="left" valign="top">Gera tag html<img alt="" />, com o src apontando para a imagem gerada. (defalt = S)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Altura_Img</td>
+<td class="corpo1" align="left" valign="top">Altura da imagem (default 30).</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Escala</td>
+<td class="corpo1" align="left" valign="top">Fator de multiplica&ccedil;&atilde;o da largura b&aacute;sica das barras (default 1).<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Angulo</td>
+<td class="corpo1" align="left" valign="top">Angulo em gr&aacute;us para rota&ccedil;&atilde;o da imagem (default 0).<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">DPI</td>
+<td class="corpo1" align="left" valign="top">Resolu&ccedil;&atilde;o da imagem (default 72).<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Tp_Img</td>
+<td class="corpo1" align="left" valign="top">Tipo da imagem a ser gerada: Png, Jpeg ou Gif (default Png).<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Tp_fonte</td>
+<td class="corpo1" align="left" valign="top">Tipo da fonte (default Arial).<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Tam_Fonte</td>
+<td class="corpo1" align="left" valign="top">amanho da fonte (default 8).<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">CKS</td>
+<td class="corpo1" align="left" valign="top">Se vai gerar checksun: S/N &nbsp;(defalt = N) - Apenas para:<br /> sc_barcode_39 , &nbsp;sc_barcode_39extended, &nbsp;sc_barcode_i25, &nbsp;sc_barcode_s25<br /> e sc_barcode_msi.<br /></td>
+</tr>
+</tbody>
+</table>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

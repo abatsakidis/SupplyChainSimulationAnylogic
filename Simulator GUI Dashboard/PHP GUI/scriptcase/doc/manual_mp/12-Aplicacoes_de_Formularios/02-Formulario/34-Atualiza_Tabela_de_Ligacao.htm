@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>Many-to-Many Relationships</TITLE>
+    <link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<h1>MANY-TO-MANY RELATIONSHIPS</h1>
+<img src="img/tabela_lig0.jpg" />
+<p>Configure   N:N relationship tables.</P>
+<p>&nbsp;</P>
+<p><img src="../../comuns/img/vejamais.jpg" /><strong>See more :</strong> </P>
+<ul>
+  <li><a href="http://www.scriptcase.net/siteen/samples/tutoriais/form/form24.php" target="_blank">Update related table</a></li>
+  <li><a href="http://www.scriptcase.net/siteen/samples/tutoriais/form/form57.php" target="_blank">Updating Many-to-Many Relationship via CheckBox List</a></li>
+</ul>
+<p><img src="img/img106.jpg" /></P>
+<P class="sob_figura">Image1: Generated application with associated tables</P>
+<hr>
+<h2>Identification</h2>
+<p>This link is treated as a field in the   <em>Form </em>application. Define <em>Field </em>name, <em>Data</em> type, <em>Label</em> and specific <em>Connection</em> for this link. For specific connection is displayed a  select with the project available connections.</P>
+<p><IMG SRC="img/atualizatab01.jpg" NAME="figura1" BORDER=0 ALIGN=BOTTOM><BR>
+  <span class="sob_figura">Image2: Create a relationship field </span></P>
+<p>&nbsp;</P><hr>
+<h2>Grid Information</h2>
+<p>Define the  select (lookup) data source. Enter a  select command or base it on a table. </P>
+<blockquote>
+  <p><IMG SRC="img/atualizatab02.jpg" NAME="figura2" BORDER=0 ALIGN=BOTTOM><BR>
+    <span class="sob_figura">Image3:
+    Enter a  select command.</span></p>
+</blockquote>
+<p>For the option<em> Choose Table </em>3  objects select are displayed allowing to choose the table and the fields <em>Key </em>and  <em>Description.</em> </P>
+<blockquote>
+  <p><img src="img/tabela_lig2.jpg" /></p>
+  <P class="sob_figura">Image4: Select command base on a table.</p>
+</blockquote>
+<ul>
+  <li><strong>Key - </strong> Value stored in the relationship table.</li>
+  <li><strong>Description - </strong> Value displayed in the update field. </li>
+</ul>
+<hr>
+<h2>SQL Select Statement</h2>
+<p>Select Command to display the update field values available. </P>
+<p><IMG SRC="img/atualizatab03.jpg" NAME="figura3" ALIGN=BOTTOM BORDER=0><BR>
+  <span class="sob_figura">Image5:
+Select Command.</span></P>
+<p>&nbsp;</P>
+<hr>
+<h2>Lookup Display</h2>
+<h2>Define the update display format.</h2>
+<p><IMG SRC="img/atualizatab04.jpg" NAME="figura4" ALIGN=BOTTOM BORDER=0><BR>
+  <span class="sob_figura">Image7:
+  Field object type.</span></P>
+<ul>
+  <li><strong>Display key and description - </strong>Display the key and the description entered in the select command.<br>
+  </li>
+  <li><strong> Display Title - </strong> Display the relationship attribute title. (see <a href="#atributo_ligacao">relationship attribute</a>). <br>
+  </li>
+  <li><strong>Separator - </strong> Define a delimiter   between key and description when the option selected is Display key and description.<br>
+  </li>
+  <li><strong>Object - </strong> Lookup object type to display in the form. Available types: <em>Select, Double Select, Checkbox and Radio.</em></li>
+  <li><strong>Check and Uncheck all - </strong> Enable an option to check or uncheck all values( available only to  <em>Checkbox</em>).<br>
+  </li>
+  <li><strong>Columns - </strong> Define  number of columns  displayed (available only to objects <em>Checkbox</em> and <em>Radio</em>).<br>
+  </li>
+</ul>
+<br>
+<hr>
+<h2> Relationship Table</h2>
+<P><img src="img/img107.jpg" /></P>
+<P class="sob_figura">Image8: Relationship table.</P>
+<P>Define the relationship table updated.</P>
+<blockquote>
+  <p><IMG SRC="img/atualizatab05.jpg" NAME="figura5" ALIGN=BOTTOM BORDER=0><BR>
+    <span class="sob_figura">Image9:
+    Select table.</span></p>
+</blockquote>
+<p>&nbsp;</P><hr>
+<h2> Relationship Keys </h2>
+<p><IMG SRC="img/img108.jpg" NAME="figura6" BORDER=0 ALIGN=BOTTOM></P>
+<P class="sob_figura">Image10: Link key.</P>
+<p>Define  the application fields related to the relationship table fields.</P>
+<p><IMG SRC="img/atualizatab06.jpg" NAME="figura6" ALIGN=BOTTOM BORDER=0><BR>
+  <span class="sob_figura">Image11:
+Defining update table field values.</span></P>
+<p>&nbsp;</P><hr>
+<h2> Lookup Field</h2>
+<P><img src="img/img109.jpg" /></P>
+<P class="sob_figura">Image12: Lookup field.</P>
+<p>Define the lookup  table field related to the relationship table.</P>
+<p><IMG SRC="img/atualizatab07.jpg" NAME="figura7" ALIGN=BOTTOM BORDER=0><br>
+<span class="sob_figura">Image13: Defining table foreign key.</span></P>
+<p>&nbsp;</P>
+<a name="atributo_ligacao"></a>
+<hr>
+<h2>Link Attributes</h2>
+<h2> Image14: Application view generate with the relationship attribute type  Access Type.
+  </p>
+&nbsp;</p>
+</h2>
+<p>Define the values stored in the relationship table fields that are not foreign keys. </p>
+<p><img src="img/tabela_lig5.jpg" /></P>
+<P class="sob_figura">Image15: Defining  field attribute.</P>
+<ul>
+  <li><strong>Dados  Entry - </strong>Store a value entered by the  user. Create a field and relate it via the select.  </li>
+  <li><strong>Attribute - </strong>Store an application field value.</li>
+</ul>
+<hr>
+<h2>Search (only for Double Select) </h2>
+<P><img src="img/img110.jpg" /></P>
+<P class="sob_figura">Image16: Double Select Filter.</P>
+<p>Define a search to the<em> relationship table</em>.</P>
+<p><img src="img/tabela_lig6.jpg" /><br>
+  <span class="sob_figura">Image17: Search field settings.</span></P>
+<ul>
+  <li><strong>Limit of Records</strong> - Maxim quantity of records return by the search. </li>
+  <li><strong> Initial State </strong>- Define the object load state.</li>
+  <li><strong>Search fields </strong>- Define search fields (<em>Key and/or Description</em>) to display. </li>
+</ul>
+<hr>
+<h2>Display Settings  (optional) </h2>
+<span>Define  <em> relationship field display settings </em>such as  CSS field attributes, title and object..</span>
+<p><img src="img/tabela_lig3.jpg" /></P>
+<P class="sob_figura">Image18: Display Settings.</P>
+  <hr>
+<h2>Help Settings</h2>
+<p>Document the application. Create on-line instructions, describe business rules and save comments in the System Help to allow users to better understand the system and instruct them in the best way of interacting with the applications.</p>
+<img src="../../comuns/campos/form/img/conf_ajuda.jpg" name="figura11" /><span class="sob_figura"><br />Figure 1: Help Configuration using a pop-up window. </span><br />
+<br />
+<br />
+<b>Attributes</b>: 
+<ul>
+  <li>
+    <p><strong><span>Tooltip - </span></strong>Add text that will be displayed when the user hovers his mouse over the field.</p>
+    <ul>
+      <li><b>Help Type:<br />
+        <br />
+          </b>
+ <ul>
+            <li><strong>Pop-up - </strong>Displays the help text in a <em>pop-up window</em> when the <em>help icon</em> displayed beside the field is clicked.<br />
+            <br />
+            <br />
+            <img src="../../comuns/campos/form/img/help_pop_up.jpg" name="figura12" /></span><br />
+              <br />
+              <br />
+            </li>
+            <li><strong>Hint</strong> - Displays the help text in a<em> hint window</em> when the mouse cursor hovers over the field.<br />
+            <br />
+            <br />
+            <img src="../../comuns/campos/form/img/help_hint.jpg" name="figura13" /><br />
+            <br />
+              <br />
+            </li>
+            <li><strong>Text</strong> - Display the specified help text beside the field.<br />
+              <br />
+            <img src="../../comuns/campos/form/img/help_texto.jpg"  /> </li>
+          </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</BODY>
+</HTML>

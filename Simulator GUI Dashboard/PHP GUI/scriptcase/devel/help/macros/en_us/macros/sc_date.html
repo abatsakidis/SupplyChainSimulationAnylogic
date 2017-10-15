@@ -1,0 +1,65 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro calculates and returns increments and decrements using dates.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date(Date, "Format", "Operator", D, M, Y)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><br />This macro has the aim to calculate the increment or decrement of dates. For its use are necessary some parameters as follows:</p>
+<p class="corpo1">
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Parameter <br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Date</td>
+<td class="corpo1" align="left" valign="top">Date field that contains the date to be modified.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Format</td>
+<td class="corpo1" align="left" valign="top">Formatting thats the date field is.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Operator</td>
+<td class="corpo1" align="left" valign="top">"+" for increment and "-" for decrement.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">D</td>
+<td class="corpo1" align="left" valign="top">Number of days to increment or decrement.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">M</td>
+<td class="corpo1" align="left" valign="top">Number of months to increment or decrement.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Y</td>
+<td class="corpo1" align="left" valign="top">Number of Years to increment or decrement.<br /></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="corpo1"><br /><br /><strong>Ex. 1:</strong><br />{birthdate} = sc_date({birthdate}), "dd/mm/yyyy", "+", 30, 0, 0);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2:</strong><br />$new_date = sc_date({birthdate}, "yyyy-mm-dd", "-", 15, 3, 2);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 3:</strong><br />{inclusion_dt} = sc_date(date('Ymd'), "yyyymmdd", "-", 0, 1, 1);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>OBS:</strong> <em>To be certified of the date format, before use the function, try it in any event:<br />echo "form_date =". {name of the field date}.<br /></em></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

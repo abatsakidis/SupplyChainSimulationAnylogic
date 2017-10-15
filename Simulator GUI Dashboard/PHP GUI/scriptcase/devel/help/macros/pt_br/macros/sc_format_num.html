@@ -1,0 +1,68 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro e usada para formatar valores numéricos.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_format_num({Meu_Campo}, "Simb_Grp", "Simb_Dec", "Qtde_Dec", "Enche_Zeros", "Lado_Neg",  "Simb_Monetário", "Lado_Simb_Monetario")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro tem por objetivo a formata&ccedil;&atilde;o de valores num&eacute;ricos.</p>
+<table style="height: 191px;" border="0" width="741">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Meu_Campo</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Vari&aacute;vel ou campo que contena o valor a ser formatado (O retorno ser&aacute; na pr&oacute;pria vari&aacute;vel).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Simb_Grp</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">S&iacute;mbolo de agrupamento dos valores inteiros.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Simb_Dec</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">S&iacute;mbolo para o separador de decimais.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Qtde_Dec</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Quantidade de decimais a ser exibida</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Enche_Zeros</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Completa com zeros as decimais inexistentes (S = sim e N = n&atilde;o).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Lado_Neg</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Lado onde o sinal de negativo deve ser exibido (1 = esquerdo e 2 = direito).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Simb_Monet&aacute;rio</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">S&iacute;mbolo monet&aacute;rio a ser exibido.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Lado_Simb_Monet&aacute;rio</td>
+<td class="corpo1" align="left" valign="top">Lado onde o s&iacute;mbolo monet&aacute;rio ser&aacute; exibido (1 = 
+esquerdo e 2 = direito).</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1: Formatando um n&uacute;mero inteiro.</strong><br />sc_format_num({meu_valor}, '.', '', 0, 'N', '1', '');<br />Valor de entrada = 001234567890<br />Valor de sa&iacute;da = 1.234.567.890<br /><br /></span></p>
+<p><span class="corpo1"><strong>Ex. 2: Formatando um valor negativo e desprezando as casas decimais.</strong><br />sc_format_num({meu_valor}, '.', '', 0, 'N', '1', '');<br />Valor de entrada = -0012345678.90<br />Valor de sa&iacute;da = -12.345.678<br /><br /><strong>Ex. 3: Formatando um valor com 4 casas decimais e prenchendo com zeros.</strong><br />sc_format_num({meu_valor}, '.', ',', 4, 'S', '1', '');<br />Valor de entrada = 0012345678.9<br />Valor de sa&iacute;da = 12.345.678,9000<br /><br /><strong>Ex. 4: Formatando um valor com 2 casas decimais, prenchendo com zeros e utilizando s&iacute;mbolo monet&aacute;rio.</strong><br />sc_format_num({meu_valor}, '.', ',', 2, 'S', '1', 'R$');<br />Valor de entrada = 0012345678.9<br />Valor de sa&iacute;da = R$ 12.345.678,90<br /><br /><strong>Ex. 5: Formatando um valor com 2 casas decimais, prenchendo com zeros.</strong><br />sc_format_num({meu_valor}, '.', ',', 2, 'S', '1', '');<br />Valor de entrada = .9<br />Valor de sa&iacute;da = 0,90<br /></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

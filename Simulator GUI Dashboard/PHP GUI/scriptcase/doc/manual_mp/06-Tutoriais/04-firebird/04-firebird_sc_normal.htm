@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Firebird - Creating a Connection</title>
+<meta name="generator" / content="namo webeditor(trial)">
+</head>
+
+<body>
+<h1><strong>Creating a Connection on Scriptcase</strong></h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/04-firebird/00-firebird.htm" target="_self">Firebird</a> >> Creating a Connection</td></tr></table>
+<p><strong><u>CREATING SCRIPTCASE CONNECTION (FIREBIRD)</u></strong></p>
+<blockquote>
+  <p><br />
+    <span>Now access ScriptCase to create a new connection.</span></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><span><strong>Step 1: </strong>Log in ScriptCase, and on the top menu you can see the item &quot;Database &quot;, click on the sub item &quot;New connection&quot; or use the icon from the fast menu.</span></p>
+<p>&nbsp;</p>
+<p><img src="../img/544_11.jpg" alt="" /><br />
+</p>
+<p><strong>Step 2:</strong> Then you can see a screen to select the database type, click on the image of the Firebird database.</p>
+<p>&nbsp;</p>
+<p><img src="../img/criar_conex_firebird.jpg" /></p>
+<p>&nbsp;</p>
+<p><strong>Step 3:</strong> In the picture below, fill in the   required specifications:</p>
+<A NAME="conex_firebird"></A>
+<p><img src="../img/criar_conex_firebird2.jpg" /></p>
+<ul>
+  <li><strong>Connection name</strong> - Set the name of your new connection.</li>
+  <li><strong>DBMS Type</strong> - Select the DBMS type.</li>
+  <li><strong>Test Connection</strong> -   Displays if the connection was successful or not.</li>
+  <li><strong>Server/Host (Name or IP)</strong> - Enter the FireBird Server.</li>
+  <li><strong>Database Name </strong>- Enter your database name.</li>
+  <li><strong>Username</strong> - Enter a valid username.</li>
+  <li><strong>Password</strong> - Enter the user valid password.</li>
+</ul>
+<p>Para mais detalhes na configura&ccedil;&atilde;o da conex&atilde;o do banco da dados clique  na aba Advanced<br />
+</p>
+<p><img src="../img/advanced_no_client_encoding.jpg" /></p>
+<p>&nbsp;</p>
+<ul>
+  
+  <li><strong>Decimal   separator</strong> - Select the type of separator between comma and point.</li>
+  <li><strong>Persistent connection</strong> - Persistent   connections are links that do not close when the execution of your   script ends.</li>
+  <li><strong>Use the schema before the table name</strong> - Use schemas before the tables names.</li>
+  <li><strong>Filter</strong> - Clicando nessa Aba, aparecer&aacute; a seguinte tela:</li>
+</ul>
+<p>&nbsp;</p>
+<p><img src="../img/filter_tab.jpg" /><br />
+</p>
+<ul>
+  <li><strong>Show </strong>-  Display   filters on the tables, views, system tables and procedures.</li>
+  <li><strong>Filters</strong> - Define which tables and owners will be displayed.<br />
+      <br />
+  </li>
+</ul>
+<p><strong>Step 4:</strong> Always test your connection before   completing the same, if the message &quot;Connected successfully&quot; is displayed, then   complete the establishment of the connection.</p>
+<p>&nbsp;</p>
+<p><strong class="titulo"></strong></p>
+<p><strong class="titulo">Connecting to FireBird in ScriptCase&nbsp;using&nbsp;ODBC</strong><br />
+  <strong><br />
+      <br />
+  </strong>To create the connection using the <strong>IBPhoenix Open Source ODBC Driver (http://www.ibphoenix.com) </strong>is required<strong>.<br />
+          <br />
+          <br />
+          </strong>Download and install the driver, create a new ODBC Source as <b>System Source</b>, and choose Firebird/Interbase driver.<br />
+  <br />
+  <br />
+  <img src="../img/687_1.jpg" alt="" /><br />
+  <br />
+  <br />
+  <br />
+  Connect to a firebird, running in another server (glacial) as in the example below.<br />
+  <br />
+  <br />
+  <img src="../img/682_1.jpg" alt="" /><br />
+  <br />
+  <br />
+  <strong>Data Source Name:</strong> ODBC Name<br />
+  <strong>Database:</strong> HOST:PATH<br />
+  Enter the user name and password.<br />
+</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{NM_PHP_REGINI}
+<!-- BEGIN abre_bloco -->
+  <TABLE {NM_CSS_TAB_BLOCO} {NM_STYLE_TAB_BLOCO} {NM_TABELA_ALIGN} width="100%" {NM_TAB_ALTURA}>
+   <TR>
+<!-- END abre_bloco -->
+<!-- BEGIN bloco -->
+    <TD {NM_CSS_BLOCO} {NM_STYLE_BLOCO} colspan="{NM_BLOCO_SPAN}" height="{NM_BLOCO_ALTURA}" width="100%" >
+     <TABLE style="padding: 0px; spacing: 0px; border-width: 0px; border-collapse:collapse;" width="100%">
+      <TR>
+       <TD {NM_CSS_TIT_BLOCO} {NM_STYLE_TIT_BLOCO} align="{NM_BLOCO_HORIZ}" valign="{NM_BLOCO_VERT}">{NM_BLOCO_TITULO}</TD>
+      </TR>
+     </TABLE>
+    </TD>
+   </TR>
+   <TR {NM_BLOCO_COLLAPSE}>
+<!-- END bloco -->
+
+<!-- BEGIN init_bloco -->
+    <TD  style="border-width: 0px; border-style: none; " height="{NM_BLOCO_ALTURA_DADOS}" valign="top" width="100%">
+     <TABLE style="padding: 0px; spacing: 0px; border-width: 0px; border-collapse:collapse;" width="100%">
+      <TR>
+<!-- END init_bloco -->
+
+
+<!-- BEGIN bloco_limpa -->
+    <TD {NM_CSS_LIMP_BLOCO} {NM_STYLE_LIMP_BLOCO} colspan="{NM_LIMPA_SPAN}">&nbsp;</TD>
+<!-- END bloco_limpa -->
+<!-- BEGIN bloco_abre_td -->
+     <TD {NM_CSS_DAD_BLOCO} {NM_STYLE_GRID_DATA} {NM_NOWRAP} align="{NM_CMP_ALIGN}" valign="{NM_CMP_VALIGN}" {NM_DAD_WIDTH} {NM_DAD_HEIGHT}>
+<!-- END bloco_abre_td -->
+<!-- BEGIN bloco_dados -->
+{NM_CMP_PHP}
+     {NM_CMP_DADO}
+{NM_FIM_PHP}
+<!-- END bloco_dados -->
+<!-- BEGIN bloco_fecha_td -->
+    </TD>
+<!-- END bloco_fecha_td -->
+{NM_PHP_REGFIM}

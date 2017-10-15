@@ -1,0 +1,136 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro permite que a aplicação exiba mensagens customizáveis.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_ajax_message("Mensagem", "Título", "Parâmetro", "Parâmetros_Redir")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="cls_titulo">&nbsp;</p>
+<p>Esta macro permite que a aplica&ccedil;&atilde;o exiba mensagens customiz&aacute;veis, com seu uso restrito aos <strong>eventos  do formul&aacute;rio/controle. </strong></p>
+<p>Esta macro s&oacute; &eacute; valida em aplica&ccedil;&otilde;es com <strong>suporte a AJAX</strong>.</p>
+<table class="cls_tabela     " border="0">
+<tbody>
+<tr>
+<th>Param&ecirc;tros</th> <th>Descri&ccedil;&atilde;o</th>
+</tr>
+<tr>
+<td>Mensagem</td>
+<td>Texto que ser&aacute; exibido no corpo da mensagem. Este parametro &eacute; de preenchimento obrigat&oacute;rio.</td>
+</tr>
+<tr>
+<td>T&iacute;tulo</td>
+<td>Texto que ser&aacute; exibido no t&iacute;tulo da mensagem. Se n&atilde;o preenchido o t&iacute;tulo da mensagem n&atilde;o ser&aacute; exibido.</td>
+</tr>
+<tr>
+<td>String de Parametros da mensagem</td>
+<td>
+<p>Par&acirc;metro de formata&ccedil;&atilde;o da mensagem. <br /> Ex.: modal=Y&amp;button=Y&amp;button_label=Ok&amp;redir=form_employees.php&amp;redir_target=_blank</p>
+<p>Os detalhes deste par&acirc;metro est&atilde;o detalhados na tabela2.</p>
+</td>
+</tr>
+<tr>
+<td>String de parametros do Redirecionamento</td>
+<td>
+<p>Nesta propriedade podem ser definidos os valores para a aplica&ccedil;&atilde;o de redirecionamento.Esta propriedade funciona apenas se a propriedade redir for informada. Os parametros devem ser informados no seguinte formato: parametro=valor;parametro=valor.</p>
+<p>Ex.: customer_id=ALFKI;customer_name=ALBERT FRANCINET</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Tabela2: String de Par&acirc;metros da mensagem</strong></p>
+<table class="cls_tabela     " border="0">
+<tbody>
+<tr>
+<th>Propriedade</th> <th>Descri&ccedil;&atilde;o</th> <th>Valores</th> <th>Exemplo</th>
+</tr>
+<tr>
+<td>modal</td>
+<td>Flag para exibi&ccedil;&atilde;o da mensagem em modal</td>
+<td>Y ou N</td>
+<td>modal=Y</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Tempo em segundos para esconder mensagem. Se n&atilde;o informado mensagem ser&aacute; exibida indefinidamente. Esta propriedade s&oacute; funciona se a propriedade button n&atilde;o estiver habilitada.</td>
+<td>Segundos</td>
+<td>timeout=5</td>
+</tr>
+<tr>
+<td>button</td>
+<td>Exibe bot&atilde;o dentro da mensagem. O seu funcionamento padr&atilde;o &eacute; fechar a mensagem. Caso seja habilitado o redirecionamento, ap&oacute;s fechar a mensagem a aplica&ccedil;&atilde;o ser&aacute; redirecionada.</td>
+<td>Y ou N</td>
+<td>button=Y</td>
+</tr>
+<tr>
+<td>button_label</td>
+<td>Label do bot&atilde;o. Esta op&ccedil;&atilde;o s&oacute; funciona caso a propriedade button habilidata</td>
+<td>String</td>
+<td>button=Y&amp;button_label=OK</td>
+</tr>
+<tr>
+<td>top</td>
+<td>Valor para posicionamento da mensagem em pixels</td>
+<td>Apenas numeros</td>
+<td>top=300</td>
+</tr>
+<tr>
+<td>left</td>
+<td>Valor para posicionamento da mensagem em pixels</td>
+<td>Apenas numeros</td>
+<td>left=200</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Valor para largura da mensagem em pixels</td>
+<td>Apenas numeros</td>
+<td>width=320</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Valor da altura da mensagem em pixels</td>
+<td>Apenas numeros</td>
+<td>height=30</td>
+</tr>
+<tr>
+<td>redir</td>
+<td>Nome da aplica&ccedil;&otilde;es ou URL  para redirecionamento. Esta propriedade  funciona apenas caso a propriedade button esteja habilitada.</td>
+<td>String</td>
+<td>button=Y&amp;redir=form_employees.php</td>
+</tr>
+<tr>
+<td>redir_target</td>
+<td>Target para url de redicionamento. Esta propriedade funciona apenas quando a propriedade redir est&aacute; habilitada.</td>
+<td>String</td>
+<td>redir=form_employees.php&amp;redir_target=_blank</td>
+</tr>
+<tr>
+<td>show_close</td>
+<td>Flag para exibi&ccedil;&atilde;o do bot&atilde;o de fechar mensagem localizado na barra de titulo. Esta propriedade quando ativa for&ccedil;a a exibi&ccedil;&atilde;o da barra de titulo mesmo que o parametro titulo esteja vazio.</td>
+<td>Y ou N</td>
+<td>show_close=Y</td>
+</tr>
+<tr>
+<td>body_icon</td>
+<td>Flag para exibi&ccedil;&atilde;o do icone do corpo da mensagem. Mesmo quando esta propriedade est&aacute; ativa a exibi&ccedil;&atilde;o do icone depende da configura&ccedil;&atilde;o do Tema (Esquema de exibi&ccedil;&atilde;o) usado na aplica&ccedil;&atilde;o.</td>
+<td>Y ou N</td>
+<td>body_icon=N</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

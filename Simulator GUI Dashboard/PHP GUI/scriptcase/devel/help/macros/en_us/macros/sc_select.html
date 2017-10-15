@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro executes the commands passed in the second parameter and returns the dataset in a variable.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select(dataset, "SQL Command", "Connection")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">This macro executes the SQL commands passed as parameter and access the "dataset" in the command.<br /><br />Different from sc_lookup macro, this macro doesn't manipulate the dataset (the user is responsible for all the manipulation).<br /><br />If an error occurs in the sql command execution, the variable attributed to the database returns as "false" and the error message is available in the "dataset_error" variable.<br /><br />The connection parameter is optional, use only if the command is executed in a data base different from the specified in the application.<br /><strong></strong></span></p>
+<p><span class="corpo1"><strong><br />Ex. 1:</strong><br />sc_select(my_data, "select clientId, clientName, limitecred from costumers");<br />if ({my_data} === false)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "Access error. Message =". {my_data_erro};<br />}<br />else<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; while (!$my_data-&gt;EOF)<br />&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {clientName} = $my_data-&gt;fields[1];<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; $my_data-&gt;MoveNext();<br />&nbsp;&nbsp;&nbsp;&nbsp; }<br />$my_data-&gt;Close();<br />}<br /><br /><br /><br /><strong>Ex. 2:</strong> <strong>The SQL command can passed as application fields (local variables) or of global variables.</strong><br />sc_select(dataset,"select price order from order where clientId = '{clientId}' and cod_Seller = [var_glo_seller]"); <br /><br /><span style="color: #000000;"><em><strong>Note:</strong> The command must always be finished with semicolon";".</em></span></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

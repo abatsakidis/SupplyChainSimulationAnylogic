@@ -1,0 +1,72 @@
+<HTML>
+	<HEAD>
+		<TITLE>This Macro adds dinamically an item to the menu.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_appmenu_add_item("String Menu_Name", "Id_Item", "Id_Parent", "Label", "Aplication", "Parameters", "Icon", "Hint", "Target")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><strong></strong></p>
+<p>Adds dinamically an item to a menu application.</p>
+<p>To use this&nbsp; macro <strong>is necessary to execute the macro <em>sc_appmenu_create</em></strong> before.</p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>Menu_name</td>
+<td>Application menu name.<br /></td>
+</tr>
+<tr>
+<td>Id_item</td>
+<td>Menu item id.</td>
+</tr>
+<tr>
+<td>Id_Parent</td>
+<td>Parent menu item id. For roots the null/empty value is passed.</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Menu item description.</td>
+</tr>
+<tr>
+<td>Aplication</td>
+<td>Menu item URL or application name&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>String&nbsp; with parameters to pass to the menu item application. <br /> Ex.: param1=valor;param2=valor</td>
+</tr>
+<tr>
+<td>Icon</td>
+<td>Path to icon used in menu item.</td>
+</tr>
+<tr>
+<td>Hint</td>
+<td>Descriptive hint&nbsp; to menu item.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>Target for menu item link.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>Creates a menu named menu_main.</strong><br />sc_appmenu_create('menu_main');<br /><br /><strong><br />Ex. 2:</strong> <strong>Adds a on the menu_main the the item_1 named Category.</strong><br />sc_appmenu_add_item('menu_main','item_1','','Category','');<br /><br /><br /><strong>Ex. 3: Adds a on the menu_main (item_2) the the item_1 named Category linked to the form_category.</strong><br />sc_appmenu_add_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

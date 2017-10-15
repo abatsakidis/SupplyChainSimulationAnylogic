@@ -1,0 +1,25 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro adds dynamically a condition to the grid WHERE clause.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select_where(add)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Is possible, during grid execution time to add a field/condition to the search WHERE clause.<br /><br /><strong></strong></span></p>
+<p><span class="corpo1"><strong>Ex. 1: It adds the contente between the quotes (") in the grids select.</strong><br />if (empty({sc_where_current}))<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_select_where(add) = "where campoX &gt; [global]";<br />}<br />else<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_select_where(add) = "AND campoX &gt; [global_variable]";<br />}<br /><strong><br /></strong><span style="color: #000000;"><strong></strong></span></span></p>
+<p><span class="corpo1"><span style="color: #000000;"><strong>Note:</strong> <em>This command must be in the context of "process before the select".</em></span></span><br /><br /><br /></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

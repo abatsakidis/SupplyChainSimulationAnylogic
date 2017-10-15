@@ -1,0 +1,19 @@
+.scAppCalendarPage { background-color: #DFECE4; opacity: 1; filter: alpha(opacity=100) }
+.fc-header-title { color: #000000; font-family: Arial, sans-serif }
+.fc-sun { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-mon { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-tue { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-wed { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-thu { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-fri { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-sat { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-agenda-axis { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-agenda-gutter { background-color: #fff; opacity: 1; filter: alpha(opacity=100); border-color: #cccccc; border-style: solid; border-width: 0 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-style: normal; padding: 1px; text-decoration: none }
+.fc-axis { background-color: #F00; color: #000; font-family: Arial, sans-serif; font-size: 13px }
+.fc-not-today { color: #000; font-family: Arial, sans-serif; font-size: 13px }
+.scCalendarEventPast { background-color: #FFE8E8; opacity: 1; filter: alpha(opacity=100); color: #000000; border-color: #E4C4C4; border-width: 1px; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scCalendarEventOnDay { background-color: #D0FDD0; opacity: 1; filter: alpha(opacity=100); color: #000000; border-color: #CADDB4; border-width: 1px; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scCalendarEventFuture { background-color: #9EBFEB; opacity: 1; filter: alpha(opacity=100); color: #000000; border-color: #679B99; border-width: 1px; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scCalendarPrintDate { font-family: Arial, sans-serif; font-size: 13px; font-style: normal; text-decoration: none }
+.scCalendarPrintTime { font-family: Arial, sans-serif; font-size: 13px; font-style: normal; text-decoration: none }
+.scCalendarPrintEvent { font-family: Arial, sans-serif; font-size: 13px; font-style: normal; text-decoration: none }

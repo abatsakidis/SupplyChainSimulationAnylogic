@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro modify dynamically the grids "ORDER BY" clause field.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select_order("Field")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">It is possible, during the grid execution time, modify the grid ORDER BY clause.<br />At least one ORDER BY is required in the original grid SQL command to allow the substitution during the grid execution time.</span></p>
+<p><span class="corpo1"><br /><br /><strong>Ex. 1:</strong> Select Clause: SELECT code, name, price FROM table ORDER BY code<br />To change the order from code to name, we will have:<br />sc_select_order("code") = "name";</span></p>
+<p><span class="corpo1"><br /><br /><strong>Ex. 2:</strong> Select Clause: SELECT code, name, price, date FROM table ORDER BY code, name, price<br />To change the order from name to date, we will have:<br />sc_select_order("name") = "date";</span></p>
+<p><span style="color: #000000;"><span class="corpo1"><strong><br />Note:</strong> <em>This command must be in the context of "process before the select".</em></span></span><em><br /></em></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

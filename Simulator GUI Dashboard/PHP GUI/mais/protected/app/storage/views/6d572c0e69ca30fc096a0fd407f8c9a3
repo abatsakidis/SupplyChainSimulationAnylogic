@@ -1,0 +1,78 @@
+	  <?php /**/ $sidebar = SiteHelpers::menus('sidebar') /**/ ?>
+
+<nav role="navigation" class="navbar-default navbar-static-side">
+     <div class="sidebar-collapse">				  
+       <ul id="sidemenu" class="nav expanded-menu">
+		<li class="logo-header" >
+		 <a class="navbar-brand" href="<?php echo URL::to('dashboard'); ?>">
+			<img src="<?php echo asset('sximo/images/logo.png'); ?>" alt="<?php echo CNF_APPNAME; ?>" />
+		 </a>
+		</li>
+		<li class="nav-header">
+			<div class="dropdown profile-element" style="text-align:center;"> <span>
+				<?php echo SiteHelpers::avatar(); ?>
+				 </span>
+				<a href="<?php echo URL::to('user/profile'); ?>" >
+				<span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo Session::get('fid'); ?></strong>
+				 <br />
+				Last Login : <br />
+				<small><?php echo date("H:i F j, Y", strtotime(Session::get('ll'))); ?></small>				
+				 </span> 
+				 </span>
+				 </a>
+			</div>
+			<div class="photo-header "> <?php echo SiteHelpers::avatar( 50 ); ?> </div>
+		</li> 
+		<?php foreach ($sidebar as $menu): ?>
+			 <li <?php if(Request::is($menu['module'])): ?> class="active" <?php endif; ?>>
+			 	<a 
+					<?php if($menu['menu_type'] =='external'): ?>
+						href="<?php echo $menu['url']; ?>" 
+					<?php else: ?>
+						href="<?php echo URL::to($menu['module']); ?>" 
+					<?php endif; ?>				
+			 	
+				 <?php if(count($menu['childs']) > 0 ): ?> class="expand level-closed" <?php endif; ?>>
+				 	<i class="<?php echo $menu['menu_icons']; ?>"></i> <span class="nav-label"><?php echo $menu['menu_name']; ?></span><span class="fa arrow"></span>	 
+				</a> 
+				<?php if(count($menu['childs']) > 0): ?>
+					<ul class="nav nav-second-level">
+						<?php foreach ($menu['childs'] as $menu2): ?>
+						 <li <?php if(Request::is($menu2['module'])): ?> class="active" <?php endif; ?>>
+						 	<a 
+								<?php if($menu2['menu_type'] =='external'): ?>
+									href="<?php echo $menu2['url']; ?>" 
+								<?php else: ?>
+									href="<?php echo URL::to($menu2['module']); ?>"  
+								<?php endif; ?>									
+							>
+								<?php echo $menu2['menu_name']; ?>
+							</a> 
+							<?php if(count($menu2['childs']) > 0): ?>
+							<ul class="nav nav-third-level">
+								<?php foreach($menu2['childs'] as $menu3): ?>
+									<li <?php if(Request::is($menu3['module'])): ?> class="active" <?php endif; ?>>
+										<a 
+											<?php if($menu['menu_type'] =='external'): ?>
+												href="<?php echo $menu3['url']; ?>" 
+											<?php else: ?>
+												href="<?php echo URL::to($menu3['module']); ?>" 
+											<?php endif; ?>										
+										
+										>
+											<?php echo $menu3['menu_name']; ?>
+										</a>
+									</li>	
+								<?php endforeach; ?>
+							</ul>
+							<?php endif; ?>							
+						</li>							
+						<?php endforeach; ?>
+					</ul>
+				<?php endif; ?>
+			</li>
+		<?php endforeach; ?>
+      </ul>
+	</div>
+</nav>	  
+	  

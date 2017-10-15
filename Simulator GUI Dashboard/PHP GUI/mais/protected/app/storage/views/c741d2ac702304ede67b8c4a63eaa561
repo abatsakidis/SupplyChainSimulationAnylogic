@@ -1,0 +1,56 @@
+<?php 
+$pages = array(10,20,30,50); 
+$orders = array('asc','desc'); 
+?>
+		   
+	<div class="table-footer">
+	<div class="row">
+	 <div class="col-sm-5">
+	  <div class="table-actions" style=" padding: 10px 0" id="<?php echo $pageModule;?>Filter">
+  			<input type="hidden" name="page" value="<?php echo $param['page']; ?>" />
+			<input type="hidden" name="md" value="<?php echo $masterdetail['filtermd']; ?>" />
+			
+		<select name="rows" class="select-alt" style="width:70px; float:left;"  >
+		  <?php foreach($pages as $p): ?> 
+		  <option value="<?php echo $p; ?>" 
+			<?php if($param['limit'] == $p): ?> selected="selected" <?php endif; ?>	
+		  ><?php echo $p; ?></option>
+		  <?php endforeach; ?>
+		</select>
+		<select name="sort" class="select-alt" style="width:100px;float:left;" >
+		  <option value=""><?php echo Lang::get('core.grid_sort');?></option>	 
+		  <?php foreach($tableGrid as $field): ?>
+		   <?php if($field['view'] =='1' && $field['sortable'] =='1'): ?> 
+			  <option value="<?php echo $field['field']; ?>" 
+				<?php if($param['sort'] == $field['field']): ?> selected="selected"	<?php endif; ?>	
+			  ><?php echo $field['label']; ?></option>
+			<?php endif; ?>	  
+		  <?php endforeach; ?>
+		 
+		</select>	
+		<select name="order" class="select-alt" style="width:70px;float:left;">
+		  <option value=""><?php echo Lang::get('core.grid_order'); ?></option>
+		   <?php foreach($orders as $o): ?>
+		  <option value="<?php echo $o; ?>"
+			<?php if($param['order'] == $o): ?>	selected="selected"	<?php endif; ?>	
+		  ><?php echo ucwords($o); ?></option>
+		 <?php endforeach; ?>
+		</select>	
+		<button type="button" class="btn  btn-primary btn-sm" onclick="ajaxFilter('#<?php echo $pageModule;?>','<?php echo $pageUrl; ?>/data')" style="float:left;"><i class="fa  fa-search"></i> GO</button>	
+	 
+	  </div>					
+	  </div>
+	   <div class="col-sm-3">
+		<p class="text-center" style=" padding: 25px 0">
+		<?php echo Lang::get('core.grid_displaying'); ?> :  <b><?php echo $pagination->getFrom(); ?></b> 
+		<?php echo Lang::get('core.grid_to'); ?> <b><?php echo $pagination->getTo(); ?></b> 
+		<?php echo Lang::get('core.grid_of'); ?> <b><?php echo $pagination->getTotal(); ?></b>
+		</p>
+	   </div>
+		<div class="col-sm-4" id="<?php echo $pageModule;?>Paginate">			 
+	  <?php echo $pagination->appends($pager)->links(); ?>
+	  </div>
+	  </div>
+	</div>	
+	
+	

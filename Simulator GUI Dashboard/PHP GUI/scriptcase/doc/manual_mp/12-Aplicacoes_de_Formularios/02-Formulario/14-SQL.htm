@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<link rel=Stylesheet type="text/css" media=all href="../../scriptcase.css">
+	<TITLE>SQL</TITLE>
+</HEAD>
+<BODY>
+<H1>SQL</H1>
+<p>In this module are defined the attributes relative to
+the connection with the table in that the form was created. We can
+define the primary key, filters, ordinances for the create form.</P>
+<p><IMG SRC="img/configuracao_sql.jpg"><BR>
+    <span class="sob_figura">Image1: Interface of SQL Configuration.</span></P>
+<UL>
+	<LI><p><B>Choosing
+	the fields that are primary key - </B><SPAN>In
+	this function it is shown an combobox object with an asterisk beside,
+	that indicates what are the fields that compose the primary key of
+	the SQL table. In the majority cases, the Scriptcase identifies it,
+	for the cases that this don't happen, the user will must do this
+	identification, using the buttons beside to do the choose of the
+	key. See how the buttons act:</SPAN></P>
+  <UL>
+		<LI><strong>On/Off
+		Button</strong> - Give or remove the attribute from the primary key of
+		the field. The defined field as primary key presents an asterisk at
+		the left side of its name.
+	  <LI><strong>All
+		Button</strong> - Define all fields as primary key. These fields
+		become to present an asterisk at the left side of its name.
+	  <LI><strong>None</strong> - Remove all fields. Normally it is used to clean all
+		definitions of the On/Off and restart the process.
+	  <LI><strong>Ordinance
+		Buttons</strong> - They are the arrows that stay at the right side of
+		the combobox. Allow to order the fields of the primary key, putting
+		it in the desired ordinance. To order click on the field and use
+		the arrows to do the movement
+	</UL>
+</UL>
+<UL>
+	<LI>
+	  <P><B>Where
+	Condition - </B>Option
+	 to  the user enter the <B>WHERE</B>
+	clause to filter  sql records.</P>
+  <LI>
+	  <P><B>Order By
+	- </B>Allows the user write an ORDER BY clause that will
+	determine the order of the records. By default the records are ordered by  primary key.</P>
+</UL>
+<UL>
+	<LI>
+	  <p><STRONG>Connection
+	- </STRONG>Show
+	the connection name (database) that the application is using for its
+	execution, this connection can be traded for another that have the
+	same tables (SQL).</P>
+	<LI>
+	  <p><STRONG>Table
+	Name - </STRONG>Table
+	name that the form application is using.</P>
+	<LI>
+	  <p><STRONG>Variable
+	for Table - </STRONG>
+	These filled fields allows that part of the table name defined in
+	the select to be traded before the execution of the command by a
+	content of a variable.<BR>
+	<BR>
+      <IMG SRC="../../comuns/img/nome_variavel_tabela.jpg" NAME="figura2" ALIGN=BOTTOM BORDER=0> 
+	</P>
+	<P class="nota"><EM>Note: In the first
+	field you must fill it with the variable name. The second field must
+	be filled with the part of the table name to be traded.</EM>    </P>
+</UL>
+<ul>
+  <li>Case Sensitive -  Set it to &quot;No&quot; only if the database is configured for case-sensitive and it is desired that the filter does not respect this setting.</li>
+</ul>
+</BODY>
+</HTML>

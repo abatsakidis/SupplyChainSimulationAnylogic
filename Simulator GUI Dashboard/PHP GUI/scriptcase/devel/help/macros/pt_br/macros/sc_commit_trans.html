@@ -1,0 +1,25 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro efetiva uma série de transações na base de dados.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_commit_trans("Conexão")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="titulo1">&nbsp;</p>
+<p>Esta macro tem por objetivo efetivar uma serie de transa&ccedil;&otilde;es na base de dados.<br /><br />Nas aplica&ccedil;&otilde;es de formul&aacute;rio, em eventos que cotenham qualquer macro que dependa de atualiza&ccedil;&atilde;o na base de dados (sc_AfterInsert, sc_AfterUpdate, sc_AfterDelete, sc_BeforeInsert, sc_BeforeUpdate ou sc_BeforeDelete) est&atilde;o automaticamente protejidas por controle de transa&ccedil;&atilde;o, desde que a conex&atilde;o seja a mesma da aplica&ccedil;&atilde;o.</p>
+<p>Caso o usu&aacute;rio, em alguma destes eventos, venha a utilizar um redirecionamento de aplica&ccedil;&atilde;o (macro "sc_redir") dever&aacute;, antes do redir, utilizar esta macro para garantir as transa&ccedil;&otilde;es efetuadas anteriormente.<br /><br />O par&acirc;metro "conex&atilde;o" &eacute; opcional, sendo necess&aacute;rio, apenas, se o comando for executado em uma base de dados diferente da especificada para a aplica&ccedil;&atilde;o.</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

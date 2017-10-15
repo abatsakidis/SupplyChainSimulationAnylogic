@@ -1,0 +1,54 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro converte o conteúdo do campo passado como parâmetro do formato de entrada para o formato de saída. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date_conv({Campo_Data}, "Formato_Entrada", "Formato_Saída")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Um trabalho relativamente complexo na programa&ccedil;&atilde;o &eacute; a manipula&ccedil;&atilde;o de datas. Para minimizar este problema o ScriptCase disponibiliza a fun&ccedil;&atilde;o para convers&atilde;o de datas <strong>sc_date_conv. </strong></p>
+<p class="corpo1"><br /> 
+<table style="border=" border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">A ou Y<br /></td>
+<td class="corpo1" align="left" valign="top">Usado para referenciar ano.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">M</td>
+<td class="corpo1" align="left" valign="top">Usado para referenciar m&ecirc;s.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">D</td>
+<td class="corpo1" align="left" valign="top">Usado para referenciar Dia.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Db_Format</td>
+<td class="corpo1" align="left" valign="top">Para formato de data do banco de dados.<br /></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p><span class="corpo1"><strong></strong></span></p>
+<p class="corpo1">&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>O c&oacute;digo abaixo converte a data do formato "dd/mm/aaaa" para o formato </strong><strong>"aaaammdd"</strong><br />{campo_data} = sc_date_conv({campo_data},"dd/mm/aaaa","aaaammdd");<br /><br /><br /><strong>Ex. 2:</strong> <strong>O c&oacute;digo abaixo converte a data do formato nativo do banco de dados para o formato </strong><strong>"dd/mm/aaaa"</strong><br />{campo_data} = sc_date_conv({campo_data},"db_format","dd/mm/aaaa");<br /><br /><br /><strong>Ex. 3:</strong> <strong>O c&oacute;digo abaixo converte a data do formato "dd/mm/aaaa" para o </strong><strong>formato nativo do Banco de dados</strong><br />{campo_data} = sc_date_conv({campo_data},"dd/mm/aaaa","db_format");</p>
+<p><span class="corpo1"><strong><br /></strong></span></p>
+<p><span class="corpo1"><strong><br /></strong></span><strong class="corpo1"></strong></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

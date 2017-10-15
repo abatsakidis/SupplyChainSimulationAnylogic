@@ -1,0 +1,36 @@
+h3 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: normal; color:#6f6f6f}
+h4 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; font-weight: normal; color:#6f6f6f}
+p {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt}
+li {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; margin-left: 5%;}
+.xtitle { font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12pt; font-weight: normal}
+.xresult { font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 9pt; font-weight: normal}
+.xlocation { font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 10pt; color:green; font-weight: normal}
+.xsmall { font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 8pt; color:green; font-weight: normal}
+a:link {
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000 !important;
+
+text-decoration: none;
+}
+a:visited {
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000 !important;
+background-color: #ffffff;
+text-decoration: none;
+}
+a:hover{
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #FFa750 !important;
+background-color: #ffffff;
+text-decoration: none;
+}
+a:active{
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000 !important;
+background-color: #c0c0c0;
+text-decoration: none;
+}

@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro executa o comando SQL passado como parâmetro ou o comando SQL contido no campo tipo ação SQL informado.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_exec_sql("Comando SQL", "Conexão")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="titulo1">&nbsp;</p>
+<p><span class="corpo1">Esta macro permite a execu&ccedil;&atilde;o de comandos SQL, para os quais o usu&aacute;rio poder&aacute; condicionar as circunst&acirc;ncias em que os mesmos devem ser executados.<br /><br />O par&acirc;metro "conex&atilde;o" &eacute; opcional, sendo necess&aacute;rio, apenas, se o comando for executado em uma base de dados diferente da especificada para a aplica&ccedil;&atilde;o.</span></p>
+<p><span class="corpo1"><br /><br /><strong>Ex. 1:</strong><br />if (sc_after_delete)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_exec_sql("<strong>delete</strong> from outratab <strong>where</strong> chave = {chave_ant}");<br />}<br /></span></p>
+<p><span class="corpo1"><strong></strong></span></p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

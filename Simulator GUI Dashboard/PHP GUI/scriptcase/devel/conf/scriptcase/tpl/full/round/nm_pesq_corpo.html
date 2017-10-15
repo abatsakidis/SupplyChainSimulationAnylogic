@@ -1,0 +1,36 @@
+<!-- BEGIN bloco -->
+    <TR>
+     <TD colspan="{NM_BLOCO_SPAN}" height="{NM_BLOCO_ALTURA}" {NM_BLOCO_COR_FUN}>
+      <TABLE border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+       <TR>
+        <TD {NM_BLOCO_FONT}>{NM_BLOCO_TITULO}</TD>
+         {NM_BLOCO_HELP}
+       </TR>
+      </TABLE>
+     </TD>
+    </TR>
+<!-- END bloco -->
+
+<!-- BEGIN bloco_linha -->
+   {NM_CMP_PHP}
+    <TD nowrap {NM_CEL_STYLE} > {NM_CMP_DADO} </TD>
+   {NM_FIM_PHP}
+<!-- END bloco_linha -->
+
+<!-- BEGIN bloco_registro -->
+     {NM_CMP_NOME}
+     {NM_COND_TD_INI} {NM_CMP_COND} {NM_COND_TD_FIM}
+     <TD {NM_SPAN} {NM_CSS_LINHA}>{NM_BI_DADOS}
+      <TABLE {NM_BI_OPC_TP} border="0" cellpadding="0" cellspacing="0">
+       <TR {NM_HIDE_CMP} valign="top">
+        <TD {NM_CSS_FONT_LIN}>
+           {NM_CMP_DADO}
+        </TD>
+       </TR>
+      </TABLE>
+     </TD>
+<!-- END bloco_registro -->
+
+<!-- BEGIN bloco_limpa -->
+    <TD {NM_LIMPA_STYLE} colspan="{NM_LIMPA_SPAN}" >&nbsp;</TD>
+<!-- END bloco_limpa -->

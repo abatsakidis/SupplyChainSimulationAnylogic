@@ -1,0 +1,576 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+
+<title>Date</title>
+<link rel=Stylesheet type="text/css" media=all href="../../../scriptcase.css">
+</head>
+<body>
+
+  <h1>Date </h1>
+  <p><SPAN><img src="img/data_geral.jpg"><br>
+<span class="sob_figura">Image1:</span>General Settings Interface</span></p>
+  <p><b>Attributes:</b></p>
+  <ul>
+    <li><strong>Data type - </strong>Define the  application field type.<strong><em> Date </em>fields are formatted according to specific date rules.</strong></li>
+
+  <li><strong>Label -</strong> Field title in the display. For example: a field identified in database as fld_client_name,
+        could be label Client Name. That is, the label is a field nickname in the application layer.</li>
+
+
+<LI> <STRONG>Do Not Repeat Value</STRONG> - Display the field only once (for records with equal values). See below.<span><br />
+    <br />
+    </span>
+    <table width="475" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="233"><img src="../../../comuns/campos/cons/img/nao_repetir_valorantes.jpg" /></td>
+        <td width="20" rowspan="2" valign="middle" bgcolor="#FFFFFF" style="margin-top:50px;"><br /></td>
+        <td width="255"><img src="../../../comuns/campos/cons/img/nao_repetir_valordepois.jpg" /></td>
+      </tr>
+      <tr>
+        <td><div align="center" class="titulo">Repeating value </div></td>
+        <td><div align="center" class="titulo">Without repeating value </div></td>
+      </tr>
+  </table>
+    <br>
+</LI>
+
+ <li><strong>SQL Type</strong> - Define the field type in the database.</li>
+
+  </ul>
+    <hr>
+  <H2>Date Format  </H2>
+<p><img src="img/formatando_data.jpg"><br>
+<span class="sob_figura">Image2: Values Format with regional settings.</span></p>
+<p><img src="img/formatando_data2.jpg"><br>
+<span class="sob_figura">Image3: Values Format without regional settings.</span></p>
+
+  <p>  <strong>Attributes</strong>:</p>
+  <ul>
+      <li><strong>Regional settings </strong> - Apply regional settings date formatting rules to the field. When selected (<em>Yes</em>) the option <em>Detail Mask</em> is displayed<em>. </em>Otherwise the developer can select the attribute <em>Display . </em>To set one of the attributes accordingly note the definitions below. (See <a href="../../../50-Ferramentas/18-Regionalidade/03-conf_regionais.htm">Regional settings</a>).</li>
+
+    <li><strong>Display  - </strong>Show a  list of predefined date display formats.</li>
+
+  </ul>
+  <li><strong> Detail Mask</strong> - Define the grid display format to the field, according to the  <em><strong>PHP Date</strong></em> function. <br>
+    <br>
+<blockquote>
+  Examples: 
+  <table>
+    <tr bgcolor="#FFFFFF">
+      <td width="157"><p>d-m-Y </p></td>
+      <td width="201"><p>25-09-2009 </p></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td width="157"><p>F/Y </p></td>
+      <td width="201"><p>September/2009 </p></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td width="157"><p>j/n/Y \a\s g:i:s A </p></td>
+      <td width="201"><p>25/9/2001  14:30:11 PM </p></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td width="157"><p>l, d \d\e F \d\e Y </p></td>
+      <td width="201"><p>Thursday, January 25 2009 </p></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td width="157"><p>h:i:s </p></td>
+      <td width="201"><p>11:33:20 </p></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td width="157"><p>#h:i:s </p></td>
+      <td width="201"><p>123:43:27 (in hours) </p></td>
+    </tr>
+  </table>
+
+  <p> Formatting Table </p>
+    <table>
+      <tr>
+        <td width="19"></td>
+      <td width="215"></td>
+      <td width="239"></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>j </p></td>
+      <td width="215"><p>day of the month </p></td>
+      <td width="239"><p>"1" to "31" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>d </p></td>
+      <td width="215"><p>day do month with zero at left </p></td>
+      <td width="239"><p>"01" a "31" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>n </p></td>
+      <td width="215"><p>month </p></td>
+      <td width="239"><p>"1" a"12" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>m </p></td>
+      <td width="215"><p>month with zero at left </p></td>
+      <td width="239"><p>"01" a"12" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>M </p></td>
+      <td width="215"><p>month (written format with 3 char) </p></td>
+      <td width="239"><p>"Jan" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>F </p></td>
+      <td width="215"><p>month (written format complete) </p></td>
+      <td width="239"><p>"January" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>y </p></td>
+      <td width="215"><p>year with 2 digits </p></td>
+      <td width="239"><p>"09" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>Y </p></td>
+      <td width="215"><p>year with 4 digits </p></td>
+      <td width="239"><p>"2009" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>D </p></td>
+      <td width="215"><p>weekday with 3 char </p></td>
+      <td width="239"><p>"Mon" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>l </p></td>
+      <td width="215"><p>weekday  (written format complete) </p></td>
+      <td width="239"><p>"Monday" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>g </p></td>
+      <td width="215"><p>hour 12-hours format</p></td>
+      <td width="239"><p>"1" a "12" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>G </p></td>
+      <td width="215"><p>hour  24-hours format </p></td>
+      <td width="239"><p>"0" a "23" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>h </p></td>
+      <td width="215"><p>hour 12-hours format with zero at left </p></td>
+      <td width="239"><p>"01" a "12" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>H </p></td>
+      <td width="215"><p>hour 24-hours format with zero at left </p></td>
+      <td width="239"><p>"00" a "23" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>i </p></td>
+      <td width="215"><p>minutes </p></td>
+      <td width="239"><p>"00" a "59" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>s </p></td>
+      <td width="215"><p>seconds with zero at left </p></td>
+      <td width="239"><p>"00" a "59" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>a </p></td>
+      <td width="215"><p>pre and pos meridian </p></td>
+      <td width="239"><p>"am" a "pm" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>A </p></td>
+      <td width="215"><p>pre and  pos meridian </p></td>
+      <td width="239"><p>"AM" a "PM" </p></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>#h </p></td>
+      <td width="215"><p> hours accumulator </p></td>
+      <td width="239"></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>#i </p></td>
+      <td width="215"><p>minutes accumulator</p></td>
+      <td width="239"></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>#s </p></td>
+      <td width="215"><p>seconds accumulator </p></td>
+      <td width="239"></td>
+    </tr>
+      <tr bgcolor="#FFFFFF">
+        <td width="19"><p>\ </p></td>
+      <td width="215"><p>escape </p></td>
+      <td width="239"></td>
+    </tr>
+    </table>
+  </blockquote>
+ </li>
+<li><strong>Internal Format -  </strong>Define the field formatting when SQL type is different from <em><strong>Date. </strong></em>Use the characters<strong> Y, M</strong> and <strong>D </strong>for<strong> Year</strong>, <strong>Month </strong>and <strong>Day </strong>to enter the format.<em><strong><br>  
+  <br>
+Example1:</strong></em> For a date stored as  <strong>char(8)</strong> SQL where the positions <strong>1</strong> to <strong>4</strong> represents the year, the position <strong>5</strong> and <strong>6</strong> the month and the positions <strong>7</strong> and <strong>8</strong> the day,  define the internal format as: <strong>YYYYMMDD<br>
+<br>
+</strong><em><strong>Example2:</strong></em> For a date stored as  <strong>char(6)</strong> SQL where the positions <strong>1</strong> to<strong>2</strong> represents the month and the positions<strong> 3</strong> and<strong> 6 </strong>the year ,  define the internal forma<strong>t </strong>as: <strong>MMYYYY</strong></li>
+
+<link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+<hr>
+<h2><br>
+  Grid Lookup </h2>
+<p>Used to  modify the display of a grid field. For example, a field<strong> gender</strong> in the database with values <strong>M</strong> or <strong>F</strong>  is displayed as <em><strong>Male or Female</strong></em> (see <a href="#lookup_manual">lookup manual</a>) or have the display values retrieved from a   database table (see <a href="#lookup_automatico">lookup automatic</a>).</p>
+<table width="407" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="../../../comuns/campos/cons/img/apl_cons_sem_lookup.jpg" /></td>
+    <td rowspan="2" bgcolor="#ffffff" class="style3"><p>&nbsp;</p>
+    <p><img src="../../../comuns/campos/cons/img/seta.jpg" align="middle" /></p></td>
+    <td>
+    <img src="../../../comuns/campos/cons/img/apl_cons_com_lookup.jpg" /></td>
+  </tr>
+  <tr>
+    <td><div align="center" class="titulo">Before Lookup</div></td>
+    <td><div align="center" class="titulo">After Lookup</div></td>
+  </tr>
+</table>
+<br />
+<br />
+<hr />
+<h2><a name="lookup_automatico" id="lookup_automatico"></a><br />
+  Grid Lookup - Automatic</h2>
+<p>Lookup used to modify a field display  dynamically,    retrieving the values from a   database table.</p>
+<img src="../../../comuns/campos/cons/img/lookup_de_consulta_automatico.jpg" /><br>
+<span class="sob_figura">Figure3:  Automatic Grid Lookup Interface. </span><br>
+<p><strong>Attributes : </strong></p>
+<ul>
+  <li><strong>SQL Select Statement </strong>- Define the SQL statement to retrieve the grid field display value. The statement has the following  format &quot;SELECT display_field FROM table WHERE key_field = {grid_field}&quot;. <br />
+   The grid field should be reference enclosed in curly brackets. During execution the field enclosed in curly brackets is substituted by its table value. </li>
+  <li><strong>Multiple Options - </strong> Select <strong><em>Yes</em></strong> when the <em>Select</em> <em>Command entered </em>return more than one informed value. <br />
+  </li>
+  <li><strong>Delimiter - </strong> Define the delimiter between the multiple values returned by the <em>Select Command. </em> Use this option when <em>Multiple Options</em> = <strong><em>Yes</em></strong>.</li>
+  <li><strong>Use lookup in</strong>:<br />
+    <blockquote>
+	<table width="564" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="94" height="20"><strong>Grid</strong></td>
+        <td width="464">Apply the <em>lookup </em> in all grid types (HTML, PDF, XML , CSV e RTF).</td>
+      </tr>
+      <tr bgcolor="#FFFFCC">
+        <td><strong>Summary</strong></td>
+        <td>Apply the <em>lookup </em> summary only (HTML e  PDF).</td>
+      </tr>
+      <tr>
+        <td><strong>Both</strong></td>
+        <td>Same as selecting Grid and Summary  </td>
+      </tr>
+    </table>
+	</blockquote>
+  </li>
+</ul>
+<ul>
+  <br>
+  <li><strong>Default Value - </strong> Define a default value  used when the select command does not return any value. <br>
+  </li>
+  <li><strong>Display original and lookup value - </strong>Select  <em><strong>No</strong>, </em>to display only the<em>  Select Command </em>   return value. Otherwise, the field  original value and the <em>Select Command </em> return value separated by the character  defined in <em>Separated by</em>.<br>
+  </li>
+  <li><strong>Separated by   - </strong> Define  the characters used to separate the field  original value and the <em>Select Command </em> return value. Use this option when <em>Display original and lookup value </em> = <strong><em>Yes</em></strong>.</li>
+  <li><strong>Choose connection   - </strong> Select a different connection available in the project.</li>
+</ul>
+<p><a name="lookup_manual" id="lookup_manual"></a></p>
+<hr />
+<H2>Grid Lookup  - Manual </h2>
+<p>Lookup used to modify a field display  with  predefined values.</p>
+<p><img src="../../../comuns/campos/cons/img/lookup_de_consulta_manual.jpg"  /><br />
+  <span class="sob_figura">Figure1:  Manual Grid LookupInterface. </span><br />
+</p>
+<p><strong> Attributes :</strong></p>
+<ul>
+  <li><strong> Lookup Types - </strong>Define the lookup operation mode: <em>Single Value</em><em> , Multiple Values (Delimiter), Multiple Values (Position) and Multiple Values (Binary)</em>. <br />
+    <br />
+  </li>
+</ul>
+<fieldset>
+        <legend class="titulo">&nbsp;Single Value&nbsp;</legend>
+        <p> Display a single value to the field by direct substitution. The value store in the database is substituted by a label  defined in a list. </p>
+<p class="sob_figura"><img src="../../../comuns/campos/cons/img/lookup_de_consulta_manual.jpg" /><br />Figure1.1: Single Value lookup settings.</p>
+      
+      <ul>
+      <li><strong>Label - </strong> Text displayed in the grid. <br />
+      </li>
+  <li><strong>Value  -</strong> Attribute stored in the table. For example,  <strong>M</strong> is displayed  <strong>Male</strong>. </li>
+</ul>
+</fieldset>
+<br />
+<br />
+<fieldset>
+<legend class="titulo">&nbsp;<strong>  Multiple Values (Delimiter)</strong>&nbsp;</legend>
+<p>Display more than one value for the selected field by replacing the string  saved in the table by full description. The string values are separated by a defined delimiter. For example, the  stored value S;M is displayed Sports(S) and Movies(M) in a list.</p>
+<p class="sob_figura"><img src="../../../comuns/campos/cons/img/lookupdelimitador.jpg" /><br />Figure1.2: Multiple Value lookup settings (delimiter).</p>
+
+<ul>
+	<li><strong>Label - </strong> Text displayed in the grid. <br />
+	</li>
+  	<li><strong>Value  -</strong> Attribute stored in the table. </li>
+  	<li><strong>Delimiter</strong> -  Define the  character used to separated string values.</li>
+</ul>
+</fieldset>
+<br />
+<br />
+<fieldset>
+<legend class="titulo">&nbsp;<strong>Multiple Values  (Position)</strong>&nbsp; </legend>
+<p>Display more than one value for the selected field by replacing the string  saved in the table by full description. The values are retrieved based on the string position and size. </p>
+<p>For example, in a string to save<strong> Gender</strong> (a byte) , <strong>Marital Status</strong> (a byte) and <strong>Hobby </strong> (two bytes) the information stored includes label, start position in the string and size in bytes that each info occupies according a defined the list: </p>
+<table width="60%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td bgcolor="#CCCCCC"><strong>Label </strong></td>
+    <td bgcolor="#CCCCCC"><strong>Value </strong></td>
+    <td bgcolor="#CCCCCC"><strong>Start</strong></td>
+    <td bgcolor="#CCCCCC"><strong>Size</strong></td>
+  </tr>
+  <tr>
+    <td>Male</td>
+    <td>M</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Female</td>
+    <td>F</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr bgcolor="#f4f4f4">
+    <td>Married</td>
+    <td>C</td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr bgcolor="#f4f4f4">
+    <td>Single</td>
+    <td>S</td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Sports</td>
+    <td>SP</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Movies</td>
+    <td>MO</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Books</td>
+    <td>BO</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Traveling</td>
+    <td>TR</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+</table>
+<p> A string saved as <strong>MMBO</strong> is displayed: <strong>MaleMarried Books </strong>. </p>
+<p class="sob_figura"><img src="../../../comuns/campos/cons/img/lookupposicao.jpg" /><br />Figure1.3: Multiple Value lookup settings  (position).</p>
+
+<ul>
+  <li><strong>Label - </strong> Text displayed in the grid. <br />
+  </li>
+  <li><strong>Value  -</strong> Attribute stored in the table. </li>
+  <li><strong>Start - </strong>String start position for the data stored. (First position is always 1). </li>
+  <li><strong>Size</strong> - Data size in bytes in the string. </li>
+</ul>
+<p>&nbsp;</p>
+</fieldset>
+<br />
+<br />
+<fieldset>
+<legend class="titulo">&nbsp;<strong>Multiple Values (Binary)</strong>&nbsp;</legend>
+<p> Display more than one value for the selected field by replacing the string  saved in the table by full description. In this options the values are stored as decimal and retrieved by specific algorithm. </p>
+<p>For example, the following information list has the data and the  value automatically attributed relative to the position that each value occupies. (the values are displayed): </p>
+<table width="40%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="42%" bgcolor="#CCCCCC"><strong> Attributed Value</strong></td>
+    <td width="58%" bgcolor="#CCCCCC"><strong>Lookup Description</strong></td>
+  </tr>
+  <tr>
+    <td width="42%">1</td>
+    <td width="58%">Sports</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Movies</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Books</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Traveling</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Music</td>
+  </tr>
+</table>
+<p>To display the info 11 e 12 (stored in the database) according to the list above use the following algorithm:<br />
+  <br />
+  <strong>11 = 1 + 2 + 8 = (Sports - Movies - Traveling) </strong></p>
+<table width="40%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="41%" height="19" bgcolor="#CCCCCC"><strong>Attributed Value </strong></td>
+    <td width="59%" bgcolor="#CCCCCC"><strong>Lookup Description</strong></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td width="41%">1</td>
+    <td width="59%">Sports</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td>2</td>
+    <td>Movies</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Books</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td>8</td>
+    <td>Traveling</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Music</td>
+  </tr>
+</table>
+<p><br />
+  <strong> 12 =  4 + 8 = (
+Books - Traveling) </strong></p>
+<table width="40%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="41%" height="21" bgcolor="#CCCCCC"><strong>Attributed Value</strong></td>
+    <td width="59%" bgcolor="#CCCCCC"><strong>Lookup Description</strong></td>
+  </tr>
+  <tr>
+    <td width="41%">1</td>
+    <td width="59%">Sports</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Movies</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Books</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Traveling</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Music</td>
+  </tr>
+</table>
+<p class="sob_figura"><img src="../../../comuns/campos/cons/img/lookupbinario.jpg" /><br />Figure1.4: Multiple Value lookup settings   (Binary).</p>
+
+<p><strong>Label - </strong> Text displayed in the grid. <br />
+</p>
+</fieldset>
+
+<p>&nbsp;</p>
+<ul>
+  <li><strong>Insert</strong> - Add to the value  list the 
+        values entered in <em>Label</em> and <em>Value</em>.</li>
+    <li><strong>Update</strong> - Update selected item.</li>
+    <li><strong>Remove </strong>- Remove selected item. </li>
+    <li><strong>Clear </strong>- Clear the attributes.</li>
+  <li><strong> Save </strong>- Save the values entered to the &quot;lookup definitions&quot; list to be used afterwards (for reuse).<br />
+  </li>
+</ul>
+<ul>
+    <li><strong>Load  lookup definitions </strong>- Loads a   pre-defined <em>Values List </em>to use in lookup. </li>
+    <li><strong>Use lookup in</strong>:<br />
+      <blockquote>
+        <table width="564" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="94" height="20"><strong>Grid</strong></td>
+            <td width="464">Apply the <em>lookup </em> in all grid types (HTML, PDF, XML , CSV e RTF).</td>
+          </tr>
+          <tr bgcolor="#FFFFCC">
+            <td><strong>Summary</strong></td>
+            <td>Apply the <em>lookup </em> only in (HTML e  PDF).</td>
+          </tr>
+          <tr>
+            <td><strong>Both</strong></td>
+            <td>Same as selecting Grid and Summary  </td>
+          </tr>
+        </table>
+      </blockquote>
+      <br />
+</li>
+</ul>
+<ul>
+  <li><strong>Default Value - </strong> Define a default value  used when the select command does not return any value. <br />
+  </li>
+  <li><strong>Display original and lookup value - </strong>Select <em><strong>No</strong>, </em>to display only t<em>he Label value </em>. Otherwise, the field  original value and the <em>Label value are displayed </em> separated by the character  defined in <em>Separated by</em>.<br />
+  </li>
+  <li><strong>Separated by   - </strong> Define  the characters used to separate the field  original value and the <em>Select Command </em> return value. Use this option when <em>Display original and lookup value </em> = <strong><em>Yes</em></strong>.</li>
+</ul>
+<p>&nbsp;</p>
+
+<hr>
+<p class="cabecalho2"><b>DISPLAY SETTINGS </b></p>
+<p>Scriptcase will attribute to the field the options bellow.</p>
+<p><img src="../../../comuns/campos/cons/img/conf_visualizacao.jpg" /><br />
+  <span class="sobfigura1">Figure5: Display   Settings</span>
+</p>
+<p><b><span>Attributes: </span></b></p>
+<ul>
+  <li><b>Font Style </b> - Field font type.</li>
+  <li><b>Font Size</b> - Font size.</li>
+  <li><b>Italic Text</b> - Uses Italic font.</li>
+  <li><b>Bold Text</b> - Apply bold formatting to the field.</li>
+  <li><b>Number of characters</b> - Characters limit in the field.</li>
+  <li><b>Horizontal Alignment</b> -Field horizontal alignment.</li>
+  <li><b>Vertical Alignment</b> - Field Vertical alignment.</li>
+  <li><b>Background Image</b> - Uses a background image in the field.</li>
+  <li><b>Line Break</b> - Uses line break in the field.</li>
+  <li><b>Font Color</b> - Font color (Select from color palette).</li>
+  <li><b>Background color</b> - Background color (Select from color palette).</li>
+  <li><b>Width</b> - Field width.</li>
+  <li><b>Height (px)</b> - Field height. </li>
+  <li><b>Title Horizontal Aligment</b> - Horizontal alignment of the title. </li>
+  <li><b>Title Horizontal Aligment</b> - Vertical alignment of the title. </li>
+  <li><b>Bold</b> - Apply bold formatting to field title only.</li>
+</ul>
+
+<hr>
+<h2>Column Chart </h2>
+<p>Display an icon on the side of the Field Title to display a chart.</p>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="../../../comuns/campos/cons/img/grafico_de_coluna.jpg" /></td>
+	  </tr>
+	  <tr><td>Column Chart Interface. </td>	</tr>
+
+</table>
+<br />
+<br />
+<br />
+<b>Attributes:</b>
+<ul>
+  <li><!--#include file="tipos_graficos.htm" --></li>
+  <li><strong>Group by Label</strong> -  Column group  by label. Similar to the effect of a group     by in a Select.</li>
+  <li><strong>Summary Function</strong> - Summary function applied: Count, Sum,     Max, Min or Avg.</li>
+  <li><strong>Configurable Chart</strong> - User configurable Chart parameters.</li>
+  <li><strong>Display Values</strong> - Display Chart Values.</li>
+  <li><b>Column for Label</b> - Column Label.</li>
+  <li><b>Chart  width </b>-     Chart width, in pixels.</li>
+  <li><b>Chart height</b> - Chart height, in     pixels.</li>
+  <li><strong>Legend height</strong> - Maximum height,  in percentage between the chart and the space (on top) reserved for captions.</li>
+</ul>
+
+<!--#include file="layout_graficos.htm" -->
+
+</body>
+</html>

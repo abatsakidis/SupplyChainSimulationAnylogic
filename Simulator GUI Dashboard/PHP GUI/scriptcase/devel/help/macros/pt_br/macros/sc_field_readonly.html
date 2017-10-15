@@ -1,0 +1,33 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro permite, dinamicamente, transformar em readonly um determinado campo do formulário.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_field_readonly({Campo}, on/off)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Permite, dinamicamente, transformar em readonly um determinado campo do <strong>formul&aacute;rio</strong>.</p>
+<p class="corpo1"><br />Em princ&iacute;pio, os campos readonly s&atilde;o especificados na interface de configura&ccedil;&atilde;o do formul&aacute;rio e funcionam da seguinte forma: No modo de atualiza&ccedil;&atilde;o, os campos aparecem na forma readonly e, no modo de inclus&atilde;o, os campos aparecem abertos para digita&ccedil;&atilde;o.</p>
+<p class="corpo1">O segundo par&acirc;metro "on/off" &eacute; opcional, e serve para que, em um evento 
+Ajax, seja poss&iacute;vel definir se um campo vai ficar como read-only (on) ou
+ deixar de ser read-only (off).</p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1: Se desejamos que um determinado campo, especificado na interface como readonly, permane&ccedil;a readonly no </strong><strong>modo de inclus&atilde;o, teremos: </strong><br />if (sc_btn_new)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_field_readonly({meu_campo});<br />} </span></p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2: Se desejamos que um determinado campo, que n&atilde;o tenha sido especificado na interface como readonly, apare&ccedil;a na forma readonly, teremos:</strong><br />sc_field_readonly({meu_campo});</p>
+<p class="corpo1">&nbsp;</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

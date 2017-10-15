@@ -1,0 +1,107 @@
+<?php /**/ usort($tableGrid, "SiteHelpers::_sort") /**/ ?>
+  <div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo $pageTitle; ?> <small><?php echo $pageNote; ?></small></h3>
+      </div>
+      <ul class="breadcrumb">
+        <li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home');; ?></a></li>
+        <li class="active"><?php echo $pageTitle; ?></li>
+      </ul>   
+
+	
+	 </div> 
+	 
+
+	<div class="page-content-wrapper">
+		<div class="toolbar-line">
+				<?php if($access['is_add'] ==1): ?>
+				<a href="<?php echo URL::to('groups/add'); ?>" class="tips btn btn-xs btn-primary"  title="<?php echo Lang::get('core.btn_create'); ?>">
+				<i class="icon-plus-circle2"></i>&nbsp; <?php echo Lang::get('core.btn_create'); ?></a>
+				<?php endif; ?>  
+				<?php if($access['is_remove'] ==1): ?>
+				<a href="javascript://ajax"  onclick="SximoDelete();" class="tips btn btn-xs btn-danger" title="<?php echo Lang::get('core.btn_remove'); ?>">
+				<i class="icon-bubble-trash"></i>&nbsp; <?php echo Lang::get('core.btn_remove'); ?></a>
+				<?php endif; ?> 		
+				<?php if($access['is_excel'] ==1): ?>
+				<a href="<?php echo URL::to('groups/download'); ?>" class="tips btn btn-xs btn-default" title="<?php echo Lang::get('core.btn_download'); ?>">
+				<i class="icon-folder-download2"></i>&nbsp;<?php echo Lang::get('core.btn_download'); ?> </a>
+				<?php endif; ?>		
+				<?php if(Session::get('gid') ==1): ?>
+				<a href="<?php echo URL::to('module/config/groups'); ?>" class="tips btn btn-xs btn-default"  title="<?php echo Lang::get('core.btn_config'); ?>">
+				<i class="icon-cog"></i>&nbsp; <?php echo Lang::get('core.btn_config'); ?></a>
+				<?php endif; ?>  	  
+		</div>  		 
+
+	<ul class="nav nav-tabs" style="margin-bottom:10px;">
+	  <li><a href="<?php echo URL::to('users'); ?>"> Users </a></li>
+	  <li  class="active"><a href="<?php echo URL::to('groups'); ?>">Groups</a></li>
+	</ul>		
+		
+	<?php if(Session::has('message')): ?>	  
+		   <?php echo Session::get('message'); ?>
+	<?php endif; ?>	
+	<?php echo $details; ?>
+	<div class="table-responsive">
+	 <?php echo Form::open(array('url'=>'groups/destroy/', 'class'=>'form-horizontal' ,'ID' =>'SximoTable' )); ?>
+    <table class="table table-striped ">
+        <thead>
+			<tr>
+				<th> No </th>
+				<th> <input type="checkbox" class="checkall" /></th>
+				<?php foreach ($tableGrid as $t): ?>
+				<?php if($t['view'] =='1'): ?>
+				<th><?php echo $t['label']; ?></th>
+				<?php endif; ?>
+				<?php endforeach; ?>
+				<th><?php echo Lang::get('core.btn_action'); ?></th>
+			  </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach ($rowData as $row): ?>
+                <tr>
+					<td width="50"> <?php echo ++$i; ?> </td>
+					<td width="50"><input type="checkbox" class="ids" name="id[]" value="<?php echo $row->group_id; ?>" />  </td>				
+				 <?php foreach ($tableGrid as $field): ?>
+					 <?php if($field['view'] =='1'): ?>
+					 <td>					 
+					 	<?php if($field['attribute']['image']['active'] =='1'): ?>
+							<img src="<?php echo asset($field['attribute']['image']['path'].'/'.$row->$field['field']); ?>" width="50" />
+						<?php else: ?>	
+							<?php /**/ $conn = (isset($field['conn']) ? $field['conn'] : array() ) /**/ ?>
+							<?php echo SiteHelpers::gridDisplay($row->$field['field'],$field['field'],$conn); ?>	
+						<?php endif; ?>						 
+					 </td>
+					 <?php endif; ?>					 
+				 <?php endforeach; ?>
+				 <td>
+				 
+					<?php /**/ $id = SiteHelpers::encryptID($row->group_id) /**/ ?>
+				 	<?php if($access['is_detail'] ==1): ?>
+					<a href="<?php echo URL::to('groups/show/'.$id); ?>"  class="tips btn btn-xs btn-primary"  title="<?php echo Lang::get('core.btn_view'); ?>"><i class="fa  fa-search"></i> </a>
+					<?php endif; ?>
+					<?php if($access['is_edit'] ==1): ?>
+					<a  href="<?php echo URL::to('groups/add/'.$id); ?>"  class="tips btn btn-xs btn-success"  title="<?php echo Lang::get('core.btn_edit'); ?>"> <i class="fa fa-edit"></i></a>
+					<?php endif; ?>
+					<?php foreach($subgrid as $md): ?>
+					<a href="<?php echo URL::to($md['module'].'?md='.$md['master'].'+'.$md['master_key'].'+'.$md['module'].'+'.$md['key'].'+'.$id); ?>"  class="tips btn btn-xs btn-info"  title=" <?php echo $md['title']; ?>">
+						<i class="icon-eye2"></i></a>
+					<?php endforeach; ?>							
+				
+				</td>				 
+                </tr>
+            <?php endforeach; ?>
+              
+        </tbody>
+      
+    </table>
+	</div>
+	<?php echo Form::close(); ?>
+	<?php echo $__env->make('footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	
+	
+	
+	</div>	  
+</div>	

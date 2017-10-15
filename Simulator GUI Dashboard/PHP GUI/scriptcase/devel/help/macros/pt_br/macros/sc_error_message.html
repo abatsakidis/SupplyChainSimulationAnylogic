@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro gera uma mensagem de erro.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_error_message("Texto")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="titulo1">&nbsp;</p>
+<p class="corpo1">Esta macro tem por objetivo possibilitar ao usu&aacute;rio enviar mensagens de erro.<br /><br />Nas aplica&ccedil;&otilde;es de "<strong>Formul&aacute;rio e Controle</strong>" as mensagens ser&atilde;o apresentadas juntamente com as demais mensagens de erro encontradas na aplica&ccedil;&atilde;o, exceto se utilizada a macro "<strong>sc_erro_exit</strong>".</p>
+<p><span class="corpo1">Nas aplica&ccedil;&otilde;es de "<strong>Consulta e Menu</strong>" as mensagens s&oacute; ser&atilde;o apresentadas atrav&eacute;s da macro "<strong>sc_erro_exit</strong>".<br /><br /><strong></strong></span></p>
+<p><span class="corpo1"><strong>Ex. 1:</strong><br />if ({desconto} &gt; 0,10 &amp;&amp; [glo_usuario] == 'operador')<br />{ <br />&nbsp;&nbsp;&nbsp;&nbsp; sc_error_message("Desconto de " . {desconto} . "acima do permitido");<br />} </span></p>
+<p><span class="corpo1">Neste exemplo, se for digitado um valor no campo desconto acima de 0,10 e o usu&aacute;rio tentar inserir ou salvar este registro, a opera&ccedil;&atilde;o ser&aacute; encerrada e a mensagem de erro ser&aacute; apresentada.<br />&Eacute; obrigat&oacute;rio que o comando termine com ");" (fecha parentese e ponto e v&iacute;rgula) que servem de delimitador para o interpredador da macro.</span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

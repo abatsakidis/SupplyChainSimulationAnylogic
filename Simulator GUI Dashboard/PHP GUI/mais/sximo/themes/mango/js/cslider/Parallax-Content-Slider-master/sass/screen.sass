@@ -1,0 +1,407 @@
+/* Compass main styles (or centralized imports).
+
+@import compass/reset
+@import compass/css3
+
+$color: #1e54a1
+
+body
+  background: $color
+
+.boxes
+  .box
+    float: left
+    width: 100px
+    height: 100px
+    text-align: center
+  .one
+    background: darken($color, 10%)
+  .two
+    background: lighten(saturate($color, 20%), 20%)
+  .three
+    background: adjust_hue($color, 5deg)
+
+// Slideshow canvas, with parallax background motion effect.
+.da-slider
+  width: 100%
+  min-width: 520px
+  height: 400px
+  position: relative
+  margin: 30px auto
+  overflow: hidden
+  background: transparent url(../images/waves.png) repeat 0% 0
+  +single-transition(background-position, 1.4s, ease-in-out, 0.3s)
+
+// Individual slide settings. All slides contain a heading, a paragraph,
+// an image and a call to action link.
+.da-slide
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  font-family: "proxima-nova", Arial, sans-serif
+  text-align: left
+  & .da-text,
+  & .da-title,
+  & .da-img,
+  & .da-link
+    position: absolute
+    opacity: 0
+    left: 110%
+  & .da-title
+    color: #73b2ff
+    font-size: 46px
+    width: 50%
+    top: 0
+    white-space: nowrap
+    z-index: 10
+    font-weight: 700
+    font-family: "proxima-nova", Arial, sans-serif
+    text-transform: uppercase
+    +text-shadow(1px 1px 1px rgba(0, 0, 0, 0.1))
+  & .da-text
+    width: 40%
+    top: 82px
+    color: white
+    font-size: 28px
+    line-height: 1.2em
+    overflow: hidden
+    font-weight: 100
+  & .da-img
+    text-align: center
+    width: 50%
+    top: 20px
+    height: 256px
+    line-height: 320px
+    left: 110%
+  & .da-link
+    bottom: 25px
+    width: 100px
+    & a
+      white-space: nowrap
+
+// Slider FB (not sure what fb stands for yet?)
+.da-slider-fb .da-slide
+  left: 100%
+  &.da-slide-current
+    left: 0
+  & .da-title,
+  & .da-text,
+  & .da-link
+    left: 10%
+    opacity: 1
+  & .da-img
+    left: 50%
+    opacity: 1
+
+// Current slide styles.
+.da-slide-current
+  z-index: 500
+  & .da-title,
+  & .da-text,
+  & .da-link
+    left: 10%
+    opacity: 1
+  & .da-img
+    left: 50%
+    opacity: 1
+
+// slideshow dots
+.da-dots
+  width: 100%
+  position: absolute
+  text-align: center
+  left: 0
+  bottom: 20px
+  z-index: 2000
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+  & span
+    display: inline-block
+    position: relative
+    width: 12px
+    height: 12px
+    background: #73B2FF
+    margin: 3px
+    cursor: pointer
+    +border-radius(50%)
+    +box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1) inset, 1px 1px 1px rgba(255, 255, 255, 0.1))
+    &.da-dots-current:after
+      content: ''
+      width: 8px
+      height: 8px
+      position: absolute
+      top: 2px
+      left: 2px
+      +border-radius(50%)
+      /* non-css3
+      background: white
+      /* for ie
+      +filter-gradient(white, #ededed, vertical)
+      /* css3
+      +background-image(linear-gradient(top, white, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%))
+
+// Left & right arrows
+.da-arrows
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+  & span
+    position: absolute
+    top: 50%
+    height: 30px
+    width: 30px
+    background: #73B2FF
+    cursor: pointer
+    z-index: 2000
+    +border-radius(50%)
+    +opacity(0)
+    +box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1) inset, 1px 1px 1px rgba(255, 255, 255, 0.1))
+    +single-transition(opacity 0.4s ease-in-out 0.2s)
+    &:after
+      content: ''
+      position: absolute
+      width: 20px
+      height: 20px
+      top: 5px
+      left: 5px
+      background: transparent url(../images/arrows.png) no-repeat top left
+      +border-radius(50%)
+      +box-shadow(1px 1px 2px rgba(0, 0, 0, 0.1))
+    &:hover:after
+      +box-shadow(1px 1px 4px rgba(0, 0, 0, 0.3))
+    &:active:after
+      +box-shadow(1px 1px 1px rgba(255, 255, 255, 0.1))
+    .da-arrows-next:after
+      background-position: top right
+    &.da-arrows-prev
+      left: 15px
+    &.da-arrows-next
+      right: 15px
+
+.da-slider:hover .da-arrows span
+  opacity: 1
+
+/* Animation classes and animations
+
+/* Slide in from the right
+.da-slide-fromright
+  & .da-title
+    +animation(fromRightAnim1 0.6s ease-in 0.8s both)
+  & .da-text
+    +animation(fromRightAnim2 0.6s ease-in 0.8s both)
+  & .da-link
+    +animation(fromRightAnim3 0.4s ease-in 1.2s both)
+  & .da-img
+    +animation(fromRightAnim4 0.6s ease-in 0.8s both)
+
++keyframes(fromRightAnim1)
+  0%
+    left: 110%
+    opacity: 0
+  100%
+    left: 10%
+    opacity: 1
+
+
++keyframes(fromRightAnim2)
+  0%
+    left: 110%
+    opacity: 0
+  100%
+    left: 10%
+    opacity: 1
+
+
++keyframes(fromRightAnim3)
+  0%
+    left: 110%
+    opacity: 0
+  1%
+    left: 10%
+    opacity: 0
+  100%
+    left: 10%
+    opacity: 1
+
+
++keyframes(fromRightAnim4)
+  0%
+    left: 110%
+    opacity: 0
+  100%
+    left: 50%
+    opacity: 1
+
+
+/* Slide in from the left
+.da-slide-fromleft
+  & .da-title
+    +animation(fromLeftAnim1 0.6s ease-in 0.6s both)
+  & .da-text
+    +animation(fromLeftAnim2 0.6s ease-in 0.6s both)
+  & .da-link
+    +animation(fromLeftAnim3 0.4s ease-in 1.2s both)
+  & .da-img
+    +animation(fromLeftAnim4 0.6s ease-in 0.6s both)
+
++keyframes(fromLeftAnim1)
+  0%
+    left: -110%
+    opacity: 0
+  100%
+    left: 10%
+    opacity: 1
+
+
++keyframes(fromLeftAnim2)
+  0%
+    left: -110%
+    opacity: 0
+  100%
+    left: 10%
+    opacity: 1
+
+
++keyframes(fromLeftAnim3)
+  0%
+    left: -110%
+    opacity: 0
+  1%
+    left: 10%
+    opacity: 0
+  100%
+    left: 10%
+    opacity: 1
+
+
++keyframes(fromLeftAnim4)
+  0%
+    left: -110%
+    opacity: 0
+  100%
+    left: 50%
+    opacity: 1
+
+
+/* Slide out to the right
+.da-slide-toright
+  & .da-title
+    +animation(toRightAnim1 0.6s ease-in 0.6s both)
+  & .da-text
+    +animation(toRightAnim2 0.6s ease-in 0.3s both)
+  & .da-link
+    +animation(toRightAnim3 0.4s ease-in both)
+  & .da-img
+    +animation(toRightAnim4 0.6s ease-in both)
+
++keyframes(toRightAnim1)
+  0%
+    left: 10%
+    opacity: 1
+  100%
+    left: 100%
+    opacity: 0
+
+
++keyframes(toRightAnim2)
+  0%
+    left: 10%
+    opacity: 1
+  100%
+    left: 100%
+    opacity: 0
+
+
++keyframes(toRightAnim3)
+  0%
+    left: 10%
+    opacity: 1
+  99%
+    left: 10%
+    opacity: 0
+  100%
+    left: 100%
+    opacity: 0
+
+
++keyframes(toRightAnim4)
+  0%
+    left: 50%
+    opacity: 1
+  30%
+    left: 50%
+    opacity: 1
+  100%
+    left: 100%
+    opacity: 0
+
+
+/* Slide out to the left
+.da-slide-toleft .da-title
+  +animation(toLeftAnim1 0.6s ease-in both)
+
+.da-slide-toleft .da-text
+  +animation(toLeftAnim2 0.6s ease-in 0.3s both)
+
+.da-slide-toleft .da-link
+  +animation(toLeftAnim3 0.4s ease-in both)
+
+.da-slide-toleft .da-img
+  +animation(toLeftAnim4 0.6s ease-in 0.6s both)
+
++keyframes(toLeftAnim1)
+  0%
+    left: 10%
+    opacity: 1
+  30%
+    left: 15%
+    opacity: 1
+  100%
+    left: -50%
+    opacity: 0
+
+
++keyframes(toLeftAnim2)
+  0%
+    left: 10%
+    opacity: 1
+  30%
+    left: 15%
+    opacity: 1
+  100%
+    left: -50%
+    opacity: 0
+
+
++keyframes(toLeftAnim3)
+  0%
+    left: 10%
+    opacity: 1
+  99%
+    left: 10%
+    opacity: 0
+  100%
+    left: -50%
+    opacity: 0
+
+
++keyframes(toLeftAnim4)
+  0%
+    left: 50%
+    opacity: 1
+  40%
+    left: 70%
+    opacity: 1
+  90%
+    left: 0
+    opacity: 0
+  100%
+    left: -50%
+    opacity: 0

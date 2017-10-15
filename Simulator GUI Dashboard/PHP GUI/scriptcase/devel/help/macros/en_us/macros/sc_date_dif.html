@@ -1,0 +1,57 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro calculates the difference between two dates (passed as parameters) returning the result in days.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date_dif({Date1}, "Format Date1", {Date2}, "Format Date2") <br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Calculates the difference between two dates (passed as parameters) in days.</span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"> 
+<table border="0">
+<tbody>
+<tr>
+<td width="20%" align="left" valign="top"><strong class="corpo1">Parameter <br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Date1</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Date1 value or variable.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Format Date1<br /></td>
+<td class="corpo1" align="left" valign="top">
+<p>Value or Variable containing the date format stored on Date1.</p>
+</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Date2</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1"><span class="corpo1">Date2 value or variable.</span></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Format Date2<br /></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Value or Variable containing the date format stored on Date2.</span></td>
+</tr>
+</tbody>
+</table>
+</span></p>
+<p><br /><br /><strong>Ex. 1:</strong><br />{amount_days} = <span class="corpo1">sc_date_dif</span>({date1}, "aaaa-mm-dd", {date2}, "mm/dd/aaaa");</p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 2:</strong><br />{amount_days} = </span><span class="corpo1">sc_date_dif</span><span class="corpo1">("2000-05-01", "aaaa-mm-dd", "04/21/2004", "mm/dd/aaaa");<br />{amount_days} would be equal to 1451 (days)</span></p>
+<p><span class="corpo1"><br /><br /><strong>Note:</strong> <em>Formats can be different but must be in days, months and years. </em></span></p>
+<p class="titulo1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

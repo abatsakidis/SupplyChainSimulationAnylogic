@@ -1,0 +1,30 @@
+<!-- BEGIN bloco -->
+    <TD colspan="{NM_BLOCO_SPAN}" height="{NM_BLOCO_ALTURA}" {NM_CSS_BLOCK}>
+     <TABLE style="padding: 0px; spacing: 0px; border-width: 0px;" width="100%" height="100%">
+      <TR>
+       <TD align="{NM_BLOCO_HORIZ}" valign="{NM_BLOCO_VERT}" {NM_CSS_BLOCK_FONT}>{NM_BLOCO_TITULO}</TD>
+       {NM_BLOCO_HELP}
+      </TR>
+     </TABLE>
+    </TD>
+<!-- END bloco -->
+<!-- BEGIN bloco_registro -->
+   {NM_CMP_PHP}
+    <TD {NM_CSS_FORM_DATA} {NM_STYLE_FORM_DATA}> {NM_CMP_CRITICA_INI}{NM_CMP_DADO}{NM_CMP_CRITICA_FIM} </TD>
+   {NM_FIM_PHP}
+<!-- END bloco_registro -->
+<!-- BEGIN bloco_limpa -->
+    <TD {NM_LIMPA_STYLE} colspan="{NM_LIMPA_SPAN}" >&nbsp;</TD>
+<!-- END bloco_limpa -->
+
+<!-- BEGIN bloco_abre_td -->
+    <TD {NM_CSS_FORM_DATA} {NM_STYLE_FORM_DATA}>
+<!-- END bloco_abre_td -->
+<!-- BEGIN bloco_linha -->
+   {NM_CMP_PHP}
+   {NM_CMP_CRITICA_INI}{NM_CMP_DADO}{NM_CMP_CRITICA_FIM}
+   {NM_FIM_PHP}
+<!-- END bloco_linha -->
+<!-- BEGIN bloco_fecha_td -->
+    </TD>
+<!-- END bloco_fecha_td -->

@@ -1,0 +1,1495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>PHP Commands</TITLE>
+    <link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<H1>PHP COMMANDS</H1>
+<p>&nbsp;</P>
+<TABLE WIDTH=600 BORDER=1>
+<TR>
+		<TD WIDTH=120>
+			<p><A HREF="#if"><FONT COLOR="#000000">if</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#else"><FONT COLOR="#000000">else</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#elseif"><FONT COLOR="#000000">elseif</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#while"><FONT COLOR="#000000">while</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#dowhile"><FONT COLOR="#000000">do while</FONT></A></P>		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=120>
+			<p><A HREF="#for"><FONT COLOR="#000000">for</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#foreach"><FONT COLOR="#000000">foreach</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#break"><FONT COLOR="#000000">break</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#continue"><FONT COLOR="#000000">continue</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#functions"><FONT COLOR="#000000">functions</FONT></A></P>		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=120>
+			<p><A HREF="#date"><FONT COLOR="#000000">date</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#strpos"><FONT COLOR="#000000">strpos</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#str_replace"><FONT COLOR="#000000">str-replace</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#ltrim"><FONT COLOR="#000000">ltrim</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#rtrim"><FONT COLOR="#000000">rtrim</FONT></A></P>		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=120>
+			<p><A HREF="#trim"><FONT COLOR="#000000">trim</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#substr"><FONT COLOR="#000000">substr</FONT></A></P>	  </TD>
+		<TD WIDTH=120>
+			<p><A HREF="#substr_replace"><FONT COLOR="#000000">substr-replace</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><A HREF="#arrays"><FONT COLOR="#000000">array</FONT></A></P>		</TD>
+		<TD WIDTH=120>
+			<p><FONT COLOR="#000000"><A HREF="#php_activex">activex</A>
+			</FONT>			</P>		</TD>
+	</TR>
+</TABLE>
+
+<h2><A NAME="arrays"></A>Arrays</h2>
+<p>An Array in the PHP is currently a
+commanded map. A map is a type that relates values with <I> keys</I>.  You can use it as an array, or a list
+(vector), <span>hashtable</span>, dictionary, collection, stack, line and probably more. As you can have
+another Array PHP as a value, you  can easily simulate trees.The explanation of these structures is
+beyond the target of this manual.</P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY> Syntax </H2>
+<p> An <B> Array</B> can be created with the constructor of <B>Array()</B>
+language. </P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+		  <p>array( [<I>chave</I> =&gt;] <I>value</I><BR>,
+			...<BR>)<BR>
+			// <I>key</I> pode ser tanto <B>string</B> ou um <B>integer</B><BR>// <I>value</I> pode ser qualquer coisa			</P>	  </TD>
+  </TR>
+</TABLE>
+<TABLE  width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode">
+		  <p>&lt;?php<BR>$arr = array(&quot;foo&quot; =&gt;
+			&quot;bar&quot;, 12 =&gt; true);<BR><BR>echo $arr[&quot;foo&quot;];
+			// bar<BR>echo $arr[12]; // 1<BR>?&gt;			</P>		</TD>
+  </TR>
+</TABLE>
+<p>The key can  be <B>integer </B> or a <B> string</B>.</P>
+<p>The value can be any type PHP:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode">
+			<p>&lt;?php<BR>$arr = array(&quot;somearray&quot; =&gt;
+			array(6 =&gt; 5, 13 =&gt; 9, &quot;a&quot; =&gt; 42));<BR><BR>echo
+			$arr[&quot;somearray&quot;][6]; // 5<BR>echo
+			$arr[&quot;somearray&quot;][13]; // 9<BR>echo
+			$arr[&quot;somearray&quot;][&quot;a&quot;]; // 42<BR>?&gt;			</P>		</TD>
+	</TR>
+</TABLE>
+<p> If
+you to specify a key that already in use, then the
+value associated to it is updated.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode">
+			<p>&lt;?php<BR>
+			<BR>
+			array(5
+			=&gt; 43, 32, 56, &quot;b&quot; =&gt; 12);<BR><BR>
+			// ... this
+			array<BR>array(5 =&gt; 43, 6 =&gt; 32, 7 =&gt; 56, &quot;b&quot;
+			=&gt; 12);<BR>?&gt;			</P>		</TD>
+	</TR>
+</TABLE>
+<p>&nbsp;</P>
+<h2> Creating/modifying
+with the square brakets syntax</H2>
+<P>That is another way to create and/or update an array as in the example below. </P>
+<P>&nbsp;</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode">
+			<p>$arr[<em>key</em>] = <I>valuer</I>;<BR>
+			  $arr[] =
+			<I>value</I>;<BR>
+			//<em>key can be </em><B>integer</B> or <B>string</B>		  </P>
+		  <p><BR>
+		  // <I>value can be anything</I></P>		</TD>
+  </TR>
+</TABLE>
+<P>To remove   a pair key/value, you need to apply the 
+<B>unset()</B>. </P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+			<p>&lt;?php<BR>$arr = array(5 =&gt; 1, 12 =&gt;
+			2);<BR><BR>
+			$arr[] = 56; // The same as  $arr[13] =
+			56;<BR>
+			<BR>
+			<BR>
+			$arr[&quot;x&quot;] = 42;
+			//  new element to array with &quot;x&quot; key<BR>
+			<BR>
+			unset($arr[5]); //remove an array element<BR>
+			<BR>
+			unset($arr); // remove the complete array<BR>
+			?&gt;			</P>		</TD>
+	</TR>
+</TABLE>
+<p>&nbsp;</P>
+<p>It notices
+that the greater entire key, used for, this necessarily don’t need existing in
+the Array. It can have existed in the Array since the last time that the Array
+was indexed. He sees the following example.</P>
+  <TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+    <TR>
+      <TD class="bgCode">
+        <p>&lt;?php<BR>
+          // Creating an array<BR>
+          $array
+          = array(1, 2, 3, 4, 5);<BR>
+          print_r($array);<BR>
+          <BR>
+          // Removing the array values leaving an empty structure.<BR>
+          foreach
+          ($array as $i =&gt; $value)
+          {<BR>
+          unset($array[$i]);<BR>
+          }<BR>
+          print_r($array);<BR>
+          <BR>
+          //
+          Adding an item <BR>
+          $array[] =
+          6;<BR>
+          print_r($array);<BR>
+          <BR>
+          // Reindexing<BR>
+          $array =
+          array_values($array);<BR>
+          $array[] = 7;<BR>
+          print_r($array);<BR>
+        ?&gt;        </P></TD>
+    </TR>
+  </TABLE>
+<BLOCKQUOTE LANG="pt-BR" STYLE="margin-bottom: 0in">The example above must produce the
+following exit:</BLOCKQUOTE>
+	<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+  <TR>
+			<TD class="bgCode">
+			  <p>Array<BR>(<BR>[0] =&gt; 1<BR>[1] =&gt; 2<BR>[2]
+				=&gt; 3<BR>[3] =&gt; 4<BR>[4] =&gt; 5<BR>)<BR>Array<BR>(<BR>)<BR>Array<BR>(<BR>[5]
+				=&gt; 6<BR>)<BR>Array<BR>(<BR>[0] =&gt; 6<BR>[1] =&gt; 7<BR>)				</P>			</TD>
+	  </TR>
+	</TABLE>
+<BLOCKQUOTE>.</BLOCKQUOTE>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+		  <p>&lt;?php<BR>
+			<BR>
+			$a = array( 'color' =&gt;
+			'red',<BR>
+			'flavor' =&gt; 'sweet',<BR>
+			'form' =&gt;
+			'round',<BR>
+			'name' =&gt; 'apple',<BR>
+			4// key 0<BR>
+			);<BR><BR>
+			// or<BR>
+			$a['color'] = 'red';<BR>
+			$a['flavor'] =
+			'sweet';<BR>
+			$a['form'] = 'round';<BR>
+			$a['name'] ='apple';<BR>
+			$a[]
+			= 4; // key 0<BR><BR>$b[] = 'a';<BR>$b[] =
+			'b';<BR>$b[] = 'c';<BR>
+			// array( 0 =&gt; 'a' , 1 =&gt;
+			'b' , 2 =&gt; 'c' ),<BR>
+			// or array('a', 'b', 'c')<BR>
+			?&gt;		  </P>	  </TD>
+  </TR>
+</TABLE>
+<p>&nbsp;</P>
+<H2><A NAME="break"></A>break</H2>
+<p>Break cancels the execution of commands like foreach while, do. .while or switch current.</P>
+<p>Break accepts an optional numerical
+argument.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+		  <p>&lt;?php<BR>
+			$arr = array ('um', 'dois', 'tr&ecirc;s',
+			'quatro', 'STOP', 'cinco');<BR>while (list (, $val) = each ($arr))
+			{<BR>
+			if ($val == 'STOP') {<BR>
+			break; <BR>
+			}<BR>echo &quot;$val&lt;br&gt;\n&quot;;<BR>}<BR><BR>
+			<BR>
+			<BR>$i = 0;<BR>while (++$i)
+			{<BR>switch ($i) {<BR>case 5:<BR>echo &quot;No 5&lt;br&gt;\n&quot;;<BR>
+			break
+			1;<BR>
+			case 10:<BR>
+			echo &quot;N# 10;&lt;br&gt;\n&quot;;<BR>
+			break 2;<BR>
+			default:<BR>break;<BR>}<BR>}<BR>?&gt;			</P>		</TD>
+  </TR>
+</TABLE>
+<H2><A NAME="continue"></A>Continue</H2>
+<p>Continue is used inside of loops structures to jump out the current Loop remaining portion
+of the iteration and to continue the execution at
+the beginning of the next iteration.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+			<p>&lt;?php<BR>while (list ($key, $value) = each
+			($arr)) {<BR>
+			if (!($key % 2)) { <BR>
+			continue;<BR>}<BR>do_something_odd ($value);<BR>}<BR><BR>$i
+			= 0;<BR>while ($i++ &lt; 5) {<BR>
+			echo &quot;Out&lt;br&gt;\n&quot;;<BR>
+			while
+			(1) {<BR>
+			echo &quot;&amp;nbsp;&amp;nbsp;Middle&lt;br&gt;\n&quot;;<BR>
+			while
+			(1) {<BR>
+			echo &quot;&amp;nbsp;&amp;nbsp;Inside&lt;br&gt;\n&quot;;<BR>
+			continue
+			3;<BR>}<BR>
+			echo &quot;It will never be displayed.&lt;br&gt;\n&quot;;<BR>
+			}<BR>
+			echo &quot;Neither this&lt;br&gt;\n&quot;;<BR>
+    }<BR>?&gt;			</P>		</TD>
+  </TR>
+</TABLE>
+<H2><A NAME="date"></A>date</H2>
+<p>(PHP 3, PHP 4 )</P>
+<P>date&nbsp;-&nbsp;Format the date and local hour.</P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY><A NAME="AEN17873"></A>
+Description</H2>
+<P>string <B>date</B> ( string format [,
+int timestamp])</P>
+<p>String in accordance with returns one the
+format from string using the given whole number <I> timestamp </I> or to the local
+current hour if no teamses tamp
+is given. In other words,<I>timestamp</I>
+is optional and the standard for the value of <B>time</B>.</P>
+<p><B>Table1. The following characters are recognized in <I>format </I> to parameter
+string.</B></P>
+<TABLE width="600" CELLPADDING=2 CELLSPACING=2>
+	<THEAD>
+		<TR>
+			<TH>
+				<p><I>format</I> character</P>			</TH>
+			<TH>
+				<p>Description</P>		  </TH>
+			<TH>
+				<p>Exemples (return values)</P>		  </TH>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR>
+			<TD>
+				<p>a</P>			</TD>
+			<TD>
+				<p>Lowercase Ante meridiem and Post
+				meridiem</P>			</TD>
+			<TD>
+				<p>am or pm</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>A</P>			</TD>
+			<TD>
+				<p>Uppercase Ante meridiem and Post
+				meridiem</P>			</TD>
+			<TD>
+				<p>AM ou PM</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>B</P>			</TD>
+			<TD>
+				<p>Swatch Internet time</P>			</TD>
+			<TD>
+				<p>000 at&eacute; 999</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>d</P>			</TD>
+			<TD>
+				<p>Dia do m&ecirc;s, 2 digitos com
+				leading zeros</P>			</TD>
+			<TD>
+				<p>01 to 31</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>D</P>			</TD>
+			<TD>
+				<p>Text representing 
+				day, with 3 letters</P>			</TD>
+			<TD>
+				<p>Mon through Sun</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>F</P>			</TD>
+			<TD>
+				<p>Text representing month </P>		  </TD>
+	  <TD>
+				<p>January  through December</P>		  </TD>
+	  </TR>
+		<TR>
+			<TD>
+				<p>g</P>			</TD>
+			<TD>
+				<p>12-hour format no leading
+				zeros</P>		  </TD>
+			<TD>
+				<p>1 a 12</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>G</P>			</TD>
+			<TD>
+				<p>24-hour format no leading
+				zeros</P>		  </TD>
+			<TD>
+				<p>0 a 23</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>h</P>			</TD>
+			<TD>
+				<p>12-hour format with leading
+				zeros</P>		  </TD>
+			<TD>
+				<p>01 a 12</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>H</P>			</TD>
+			<TD>
+				<p>24-hour format with leading
+				zeros</P>		  </TD>
+			<TD>
+				<p>00 a 23</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>i</P>			</TD>
+			<TD>
+				<p>Minutes with leading zeros</P>			</TD>
+			<TD>
+				<p>00 para 59</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>I </P>		  </TD>
+			<TD>
+				<p>summer  time </P>		  </TD>
+			<TD>
+				<p>1 summer time, 0
+				no summer time </P>		  </TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>j</P>			</TD>
+			<TD>
+				<p>Day no leading zeros</P>		  </TD>
+			<TD>
+				<p>1 to 31</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>l </P>		  </TD>
+			<TD>
+				<p>Text representing week days</P>		  </TD>
+			<TD>
+				<p>Sunday through Saturday</P>		  </TD>
+	  </TR>
+		<TR>
+			<TD>
+				<p>L</P>			</TD>
+			<TD>
+				<p>leep year</P>		  </TD>
+			<TD>
+				<p>1 leep year, 0 not leep year</P>		  </TD>
+	  </TR>
+		<TR>
+			<TD>
+				<p>m</P>			</TD>
+			<TD>
+				<p>Month (numeric)
+				with leading zeros</P>		  </TD>
+			<TD>
+				<p>01 a 12</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>M</P>			</TD>
+			<TD>
+				<p>Text representing month in short (3 letters)</P>		  </TD>
+<TD>
+				<p>Jan a Dec</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>n</P>			</TD>
+			<TD>
+				<p>Month (numeric)
+				no leading zeros</P>		  </TD>
+	  <TD>
+				<p>1 a 12</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>O</P>			</TD>
+			<TD>
+				<p>Diferen&ccedil;a ao hor&aacute;rio de
+				Greenwich (GMT) em horas</P>			</TD>
+			<TD>
+				<p>Example: +0200</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>r</P>			</TD>
+			<TD>
+				<p>RFC 822 formatted date</P>			</TD>
+			<TD>
+				<p>Example: Thu, 21 Dec 2000 16:01:07
+				+0200</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>s</P>			</TD>
+			<TD>
+				<p>Seconds with leading zeros</P>			</TD>
+			<TD>
+				<p>00 a 59</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>S</P>			</TD>
+			<TD>
+				<p>Sufixo ordinal ingl&ecirc;s para o dia
+				do m&ecirc;s, 2 caracteres</P>			</TD>
+			<TD>
+				<p>st, nd, rd ou th. Funciona bem com j				</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>t</P>			</TD>
+			<TD>
+				<p>Days in a month</P>		  </TD>
+			<TD>
+				<p>28 a 31</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>T</P>			</TD>
+			<TD>
+				<p>Timezone setting </P>		  </TD>
+			<TD>
+				<p>Examples: EST, MDT ...</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>U</P>			</TD>
+			<TD>
+				<p>Seconds since the Unix Epoch (January
+				1 1970 00:00:00 GMT)</P>			</TD>
+			<TD>
+				<p>See also <B>time()</B></P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>w</P>			</TD>
+			<TD>
+				<p>week day  numeric</P>		  </TD>
+			<TD>
+				<p> <em>0</em>&nbsp;(for Sunday) through&nbsp;<em>6</em>&nbsp;(for Saturday) </P>		  </TD>
+	  </TR>
+		<TR>
+			<TD>
+				<p>W</P>			</TD>
+			<TD>
+				<p> ISO-8601 week number of year, weeks starting on Monday (added in PHP 4.1.0) </P>		  </TD>
+	  <TD>
+				<p> Example:&nbsp;<em>42</em>&nbsp;(the 42nd week in the year) </P>		  </TD>
+	  </TR>
+		<TR>
+			<TD>
+				<p>Y</P>			</TD>
+			<TD>
+				<p>Year with 4 digits</P>		  </TD>
+	  <TD>
+				<p>Examples: 1999 ou 2003</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>y</P>			</TD>
+			<TD>
+				<p>Year with 2 digits </P>		  </TD>
+			<TD>
+				<p>Examples: 99 ou 03</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>z</P>			</TD>
+			<TD>
+				<p>Day in a year</P>			</TD>
+			<TD>
+				<p>0 a 366</P>			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>Z</P>			</TD>
+			<TD>
+				<p>Timezone offset in seconds. The offset
+				for timezones west of UTC is always negative, and for those east
+				of UTC is always positive.</P>			</TD>
+			<TD>
+				<p>-43200 at&eacute; 43200</P>			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<p>&nbsp;</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=145*>
+	<COL WIDTH=111*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>Example 1. date() examples</B></P>		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=57% class="bgCode">
+	      &lt;?php<br>
+	      <SPAN>// Prints something like: Wednesday</SPAN><br>
+	      <SPAN>echo date(&quot;l&quot;);</SPAN><br>
+	      <SPAN>// Prints something like: Wednesday 15th of January 2003 05:51:38 AM</SPAN><br>
+	      <SPAN>echo date (&quot;l dS of F Y h:i:s A&quot;);</SPAN><br>
+	      <SPAN>// Prints: July 1, 2000 is on a Saturday</SPAN><br>
+	      <SPAN>echo &quot;July 1, 2000 is on a &quot; . date (&quot;l&quot;, mktime(0,0,0,7,1,2000));</SPAN><br>
+      <SPAN>?&gt;</SPAN></TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=191*>
+	<COL WIDTH=65*>
+	<TR>
+		<TD COLSPAN=2>
+		  <p>&nbsp;</P>		</TD>
+  </TR>
+	<TR>
+		<TD WIDTH=69% class="bgCode">
+	      &lt;?php<br>
+	      <SPAN>// Assuming today is: March 10th, 2001, 5:16:18 pm</SPAN><br>
+	      <SPAN>$today = date(&quot;F j, Y, g:i a&quot;);                 // March 10, 2001, 5:16 pm</SPAN><br>
+	      <SPAN>$today = date(&quot;m.d.y&quot;);                         // 03.10.01</SPAN><br>
+	      <SPAN>$today = date(&quot;j, n, Y&quot;);                       // 10, 3, 2001</SPAN><br>
+	      <SPAN>$today = date(&quot;Ymd&quot;);                           // 20010310</SPAN><br>
+	      <SPAN>$today = date('h-i-s, j-m-y, it is w Day z ');  // 05-16-17, 10-03-01, 1631 1618 6 Fripm01</SPAN><br>
+	      <SPAN>$today = date('\i\t \i\s \t\h\e jS \d\a\y.');   // It is the 10th day.</SPAN><br>
+	      <SPAN>$today = date(&quot;D M j G:i:s T Y&quot;);               // Sat Mar 10 15:16:08 MST 2001</SPAN><br>
+	      <SPAN>$today = date('H:m:s \m \i\s\ \m\o\n\t\h');     // 17:03:17 m is month</SPAN><br>
+	      <SPAN>$today = date(&quot;H:i:s&quot;);                         // 17:16:17</SPAN><br>
+      <SPAN>?&gt;</SPAN></TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2></TD>
+  </TR>
+</TABLE>
+<h2><A NAME="dowhile"></A>do..while</H2>
+<p>Loops do. .while is similar to loop,
+except for the fact of that the condition is verified in the end 
+of each iteration instead of in the start. The main
+difference of loops while regular is that the first iteration of a Loop of
+.while guaranteeing is executed (the condition alone is verified in the end of
+the iteration) whereas it can necessarily not twirl in a normal Loop while (the
+condition is verified in the start of each iteration, if it is evaluated as 
+<B>FALSE</B> soon in the start, the execution of the Loop would finish
+immediately).</P>
+<p>It has only syntax for loops of while:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+	      <p>&lt;?php<br>
+	      $i = 0;<br>
+	      do {<br>   
+	      print $i;<br>
+	      } while ($i &gt; 0);<br></p>
+      ?&gt;</TD>
+  </TR>
+</TABLE>
+<p>Loop above would twirl accurately one
+time, since that after the first iteration, when the condition is verified, it is
+evaluated as it <B>FALSE</B> isn’t greater who zero 0) and the execution of the Loop finishes.</P>
+<p>Advanced users of C can be made familiar
+to the differentiated use of the Loop of
+.while, allowing to the end of the execution in the way them code blocks, 
+generalizing them with it .while (0), and
+using the instruction break. I break up it of code following demonstrates this:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+	      <p>&lt;?php <SPAN>do {if ($i &lt; 5) {print &quot;i&nbsp;is&nbsp;not&nbsp;big&nbsp;enough  &quot;;break;}$i *= $factor;if ($i &lt; $minimum_limit) {break;}print &quot;i is Ok&quot;;/* process i */} while(0);?&gt;</SPAN></p></TD>
+  </TR>
+</TABLE>
+<p>If it doesn’t worry if you it did not
+understand this of the certain form no way or. You can codify simple or exactly
+powerful scripts without using this “resource”. </P>
+<h2><A NAME="else"></A>else</H2>
+<p>Frequently you go to want executing an instruction if
+a certain condition will be found and a different instruction if the condition
+will not be found. That is what else makes. Else extends to a command if to
+execute an instruction case the expression in the command if either evaluated
+as it <B>FALSE</B>. For example, the code
+to follow would show it is greater that b if <I>$a </I> will be greater that <I>$b </I> and it
+isn’t greater that b contrary case:</p>
+
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+  <TR>
+    <TD class="bgCode" ><p> &lt;?php<br>if&nbsp;($a&nbsp;&gt;&nbsp;$b)&nbsp;{<br>&nbsp;&nbsp;echo&nbsp;"a&nbsp;is&nbsp;greater&nbsp;than&nbsp;b";<br>}&nbsp;else&nbsp;{<br>&nbsp;&nbsp;echo&nbsp;"a&nbsp;is&nbsp;NOT&nbsp;greater&nbsp;than&nbsp;b";<br>}<br>?&gt;  </p></TD>
+  </TR>
+</TABLE>
+The command else is only executed if the expression if
+  will be evaluated as <B>FALSE</B>, and if
+  having any expression elseif, if all they will only
+  be evaluated as it also <B>FALSE</B> (it
+  sees elseif).</P>
+<h2><A NAME="elseif"></A>elseif</H2>
+<p>elseif, as its name
+suggests, is a combination of if and else. In the same way
+that else, it extends to a command if executing a different instruction in the
+case of the original expression if to be evaluated as <B>FALSE</B>. However, in contrast to else, it will only execute
+that alternative expression if the conditional expression of elseif will be evaluated as <B>TRUE</B>. For example, the code following would show it is greater that b, a it is equal the b or it she is minor who b:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode" >
+	  <p> &lt;?php<br>if&nbsp;($a&nbsp;&gt;&nbsp;$b)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"a&nbsp;is&nbsp;bigger&nbsp;than&nbsp;b";<br>}&nbsp;elseif&nbsp;($a&nbsp;==&nbsp;$b)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"a&nbsp;is&nbsp;equal&nbsp;to&nbsp;b";<br>}&nbsp;else&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"a&nbsp;is&nbsp;smaller&nbsp;than&nbsp;b";<br>}<br>?&gt;  </p></TD>
+  </TR>
+</TABLE>
+<p>If can have several inside of the same instruction. The first expression 
+elseif(it will be had) that it will be evaluated as <B>TRUE</B> will be executed. In the PHP, you
+also it can write “else if” (in two words) and the behavior will be identical
+to one 'elseif' (in one alone word). The meaning
+syntactic is slightly different (if you are made familiar to C, them you have
+behavior the same), but in the end of accounts both would have the same behavior
+accurately.</P>
+<p>The command is only executed if the preceding expression if and any previous expressions 
+elseif will be evaluated as <B>FALSE</B>, and the current expression elseif 
+will be evaluated as <B>TRUE</B>.</P>
+<h2><A NAME="for"></A>for</H2>
+<p>Loops will be is the bows most complex in
+PHP. They behave as its compatible in C. syntax of a Loop
+will be is:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode">
+			<p>for (expr1; expr2; expr3) instructions</p>
+        </TD>
+	</TR>
+</TABLE>
+<p>The first
+expression (<I>expr1</I>) is evaluated (executed) a time unconditionally in the start
+of the Loop. </P>
+<p>In the start of each
+iteration, expr2 is evaluated. If it is evaluated as <B>TRUE</B>, the Loop
+continue and (s) the command (s) nestled (s) (they are) is executed (s). If she
+is evaluated as SHE <B>FALSE</B>, the
+execution of the 'Loop' finishes. </P>
+<p>In the end of each iteration,<I>expr3 </I>is evaluated (executed).</P>
+<p>Each one of the expressions can be empty.<I>expr2</I>> empty means that the Loop
+can twirl indefinitely (PHP considers it implicitly as <B>TRUE</B>, as in C). This can’t be so useless how much you can think,
+therefore frequently you can want to finish the 'Loop'
+using a break conditional instruction instead of using the expression-truth of
+it you will be. </P>
+<p>It considers the following examples. All they show to
+numbers of 1 the 10:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode" >
+			&lt;?php<br>
+			<SPAN>/* example 1 */</SPAN><br>
+			<SPAN>for ($i = 1; $i &lt;= 10; $i++) {</SPAN><br>    
+			<SPAN>print $i;</SPAN><br>
+			<SPAN>}</SPAN><br>
+			<SPAN>/* example 2 */</SPAN><br>
+			<SPAN>for ($i = 1; ; $i++) {</SPAN><br>    
+			<SPAN>if ($i &gt; 10) {</SPAN><br>        
+			<SPAN>break;</SPAN><br>    
+			<SPAN>}</SPAN><br>    
+			<SPAN>print $i;</SPAN><br>
+			<SPAN>}</SPAN><br>
+			<SPAN>/* example 3 */</SPAN><br>
+			<SPAN>$i = 1;</SPAN><br>
+			<SPAN>for (;;) {</SPAN><br>    
+			<SPAN>if ($i &gt; 10) {</SPAN><br>        
+			<SPAN>break;</SPAN><br>    
+			<SPAN>}</SPAN><br>    
+			<SPAN>print $i;</SPAN><br>    
+			<SPAN>$i++;</SPAN><br>
+			<SPAN>}</SPAN><br>
+			<SPAN>/* example 4 */</SPAN><br>
+			<SPAN>for ($i = 1; $i &lt;= 10; print $i, $i++);</SPAN><br>
+	  <SPAN>?&gt;</SPAN></p></TD>
+  </TR>
+</TABLE>
+<p>The first example seems to be prettiest
+(or perhaps the room), but you can perceive that the possible use of empty
+expressions in bows will be if it becomes practical in some occasions.</P>
+<p>The
+PHP also supports the alternative syntax of two-points
+bows will be:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode" >
+		for (expr1; expr2; expr3): instructions; ...; endfor;</p>
+      </TD>
+	</TR>
+</TABLE>
+<h2><A NAME="foreach"></A>foreach</H2>
+<p>The PHP4 (but not it PHP3) includes a
+constructor foreach, much similar to the Perl and
+other languages. This offers an easy way to iterar on
+matrices. foreach only
+functions with arrays, and will launch an error if to try to use it in an variable
+of any different type or in variable not initialized. It has two syntaxes;
+second it is an abbreviation, but useful, of the first one:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode" >
+		  <p>foreach (expressao_array as $valor) instructions<br>
+	  <SPAN>foreach (expressao_array as $chave =&gt; $valor) instructions</SPAN></p></TD>
+  </TR>
+</TABLE>
+<p>The first form sweeps one given first one
+given for expression_array. In each Loop, the value of the current element is attributed the
+$value and the internal hand of the matrix is advanced in a position (thus, in
+the next iteration you it will be looking at for the next element).</P>
+<p>The second form makes the same thing,
+except for the fact of that the key of the current element will be attributed
+to the 0 variable $key in each iteration.</P>
+<BLOCKQUOTE LANG="pt-BR" STYLE="text-align: justify">&nbsp;</BLOCKQUOTE>
+<BLOCKQUOTE><B>Note:</B> When <span>foreach</span>
+initiates its first execution, the internal hand of the matrix is zeroed
+automatically for the first element of the Array. This means that you do not
+need to call <B>reset()</B> before a Loop foreach.</BLOCKQUOTE>
+<BLOCKQUOTE LANG="pt-BR" STYLE="text-align: justify">&nbsp;</BLOCKQUOTE>
+<BLOCKQUOTE><B>Note: </B> It also notices that foreach operates on a copy of the specified Array, not it
+proper Array, and therefore, the hand of the original Array is not modified as
+in the instruction <B>each()</B>, that it modifies the element of the selected Array,
+but this doesn’t reflect the original Array. However, the internal hand of the
+original Array is put into motion by the processing of the Array. Assuming that
+the bow foreach twirls until the end, the internal
+hand of the Array will be located in the end of the Array.</BLOCKQUOTE>
+<BLOCKQUOTE LANG="pt-BR" STYLE="text-align: justify">&nbsp;</BLOCKQUOTE>
+<BLOCKQUOTE><B>Note: </B>foreach has the
+ability to prevent messages of error with “@”.</BLOCKQUOTE>
+<p>You can have noticed that following items
+is functionally identical:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode" >
+			<p>&lt;?php<br>
+			<SPAN>$arr = array(&quot;one&quot;, &quot;two&quot;, &quot;three&quot;);</SPAN><br>
+			<SPAN>reset ($arr);</SPAN><br>
+			<SPAN>while (list(, $value) = each ($arr)) {</SPAN><br>    
+			<SPAN>echo &quot;Valor: $value&lt;br&gt;\n&quot;;</SPAN><br>
+			<SPAN>}</SPAN><br>
+			<SPAN>foreach ($arr as $value) {</SPAN><br>    
+			<SPAN>echo &quot;Valor: $value&lt;br&gt;\n&quot;;</SPAN><br>
+			<SPAN>}</SPAN><br>
+	  <SPAN>?&gt;</SPAN></p></TD>
+  </TR>
+</TABLE>
+<P>The following are also functionally identical:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode" >
+			<p>&lt;?php<br>
+			<SPAN>reset ($arr);</SPAN><br>
+			<SPAN>while (list($key, $value) = each ($arr)) {</SPAN><br>    
+			<SPAN>echo &quot;Chave: $key; Valor: $value&lt;br&gt;\n&quot;;</SPAN><br>
+			<SPAN>}</SPAN><br>
+			<SPAN>foreach ($arr as $key =&gt; $value) {</SPAN><br>    
+			<SPAN>echo &quot;Chave: $key; Valor: $value&lt;br&gt;\n&quot;;</SPAN><br>
+			<SPAN>}</SPAN><br>
+	  <SPAN>?&gt;</SPAN></p></TD>
+  </TR>
+</TABLE>
+<p>More examples to demonstrate the uses: </P>
+<h2><A NAME="functions"></A>Functions defined for the
+user </H2>
+<p>A function can be defined using it syntax as the
+following one:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=93*>
+	<COL WIDTH=163*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p> <strong>Pseudo code to demonstrate function uses</strong> </P>	  </TD>
+  </TR>
+	<TR>
+		<TD class="bgCode" >
+		  <P> &lt;?php<br>
+		    function&nbsp;foo($arg_1,&nbsp;$arg_2,&nbsp;/*&nbsp;...,&nbsp;*/&nbsp;$arg_n)<br>
+		    {<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"Example&nbsp;function.\n";<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$retval;<br>
+		    }<br>
+      ?&gt; </P>	  </TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>Any valid code PHP can appear inside of a
+function, exactly other functions and definitions of classrooms.</P>
+<p>When a function is defined conditionally
+as in the two examples below, its definition can be processed <I>before<\I> being
+called.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=94*>
+	<COL WIDTH=162*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p> <strong>Conditional functions</strong> </P>	  </TD>
+  </TR>
+	<TR>
+		<TD class="bgCode" >
+		  <P> &lt;?php<br>
+		    <br>
+		    $makefoo&nbsp;=&nbsp;true;<br>
+		    <br>
+		    /*&nbsp;We&nbsp;can't&nbsp;call&nbsp;foo()&nbsp;from&nbsp;here&nbsp;<br>
+		    &nbsp;&nbsp;&nbsp;since&nbsp;it&nbsp;doesn't&nbsp;exist&nbsp;yet,<br>
+		    &nbsp;&nbsp;&nbsp;but&nbsp;we&nbsp;can&nbsp;call&nbsp;bar()&nbsp;*/<br>
+		    <br>
+		    bar();<br>
+		    <br>
+		    if&nbsp;($makefoo)&nbsp;{<br>
+		    &nbsp;&nbsp;function&nbsp;foo()<br>
+		    &nbsp;&nbsp;{<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"I&nbsp;don't&nbsp;exist&nbsp;until&nbsp;program&nbsp;execution&nbsp;reaches&nbsp;me.\n";<br>
+		    &nbsp;&nbsp;}<br>
+		    }<br>
+		    <br>
+		    /*&nbsp;Now&nbsp;we&nbsp;can&nbsp;safely&nbsp;call&nbsp;foo()<br>
+		    &nbsp;&nbsp;&nbsp;since&nbsp;$makefoo&nbsp;evaluated&nbsp;to&nbsp;true&nbsp;*/<br>
+		    <br>
+		    if&nbsp;($makefoo)&nbsp;foo();<br>
+		    <br>
+		    function&nbsp;bar()&nbsp;<br>
+		    {<br>
+		    &nbsp;&nbsp;echo&nbsp;"I&nbsp;exist&nbsp;immediately&nbsp;upon&nbsp;program&nbsp;start.\n";<br>
+		    }<br>
+		    <br>
+      ?&gt; </P>	  </TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=69*>
+	<COL WIDTH=187*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p> <strong>Functions within functions</strong> </P>	  </TD>
+  </TR>
+	<TR>
+		<TD class="bgCode" >
+		  <p> &lt;?php<br>
+		    function&nbsp;foo()&nbsp;<br>
+		    {<br>
+		    &nbsp;&nbsp;function&nbsp;bar()&nbsp;<br>
+		    &nbsp;&nbsp;{<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"I&nbsp;don't&nbsp;exist&nbsp;until&nbsp;foo()&nbsp;is&nbsp;called.\n";<br>
+		    &nbsp;&nbsp;}<br>
+		    }<br>
+		    <br>
+		    /*&nbsp;We&nbsp;can't&nbsp;call&nbsp;bar()&nbsp;yet<br>
+		    &nbsp;&nbsp;&nbsp;since&nbsp;it&nbsp;doesn't&nbsp;exist.&nbsp;*/<br>
+		    <br>
+		    foo();<br>
+		    <br>
+		    /*&nbsp;Now&nbsp;we&nbsp;can&nbsp;call&nbsp;bar(),<br>
+		    &nbsp;&nbsp;&nbsp;foo()'s&nbsp;processesing&nbsp;has<br>
+		    &nbsp;&nbsp;&nbsp;made&nbsp;it&nbsp;accessible.&nbsp;*/<br>
+		    <br>
+		    bar();<br>
+		    <br>
+      ?&gt; </P>	  </TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>The PHP doesn’t support overload of functions, and
+also it isn’t possible to cancel or to modify the definition of functions
+previously declared.</P>
+<B>Note:</B> Names of functions are
+insensitive to the case, but it is better to call the functions in the same way
+that it appears in the declarations.
+<H2><A NAME="if"></A>if</H2>
+<P>The construction
+if is the one of the most important implementations of many languages,
+including PHP. Allows the conditional execution of fragments of code. The PHP implements a structure if
+that it is similar to that one of the C: /P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode" >
+			<p>if (express)<BR>
+			  instructions			</P>	  </TD>
+	</TR>
+</TABLE>
+<p>As described in the section on
+expressions, expression is evaluated by its Boolean context. If expression will
+be evaluated as <B>TRUE</b>, the PHP will
+execute instructors, and it will have evaluated itself as <B>FALSE</B>, will be ignored. More information on the evaluation for <B>FALSE</B> can be found in the section converting for Boolean.</P>
+<p>The examples to follow would show that it is
+greater that b if $a will be greater that <I>$b</I>:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+	<TR>
+		<TD class="bgCode" >
+			<p>&lt;?php<BR>if ($a &gt; $b)<BR>
+			print &quot;a is grater than b&quot;;<BR>
+			?&gt;			</P>		</TD>
+	</TR>
+</TABLE>
+<p>Frequently you go to want having more than
+an instruction is executed conditionally. And is clearly, does not have
+necessity of generalize each instruction
+with a clause if. Instead of this, you can place some instructions in a
+grouping of commands. For example, this code would show it is greater that b if
+<I>$a</I> will be greater that <I>$b</I>, and then would attribute the value of <I>$a</I> for <I>$b</I>:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+	  <p>&lt;?php<BR>if ($a &gt; $b) {<BR>print &quot;a is grater than b&quot;;<BR>$b = $a;<BR>}<BR>?&gt;			</P>	  </TD>
+  </TR>
+</TABLE>
+<p>Commands if can
+inside indefinitely be nestled of other commands if, what it makes with that
+you completes flexibility for the conditional execution of some parts of its
+program.</P>
+<h2><A NAME="ltrim"></A>ltrim</H2>
+<p>(PHP 3, PHP 4 )</P>
+<P>ltrim&nbsp;--&nbsp;It removes whitespace of the beginning of string.</P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY>Description</H2>
+<P>string <B>ltrim</B> ( string str [,
+string charlist])</P>
+<BLOCKQUOTE LANG="pt-BR" STYLE="text-align: justify">&nbsp;</BLOCKQUOTE>
+<BLOCKQUOTE><B>Note:</B> As the parameter was added
+in PHP 4.1.0</BLOCKQUOTE>
+<p>This function returns one string with whitespace
+removed from the beginning of <I>str</I>. Without as the
+parameter, <B>ltrim()</B> will remove these characters:</P>
+<UL>
+	<LI><p>&quot; &quot; (ASCII 32 (0x20)), um espa&ccedil;o
+	normal. 
+	</P>
+	<LI><p>&quot;\t&quot; (ASCII 9 (0x09)), uma tabula&ccedil;&atilde;o.
+		</P>
+	<LI><p>&quot;\n&quot; (ASCII 10 (0x0A)), uma linha nova
+	(line feed). 
+	</P>
+	<LI><p>&quot;\r&quot; (ASCII 13 (0x0D)), um retono de
+	carro. 
+	</P>
+	<LI><p>&quot;\0&quot; (ASCII 0 (0x00)), o byte NULL. 
+	</P>
+	<LI><p>&quot;\x0B&quot; (ASCII 11 (0x0B)), uma
+	tabula&ccedil;&atilde;o vertical. 
+	</P>
+</UL>
+<p>You also
+can specify which characters you want removing, through the parameter <I>charlist</I>. Simply
+he lists all the characters that you want removing. With you can specify an
+interval of characters.</P><br>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=86*>
+	<COL WIDTH=170*>
+<TR>
+<TD><P ><B>Example  ltrim()</B><br></P></TD><br>
+</TR><br>
+<TR><br>
+<TD class="bgCode">
+<P>&lt;?php<BR><BR>$text = &quot;\t\tThese are a few
+words :) ... &quot;;<BR>
+$trimmed = ltrim($text);<BR>// $trimmed =&quot;These are a few words :) ... &quot;<BR>
+$trimmed =
+ltrim($text,&quot; \t.&quot;);<BR>// $trimmed = &quot;These are a
+few words :) ... &quot;<BR>
+$clean =<br>
+ltrim($binary,&quot;\0x00..\0x1F&quot;);<BR>
+// trim the ASCII
+control characters at the beginning of $binary <BR>
+// (from 0 to
+31 inclusive)<BR>
+<BR>?&gt;<br>
+</P></TD>
+</TR>
+<TR>
+<TD COLSPAN=2 WIDTH=100%></TD><br>
+</TR>
+</TABLE>
+<P>&nbsp;</P><br>
+<h2><A NAME="rtrim"></A>rtrim</H2><br>
+<P>(PHP 3, PHP 4 )</P><br>
+<P>rtrim&nbsp;--&nbsp;<span
+style='font-size:10.0pt;font-family:"Courier New";color:black;mso-ansi-language:
+EN-US'>It removes blank space of the end of string.</span></P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY>Description</H2>
+<P>string <B>rtrim</B> ( string str [,
+string charlist])</P>
+<BLOCKQUOTE LANG="pt-BR" STYLE="text-align: justify">&nbsp;</BLOCKQUOTE>
+<BLOCKQUOTE><B>Note:</B> As the parameter was added in PHP 4.1.0</BLOCKQUOTE>
+<p>This function returns string as the removed spaces
+blank from the end of <I>str</I>. Without as the parameter, <B>rtrim()</B> will go to remove the
+following characters:</P>
+<UL>
+  <li>
+    <p>" " (<acronym title="American Standard Code for Information Interchange">ASCII</acronym>&nbsp;32&nbsp;(0x20)), an ordinary space.</p>
+  </li>
+  <li>
+    <p>"\t" (<acronym title="American Standard Code for Information Interchange">ASCII</acronym>&nbsp;9&nbsp;(0x09)), a tab.</p>
+  </li>
+  <li>
+    <p>"\n" (<acronym title="American Standard Code for Information Interchange">ASCII</acronym>&nbsp;10&nbsp;(0x0A)), a new line (line feed).</p>
+  </li>
+  <li>
+    <p>"\r" (<acronym title="American Standard Code for Information Interchange">ASCII</acronym>&nbsp;13&nbsp;(0x0D)), a carriage return.</p>
+  </li>
+  <li>
+    <p>"\0" (<acronym title="American Standard Code for Information Interchange">ASCII</acronym>&nbsp;0&nbsp;(0x00)), the&nbsp;NUL-byte.</p>
+  </li>
+  <li>
+    <p>"\x0B" (<acronym title="American Standard Code for Information Interchange">ASCII</acronym>&nbsp;11&nbsp;(0x0B)), a vertical tab.</p>
+  </li>
+</UL>
+<p>You also can specify the characters that
+  you desire removing, for the parameter <I>charlist</I>. Simply he lists all the characters that you want
+  to see removed. With you can specify an interval of characters.</p>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=86*>
+	<COL WIDTH=170*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>Example  funtion rtrim()</B></P>	  </TD>
+	</TR>
+	<TR>
+		<TD WIDTH=33% class="bgCode">
+		  <p>&lt;?php<BR><BR>$text = &quot;\t\tThese are a few
+			words :) ... &quot;;<BR>$trimmed = rtrim($text);<BR>// $trimmed =
+			&quot;\t\tThese are a few words :) ...&quot;<BR>$trimmed =
+			rtrim($text,&quot; \t.&quot;);<BR>// $trimmed = &quot;\t\tThese
+			are a few words :)&quot;<BR>$clean =
+			rtrim($binary,&quot;\0x00..\0x1F&quot;);<BR>// retira os
+			caracteres de controle ASCII ao final de $binary<BR>
+			// (de 0 at&eacute;
+<BR><BR>?&gt;			</P>	</TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>&nbsp;</P>
+<h2><A NAME="str_replace"></A>str_replace</H2>
+<p>(PHP 3&gt;= 3.0.6, PHP 4 )</P>
+<P>str_replace&nbsp;--&nbsp; Replace all
+occurrences of the search string with the replacement string.</P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY>Description</H2>
+<P>mixed <B>str_replace</B> ( mixed
+search, mixed replace, mixed subject [, int &amp;count])</P>
+<p>This function returns a string or an array with all
+occurrences of <I>search</I> in <I>subject</I> replaced with the
+given <I>replace</I> value. If you don't need fancy replacing rules,
+you should always use this function instead of <B>ereg_replace()</B>
+or <B>preg_replace()</B>.</P>
+<p>As of PHP 4.0.5, every parameter in <B>str_replace()</B>
+can be an <B>array</B>.</P>
+<p>If <I>subject</I> is an array, then the search and
+replace is performed with every entry of <I>subject</I>, and the
+return value is an array as well.</P>
+<p>If <I>search</I> and <I>replace</I> are arrays, then
+<B>str_replace()</B> takes a value from each array and uses them to
+do search and replace on <I>subject</I>. If <I>replace</I> has fewer
+values than <I>search</I>, then an empty string is used for the rest
+of replacement values. If <I>search</I> is an array and <I>replace</I>
+is a string; then this replacement string is used for every value of
+<I>search</I>.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=100*>
+	<COL WIDTH=156*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>str_replace() examples</B></P>		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=39% class="bgCode">
+		  <p>&lt;?php<BR>// Provides: &lt;body
+			text='black'&gt;<BR>$bodytag = str_replace(&quot;%body%&quot;,
+			&quot;black&quot;, &quot;&lt;body text='%body%'&gt;&quot;);<BR><BR>//
+			Provides: Hll Wrld f PHP<BR>$vowels = array(&quot;a&quot;, &quot;e&quot;,
+			&quot;i&quot;, &quot;o&quot;, &quot;u&quot;, &quot;A&quot;, &quot;E&quot;,
+			&quot;I&quot;, &quot;O&quot;, &quot;U&quot;);<BR>$onlyconstants =
+			str_replace($vowels, &quot;&quot;, &quot;Hello World of PHP&quot;);<BR><BR>//
+			Provides: You should eat pizza, beer, and ice cream every
+			day<BR>$phrase = &quot;You should eat fruits, vegetables, and
+			fiber every day.&quot;;<BR>$healthy = array(&quot;fruits&quot;,
+			&quot;vegetables&quot;, &quot;fiber&quot;);<BR>$yummy =
+			array(&quot;pizza&quot;, &quot;beer&quot;, &quot;ice
+			cream&quot;);<BR>
+			<BR>$newphrase = str_replace($healthy, $yummy,
+			$phrase);<BR><BR>// Use of the count parameter is available as of
+			PHP 5.0.0<BR>$str = str_replace(&quot;ll&quot;, &quot;&quot;,
+			&quot;good golly miss molly!&quot;, $count);<BR>echo $count; //
+	  2<BR>?&gt;			</P>		</TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p><B>Note:</B> This function is
+  compatible with binary data.</p>
+<BLOCKQUOTE LANG="pt-BR" STYLE="text-align: justify">&nbsp;</BLOCKQUOTE>
+<h2><A NAME="strpos"></A>strpos</H2>
+<p>(PHP 3, PHP 4 )</P>
+<P>strpos&nbsp;--&nbsp;String finds the position of the first occurrence of one.</P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY>Description</H2>
+<P>int <B>strpos</B> ( string haystack,
+string needle [, int offset])</P>
+<p>It inside returns the numerical position
+from the first occurrence of <I>needle</I>
+of <I>haystack</I>. Differently of <B>strrpos()</B>, this
+function can have one string entire as the parameter <I>needle</I> and all string will be used.</P>
+<p>If <I>needle</I>will not be found, <B>strpos()</B>
+ will go to return B>boole <B>FALSE</B>.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=2 CELLSPACING=2>
+	<TR>
+		<TD>
+			<P><strong>Warning</strong></P>	  </TD>
+	</TR>
+	<TR>
+		<TD>
+			<p> This function may return Boolean&nbsp;<strong>FALSE</strong>, but may also return a non-Boolean value which evaluates to&nbsp;<strong>FALSE</strong>, such as<em>0</em>&nbsp;or "". Please read the section on&nbsp;Booleans&nbsp;for more information. Use&nbsp;the === operator&nbsp;for testing the return value of this function. </P>	  </TD>
+  </TR>
+</TABLE>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=97*>
+	<COL WIDTH=159*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>Example strpos()</B></P>		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=38% class="bgCode">
+		  <p> &lt;?php<br>
+		    $mystring&nbsp;=&nbsp;'abc';<br>
+		    $findme&nbsp;&nbsp;&nbsp;=&nbsp;'a';<br>
+		    $pos&nbsp;=&nbsp;strpos($mystring,&nbsp;$findme);<br>
+		    <br>
+		    //&nbsp;Note&nbsp;our&nbsp;use&nbsp;of&nbsp;===.&nbsp;&nbsp;Simply&nbsp;==&nbsp;would&nbsp;not&nbsp;work&nbsp;as&nbsp;expected<br>
+		    //&nbsp;because&nbsp;the&nbsp;position&nbsp;of&nbsp;'a'&nbsp;was&nbsp;the&nbsp;0th&nbsp;(first)&nbsp;character.<br>
+		    if&nbsp;($pos&nbsp;===&nbsp;false)&nbsp;{<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"The&nbsp;string&nbsp;'$findme'&nbsp;was&nbsp;not&nbsp;found&nbsp;in&nbsp;the&nbsp;string&nbsp;'$mystring'";<br>
+		    }&nbsp;else&nbsp;{<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"The&nbsp;string&nbsp;'$findme'&nbsp;was&nbsp;found&nbsp;in&nbsp;the&nbsp;string&nbsp;'$mystring'";<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;"&nbsp;and&nbsp;exists&nbsp;at&nbsp;position&nbsp;$pos";<br>
+		    }<br>
+	      ?&gt; </P>	  </TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>If the
+parameter  <I>needle</I> isn’t a string, is
+converted for a whole number and applied the value of the character.</P>
+<p>The optional parameter <I>offset</I> allows you defining from which
+character in <I>haystack</I> to initiate the
+search. The position still return is relative to the beginning of<I>haystack</I>.</P>
+<p>&nbsp;</P>
+<h2><A NAME="substr"></A>substr</H2>
+<p>(PHP 3, PHP 4 )</P>
+<P>substr&nbsp;--&nbsp;String returns a part from one.</P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY>Description</H2>
+<P>string <B>substr</B> ( string string,
+int start [, int length])</P>
+<p><B>substr()</B>it returns the part from  <I>string</I> specified by
+the parameter <I>start</I> and <I>length</I>. </P>
+<p>If <I>start</I> will not be negative, string
+returned will initiate in the position <I>start</I>in string, starting in zero. For
+example, in <I>string</I> 'abcdef', the character in
+position 0 is 'a', the character in position 2 it is 'c', and thus in ahead.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=71*>
+	<COL WIDTH=185*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>Basic use of  substr()</B></P>		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=28% class="bgCode">
+		  <p>&lt;?php<BR>$rest = substr(&quot;abcdef&quot;, 1);
+			// returns &quot;bcdef&quot;<BR>$rest = substr(&quot;abcdef&quot;,
+			1, 3); // returns &quot;bcd&quot;<BR>$rest = substr(&quot;abcdef&quot;,
+			0, 4); // returns &quot;abcd&quot;<BR>$rest = substr(&quot;abcdef&quot;,
+			0, 8); // returns &quot;abcdef&quot;<BR><BR>
+			// Another option is access it using curly brackets<BR>$string =
+			'abcdef';<BR>
+			echo $string{0}; // returns a<BR>echo $string{3}; //
+	  returns d<BR>?&gt;			</P>		</TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>If <I>start</I> will be negative, string returned will go starting
+in the character <I>start</I> from the end of <I>string</I>.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=64*>
+	<COL WIDTH=192*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>Example 2. Using a  negative start</B></P>	  </TD>
+	</TR>
+	<TR>
+		<TD WIDTH=25% class="bgCode">
+		  <p>&lt;?php<BR>$rest = substr(&quot;abcdef&quot;,
+			-1); // returns &quot;f&quot;<BR>$rest = substr(&quot;abcdef&quot;,
+			-2); // returns &quot;ef&quot;<BR>
+			$rest = substr(&quot;abcdef&quot;,
+			-3, 1); // returns &quot;d&quot;<BR>?&gt;			</P>		</TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>If <I>length</I> will be given and will be positive, string
+returned will go to contain <I>length</I> characters starting in <I>start</I> (depending on
+the size of <I>string</I>). If <I>string</I> is lesser from what <I>start</I>, will be returned <B>FALSE</B>.</P>
+<p>If <I>length</I> will be given and will be
+negative, then this amount characters will be omitted of the end of <I>string</I>
+(after the beginning position to have been calculated when <I>start</I> will be
+negative). If <I>start</I> denotes a position beyond truncate, one string empty will
+be returned.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=71*>
+	<COL WIDTH=185*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>Example 3. Using negative <I>length</I></B></P>	  </TD>
+  </TR>
+	<TR>
+		<TD WIDTH=28% class="bgCode">
+		  <p>&lt;?php<BR>$rest = substr(&quot;abcdef&quot;, 0,
+			-1); // returns &quot;abcde&quot;<BR>$rest = substr(&quot;abcdef&quot;,
+			2, -1); // returns &quot;cde&quot;<BR>$rest = substr(&quot;abcdef&quot;,
+			4, -4); // returns &quot;&quot;<BR>$rest = substr(&quot;abcdef&quot;,
+			-3, -1); // returns &quot;de&quot;<BR>
+			?&gt;			</P>		</TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>&nbsp;</P>
+<h2><A NAME="substr_replace"></A>substr_replace</H2>
+<p>(PHP 4 )</P>
+<P>substr_replace&nbsp;--&nbsp;Replace
+text within a portion of a string.</P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY>Description</H2>
+<P>string <B>substr_replace</B> ( string
+string, string replacement, int start [, int length])</P>
+<p><B>substr_replace()</B> replaces a copy of <I>string</I>
+delimited by the <I>start</I> and (optionally) <I>length</I>
+parameters with the string given in <I>replacement</I>. The result is
+returned.</P>
+<p>If <I>start</I> is positive, the replacing will begin
+at the <I>start</I>'th offset into <I>string</I>.</P>
+<p>If <I>start</I> is negative, the replacing will begin
+at the <I>start</I>'th character from the end of <I>string</I>.</P>
+<p>If <I>length</I> is given and is positive, it
+represents the length of the portion of <I>string</I> which is to be
+replaced. If it is negative, it represents the number of characters
+from the end of <I>string</I> at which to stop replacing. If it is
+not given, then it will default to strlen( <I>string</I> ); i.e. end
+the replacing at the end of <I>string</I>.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=85*>
+	<COL WIDTH=171*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>substr_replace() example</B></P>		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=33% class="bgCode">
+		  <p>&lt;?php<BR>$var = 'ABCDEFGH:/MNRPQR/';<BR>echo
+			&quot;Original: $var&lt;hr&gt;\n&quot;;<BR><BR>/* These two
+			examples replace all of $var with 'bob'. */<BR>echo
+			substr_replace($var, 'bob', 0) . &quot;&lt;br&gt;\n&quot;;<BR>echo
+			substr_replace($var, 'bob', 0, strlen($var)) . &quot;&lt;br&gt;\n&quot;;<BR>
+			<BR>/*
+			Insert 'bob' right at the beginning of $var. */<BR>echo
+			substr_replace($var, 'bob', 0, 0) . &quot;&lt;br&gt;\n&quot;;<BR><BR>/*
+			These next two replace 'MNRPQR' in $var with 'bob'. */<BR>echo
+			substr_replace($var, 'bob', 10, -1) . &quot;&lt;br&gt;\n&quot;;<BR>echo
+			substr_replace($var, 'bob', -7, -1) . &quot;&lt;br&gt;\n&quot;;<BR><BR>/*
+			Delete 'MNRPQR' from $var. */<BR>echo substr_replace($var, '', 10,
+			-1) . &quot;&lt;br&gt;\n&quot;;<BR>?&gt;			</P>		</TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>&nbsp;</P>
+<h2><A NAME="trim"></A>trim</H2>
+<p>(PHP 3, PHP 4 )</P>
+<P>trim&nbsp;--&nbsp;Removes space in the begin and end of one string.</P>
+<H2 LANG="pt-BR" CLASS="western" ALIGN=JUSTIFY>Description</H2>
+<P>string( string str [,
+string charlist])</P>
+<P><B>Note: </B> The optional parameter <I>charlist</I> was added in PHP 4.1.0 </P>
+<p>This
+function returns one string with the removed spaces from the beginning and the
+end of <I>str</I>. Without as the parameter, <B>trim()</B> will go to remove these characters. </P>
+<UL>
+	<LI><p>&quot; &quot; (ASCII 32 (0x20)), um espa&ccedil;o
+	normal. 
+	</P>
+	<LI><p>&quot;\t&quot; (ASCII 9 (0x09)), uma tabula&ccedil;&atilde;o.
+		</P>
+	<LI><p>&quot;\n&quot; (ASCII 10 (0x0A)), uma linha nova
+	(line feed). 
+	</P>
+	<LI><p>&quot;\r&quot; (ASCII 13 (0x0D)), um retono de
+	carro. 
+	</P>
+	<LI><p>&quot;\0&quot; (ASCII 0 (0x00)), o byte NULL. 
+	</P>
+	<LI><p>&quot;\x0B&quot; (ASCII 11 (0x0B)), uma
+	tabula&ccedil;&atilde;o vertical. 
+	</P>
+</UL>
+<p>You also can specify which characters you want
+to removing, through the parameter <I>charlist</I>. Simply he lists all the characters that you
+want removing. With you can specify an interval of characters.</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=0>
+<COL WIDTH=102*>
+	<COL WIDTH=154*>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%>
+			<p><B>Example  trim()</B></P>	  </TD>
+	</TR>
+	<TR>
+		<TD WIDTH=40% class="bgCode">
+		  <p>&lt;?php<BR><BR>$text = &quot;\t\tThese are a few
+			words :) ... &quot;;<BR>$trimmed = trim($text);<BR>// $trimmed =
+			&quot;These are a few words :) ...&quot;<BR>$trimmed =
+			trim($text,&quot; \t.&quot;);<BR>// $trimmed = &quot;These are a
+			few words :)&quot;<BR>$clean = trim($binary,&quot;\0x00..\0x1F&quot;);<BR>//
+			trim the ASCII control characters at the beginning and end of
+			$binary<BR>// (from 0 to 31 inclusive)<BR>
+			<BR>?&gt;			</P>		</TD>
+  </TR>
+	<TR>
+		<TD COLSPAN=2 WIDTH=100%></TD>
+	</TR>
+</TABLE>
+<p>&nbsp;</P>
+<h2><A NAME="while"></A>while</H2>
+<p>Loops while is the simples type t to create a “
+  <st1:place
+w:st="on">Loop</st1:place>” in PHP. They behave as its compatible ones in C.
+The basic format of a command while is:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD width="174" class="bgCode">
+	  <p>while(expression) instructions</P>		</TD>
+  </TR>
+</TABLE>
+<p>The meaning of a command while is simple. It asks for that the PHP executes
+the nestled commands repeated, while the expression of while is evaluated as <B>TRUE</B>. 
+The value of the expression is
+verified each time that if passes in the start of the 'Loop', in such a way,
+exactly that this value moves during the execution of (s) the command (s)
+nestled (s), the execution will not stop until the end of the iteration (each
+time that the PHP inside executes the commands of the 'Loop' is an iteration. To
+the times, if the expression while is evaluated as IT <B>FALSE</B> soon at the beginning, 
+the command (s) nestled will not be twirled (s) nor a time at least.</P>
+<P LANG="pt-BR" CLASS="macros">As in the command if, you can group multiples inside commands of the
+same bow while generalizing a group of instructions with keys, or using the
+alternative syntax:</P>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+	  <p>while (expressao): instrucoes ... endwhile;</P>		</TD>
+  </TR>
+</TABLE>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD class="bgCode">
+		  <p>&lt;?php<BR>
+			/* exemple 1 */<BR><BR>$i = 1;<BR>while
+			($i &lt;= 10) {<BR>
+			print $i++; <BR>
+			}<BR><BR>
+			/*
+			exemple 2 */<BR><BR>$i = 1;<BR>while ($i &lt;= 10):<BR>print
+			$i;<BR>$i++;<BR>endwhile;<BR>?&gt;</P>		</TD>
+  </TR>
+</TABLE>
+<h2><A NAME="php_activex"></A><BR>CALLING ACTIVEX </H2>
+<TABLE width="600" BORDER=0 CELLPADDING=5 CELLSPACING=2 BGCOLOR="#e0e0e0">
+<TR>
+		<TD WIDTH=619 class="bgCode">
+		  <P LANG="pt-BR" STYLE="margin-right: 0.39in"><U>EX1:</U></P>
+			<P LANG="pt-BR" STYLE="margin-right: 0.39in"><B><FONT COLOR="#800080">$obj</FONT></B>
+			<B><FONT COLOR="#008000">=</FONT></B> <B><FONT COLOR="#008000">new</FONT></B>
+			<FONT COLOR="#0000ff">COM</FONT><B><FONT COLOR="#008000">(</FONT><font>&quot;security.csecurity&quot;</FONT><FONT COLOR="#008000">);<BR>
+			</FONT><FONT COLOR="#800080">$obj</FONT><FONT COLOR="#008000">-&gt;</FONT></B><FONT COLOR="#0000ff">repass_conection</FONT><B><FONT COLOR="#008000">(</FONT>&quot;demo;[glo_server];[glo_banck];[glo_user];[glo_password];Sql server&quot;<FONT COLOR="#008000">);<BR>
+			</FONT><FONT COLOR="#800080">$obj</FONT><FONT COLOR="#008000">-&gt;</FONT></B><FONT COLOR="#0000ff">valid_user</FONT><B><FONT COLOR="#008000">({</FONT></B><FONT COLOR="#0000ff">user</FONT><B><FONT COLOR="#008000">},</FONT></B>
+			<B><FONT COLOR="#008000">{</FONT></B><font color="#0000ff">password</font><B><FONT COLOR="#008000">});<BR>
+			{</FONT></B><FONT COLOR="#0000ff">fieldPHP</FONT><B><FONT COLOR="#008000">}</FONT></B>
+			<B><FONT COLOR="#008000">=</FONT></B> <B><FONT COLOR="#800080">$obj</FONT><FONT COLOR="#008000">-&gt;</FONT></B><FONT COLOR="#0000ff">retorn_status</FONT><B><FONT COLOR="#008000">;</FONT></B>		  </P>
+		  <P LANG="pt-BR" STYLE="margin-right: 0.39in"><EM><FONT COLOR="#ff8000">//
+			the code below calls an  ActiveX objecto , methods and attributes </FONT></EM><BR>
+			<I><FONT COLOR="#ff8000">// PHP suports  COM  tecnology</FONT></I></P>
+		  <P LANG="pt-BR" STYLE="margin-right: 0.39in"><U>EX2:</U></P>
+			<P LANG="pt-BR" STYLE="margin-right: 0.39in"><STRONG><FONT COLOR="#000000"><STRONG><FONT COLOR="#800080">$obj</FONT></STRONG><FONT COLOR="#ff8000">
+			<B><FONT COLOR="#008000">=</FONT></B> <B><FONT COLOR="#008000">new</FONT></B>
+			<FONT COLOR="#0000ff">COM</FONT><B><FONT COLOR="#008000">(</FONT><font>&quot;sc.valid&quot;</FONT><FONT COLOR="#008000">);<BR>
+			</FONT></B><STRONG><FONT COLOR="#800080">{return}
+			= $obj</FONT><FONT COLOR="#008000">-&gt;</FONT></STRONG><FONT COLOR="#0000ff">valid</FONT><B><FONT COLOR="#008000">(</FONT><font>&quot;[glo_user]&quot;</FONT></B></FONT><B><FONT COLOR="#008000">);<BR>
+			</FONT></B><STRONG><FONT COLOR="#800080">$obj</FONT><FONT COLOR="#008000">-&gt;</FONT></STRONG><FONT COLOR="#0000ff">release();<BR></FONT><STRONG><FONT COLOR="#800080">$obj
+			= null;<BR>if($retorno == &ldquo;err&rdquo;)<BR>
+			{<BR>
+			sc_err_message(&ldquo;invalid user&rdquo;)<BR>
+			}</FONT></STRONG></FONT></STRONG></P>	  </TD>
+  </TR>
+</TABLE>
+<p>&nbsp;</P>
+<P LANG="pt-BR" ALIGN=JUSTIFY STYLE="margin-right: 0.39in">&nbsp;</P>
+</BODY>
+</HTML>

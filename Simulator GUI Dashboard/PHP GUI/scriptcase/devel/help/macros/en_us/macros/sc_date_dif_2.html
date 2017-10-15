@@ -1,0 +1,61 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro calculates the difference between two dates returning the amount of days, months and years.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date_dif_2({Date1}, "Format Date1", {Date2}, "Format Date2", Option) <br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Calculates the difference between two dates (passed as parameters) returning the amount of days, months and years.</span></p>
+<p><span class="corpo1"><br />The result is returned in an array structure, where the index 0 have the amount of days, the index 1 have the amount of months and the index 2 have the amount of years.</span></p>
+<p>&nbsp;</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="20%" align="left" valign="top"><strong class="corpo1">Parameter <br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Date1</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Date1 value or variable.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Format Date1<br /></td>
+<td class="corpo1" align="left" valign="top">
+<p>Value or Variable containing the date format stored on Date1.</p>
+</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Date2</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1"><span class="corpo1">Date2 value or variable.</span></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Format Date2<br /></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Value or Variable containing the date format stored on Date2.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Option<br /></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">1 = Doesn't consider the initial day; 2 = Considers the initial day.</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="corpo1"><br /><br /><strong>Ex. 1:</strong><br />{differences} = </span><span class="corpo1">sc_date_dif</span><span class="corpo1">_2 ({date1}, "yyyy-mm-dd", {date2}, "mm/dd/yyyy", 1);<br />{dif_days} = {differences[0]};<br />{dif_months} = {differences[1]};<br />{dif_years} = {differences[2]};</span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 2:<br /></strong>{differences} = </span><span class="corpo1">sc_date_dif</span><span class="corpo1">_2 ("2000-05-01", "yyyy-mm-dd", "04/21/2004", "mm/dd/yyyy", 1);<br />{differences[0]} = 20 (days)<br />{differences[1]} = 11 (months)<br />{differences[2]}&nbsp; = 3 (years)</span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><br /><strong>Ex. 3: Using the option 2</strong><br />{differences} = </span><span class="corpo1">sc_date_dif</span><span class="corpo1">_2 ("2000-05-01", "yyyy-mm-dd", "04/21/2004", "mm/dd/yyyy", 2);<br />{differences[0]} = 21 (days)<br />{differences[1]} = 11 (months)<br />{differences[2]} = 3 (years).<br /></span></p>
+<p><span class="corpo1"><br /><strong>Note:</strong> <em>Formats between the two dates can be different but it must have days, months and years.</em></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

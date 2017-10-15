@@ -1,0 +1,28 @@
+/* CSS Document */
+
+.blog-post{   margin-bottom:20px; }
+.blog-post .post-item {}
+.blog-post p { margin:0 0 10px; font-size:13px; font-weight:300; }
+.blog-post .post-item .title{  padding: 0 ;}
+.blog-post .post-item .title h3 a{ font-weight:400;}
+.blog-post .post-item .blog-info-small{   padding: 5px 20px  20px; color:#999; font-size:12px; }
+.blog-post .post-item .blog-info-small i{  color:#78CFF8 !important; } 
+.blog-post .post-item .summary{   padding:0 0 20px;}
+.blog-post .post-item .line{ border-top:solid 1px #ddd;}
+.blog-post .post-item .action{ padding:20px;   border-radius:0 0 4px 4px;  border-top:solid 1px #ddd;}
+.blog-post .post-item .action a{ color:#717171; }
+ul.categories { margin:20px 0;}
+ul.categories li{ border-bottom:solid 1px #ddd;}
+ul.categories li a{ display:block; padding:10px 0; font-size:13px; font-weight:400; color:#444; }
+.line { border-bottom:solid 1px #ddd;}
+/* RECENT POST */
+ul.recent-post { margin:0 0 20px; list-style:none; padding:0;}
+ul.recent-post li{ border-bottom:solid 1px #ddd;}
+ul.recent-post li a{ display:block; padding:10px 0; font-size:13px; color:#717171;}
+.comment-list .info { font-weight:600;}
+.comment-list .body blockquote{ font-size:13px;}
+.comment-list .action { padding-bottom:10px;} 
+.comment-list .comm { border-bottom:dotted 1px #ddd; margin-bottom:15px; font-weight:300;}
+/* Widget block */
+.block-widget {  margin-bottom:25px;}
+

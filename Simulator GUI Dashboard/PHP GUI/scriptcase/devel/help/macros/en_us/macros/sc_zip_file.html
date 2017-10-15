@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro its used to generate ZIP files from a file list and/or directories.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_zip_file("File", "Zip")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">This macro its used to generate ZIP files from a list of files and/or directories. The file parameter must be one of the following:<br /><br />- File name<br />- Directory name<br />- A variable containing array, which contains a files and/or directories list.<br />- A variable a file or a directory name.&nbsp; <br />- A variable containing array, which contains a files and/or directories list.<br /><br />The zip parameter must be the zip file name generated, or a variable containing its name.</span></p>
+<p><span class="corpo1"><br /><br /><strong>Ex. 1:</strong> <strong>Only a file.</strong><br />sc_zip_file("/test/sample.htm", "/tmp/test.zip");</span></p>
+<p><span class="corpo1"><br /><strong><br />Ex. 2:</strong> O<strong>nly a directory.</strong><br />sc_zip_file("/test", "/tmp/test.zip");</span></p>
+<p><span class="corpo1"><br /><strong><br />Ex. 3:</strong> <strong>Using an array of files and directories.</strong><br />$prep = array();<br />$prep[] = "/test/sample.htm";<br />$prep[] = "/test";<br />sc_zip_file($prep, "/tmp/test.zip");</span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

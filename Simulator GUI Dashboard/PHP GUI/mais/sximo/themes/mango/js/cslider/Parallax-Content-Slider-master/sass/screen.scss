@@ -1,0 +1,372 @@
+/* Compass main styles (or centralized imports). */
+
+//@import "compass/reset";
+@import "compass/css3";
+@import "fancy-buttons";
+
+$background: #1e54a1;
+$title: #73b2ff; //lighten(saturate($background, 25%), 30%);
+$text: white;
+$slider_nav: #73b2ff; //lighten(saturate($background, 25%), 30%);
+$button: lighten(saturate(adjust_hue($background, 170deg), 20%), 20%);
+
+body {
+  background:$background;
+}
+
+.boxes {
+  .box {
+    float:left;
+    width:100px;
+    height:100px;
+    text-align:center;
+  }
+  .one {
+    background:darken($background, 10%);
+  }
+  .two {
+    background:lighten(saturate($background, 20%), 20%);
+  }
+  .three {
+    background:adjust_hue($background, 5deg);
+  }
+}
+
+.button {
+  @include fancy-button($button);
+}
+
+// Slideshow canvas, with parallax background motion effect.
+.da-slider {
+  width: 100%;
+  min-width: 520px;
+  height: 400px;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;
+  background: transparent url(../images/waves.png) repeat 0% 0;
+  @include single-transition(background-position, 1.4s, ease-in-out, .3s);
+}
+
+// Individual slide settings. All slides contain a heading, a paragraph,
+// an image and a call to action link.
+.da-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-family: "proxima-nova", Arial, sans-serif;
+  text-align: left;
+  & .da-text,
+  & .da-title,
+  & .da-img,
+  & .da-link {
+    position: absolute;
+    opacity: 0;
+    left: 110%;
+  }
+  & .da-title {
+    color: $title;
+    width: 50%;
+    top: 0;
+    white-space: nowrap;
+    z-index: 10;
+    font-weight: 700;
+    font-size: 46px;
+    text-transform:uppercase;
+    @include text-shadow(1px 1px 1px rgba(0,0,0,.1));
+  }
+  & .da-text {
+    width: 40%;
+    top: 82px;
+    color: white;
+    font-size: 28px;
+    line-height: 1.2em;
+    overflow: hidden;
+    font-weight: 100;
+  }
+  & .da-img {
+    text-align: center;
+    width: 50%;
+    top: 20px;
+    height: 256px;
+    line-height: 320px;
+    left: 110%;
+  }
+  & .da-link {
+    bottom: 25px;
+    width: 100px;
+    & a {
+      white-space: nowrap;
+    }
+  }
+}
+
+// Slider FB (not sure what fb stands for yet?)
+.da-slider-fb .da-slide {
+  left: 100%;
+  &.da-slide-current {
+    left: 0;
+  }
+  & .da-title,
+  & .da-text,
+  & .da-link {
+    left: 10%;
+    opacity: 1;
+  }
+  & .da-img {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+// Current slide styles.
+.da-slide-current {
+  z-index: 500;
+  & .da-title,
+  & .da-text,
+  & .da-link {
+    left: 10%;
+    opacity: 1;
+  }
+  & .da-img {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+// Slideshow dots
+.da-dots {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 20px;
+  z-index: 2000;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  & span {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    margin: 3px;
+    cursor: pointer;
+    background: $slider_nav;
+    @include border-radius(50%);
+    @include box-shadow(
+      1px 1px 1px rgba(0,0,0,.1) inset,
+      1px 1px 1px rgba(255,255,255,.1));
+    &.da-dots-current:after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      @include border-radius(50%);
+      /* non-css3 */
+      background: $text;
+      /* for ie */
+      @include filter-gradient(white, #ededed, vertical);
+      /* css3 */
+      @include background-image(linear-gradient(top, white, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%));
+    }
+  }
+}
+
+// Left & right arrows
+.da-arrows {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+  & span {
+    position: absolute;
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    background: $slider_nav;
+    cursor: pointer;
+    z-index: 2000;
+    @include border-radius(50%);
+    @include opacity(0);
+    @include box-shadow(
+      1px 1px 1px rgba(0,0,0,.1) inset,
+      1px 1px 1px rgba(255,255,255,.1)
+    );
+    @include single-transition(opacity .4s ease-in-out .2s);
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 5px;
+      left: 5px;
+      background: transparent url(../images/arrows.png) no-repeat top left;
+      @include border-radius(50%);
+      @include box-shadow(1px 1px 2px rgba(0,0,0,.1));
+    }
+    &:hover:after {
+      @include box-shadow(1px 1px 4px rgba(0,0,0,.3));
+    }
+    &:active:after {
+      @include box-shadow(1px 1px 1px rgba(255,255,255,.1));
+    }
+    &.da-arrows-prev {
+      left: 15px;
+    }
+    &.da-arrows-next {
+      right: 15px;
+      &:after {
+        background-position: top right;
+      }
+    }
+  }
+}
+.da-slider:hover .da-arrows span {
+  opacity: 1;
+}
+
+/* Animation classes and animations */
+
+/* Slide in from the right */
+.da-slide-fromright {
+  & .da-title {
+    @include animation(fromRightAnim1 .6s ease-in .8s both);
+  }
+  & .da-text {
+    @include animation(fromRightAnim2 .6s ease-in .8s both);
+  }
+  & .da-link {
+    @include animation(fromRightAnim3 .4s ease-in 1.2s both);
+  }
+  & .da-img {
+    @include animation(fromRightAnim4 .6s ease-in .8s both);
+  }
+}
+@include keyframes(fromRightAnim1) {
+  0%{ left: 110%; opacity: 0; }
+  100%{ left: 10%; opacity: 1; }
+}
+@include keyframes(fromRightAnim2) {
+  0%{ left: 110%; opacity: 0; }
+  100%{ left: 10%; opacity: 1; }
+}
+@include keyframes(fromRightAnim3) {
+  0%{ left: 110%; opacity: 0; }
+  1%{ left: 10%; opacity: 0; }
+  100%{ left: 10%; opacity: 1; }
+}
+@include keyframes(fromRightAnim4) {
+  0%{ left: 110%; opacity: 0; }
+  100%{ left: 50%; opacity: 1; }
+}
+
+/* Slide in from the left */
+.da-slide-fromleft {
+  & .da-title {
+    @include animation(fromLeftAnim1 .6s ease-in .6s both);
+  }
+  & .da-text {
+    @include animation(fromLeftAnim2 .6s ease-in .6s both);
+  }
+  & .da-link {
+    @include animation(fromLeftAnim3 .4s ease-in 1.2s both);
+  }
+  & .da-img {
+    @include animation(fromLeftAnim4 .6s ease-in .6s both);
+  }
+}
+@include keyframes(fromLeftAnim1) {
+  0%{ left: -110%; opacity: 0; }
+  100%{ left: 10%; opacity: 1; }
+};
+@include keyframes(fromLeftAnim2) {
+  0%{ left: -110%; opacity: 0; }
+  100%{ left: 10%; opacity: 1; }
+}
+@include keyframes(fromLeftAnim3) {
+  0%{ left: -110%; opacity: 0; }
+  1%{ left: 10%; opacity: 0; }
+  100%{ left: 10%; opacity: 1; }
+}
+@include keyframes(fromLeftAnim4) {
+  0%{ left: -110%; opacity: 0; }
+  100%{ left: 50%; opacity: 1; }
+}
+
+/* Slide out to the right */
+.da-slide-toright {
+  & .da-title {
+    @include animation(toRightAnim1 .6s ease-in .6s both);
+  }
+  & .da-text {
+    @include animation(toRightAnim2 .6s ease-in .3s both);
+  }
+  & .da-link {
+    @include animation(toRightAnim3 .4s ease-in both);
+  }
+  & .da-img {
+    @include animation(toRightAnim4 .6s ease-in both);
+  }
+}
+@include keyframes(toRightAnim1) {
+  0%{ left: 10%;  opacity: 1; }
+  100%{ left: 100%; opacity: 0; }
+}
+@include keyframes(toRightAnim2) {
+  0%{ left: 10%;  opacity: 1; }
+  100%{ left: 100%; opacity: 0; }
+}
+@include keyframes(toRightAnim3) {
+  0%{ left: 10%;  opacity: 1; }
+  99%{ left: 10%; opacity: 0; }
+  100%{ left: 100%; opacity: 0; }
+}
+@include keyframes(toRightAnim4) {
+  0%{ left: 50%;  opacity: 1; }
+  30%{ left: 50%;  opacity: 1; }
+  100%{ left: 100%; opacity: 0; }
+}
+
+/* Slide out to the left */
+.da-slide-toleft .da-title {
+  @include animation(toLeftAnim1 .6s ease-in both);
+}
+.da-slide-toleft .da-text {
+  @include animation(toLeftAnim2 .6s ease-in .3s both);
+}
+.da-slide-toleft .da-link {
+  @include animation(toLeftAnim3 .4s ease-in both);
+}
+.da-slide-toleft .da-img {
+  @include animation(toLeftAnim4 .6s ease-in .6s both);
+}
+@include keyframes(toLeftAnim1) {
+  0%{ left: 10%;  opacity: 1; }
+  30%{ left: 15%;  opacity: 1; }
+  100%{ left: -50%; opacity: 0; }
+}
+@include keyframes(toLeftAnim2) {
+  0%{ left: 10%;  opacity: 1; }
+  30%{ left: 15%;  opacity: 1; }
+  100%{ left: -50%; opacity: 0; }
+}
+@include keyframes(toLeftAnim3) {
+  0%{ left: 10%;  opacity: 1; }
+  99%{ left: 10%; opacity: 0; }
+  100%{ left: -50%; opacity: 0; }
+}
+@include keyframes(toLeftAnim4) {
+  0%{ left: 50%; opacity: 1; }
+  40%{ left: 70%; opacity: 1; }
+  90%{ left: 0; opacity: 0; }
+  100%{ left: -50%; opacity: 0; }
+}

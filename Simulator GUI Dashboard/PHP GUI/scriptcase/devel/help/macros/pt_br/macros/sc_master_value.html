@@ -1,0 +1,42 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro atualiza um objeto da aplicação Mestre em uma aplicação Detalhe.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_master_value('Objeto', Valor)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Esta macro tem o poder de atualizar qualquer objeto de uma aplica&ccedil;&atilde;o Mestre, em uma aplica&ccedil;&atilde;o Detalhe.</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Objeto</td>
+<td class="corpo1" align="left" valign="top">Nome do objeto a ser atualizado na aplica&ccedil;&atilde;o Mestre. Ao informar o nome de um campo, n&atilde;o &eacute; necess&aacute;rio utilizar as {}.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Valor</td>
+<td class="corpo1" align="left" valign="top">Valor que o objeto especificado receber&aacute;. O valor pode ser um campo ou vari&aacute;vel.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong><br />sc_lookup(result,"SELECT SUM(Total) FROM adm_pedido_itens WHERE PedidoID = '{PedidoID}'");<br />[valor] = {result}[0][0];<br />sc_master_value('ValorPedido', [valor]);<br /></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

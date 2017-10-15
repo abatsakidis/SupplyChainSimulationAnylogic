@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro verifies if its been used a safe/secure site. (https protocol)</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_site_ssl<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This macro its used to <span class="corpo1">verifie if a used site is a safe site. (https protocol)<br /><br /><em></em><br /><br /><strong>Ex. 1:</strong> <strong>Using an affirmative.</strong><br />if (sc_site_ssl)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "ok - Safe site";<br />}</span></p>
+<p><span class="corpo1"><br /><br /><strong>Ex. 2: Using a negative.</strong><br />if (!sc_site_ssl)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "Warning - Unsafe site";<br />}</span></p>
+<p><span class="corpo1"><br /><br /><strong>Ex. 3:</strong> <strong>Redirecting if the site isn't safe.</strong><br />if (!sc_site_ssl)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir("http://www.erro_page.com/") ;<br />}</span><br /></p>
+<p><span class="corpo1"><strong>Note:</strong> <em>This macro works only to the web server llS.</em></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

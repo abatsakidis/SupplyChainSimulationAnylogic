@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro deactivates the Scriptcase standard database error treatment message for an event.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_error_continue("Event")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This macro deactivates the Scriptcase standard database error treatment message for the event passed as parameter allowing it to be substituted by the programmer customized error treatment.<br /><br />It can be used in along with variable: {sc_erro_delete}, {sc_erro_insert} and/or {sc_erro_update}</p>
+<p>The events to be passed as parameter are: insert, delete or update.</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong> Using on the event <strong>onDelete</strong> for the message returned by mssql, trigger treatment, which cancels the record exclusion, displays a error message in the format [Microsoft] [ODBC SQL Server Driver] [SQL Server] You can't erase the record.<br /><br />sc_error_continue("delete");<br />if (!empty({sc_error_delete}))<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; $tmp = strrpos({sc_error_delete}, "]");<br />&nbsp;&nbsp;&nbsp;&nbsp; if ($tmp !== false)<br />&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {sc_error_delete} = substr({sc_error_delete}, $tmp 1);<br />&nbsp;&nbsp;&nbsp;&nbsp; }<br />sc_error_message({sc_error_delete});<br />sc_error_exit;<br />}</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

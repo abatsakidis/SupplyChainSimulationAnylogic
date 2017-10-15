@@ -1,0 +1,16 @@
+/* CSS Document */
+
+/* FAQ */
+.mangocms { clear:both;}
+.mangocms h3 { font-weight:400; font-size:16px; border-bottom:dashed 1px #ddd; margin-bottom:15px; padding-bottom:15px;}
+.mango-faq {}
+.mango-faq .faq-widget{ }
+.mango-faq .faq-widget ul{ margin:0; padding:0; list-style:none; }
+.mango-faq .faq-widget ul li{ border-bottom:dashed 1px #ddd; padding:5px 10px; clear:both;}
+.mango-faq .faq-widget ul li a.remove{ float:right; width:30px;} 
+.mango-faq .faq-widget ul li a{  }
+
+.portadminlist { margin-bottom:15px;}
+.portadminlist .caption{ line-height:25px; height:25px;  border:solid 1px #ddd;padding:0 10px; font-size:12px; font-weight:400; } 
+.portadminlist .img{ height:110px; overflow:hidden; }
+.portadminlist .action{ line-height:30px; height:30px; background:#e9e9e9;   border:solid 1px #ddd; padding:0 10px;}

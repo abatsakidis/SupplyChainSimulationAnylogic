@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Advanced Deployment</title>
+<link href="../scriptcase.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<h1>Advanced Deployment</h1>
+
+</strong>This deployment type is used to manually configure the  production environment (common library) in the production server informing the  exact environment location. 
+<p>
+  <strong>Step 1</strong>: Access the ScriptCase menu item<strong> ProjectDeploy</strong>, according to image below.<br />
+  <br />
+  <br />
+  <img src="img/new_deploy17.jpg" border="1" /><strong><br />
+  <br />
+  <br />
+  <br />
+    </strong><br />
+  <br />
+  <strong>Step 2:</strong> Select the applications to deploy. It is possible to  deploy the entire Project (the entire application set) or a partial set of  Project applications.<br />
+  <br />
+  <strong><br />
+  </strong><img src="img/new_deploy18.jpg" border="1" /><br />
+  <br />
+  <br />
+  <strong>Step 3:</strong> Select Advanced deployment.<br />
+  <br />
+  <br />
+  <img src="img/new_deploy25.jpg"  border="1" /><br />
+  <br />
+</p>
+<p><strong>Step 4:</strong> Create a deployment template to save (and re-use)  the defined configuration. <br />
+  <br />
+  <br />
+  <img src="img/new_deploy26.jpg"  border="1" /><br />
+  <br />
+  <br />
+  <br />
+  <strong>Step 5:</strong> Define the production environment directory  structure according to the common libraries structure defined in the production  server. Consider that environment directory root is <em><strong>prod_scriptcase</strong></em>. See a  configuration example below.</p>
+<p>*Note – The character &quot;/&quot;, means the Server Web  root, utilized in relative paths.</p>
+<p><br />
+  <strong> Production Directory</strong> - Relative path  to <strong>prod</strong> (dir).<br />
+  /prod_scriptcase/prod<br />
+</p>
+<p><strong>Images Directory (used for upload)</strong> -  Relative path  to  <strong>img</strong>.<br />
+  /prod_scriptcase/file/img<strong><br />            
+  <br />
+  Temporary Directory- </strong>Relative path  to tmp.<strong><br />
+    </strong>/prod_scriptcase/tmp<strong><br />
+    </strong><br />
+      <strong> Documents Directory  (used for upload) </strong>- Absolute path  (full path) to <strong>doc</strong>.<br />
+C:/Apache/Apache2/htdocs/prod_scriptcase/file/doc</p>
+<p><br />
+  <br />
+  <br />
+              <br />
+  <img src="img/new_deploy27.jpg"  border="1" /><br />
+              <br />
+              <br />
+              <strong>Step 6:</strong> Name the connections used for Production.<br />
+  <br />
+  <br />
+  <br />
+  <img src="img/new_deploy28.jpg"  border="1" /><br />
+  <br />
+  <br />
+  <br />
+  <strong>Step 7:</strong> Select used Deployment Output. ScriptCase  offers the following options:<br />
+  <br />
+  <strong>1 - Generate ZIP with applications (recommended): </strong>Upon  complete the process is displayed a download link to the deployment package.<br />
+  <br />
+  <img src="img/new_deploy21.jpg"  border="1" /><br />
+  <br />
+</p>
+
+<p><strong>2 – Deploy in Server directory:</strong>  Deploy the applications in selected directory.  This option should only be used case the deployment is in the same ScriptCase server.<br />
+</p>
+<p><br />
+  <img src="img/new_deploy22.jpg"  border="1" /><br />
+  <br />
+  <br />
+</p>
+<p><br />
+  <strong>3 – Deploy in FTP server:</strong> Deploy the applications automatically  in FTP remote server. <br />
+  <br />
+  <br />
+  <img src="img/new_deploy23.jpg"  border="1" /><br />
+  <br />
+  <br />
+  <br />
+  <strong>Step 8:</strong> Upon complete the process is displayed an application  deployed report.<br />
+  <br />
+  <img src="img/new_deploy24.jpg"  border="1" /><br />
+  <br />
+  <br />
+<span><strong>Step 9</strong>:</span> The common libraries are methods required by the  applications in the production environment being required by the deployment  package. </p>
+<p><br />
+  <strong>Note:</strong> In case of re-deployment (deploying again same project  applications) it is not necessary to download common library again. This info  is not valid when the common libraries are update in another ScriptCase release.</p>
+<br />
+<br />
+<img src="img/new_deploy29.jpg"  border="1" /><br />
+<br />
+<br />
+</body>
+</html>

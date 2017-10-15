@@ -1,0 +1,30 @@
+<!-- BEGIN bloco -->
+    <TD colspan="{NM_BLOCO_SPAN}" height="{NM_BLOCO_ALTURA}" {NM_BLOCO_IMG_FUN} BGCOLOR="{NM_BLOCO_COR_FUN}">
+     <TABLE border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+      <TR>
+       <TD align="{NM_BLOCO_HORIZ}" valign="{NM_BLOCO_VERT}"><B><FONT SIZE="{NM_BLOCO_TXT_TAM}" COLOR="{NM_BLOCO_COR_TXT}" FACE="{NM_BLOCO_TXT_TIP}">{NM_BLOCO_TITULO}</FONT></B></TD>
+       {NM_BLOCO_HELP}
+      </TR>
+     </TABLE>
+    </TD>
+<!-- END bloco -->
+<!-- BEGIN bloco_registro -->
+   {NM_CMP_PHP}
+    <TD {NM_DAD_STYLE} > {NM_CMP_DADO} </TD>
+   {NM_FIM_PHP}
+<!-- END bloco_registro -->
+<!-- BEGIN bloco_limpa -->
+    <TD {NM_LIMPA_STYLE} colspan="{NM_LIMPA_SPAN}" >&nbsp;</TD>
+<!-- END bloco_limpa -->
+
+<!-- BEGIN bloco_abre_td -->
+    <TD {NM_DAD_STYLE} >
+<!-- END bloco_abre_td -->
+<!-- BEGIN bloco_linha -->
+   {NM_CMP_PHP}
+   {NM_CMP_DADO}
+   {NM_FIM_PHP}
+<!-- END bloco_linha -->
+<!-- BEGIN bloco_fecha_td -->
+    </TD>
+<!-- END bloco_fecha_td -->

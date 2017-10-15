@@ -1,0 +1,45 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro is used to create a string with the link data to another application.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_make_link(Application, Parameters)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1"><span style="font-size: xx-small;"><span class="corpo1">This macro creates a string containing a link to other Scriptcase application (when writing html code).</span></span></p>
+<p class="corpo1"><span style="font-size: xx-small;"><span class="corpo1"> 
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Parameter<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Application</td>
+<td class="corpo1" align="left" valign="top"><span style="font-size: xx-small;"><span class="corpo1">Name of the application to establish the link.</span></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Parameters</td>
+<td class="corpo1" align="left" valign="top"><span style="font-size: xx-small;"><span class="corpo1">Parameters necessary so called 
+application. In the format:   "=" (the attribution sign) . More than one
+ parameter must be separated by ";" (semicolon).</span></span></td>
+</tr>
+</tbody>
+</table>
+</span></span></p>
+<p class="corpo1"><br /><strong><br />Ex. 1: Creating a string with a link for the datacli.php application, without parameters passage.</strong><br />$string_link = sc_make_link(datacli.php);</p>
+<p class="corpo1"><span style="font-size: xx-small;"><span class="corpo1"><br /><strong><br />Ex. 2: Creating a string with a link for the application datacli.php, with parameters passage.</strong><br />$string_link = sc_make_link(datacli, parm1={company};parm2=[glo_office]);</span><br /><br /><br /><br /></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,15 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre após que algum resgistro tenha sido deletado.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre ap&oacute;s que algum resgistro tenha sido deletado.</p>
+<p class="corpo1">A cada exclus&atilde;o &eacute; disparado este evento , depois da exclus&atilde;o , podemos por exemplo criar logs com facilidade, usando um bloco PHP no evento OnAfterDelete, semelhante ao exibido abaixo:</p>
+<p class="corpo1">sc_exec_sql(" insert into tb_log values([glo_usuario],'exclusao','tabela_clientes',{codigo});</p>
+<p class="corpo1">//gravamos alem dos literais 'exclus&atilde;o' e 'tabela_clientes', a vari&aacute;vel de sessao [glo_usuario], e a vari&aacute;vel local {codigo}&nbsp; , que continha o conte&uacute;do do campo c&oacute;digo rec&eacute;m exclu&iacute;do</p>
+			</body>
+			
+</HTML>

@@ -1,0 +1,57 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro calcula diferença entre datas, retornando a quantidade de dias, meses e anos.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date_dif_2({Data1}, "Formato Data1", {Data2}, "Formato Data2", Opção)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Calcula diferen&ccedil;a entre datas, retornando a quantidade de dias, meses e anos.</p>
+<p>O resultado ser&aacute; retornado em forma de array, no qual o &iacute;ndice 0 ter&aacute; a a quantidade de dias, o &iacute;ndice 1 ter&aacute; a quantidade de meses e o &iacute;ndice 2 ter&aacute; a quantidade de anos.</p>
+<table style="border=" border="0">
+<tbody>
+<tr>
+<td width="20%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro <br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Data1</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou vari&aacute;vel contendo a primeira data.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Formato Data1<br /></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou vari&aacute;vel contendo o formato no qual est&aacute; armazenada a data1. </span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Data2</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou vari&aacute;vel contendo a segunda data.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Formato Data2<br /></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou vari&aacute;vel contendo o formato no qual est&aacute; armazenada a data2. </span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Op&ccedil;&atilde;o<br /></td>
+<td class="corpo1" align="left" valign="top">1 = n&atilde;o considera o dia inicial; 2 = considera o dia inicial.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong><br />{diferencas} = <span class="corpo1">sc_date_dif</span>_2 ({data1}, "aaaa-mm-dd", {data2}, "dd/mm/aaaa", 1);<br />{dif_dias} = {diferencas[0]}; <br />{dif_meses} = {diferencas[1]}; <br />{dif_anos } = {diferencas[2]};</p>
+<p><br /><strong>Ex. 2:</strong><br />{diferencas} = <span class="corpo1">sc_date_dif</span>_2 ("2000-05-01", "aaaa-mm-dd", "21/04/2004", "dd/mm/aaaa", 1);<br />{diferencas[0]} seria igual a 20 (dias)<br />{diferencas[1]} seria igual a 11 (meses) <br />{diferencas[2]} seria igual a 3 (anos).</p>
+<p><br /><strong>Ex. 3: Utilizando a op&ccedil;&atilde;o 2</strong>.<br />{diferencas} = <span class="corpo1">sc_date_dif</span>_2 ("2000-05-01", "aaaa-mm-dd", "21/04/2004", "dd/mm/aaaa", 2);<br />{diferencas[0]} seria igual a 21 (dias)<br />{diferencas[1]} seria igual a 11 (meses) <br />{diferencas[2]} seria igual a 3 (anos).</p>
+<p><br /><strong>Obs:</strong> <em>Embora os formatos possam ser diferentes, as datas devem ser compostas de dia, m&ecirc;s e ano.</em></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

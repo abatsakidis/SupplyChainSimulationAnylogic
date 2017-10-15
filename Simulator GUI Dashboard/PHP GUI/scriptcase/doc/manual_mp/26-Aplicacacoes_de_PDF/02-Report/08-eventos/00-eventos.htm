@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<META NAME="Last REVIEWED" CONTENT="José Arteiro, 24-05-2010">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Events</title>
+		<link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		<h1> Events </h1>
+	<p>If you need do something more specific on you reports, you can program it, using events.
+		   For example if you want to sum two fields and move this result to another one, before printing the record, just edit the event
+		   <b>OnRecord</b> and write a code similar to this:<br>
+		{field_c} = {field_b} + {field_a};</p>
+		<p><img src="img/event_access.jpg"></p>
+		<p><br>
+		  Here you are free to program PHP, just remember the character { } , around the field name to make reference the local variables,
+		  using [ ], you are making reference to global variables. </p>
+		<p> <p><span>Scriptcase uses the concept of events to enable to developer to customize application code. Events allow the developer to define custom actions at a specific execution time (e.g. After a record is inserted, when it is loaded, upon submitting a form, ...) and for a specific type of application.</span></p>
+
+		
+		<p><STRONG><SPAN>onApplicationInit - </SPAN></STRONG><SPAN>Occurs   when the application is initiated.</SPAN></p>
+		  <p><STRONG><SPAN>onScriptInit - </SPAN></STRONG><SPAN> Occurs every time the application is loaded.</SPAN></p>
+	<p><strong>onRecord</strong> - This event is executed before printing each
+		  record.
+	</p>
+		<p><strong>onHeader</strong> - This event is executed immediately before printing  the header. Use this event, for example, to print a calculated value in the header.
+		</p>
+		<p><strong>onFooter - </strong>This event is used to show some
+		  calculated value on the footer. </p>
+	<p><p>Any event can use pre-defined functions (macros) that are available in and specific to Scriptcase. These functions are called "Scriptcase Macros". </p>
+<ul>
+  <li><a href="../../../28-Macros/00-macros_sc.htm">Read more about Scriptcase Macros.</a></li>
+</ul>
+</p>
+	</body>
+</html>

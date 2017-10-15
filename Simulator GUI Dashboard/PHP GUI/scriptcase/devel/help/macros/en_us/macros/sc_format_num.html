@@ -1,0 +1,65 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro its used to format numerical values.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_format_num({My_Field}, "Group_Symb", "Dec_Symb", "Amount_Dec", "Fill_Zeros",  "Side_Neg", "Currency_Symb", "Side_Currency_Symb")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">This macro its used to format numerical values.</span></p>
+<p><span class="corpo1"><br /> 
+<table style="height: 191px;" border="0" width="741">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Parameter<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">My_Field</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Variable or field to format (The return is in the next variable).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Group_Symb</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Integer values grouping symbol.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Dec_Symb</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Decimals separator symbol.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Amount_Dec</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Number of decimals to be displayed.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Fill_Zeros</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Complete decimals with zeros (fill in) (S = yes and N = no).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Side_Neg</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Negative sign position. (1 = left and 2 = right)</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Currency_Symb</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Monetary symbol to be displayed.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Side_Currency_Symb</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Currency symbol position. (1 = left and 2 = right).</span></td>
+</tr>
+</tbody>
+</table>
+</span><span class="corpo1"><br /><br /><strong>Ex. 1: Formatting an integer.</strong><br />sc_format_num({my_value}, '.', '', 0, 'N', '1', '');<br />Input value = 001234567890<br />Output value = 1.234.567.890<br /><br /><strong>Ex. 2: Formatting a negative value and truncating decimals.</strong><br />sc_format_num({my_value}, '.', '', 0, 'N', '1', '');<br />Input value = 0012345678.90-<br />Output value = -12.345.678<br /><br /><strong>Ex. 3: Formatting a value with 4 decimals and filling with zeros.</strong><br />sc_format_num({my_value}, '.', ',', 4, 'S', '1', '');<br />Input value = 0012345678.9<br />Output value = 12.345.678,9000<br /><br /><strong>Ex. 4: Formatting a value with 2 decimals, filling with zeros and using monetary symbol.</strong><br />sc_format_num({my_value}, '.', ',', 2, 'S', '1', 'US$');<br />Input value = 0012345678.9<br />Output value = US$ 12.345.678,90<br /><br /><strong>Ex. 5: Formatting a value with 2 decimals, filling with zeros.</strong><br />sc_format_num({my_value}, '.', ',', 2, 'S', '1', '');<br />Input value = .9<br />Output value = 0,90</span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

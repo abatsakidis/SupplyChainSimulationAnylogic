@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Application</title>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1> Links - Application</h1>
+<p><img src="img/img03.jpg" /><br />
+  <span class="sob_figura">Image1: Selecting link type.</span><br />
+</p>
+<p>Used to edit the grid records through a form. In the generated grid a link will appear on   each line <img src="img/icone_liga_aplicacao.jpg" name="figura1" border="0" align="bottom" id="figura1" /> to edit the record. Clicking in the link, the selected form is displayed according to selected format (in an iframe, in the same window or in a new window). </p>
+<p><img src="img/ligacaodeaplicacao.jpg" name="figura6" border="0" align="bottom" id="figura6" /></p>
+<p>&nbsp;</p>
+<hr />
+<p class="cabecalho3">Applications List</p>
+<p><img src="../../comuns/img/tipo_captura_lista.jpg" /><br />
+  <span class="sob_figura">Image2: List of Applications. </span></p>
+<p><strong>Application</strong>: Select the form application called by the grid.</p>
+<p>&nbsp;</p>
+<hr />
+<p class="cabecalho3">Parameters definition</p>
+<p><img src="../../comuns/img/ligacao_parametros.jpg" name="figura8" /><br />
+  <br />
+<span class="sob_figura">Image3: Parameters Definition Interface.</span> </p>
+On the image above is displayed, in the left   side,  the application form parameters  (primary key,   global variables). Select on the right side,  the value to pass to the   parameter. The options are:
+<p>&nbsp;</p>
+<ul>
+  <li><strong>Field </strong>- Used to pass a grid field value  as parameter.</li>
+  <li><strong>Variable</strong> - Used to pass a global variable value, used by the grid as parameter.</li>
+  <li><strong>Value</strong> - Used to pass a fixed value as parameter.</li>
+  <li><strong>Empty </strong>- No value is passed as a parameter.</li>
+</ul>
+<p>&nbsp;</p>
+<hr />
+<p>Link Properties </p>
+The image below   display  the attributes that define the link  behavior. Enter the selected option to customize the link properties.
+<p><strong>Link Properties</strong></p>
+<blockquote>
+  <p><img src="img/tipo_aplicacao_propriedades1.jpg" /><br />
+    <span class="sob_figura">Image4:
+  Link Properties Interface.</span></p>
+</blockquote>
+<ul><li>
+  <p><strong> Link Operation Mode </strong> - The options are: </p>
+  <blockquote>
+  <table width="80%" height="128" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="29%" bgcolor="#cccccc"><strong>Mode</strong></td>
+      <td width="71%" bgcolor="#cccccc"><strong>Description</strong></td>
+    </tr>
+    <tr>
+      <td>Open in the same window </td>
+      <td> Display the form in the same browser window, (in another page, the form display substitute the grid).</td>
+    </tr>
+    <tr>
+      <td>Open in another window </td>
+      <td>Another window is open to display the form
+        .</td>
+    </tr>
+    <tr>
+      <td>Open in  Iframe</td>
+      <td><p>The form is displayed in an frame, in the same page, below, above, right or left to the grid.</p>        </td>
+    </tr>
+  </table>
+  </blockquote>
+  </li>
+  <li><strong>Display the <em>New</em> button
+    on the grid - </strong>The button <em>New </em>  is displayed on the grid&acute;s toolbar to add new records.<br />
+  </li>
+  <li><strong>Shortcut Key to the<em> New</em> button </strong>- Define the shortcut key to the add<em> New</em> button.<br />
+  </li>
+  <li> <strong>Called application exit URL</strong> -  Called form exit URL. Default address (back button) is the calling grid. <br />
+  <br />
+  </li>
+</ul>
+<p><strong> Form Properties</strong></p>
+<blockquote>
+  <p>Select the buttons to be displayed in form.</p>
+  <p><img src="img/tipo_aplicacao_propriedades2.jpg" /></p>
+</blockquote>
+<ul>
+  <li><strong>Enable Insert button </strong>- Enable  the buttons New and Insert in form. </li>
+  <li><strong>Enable Update button</strong> - Enable  the Update button in form. </li>
+  <li><strong>Enable Delete button</strong> - Enable  the delete button in form.</li>
+  <li>
+    <label for="id_rad_liga_form_btn_nav_ce7ab867e260196f"><strong>Enable Navigation </strong></label>
+    <strong>buttons </strong>- Enable  the navigation buttons  (First , Previous, Next, Last) in form.</li>
+  <li><strong>Enable button to edit a grid record </strong>- </li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Iframeproperties  </strong>- Displayed only when <em>Link Operation Mode </em>is<em> Open in  Iframe.</em></p>
+<blockquote>
+  <p><img src="img/img05.jpg" /></p>
+</blockquote>
+<ul><li><strong>Display the called   application header </strong> - Display form header.</li>
+  <li><strong>Iframe position relative to the main application </strong> - The form is displayed together with the grid application according to selected position. Options are: Bellow, Above, Right and Left. </li>
+  <li><strong>Action after insert&nbsp;</strong>&nbsp;- See table below:
+    <blockquote>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+		  	<td bgcolor="#cccccc"><strong>Attribute</strong></td>
+			<td bgcolor="#cccccc"><strong>Action</strong></td>
+		  </tr>
+		  <tr>
+            <td>Reload the grid</td>
+            <td>Refresh  current page</td>
+          </tr>
+          <tr>
+            <td>Move to the grid end </td>
+            <td>Navigate the grid to the last page</td>
+          </tr>
+      </table>
+    </blockquote>
+  </li>
+  <li><strong> IframeHeight</strong> 
+    -  Iframe Height in pixels</li>
+  <li><strong>   IframeWidth </strong>&nbsp;- Iframe Width  in pixels. </li>
+  <li><strong>Save Button</strong> - End the link wizard.</li>
+</ul>
+</body>
+</html>

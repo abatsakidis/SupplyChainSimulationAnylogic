@@ -1,0 +1,35 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro executa o comando SELECT informado no segundo parâmetro e retorna os dados em uma variável.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_lookup(Dataset, "Comando SQL", "Conexão")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro permite que o usu&aacute;rio execute <strong>comandos SQL</strong> e tenha acesso ao "dataset" proveniente do comando. O "dataset" fica dispon&iacute;vel, <strong>em forma de array</strong> (linha/coluna).</p>
+<p class="corpo1">O par&acirc;metro "<strong>conex&atilde;o</strong>" &eacute; opcional, sendo necess&aacute;rio, apenas, se o comando for executado em uma <strong>base de dados diferente da especificada para a aplica&ccedil;&atilde;o</strong>.</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1:</strong><br />sc_lookup(dataset, "select clienteid, nomecliente, limitecred from clientes" );</p>
+<p><br /><span class="corpo1"><strong>Para ter acesso &agrave; primeira linha (dataset), teremos:</strong><br />{clienteid} = {dataset[0][0]}; <br />{nomecliente} = {dataset[0][1]}; <br />{limitecred} = {dataset[0][2]}; </span></p>
+<p class="corpo1"><strong>Para ter acesso &agrave; segunda linha (dataset), teremos:</strong><br />{clienteid} = {dataset[1][0]}; <br />{nomecliente} = {dataset[1][1]}; <br />{limitecred} = {dataset[1][2]};</p>
+<p class="corpo1">Caso ocorra erro na execu&ccedil;&atilde;o do comando sql, a vari&aacute;vel atribuida ao dataset retornar&aacute; como "false" e a mensagem de erro estar&aacute; dispon&iacute;vel na vari&aacute;vel "<strong>dataset_erro</strong>".<br />&Eacute; importante, tamb&eacute;m, <strong>verificar se o select retornou dados</strong>, para evitar o acesso a vari&aacute;veis inexistentes, uma vez que o array de sa&iacute;da s&oacute; ser&aacute; criado <strong>se o comando select retornar dados</strong>.</p>
+<p class="corpo1">&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 2:<br /></strong>sc_lookup(meus_dados, "select clienteid, nomecliente, limitecred from clientes");<br />if ({meus_dados} === false)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "Erro de acesso. Mensagem = " . {meus_dados_erro};<br />}<br />elseif (empty({meus_dados}))<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "Comando select n&atilde;o retornou dados ";<br />}<br />else<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; {clienteid} = {meus_dados[0][0]};<br />&nbsp;&nbsp;&nbsp;&nbsp; {nomecliente} = {meus_dados[0][1]};<br />&nbsp;&nbsp;&nbsp;&nbsp; {limitecred} = {meus_dados[0][2]};<br />}<strong><br /></strong></span></p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 3 : O comando SQL tamb&eacute;m pode ser </strong><strong>composto de campos da aplica&ccedil;&atilde;o (vari&aacute;veis locais) ou de vari&aacute;veis globais:</strong><br />sc_lookup(dataset, "select valor pedido from pedidos where clienteid = '{clienteid} ' and cod_vendedor = [var_glo_vendedor]");</p>
+<p><br /><span class="corpo1"><strong>Obs</strong>: <em>Em qualquer circunst&acirc;ncia, o comando tem que ser encerrado com ponto e v&iacute;rgula ";".</em></span></p>
+<p><strong>Obs2:</strong> <em>N&atilde;o recomendamos o uso da macro sc_lookup com retornos muito grandes, para esse tipo de ocasi&atilde;o recomendamos o uso da macro sc_select</em></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

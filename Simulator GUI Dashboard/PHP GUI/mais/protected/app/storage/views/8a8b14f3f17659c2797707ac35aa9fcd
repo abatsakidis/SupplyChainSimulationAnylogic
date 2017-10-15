@@ -1,0 +1,140 @@
+
+  <div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> SXIMO VERSION  <small><?php echo Lang::get('core.t_generalsettingsmall');; ?></small></h3>
+      </div>
+	  
+	 
+	  <ul class="breadcrumb">
+		<li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home');; ?></a></li>
+		<li><a href="<?php echo URL::to('config'); ?>"><?php echo Lang::get('core.t_generalsetting');; ?></a></li>
+	  </ul>	  
+	 
+    </div>
+ 	<div class="page-content-wrapper">   
+	<?php if(Session::has('message')): ?>
+	  
+		   <?php echo Session::get('message'); ?>
+	   
+	<?php endif; ?>
+	<ul class="parsley-error-list">
+		<?php foreach($errors->all() as $error): ?>
+			<li><?php echo $error; ?></li>
+		<?php endforeach; ?>
+	</ul>		
+<div class="block-content">
+	<ul class="nav nav-tabs" >
+	  <li class="active"><a href="<?php echo URL::to('config'); ?>"> <?php echo Lang::get('core.tab_siteinfo');; ?>  </a></li>
+	  <li ><a href="<?php echo URL::to('config/email'); ?>" >  <?php echo Lang::get('core.tab_email');; ?> </a></li>
+	  <li ><a href="<?php echo URL::to('config/security'); ?>" >  <?php echo Lang::get('core.tab_loginsecurity');; ?>  </a></li>
+	  <li ><a href="<?php echo URL::to('config/translation'); ?>" >  Translation  <sup class="badge " style="background:#5BC0DE" >New </sup> </a></li>
+	   <li ><a href="<?php echo URL::to('config/log'); ?>" >  Clear Cache & Logs  </a></li>
+	</ul>	
+<div class="tab-content m-t">
+  <div class="tab-pane active use-padding" id="info">	
+ <?php echo Form::open(array('url'=>'config/save/', 'class'=>'form-horizontal row')); ?>
+
+<div class="col-sm-6">
+  <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4"><?php echo Lang::get('core.fr_appname');; ?> </label>
+	<div class="col-md-8">
+	<input name="cnf_appname" type="text" id="cnf_appname" class="form-control input-sm" required  value="<?php echo CNF_APPNAME; ?>" />  
+	 </div> 
+  </div>  
+  
+  <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4"><?php echo Lang::get('core.fr_appdesc');; ?> </label>
+	<div class="col-md-8">
+	<input name="cnf_appdesc" type="text" id="cnf_appdesc" class="form-control input-sm" value="<?php echo CNF_APPDESC; ?>" /> 
+	 </div> 
+  </div>  
+  
+  <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4"><?php echo Lang::get('core.fr_comname');; ?> </label>
+	<div class="col-md-8">
+	<input name="cnf_comname" type="text" id="cnf_comname" class="form-control input-sm" value="<?php echo CNF_COMNAME; ?>" />  
+	 </div> 
+  </div>      
+
+  <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4"><?php echo Lang::get('core.fr_emailsys');; ?> </label>
+	<div class="col-md-8">
+	<input name="cnf_email" type="text" id="cnf_email" class="form-control input-sm" value="<?php echo CNF_EMAIL; ?>" /> 
+	 </div> 
+  </div>   
+  <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4"> Muliti language <br /> <small> Only Layout Interface </small> </label>
+	<div class="col-md-8">
+		<div class="checkbox">
+			<input name="cnf_multilang" type="checkbox" id="cnf_multilang" value="1"
+			<?php if(CNF_MULTILANG ==1): ?> checked <?php endif; ?>
+			  />  <?php echo Lang::get('core.fr_enable'); ?>  <span class="label label-info"> Experimental</span> 
+		</div>	
+	 </div> 
+  </div> 
+     
+   <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4"><?php echo Lang::get('core.fr_mainlanguage');; ?> </label>
+	<div class="col-md-8">
+			<select class="form-control" name="cnf_lang">
+			<?php foreach(SiteHelpers::langOption() as $lang): ?>
+				<option value="<?php echo $lang['folder']; ?>"
+				<?php if(CNF_LANG ==$lang['folder']): ?> selected <?php endif; ?>
+				><?php echo $lang['name']; ?></option>
+			<?php endforeach; ?>
+		</select>
+	 </div> 
+  </div>   
+      
+   <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4"> Frontend Template </label>
+	<div class="col-md-8">
+			<select class="form-control" name="cnf_theme">
+			<?php foreach(SiteHelpers::themeOption() as $t): ?>
+				<option value="<?php echo $t['folder']; ?>"
+				<?php if(CNF_THEME ==$t['folder']): ?> selected <?php endif; ?>
+				><?php echo $t['name']; ?></option>
+			<?php endforeach; ?>
+		</select>
+	 </div> 
+  </div> 
+  
+  <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4">&nbsp;</label>
+	<div class="col-md-8">
+		<button class="btn btn-primary" type="submit"><?php echo Lang::get('core.sb_savechanges');; ?> </button>
+	 </div> 
+  </div> 
+</div>
+
+<div class="col-sm-6">
+
+  <div class="form-group">
+    <label for="ipt" class=" control-label col-md-4">Metakey </label>
+	<div class="col-md-8">
+		<textarea class="form-control input-sm" name="cnf_metakey"><?php echo CNF_METAKEY; ?></textarea>
+	 </div> 
+  </div> 
+
+   <div class="form-group">
+    <label  class=" control-label col-md-4">Meta Descriptiom</label>
+	<div class="col-md-8">
+		<textarea class="form-control input-sm"  name="cnf_metadesc"><?php echo CNF_METADESC; ?></textarea>
+	 </div> 
+  </div>  
+
+</div>  
+ <?php echo Form::close(); ?>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+

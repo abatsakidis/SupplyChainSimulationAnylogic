@@ -1,0 +1,15 @@
+<ul class="nav nav-tabs" style="margin-bottom:10px;">
+  <li <?php if($active == 'config'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to($module.'/config/'.$module_name); ?>">Info</a></li>
+  <li <?php if($active == 'sql'): ?> class="active" <?php endif; ?> >
+  <a href="<?php echo URL::to($module.'/sql/'.$module_name); ?>">SQL</a></li>
+  <li <?php if($active == 'table'): ?> class="active" <?php endif; ?> >
+  <a href="<?php echo URL::to($module.'/table/'.$module_name); ?>">Table</a></li>
+  <li <?php if($active == 'form'): ?> class="active" <?php endif; ?> >
+  <a href="<?php echo URL::to($module.'/form/'.$module_name); ?>">Form</a></li>
+  <li <?php if($active == 'sub'): ?> class="active" <?php endif; ?> >
+  <a href="<?php echo URL::to($module.'/sub/'.$module_name); ?>">Master Detail</a></li>  
+  <li <?php if($active == 'permission'): ?> class="active" <?php endif; ?> >
+  <a href="<?php echo URL::to($module.'/permission/'.$module_name); ?>">Permission</a></li>
+   <li <?php if($active == 'rebuild'): ?> class="active" <?php endif; ?> >
+   <a href="javascript://ajax" onclick="SximoModal('<?php echo URL::to($module.'/build/'.$module_name); ?>','Rebuild Module <?php echo $module_name; ?>')">Rebuild</a></li>
+</ul>

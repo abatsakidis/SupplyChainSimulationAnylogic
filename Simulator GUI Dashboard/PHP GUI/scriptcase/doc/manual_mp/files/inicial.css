@@ -1,0 +1,103 @@
+#abas{
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 13px; color:#000000;
+vertical-align:text-top;
+}
+
+body{
+background-color:#333;
+margin:0;
+}
+
+
+
+#id_bodyContent{
+
+width:100%;
+height:100%;
+border-width:0;
+
+}
+
+#geral_content{
+height: -moz-calc(100% - 80px);
+height: -webkit-calc(100% - 80px);
+height:calc(100% - 80px);
+}
+
+#id_bodyContent{
+border-radius:5px;
+
+}
+
+#td_content{
+
+vertical-align: top;
+background-color: #FFF;
+border-radius:5px;
+height:100%;
+border-width:0;
+
+}
+
+#principaltable{
+height: -moz-calc(100% - 70px);
+height: -webkit-calc(100% - 70px);
+height:calc(100% - 70px);
+width:100%;
+}
+
+#menu_list{
+height:100%;
+width:300px
+}
+
+#tabs{
+height:100%;
+}
+
+#topoTotal {
+height: 65px;
+width: 100%;
+background-color: #333333;
+position:relative;
+ }
+
+#img_logo{
+
+text-decoration:none;
+border:0;
+}
+#img_logo{
+
+text-decoration:none;
+border:0;
+background-color:#333
+}
+ 
+#topoEsquerda {
+height: 49px;
+width: 49%;
+float:left
+}
+
+#topoDireita {
+height: 49px;
+width: 49%;
+float:left
+}
+
+
+.ui-widget-content{
+border-width:0px;
+}
+
+#divisor{
+width:1px
+}
+
+#search_content{
+
+}
+
+#id_menu{font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 11px;}

@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro altera dinamicamente o campo da cláusula "ORDER BY" da consulta.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select_order("Campo") <br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">&Eacute; poss&iacute;vel, em tempo de execu&ccedil;&atilde;o da aplica&ccedil;&atilde;o de consulta, alterar a cl&aacute;usula ORDER BY do select principal da consulta.<br />Para isso, &eacute; necess&aacute;rio que no comando SQL original da consulta j&aacute; exista pelo menos uma cl&aacute;usula ORDER BY, pois ser&aacute; feita a subtitui&ccedil;&atilde;o de determinada cl&aacute;usula pela nova.</span></p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong> Cl&aacute;usula select: select codigo, nome, valor from tabela order by codigo<br />Para mudar a ordem, de codigo para nome, teremos:<br />sc_select_order("codigo") = "nome";<br /><br /><br /><strong>Ex. 2:</strong> Cl&aacute;usula select: select codigo, nome, valor, data from tabela order by codigo, nome, valor<br />Para mudar a ordem, de nome para data, teremos:<br />sc_select_order("nome") = "data";</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><span style="color: #000000;"><strong>Obs:</strong> <em>Este comando deve estar no contexto de "processar antes do select".</em></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

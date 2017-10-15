@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre antes de um registro ser deletado em um formulário.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p class="titulo1">&nbsp;</p>
+<p class="corpo1 corpo1">Ocorre antes da exclus&atilde;o de um registro no formul&aacute;rio.</p>
+<p class="corpo1">Como exemplos podemos verificar no exemplo abaixo, consultamos  uma tabela de privilegios de usu&aacute;rio antes de excluir o registro , caso o mesmo n&atilde;o tenha tal privil&eacute;gio, mandamos uma mensagem de erro.</p>
+<p class="corpo1">sc_lookup(priv_del," select priv_del from tb_privilegios where login = [var_login] ");</p>
+<p class="corpo1">if({priv_del[0][0]} != 'SIM')</p>
+<p class="corpo1">{</p>
+<p class="corpo1">sc_erro_mensagem(" voc&ecirc; nao tem privil&eacute;gios para executar esta opera&ccedil;&atilde;o ");</p>
+<p class="corpo1">}</p>
+<p>&nbsp;</p>
+			</body>
+			
+</HTML>

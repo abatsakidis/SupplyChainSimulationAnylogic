@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro adiciona dinamicamente uma condição à cláusula WHERE da consulta.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select_where(add)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">&Eacute; poss&iacute;vel, em tempo de execu&ccedil;&atilde;o da aplica&ccedil;&atilde;o de consulta, adicionar um campo/condi&ccedil;&atilde;o &agrave; cl&aacute;usula WHERE da consulta.</span></p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>Adiciona tudo que estra dentro das aspas duplas ao where do select da consulta.</strong><br />if (empty({sc_where_atual})){<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_select_where(add) = "where campoX &gt; [variavel_global]";<br />}<br />else{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_select_where(add) = "AND campoX &gt; [variavel_global]";<br />}</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Obs:</strong> <em>Este comando deve estar no contexto de "processar antes do select".<br /></em></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

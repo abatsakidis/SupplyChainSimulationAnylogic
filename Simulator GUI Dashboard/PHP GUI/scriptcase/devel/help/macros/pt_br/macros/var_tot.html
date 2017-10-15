@@ -1,0 +1,73 @@
+<HTML>
+	<HEAD>
+		<TITLE>Variáveis especiais que contêm todos os totais (gerais e por quebra). </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">var_totVariáveis de Totalização<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">O Scriptcase disponibiliza todas as vari&aacute;veis de totaliza&ccedil;&atilde;o no escopo da grid.</p>
+<p class="corpo1"><br />Supondo uma aplica&ccedil;&atilde;o que tenha dois n&iacute;veis de quebra (estado e cidade) e que totaliza dois campos (parcela e saldo) , podemos ter acesso aos totais, no evento "<strong>onRecord</strong>", da seguinte forma:</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Vari&aacute;veis<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{count_ger}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m a quantidade total dos registros.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{sum_parcela}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m o somat&oacute;rio geral do campo "parcela".<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{sum_saldo}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m o somat&oacute;rio geral do campo "saldo".<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{count_estado}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m a quantidade total dos registros, da quebra de "estado" que estiver sendo processada.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{sum_estado_parcela}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m o somat&oacute;rio do campo "parcela", da quebra de "estado" que estiver sendo processada.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{count_cidade}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m a quantidade total dos registros, da quebra de "cidade" que estiver sendo processada.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{sum_cidade_parcela}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m o somat&oacute;rio do campo "parcela", da quebra de "cidade" que estiver sendo processada.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{sum_cidade_saldo}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m o somat&oacute;rio do campo "saldo", da quebra de "cidade" que estiver sendo processada.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">{sum_estado_saldo}</td>
+<td class="corpo1" align="left" valign="top">Cont&eacute;m o somat&oacute;rio do campo "saldo", da quebra de "estado" que estiver sendo processada;.<br /></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1:</strong> <strong>Em um aplica&ccedil;&atilde;o com qubra pelo estado e cidade que totaliza um campo valor, e nas quebras usando totais, e possivel exibir&nbsp; a media ao inves do valor, como no exemplo:</strong><br /><br />{sum_quebra_valor} = {sum_quebra_valor} / {count_quebra};</span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

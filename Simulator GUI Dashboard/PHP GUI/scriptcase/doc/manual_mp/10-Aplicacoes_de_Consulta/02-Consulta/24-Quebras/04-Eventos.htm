@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>Events</TITLE>
+<link rel=Stylesheet type="text/css" media=all href="../../../scriptcase.css">
+	<STYLE TYPE="text/css">
+	<!--
+		TD P { background: #e4f3fc; font-family: "Arial", "Helvetica", sans-serif; font-size: 9pt; text-align: justify }
+	-->
+	</STYLE>
+</HEAD>
+<BODY>
+<H1> Events</H1>
+<P><STRONG>OnGroupBy - </STRONG>
+This event is always performed when breakings occurs, independently
+of the level, and allow the manipulation of the totalization fields.
+The ScriptCase have all totalization variables of the grid scope.
+Guessing that an application which have two levels of breakings
+(state and city)
+and which totalize two fields (parcel and
+balance), we
+can have access to the totals, in the scope of &rdquo;calculate for
+each register&rdquo;, in the following way:</P>
+<CENTER>
+	<TABLE WIDTH=690 BORDER=0 CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TD WIDTH=166>
+				<p>{count_ger}&nbsp;</P>
+			</TD>
+			<TD WIDTH=424>
+				<p>- contains the total amount of the registers;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>{sum_parcel} 
+				</P>
+			</TD>
+			<TD>
+				<p>- contains the total sum of the field &ldquo;parcel&rdquo;;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>{sum_balance}&nbsp;</P>
+			</TD>
+			<TD>
+				<p>- contains the total sum of the field &ldquo;balance&rdquo;;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>{count_state}&nbsp;</P>
+			</TD>
+			<TD>
+				<p>- contains the total amout of the registers of
+				the breaking of &ldquo;state&rdquo; which has been processed;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>{sum_state_parcel}</P>
+			</TD>
+			<TD>
+				<p>- contains the total sum of the field &ldquo;parcel&rdquo;
+				of the field of &ldquo;state&rdquo; which has bem processed;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>{sum_state_balance}&nbsp;</P>
+			</TD>
+			<TD>
+				<p>- contains the total sum of the field &ldquo;balance&rdquo;
+				of the field of &ldquo;state&rdquo; which has bem processed;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>{count_city}&nbsp;</P>
+			</TD>
+			<TD>
+				<p>- contains the total amout of registers of the
+				breaking of &ldquo;city&rdquo; which has been processed;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>{sum_city_parcel}</P>
+			</TD>
+			<TD>
+				<p>- contains the total sum of the field &ldquo;parcel&rdquo;
+				of the breaking of &ldquo;city&rdquo; which has been processed;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p>{sum_city_balance} 
+				</P>
+			</TD>
+			<TD>
+				<p>- contains the total sum of the field &ldquo;balance&rdquo;
+				of the breaking of &ldquo;city&rdquo; which has been processed;</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><font><BR>Considering
+that the formulas defined to be processed in the scope of &ldquo;calculate
+during the breakings&rdquo;  will be acting for the some levels of
+breaking, the special variables of totalization, in this scope, they
+are mentioned substituting the breaking name  by the key word
+&ldquo;breaking&rdquo; that means:</FONT></P>
+<CENTER>
+	<TABLE WIDTH=634 BORDER=0 CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TD WIDTH=142>
+				<p><font>{count_ger}&nbsp;&nbsp;&nbsp;&nbsp;</FONT></P>
+			</TD>
+			<TD WIDTH=482>
+				<p><font>-
+				contains the total amout of registers;</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p><font>{sum_parcel}</FONT></P>
+			</TD>
+			<TD>
+				<p><font>-
+				contains the total sum of the field &ldquo;parcel&rdquo;;</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p><font>{sum_balance}&nbsp;</FONT></P>
+			</TD>
+			<TD>
+				<p><font>-
+				contains the total sum of the field &ldquo;balance&rdquo;;</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<p><font>{count_groupby}</FONT></P>
+			</TD>
+			<TD>
+				<p><font>-
+				contains the total amount of registers, of the breaking which has
+				been processed;</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=22>
+				<p><font>{sum_groupby_parcel}</FONT></P>
+			</TD>
+			<TD>
+				<p><font>-
+				contains the total sum of the field &ldquo;parcel&rdquo; of the
+				breaking which has been processed;</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD HEIGHT=34>
+				<p><font>{sum_groupby_balance}</FONT></P>
+			</TD>
+			<TD>
+				<p><font>- contains the total sum of the field &ldquo;balance&rdquo; of the
+				breaking which has been processed;</FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P><FONT COLOR="#000000"><font>Ex:
+In an application which has breakings by </FONT></FONT><FONT COLOR="#000000"><font><B>state</B></FONT></FONT><FONT COLOR="#000000"><font>
+and </FONT></FONT><FONT COLOR="#000000"><font><B>city</B></FONT></FONT><FONT COLOR="#000000"><font>
+and which totalizes a field </FONT></FONT><FONT COLOR="#000000"><font><B>balance</B></FONT></FONT><FONT COLOR="#000000"><font>
+in the breakings total, we wish to show the average in substitution
+to the </FONT></FONT><FONT COLOR="#000000"><font><B>balance</B></FONT></FONT><FONT COLOR="#000000"><font><SPAN>.
+It creates a method in the event OnGroupBy with the following
+content:</SPAN></FONT></FONT></P>
+<P><FONT COLOR="#000000"><font>{sum_groupby_balance}=
+{sum_groupby_balance} / {count_groupby};</FONT></FONT></P>
+<P><BR><BR>
+</P>
+<p>&nbsp;</P>
+</BODY>
+</HTML>

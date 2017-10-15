@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>SQL</TITLE>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<h1>SQL - STRUTURED QUERY LANGUAGE</h1>
+<H2><BR>INSERT </h2>
+<P>In <span>SQL </span>language  the only way to add data to a table is using the  INSERT <span>statement</span> like the following:</P>
+<P>INSERT INTO adm_Category (CategoryID,NameCategory,Photo)
+VALUES (9,'CAR','carros.gif')</P>
+<P>&nbsp;</P>
+<H2>UPDATE </h2>
+<P>It  updates a given line.</P>
+<P><BR>
+  UPDATE adm_category SET NameCategory 'rent car' WHERE CategoryId = 9</P>
+<H2><BR>DELETE </h2>
+<P>Exclude a given table line.</P>
+<P>DELETE FROM adm_category WHERE categoryId = 9 </P>
+<P>/*it eliminates in the table adm_category
+the line with <span> category</span> code <span> equal</span> 9 * </P>
+<P><BR> 
+Commands INSERT, UPDATE E DELETE in the ScriptCase.</P>
+<P><br>
+ To execute these commands the ScriptCase use the macro <B>sc_exec_sql. </B> </P>
+<p>sc_exec_sql('DELETE FROM adm_category WHERE categoryId =9');</P>
+<p>&nbsp;</P>
+<h2>QUERY</h2>
+<p><BR>
+  <span>Use the Query</span> statement to search a given DB table. A Query  has
+at least two components:</P>
+<p><strong>SELECT </strong> : It enumerates the <span>columns</span> name  that
+contains the desired data.</P>
+<p><strong>FROM</strong> : It specifies the 
+tables where the columns are located.</P>
+<p><BR>Ex.: <strong>SELECT </strong>categoryId,NameCategory,Photo 
+<strong>FROM </strong> adm_category;</P>
+<p><BR>
+</P>
+<h2>WHERE</h2>
+<P>It returns only the values from the lines
+that satisfies the conditions specified in the WHERE <span>clause.</span></P>
+<P>SELECT NameCustomers FROM adm_Customers <strong>WHERE</strong> Sex = 'M'</P>
+<P><BR>
+</P>
+<P><BR>
+</P>
+<TABLE WIDTH=447 BORDER=1 CELLPADDING=4 CELLSPACING=0 BORDERCOLOR="#000000" style="margin-bottom: 0cm">
+  <COL WIDTH=100>
+  <COL WIDTH=329>
+  <THEAD>
+    <TR VALIGN=TOP>
+      <TH WIDTH=100> <P CLASS="western" ALIGN=CENTER>Operators</P></TH>
+      <TH WIDTH=329> <P CLASS="western">Description</P></TH>
+    </TR>
+  </THEAD>
+  <TBODY>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100> <P CLASS="western" ALIGN=CENTER> =</P>
+      <TD WIDTH=329> <P><span>equal</span></P>
+    </TR>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100><P CLASS="western" ALIGN=CENTER>!=</P></TD>
+      <TD WIDTH=329><P CLASS="western">Not equal</P></TD>
+    </TR>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100><P CLASS="western" ALIGN=CENTER>&lt;&gt;</P></TD>
+      <TD WIDTH=329><P CLASS="western">Different</P></TD>
+    </TR>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100><P CLASS="western" ALIGN=CENTER>&gt;</P></TD>
+      <TD WIDTH=329><P CLASS="western">Higher</P></TD>
+    </TR>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100><P CLASS="western" ALIGN=CENTER>&lt;</P></TD>
+      <TD WIDTH=329><P CLASS="western">Shorter</P></TD>
+    </TR>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100><P CLASS="western" ALIGN=CENTER>!&lt;</P></TD>
+      <TD WIDTH=329><P CLASS="western">Not Shorter</P></TD>
+    </TR>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100><P CLASS="western" ALIGN=CENTER>!&gt;</P></TD>
+      <TD WIDTH=329><P CLASS="western">Not Higher</P></TD>
+    </TR>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100><P CLASS="western" ALIGN=CENTER>&gt;=</P></TD>
+      <TD WIDTH=329><P CLASS="western">Higher or <span>equal</span></P></TD>
+    </TR>
+    <TR VALIGN=TOP>
+      <TD WIDTH=100><P CLASS="western" ALIGN=CENTER>&lt;=</P></TD>
+      <TD WIDTH=329><P CLASS="western">Shorter or <span>equal</span></P></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<P><BR>
+  <strong>BETWEEN - AND </strong>: It specifies data range. </P>
+<P>SELECT CustomersId,NameCustomers FROM adm_Customers WHERE
+<strong>BETWEEN </strong>'1997-01-01' <strong>AND </strong>'1997-04-31'</P>
+<P>SELECT SupplierId,Name_supplier FROM adm_supplier WHERE SupplierId <strong>BETWEEN</strong> 1 <strong>AND</strong> 9</P>
+<P><BR>
+<strong>IS NUL </strong>: Select lines where the content of the field
+is null (EMPTY).</P>
+<P>SELECT CustomersId 
+FROM adm_order WHERE DateOrder <strong>IS NULL</strong></P>
+<P><BR>
+  <strong>LIKE </strong>:  Use  masks
+in conditions <span>to compare</span> <span>text</span> values:</P>
+<UL><LI>
+  <P>Substitute only one character:
+_ or? ;</P>
+  <LI>Substitute a sequence of
+characters: % or *.</UL>
+<P>SELECT NameCustomers FROM adm_Customers
+ WHERE NameCustomers <strong>LIKE</strong> 'RIC%';</P> 
+<P>SELECT NameCustomers FROM adm_Customers
+ WHERE NameCustomers<<strong>LIKE</strong> 'J_A_';</P>
+<P><BR>
+<strong>IN </strong>: Selects data from a given set or lists.</P>
+<P><BR>SELECT CustomersId,NameCustomers FROM adm_Customers WHERE <strong>IN</strong> ('ABCDE','ZXED','WW3CD')</P>
+<h2>Operators<em> AND</em> and <em>OR </em></h2>
+<P><BR>
+Allows to use <span>more than one </span><span> condition</span> in  one WHERE <span>clause.</span></P>
+<P><BR> SELECT P.ValueOrderFROM adm_Customers C, adm_order P WHERE </P>
+<P> (CustomersId ='CustomersId') AND</P>
+<P> (P.dateOrder IS NULL AND C.CustomersId = 'ABCDE')<BR>
+<br>
+<h2>Arithmetical operators</h2>
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:0cm;border:outset black 1.0pt;mso-border-alt:
+ outset black .75pt;mso-padding-alt:3.0pt 3.0pt 3.0pt 3.0pt'>
+ <COL WIDTH=89*><COL WIDTH=167*>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td width="35%" valign=top style='width:35.0%;border:inset black 1.0pt;
+   mso-border-alt:inset black .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+   <p>+<o:p></o:p></p>
+   </td>
+   <td width="65%" valign=top style='width:65.0%;border:inset black 1.0pt;
+   mso-border-alt:inset black .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+   <p><span><span>Addition</span></span></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:1'>
+  <td width="35%" valign=top style='width:35.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+  <p>-<o:p></o:p></p>
+  </td>
+  <td width="65%" valign=top style='width:65.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+  <p><span><span>Subtraction</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="35%" valign=top style='width:35.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+  <p>*<o:p></o:p></p>
+  </td>
+  <td width="65%" valign=top style='width:65.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+  <p><span><span>Multiplication</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width="35%" valign=top style='width:35.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+  <p>/<o:p></o:p></p>
+  </td>
+  <td width="65%" valign=top style='width:65.0%;border:inset black 1.0pt;
+  mso-border-alt:inset black .75pt;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+  <p><span><span>Division</span></span></p>
+  </td>
+ </tr>
+</table>
+<br>
+In the example to follow, we add   0,05 to Customer “ABCDE” order value.
+<P><BR>
+SELECT DISTINCT C.CustomersId, C. NameCustomers,P.ValueOrder + 0,05 AS DISCOUNTING
+FROM adm_Customers C, adm_order P WHERE C.CustomersId = P.CustomersId
+AND CustomersId= 'ABCDE'<BR>
+</P>
+<h2>Concatenation Operator</h2>
+<P><BR>
+</P>
+<P>In the MySQL the function <B>concat </B>implements the <span>concatenation functionality</span>:</P>
+<p><SPAN>SELECT concat(Name Customers " Happy Birthday”)from admCustomers where month (DateBirth)= month(now()) AND day(DataBirth) = day(now());
+;</P>
+<P><BR>
+  Note the use of the functions <B>day, month e now</B>, that manipulate <span>date <span> type</span> </span>fields.<BR>
+</P>
+<h2> Functions </h2>
+<P><BR>
+Use <span>functions to </span><span>perform the operation</span>s on query results.</P>
+<P><BR>
+  <strong>Aggregate functions</strong></P>
+<P>They produce one value from an entire
+<span>  data</span> column.  They are <span>also</span> called column functions. </P>
+<P><strong>AVG</strong>:
+ Calculates the
+<span> query</span> selected i<span>tems <span>average</span>.</span></P>
+<P>SELECT AVG(ValueOrder) FROM adm_orderP CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P><strong>MAX </strong>: Returns the max value from <span> <span> the<span> query</span> selected </span>items. </span></P>
+<P>SELECT MAX(ValueOrder) FROM adm_order</P>
+<P><br>
+  <strong>MIN</strong>:<span> min value from <span> <span> the<span> query</span> selected </span>items. </span></span></P>
+<P>SELECT MIN(ValueOrder) FROM adm_order;</P>
+<P><BR>
+  <strong>SUM </strong>:<span> <span>Returns the</span></span>  sum of <span> all items for </span>the
+<span> selected </span>column.</P>
+<P>SELECT SUM(ValueOrder) FROM adm_orders<P><br>
+  <strong> COUNT </strong>:<span> Returns the</span>  <span>line  </span>count <span>(number of records)</span> of  a query <span> result.</span></P>
+<P>SELECT COUNT(*)adm_Customers;</P>
+<P><BR>
+</P>
+<P><strong> Not Aggregate functions</strong></P>
+<P>Return a value for each line.</P>
+<P><BR>
+  <strong> MID </strong>: Display a part
+of a text. For example, it lists all the customers with only the 5 first characters of its
+name. </P>
+<P>SELECT MID(NameCustomers,1,5)
+FROM adm_Customers;</P>
+<P><BR>
+  <strong>UCASE </strong>: Returns a text in capital letters.</P>
+<P>SELECT UCASE(NamCustomers FROM adm_Customers</P>
+<P><strong>LCASE </strong>: <span>Returns a text in lower case.</span></P>
+<P>SELECT LCASE(NameCustomers)
+FROM adm_Customers</P>
+<P><BR>
+  <strong>LENGTH :</strong> Returns the amount of characters <span>f<span>rom a </span></span> field/text/P>
+<P>SELECT LENGTH(Namesupplie) FROM adm_supplies</P>
+<P><BR>
+</P>
+<h2>Breaks and Organization</h2>
+<P><BR>
+ Clauses that can be added to a query to organize the results.
+<P><strong>GROUP BY</strong></P>
+<P>Used to group
+lines in the result.</P>
+<P>SELECT F.Namesupplier,P.NameProduct FROM adm_supplier F, adm_product P
+WHERE P.SupplierId= F. SupplierId GROUP BY F. SupplierId</p>
+
+<p><span></P>
+<P>Aggregate Functions cannot be used in GROUP BY <span>clause. </span></P>
+<P><BR>
+<strong>HAVING</strong></P>
+<P>Apply search conditions to the lines in  GROUP
+BY <span>clause.</span></P>
+<P>For example :</P>
+<P>SELECT CustomersId 
+MAX(ValueOrder),MIN(ValueOrder),MAX(ValueOrder) – MIN(ValueOrder)
+as Differences FROM adm_pedidos GROUP BY CustomersId HAVING MAX( ValueOrder)- MIN(ValueOrder) &gt; 12700; </P>
+<P> List all the customers who had made more than 20.</P>
+<P>SELECT CustomersId COUNT(CustomersId) FROM adm_order
+GROUP BY CustomersId HAVING COUNT(CustomersId) &gt; 20;;</P>
+<P><BR>
+<strong>ORDER BY</strong></P>
+<P>Order (sort) the lines (records).<BR>
+</P>
+<P>&nbsp;</P>
+</body>
+</html>

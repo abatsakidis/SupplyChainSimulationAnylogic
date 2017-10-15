@@ -1,0 +1,161 @@
+
+  <div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo $pageTitle; ?> <small><?php echo $pageNote; ?></small></h3>
+      </div>
+
+	
+		  <ul class="breadcrumb">
+			<li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home');; ?></a></li>
+			<li><a href="<?php echo URL::to('pages'); ?>"><?php echo $pageTitle; ?></a></li>
+			<li class="active"> Add </li>
+		  </ul>
+		 
+	  
+    </div>
+
+<div class="page-content-wrapper">
+	<?php if(Session::has('message')): ?>	  
+		   <?php echo Session::get('message'); ?>
+	<?php endif; ?>	
+		
+		<ul class="parsley-error-list">
+			<?php foreach($errors->all() as $error): ?>
+				<li><?php echo $error; ?></li>
+			<?php endforeach; ?>
+		</ul>
+		 <?php echo Form::open(array('url'=>'pages/save/'.SiteHelpers::encryptID($row['pageID']), 'class'=>'form-vertical row ','files' => true , 'parsley-validate'=>'','novalidate'=>' ')); ?>
+
+			<div class="col-sm-8 ">
+				<div class="sbox">
+					<div class="sbox-title">Page Content </div>	
+					<div class="sbox-content">				
+						
+					  <div class="form-group  " >
+						
+						<div class="" style="background:#fff;">
+						  <textarea name='content' rows='35' id='content'    class='form-control markItUp'  
+							 ><?php echo $content; ?></textarea> 
+						 </div> 
+					  </div> 	
+					 </div>
+				</div>	
+		 	</div>		 
+		 
+		 <div class="col-sm-4 ">
+			<div class="sbox">
+				<div class="sbox-title">Page Info </div>	
+				<div class="sbox-content">						
+				  <div class="form-group hidethis " style="display:none;">
+					<label for="ipt" class=""> PageID </label>
+					
+					  <?php echo Form::text('pageID', $row['pageID'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+					
+				  </div> 					
+				  <div class="form-group  " >
+					<label for="ipt" > Title </label>
+					
+					  <?php echo Form::text('title', $row['title'],array('class'=>'form-control', 'placeholder'=>'', 'required'=>'true'  )); ?> 
+					
+				  </div> 					
+				  <div class="form-group  " >
+					<label for="ipt" > Alias </label>
+					
+					  <?php echo Form::text('alias', $row['alias'],array('class'=>'form-control', 'placeholder'=>'', 'required'=>'true'   )); ?> 
+					 
+				  </div> 					
+				  <div class="form-group  " >
+					<label for="ipt" > Filename </label>
+					
+					  <input name="filename" type="text" class="form-control" value="<?php echo $row['filename']; ?>" 
+					  <?php if($row['pageID'] !=''): ?> readonly="1" <?php endif; ?> required
+					  />
+					
+				  </div> 
+				  <div class="form-group  " >
+				  <label for="ipt"> Who can view this page ? </label>
+					<?php foreach($groups as $group): ?> 
+					<label class="checkbox">					
+					  <input  type='checkbox' name='group_id[<?php echo $group['id']; ?>]'    value="<?php echo $group['id']; ?>"
+					  <?php if($group['access'] ==1 or $group['id'] ==1): ?>
+					  	checked
+					  <?php endif; ?>				 
+					   /> 
+					  <?php echo $group['name']; ?>
+					</label>  
+					<?php endforeach; ?>	
+						  
+				  </div> 
+				  <div class="form-group  " >
+					<label> Show for Guest ? unlogged  </label>
+					<label class="checkbox"><input  type='checkbox' name='allow_guest' 
+ 						<?php if($row['allow_guest'] ==1 ): ?> checked  <?php endif; ?>	
+					   value="1"	/> Allow Guest ?  </lable>
+				  </div>
+
+
+				  <div class="form-group hidethis " style="display:none;">
+					<label for="ipt" class=" control-label col-md-4 text-right"> Created </label>
+					<div class="col-md-8">
+					  <?php echo Form::text('created', $row['created'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+					 </div> 
+				  </div> 					
+				  <div class="form-group hidethis " style="display:none;">
+					<label for="ipt" > Updated </label>
+			
+					  <?php echo Form::text('updated', $row['updated'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+					
+				  </div>	
+	
+				  <div class="form-group  " >
+					<label> Status </label>
+					<label class="radio">					
+					  <input  type='radio' name='status'  value="enable" required
+					  <?php if( $row['status'] =='enable'): ?>  	checked	  <?php endif; ?>				  
+					   /> 
+					  Enable
+					</label> 
+					<label class="radio">					
+					  <input  type='radio' name='status'  value="disabled" required
+					   <?php if( $row['status'] =='disabled'): ?>  	checked	  <?php endif; ?>				  
+					   /> 
+					  Disabled
+					</label> 					 
+				  </div> 
+
+				  <div class="form-group  " >
+					<label> Template </label>
+					<label class="radio">					
+					  <input  type='radio' name='template'  value="frontend" required
+					  <?php if( $row['template'] =='frontend'): ?>  	checked	  <?php endif; ?>				  
+					   /> 
+					  Frontend
+					</label> 
+					<label class="radio">					
+					  <input  type='radio' name='template'  value="backend" required
+					   <?php if( $row['template'] =='backend'): ?>  	checked	  <?php endif; ?>				  
+					   /> 
+					  Backend
+					</label> 					 
+				  </div> 				  
+				  
+			  <div class="form-group">
+				
+				<button type="submit" class="btn btn-primary ">  Submit </button>
+				 
+		
+			  </div> 
+			  </div>
+			  </div>				  				  
+				  		
+			</div>
+
+		 <?php echo Form::close(); ?>
+	</div>
+</div>	
+
+<style type="text/css">
+.note-editor .note-editable { height:500px;}
+</style>			 	 

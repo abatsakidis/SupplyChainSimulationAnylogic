@@ -1,0 +1,357 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>TIME</TITLE>
+    <link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+<!--
+.style1 {color: #666666}
+-->
+    </style>
+</HEAD>
+<BODY>
+<H1>TIME</H1>
+<p><img src="img/hora_geral.jpg" /><BR>
+<span class="sob_figura">Image1: Field General Settings Interface.</span></P>
+<STRONG>Attributes:</STRONG>
+<UL>
+  <LI>
+    <p><STRONG>Data Type  - </STRONG>Define 
+      the application field type. A field type  <em>Time</em> is formatted as in the option
+      <LABEL onMouseOver="this.style.cursor='pointer'" onMouseOut="this.style.cursor='default'" for="id_blk_lnk_opn_format">Values   format</LABEL>
+      (Image2).    </p>
+  <LI>
+    <p><STRONG>SQL Type</STRONG> - Determine the field type in database. <br>
+      <br>
+      <br>
+    </p>
+</UL>
+<hr />
+<h2>Values Format</h2>
+<p><br />
+    <img src="img/formatacao_de_valores_hora.jpg" /><br>
+    <span class="sob_figura">Image2: Values Format. </span><br>
+</p>
+<UL><li>
+    <p><strong>Regional Settings </strong> - Applies regional settings to the field.<br>
+    To learn more about regional settings <a href="../../../50-Ferramentas/18-Regionalidade/03-conf_regionais.htm">click here.</a></p>
+  </li>
+  <li>
+    <p><SPAN id="id_desc_format_data_config_reg"><strong>Detail Mask</strong> - Format of the field display.</SPAN></p>
+  </li>
+</UL>
+<P>
+<link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+<hr>
+<h2><br>
+  Grid Lookup </h2>
+<p>Used to  modify the display of a grid field. For example, a field<strong> gender</strong> in the database with values <strong>M</strong> or <strong>F</strong>  is displayed as <em><strong>Male or Female</strong></em> (see <a href="#lookup_manual">lookup manual</a>) or have the display values retrieved from a   database table (see <a href="#lookup_automatico">lookup automatic</a>).</p>
+<table width="407" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="../../../comuns/campos/cons/img/apl_cons_sem_lookup.jpg" /></td>
+    <td rowspan="2" bgcolor="#ffffff" class="style3"><p>&nbsp;</p>
+    <p><img src="../../../comuns/campos/cons/img/seta.jpg" align="middle" /></p></td>
+    <td>
+    <img src="../../../comuns/campos/cons/img/apl_cons_com_lookup.jpg" /></td>
+  </tr>
+  <tr>
+    <td><div align="center" class="titulo">Before Lookup</div></td>
+    <td><div align="center" class="titulo">After Lookup</div></td>
+  </tr>
+</table>
+<br />
+<br />
+<hr />
+<h2><a name="lookup_automatico" id="lookup_automatico"></a><br />
+  Grid Lookup - Automatic</h2>
+<p>Lookup used to modify a field display  dynamically,    retrieving the values from a   database table.</p>
+<img src="../../../comuns/campos/cons/img/lookup_de_consulta_automatico.jpg" /><br>
+<span class="sob_figura">Figure3:  Automatic Grid Lookup Interface. </span><br>
+<p><strong>Attributes : </strong></p>
+<ul>
+  <li><strong>SQL Select Statement </strong>- Define the SQL statement to retrieve the grid field display value. The statement has the following  format &quot;SELECT display_field FROM table WHERE key_field = {grid_field}&quot;. <br />
+   The grid field should be reference enclosed in curly brackets. During execution the field enclosed in curly brackets is substituted by its table value. </li>
+  <li><strong>Multiple Options - </strong> Select <strong><em>Yes</em></strong> when the <em>Select</em> <em>Command entered </em>return more than one informed value. <br />
+  </li>
+  <li><strong>Delimiter - </strong> Define the delimiter between the multiple values returned by the <em>Select Command. </em> Use this option when <em>Multiple Options</em> = <strong><em>Yes</em></strong>.</li>
+  <li><strong>Use lookup in</strong>:<br />
+    <blockquote>
+	<table width="564" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="94" height="20"><strong>Grid</strong></td>
+        <td width="464">Apply the <em>lookup </em> in all grid types (HTML, PDF, XML , CSV e RTF).</td>
+      </tr>
+      <tr bgcolor="#FFFFCC">
+        <td><strong>Summary</strong></td>
+        <td>Apply the <em>lookup </em> summary only (HTML e  PDF).</td>
+      </tr>
+      <tr>
+        <td><strong>Both</strong></td>
+        <td>Same as selecting Grid and Summary  </td>
+      </tr>
+    </table>
+	</blockquote>
+  </li>
+</ul>
+<ul>
+  <br>
+  <li><strong>Default Value - </strong> Define a default value  used when the select command does not return any value. <br>
+  </li>
+  <li><strong>Display original and lookup value - </strong>Select  <em><strong>No</strong>, </em>to display only the<em>  Select Command </em>   return value. Otherwise, the field  original value and the <em>Select Command </em> return value separated by the character  defined in <em>Separated by</em>.<br>
+  </li>
+  <li><strong>Separated by   - </strong> Define  the characters used to separate the field  original value and the <em>Select Command </em> return value. Use this option when <em>Display original and lookup value </em> = <strong><em>Yes</em></strong>.</li>
+  <li><strong>Choose connection   - </strong> Select a different connection available in the project.</li>
+</ul>
+<p><a name="lookup_manual" id="lookup_manual"></a></p>
+<hr />
+<H2>Grid Lookup  - Manual </h2>
+<p>Lookup used to modify a field display  with  predefined values.</p>
+<p><img src="../../../comuns/campos/cons/img/lookup_de_consulta_manual.jpg"  /><br />
+  <span class="sob_figura">Figure1:  Manual Grid LookupInterface. </span><br />
+</p>
+<p><strong> Attributes :</strong></p>
+<ul>
+  <li><strong> Lookup Types - </strong>Define the lookup operation mode: <em>Single Value</em><em> , Multiple Values (Delimiter), Multiple Values (Position) and Multiple Values (Binary)</em>. <br />
+    <br />
+  </li>
+</ul>
+<fieldset>
+        <legend class="titulo">&nbsp;Single Value&nbsp;</legend>
+        <p> Display a single value to the field by direct substitution. The value store in the database is substituted by a label  defined in a list. </p>
+<p class="sob_figura"><img src="../../../comuns/campos/cons/img/lookup_de_consulta_manual.jpg" /><br />Figure1.1: Single Value lookup settings.</p>
+      
+      <ul>
+      <li><strong>Label - </strong> Text displayed in the grid. <br />
+      </li>
+  <li><strong>Value  -</strong> Attribute stored in the table. For example,  <strong>M</strong> is displayed  <strong>Male</strong>. </li>
+</ul>
+</fieldset>
+<br />
+<br />
+<fieldset>
+<legend class="titulo">&nbsp;<strong>  Multiple Values (Delimiter)</strong>&nbsp;</legend>
+<p>Display more than one value for the selected field by replacing the string  saved in the table by full description. The string values are separated by a defined delimiter. For example, the  stored value S;M is displayed Sports(S) and Movies(M) in a list.</p>
+<p class="sob_figura"><img src="../../../comuns/campos/cons/img/lookupdelimitador.jpg" /><br />Figure1.2: Multiple Value lookup settings (delimiter).</p>
+
+<ul>
+	<li><strong>Label - </strong> Text displayed in the grid. <br />
+	</li>
+  	<li><strong>Value  -</strong> Attribute stored in the table. </li>
+  	<li><strong>Delimiter</strong> -  Define the  character used to separated string values.</li>
+</ul>
+</fieldset>
+<br />
+<br />
+<fieldset>
+<legend class="titulo">&nbsp;<strong>Multiple Values  (Position)</strong>&nbsp; </legend>
+<p>Display more than one value for the selected field by replacing the string  saved in the table by full description. The values are retrieved based on the string position and size. </p>
+<p>For example, in a string to save<strong> Gender</strong> (a byte) , <strong>Marital Status</strong> (a byte) and <strong>Hobby </strong> (two bytes) the information stored includes label, start position in the string and size in bytes that each info occupies according a defined the list: </p>
+<table width="60%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td bgcolor="#CCCCCC"><strong>Label </strong></td>
+    <td bgcolor="#CCCCCC"><strong>Value </strong></td>
+    <td bgcolor="#CCCCCC"><strong>Start</strong></td>
+    <td bgcolor="#CCCCCC"><strong>Size</strong></td>
+  </tr>
+  <tr>
+    <td>Male</td>
+    <td>M</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Female</td>
+    <td>F</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr bgcolor="#f4f4f4">
+    <td>Married</td>
+    <td>C</td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr bgcolor="#f4f4f4">
+    <td>Single</td>
+    <td>S</td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Sports</td>
+    <td>SP</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Movies</td>
+    <td>MO</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Books</td>
+    <td>BO</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Traveling</td>
+    <td>TR</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+</table>
+<p> A string saved as <strong>MMBO</strong> is displayed: <strong>MaleMarried Books </strong>. </p>
+<p class="sob_figura"><img src="../../../comuns/campos/cons/img/lookupposicao.jpg" /><br />Figure1.3: Multiple Value lookup settings  (position).</p>
+
+<ul>
+  <li><strong>Label - </strong> Text displayed in the grid. <br />
+  </li>
+  <li><strong>Value  -</strong> Attribute stored in the table. </li>
+  <li><strong>Start - </strong>String start position for the data stored. (First position is always 1). </li>
+  <li><strong>Size</strong> - Data size in bytes in the string. </li>
+</ul>
+<p>&nbsp;</p>
+</fieldset>
+<br />
+<br />
+<fieldset>
+<legend class="titulo">&nbsp;<strong>Multiple Values (Binary)</strong>&nbsp;</legend>
+<p> Display more than one value for the selected field by replacing the string  saved in the table by full description. In this options the values are stored as decimal and retrieved by specific algorithm. </p>
+<p>For example, the following information list has the data and the  value automatically attributed relative to the position that each value occupies. (the values are displayed): </p>
+<table width="40%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="42%" bgcolor="#CCCCCC"><strong> Attributed Value</strong></td>
+    <td width="58%" bgcolor="#CCCCCC"><strong>Lookup Description</strong></td>
+  </tr>
+  <tr>
+    <td width="42%">1</td>
+    <td width="58%">Sports</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Movies</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Books</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Traveling</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Music</td>
+  </tr>
+</table>
+<p>To display the info 11 e 12 (stored in the database) according to the list above use the following algorithm:<br />
+  <br />
+  <strong>11 = 1 + 2 + 8 = (Sports - Movies - Traveling) </strong></p>
+<table width="40%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="41%" height="19" bgcolor="#CCCCCC"><strong>Attributed Value </strong></td>
+    <td width="59%" bgcolor="#CCCCCC"><strong>Lookup Description</strong></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td width="41%">1</td>
+    <td width="59%">Sports</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td>2</td>
+    <td>Movies</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Books</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td>8</td>
+    <td>Traveling</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Music</td>
+  </tr>
+</table>
+<p><br />
+  <strong> 12 =  4 + 8 = (
+Books - Traveling) </strong></p>
+<table width="40%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="41%" height="21" bgcolor="#CCCCCC"><strong>Attributed Value</strong></td>
+    <td width="59%" bgcolor="#CCCCCC"><strong>Lookup Description</strong></td>
+  </tr>
+  <tr>
+    <td width="41%">1</td>
+    <td width="59%">Sports</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Movies</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Books</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Traveling</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Music</td>
+  </tr>
+</table>
+<p class="sob_figura"><img src="../../../comuns/campos/cons/img/lookupbinario.jpg" /><br />Figure1.4: Multiple Value lookup settings   (Binary).</p>
+
+<p><strong>Label - </strong> Text displayed in the grid. <br />
+</p>
+</fieldset>
+
+<p>&nbsp;</p>
+<ul>
+  <li><strong>Insert</strong> - Add to the value  list the 
+        values entered in <em>Label</em> and <em>Value</em>.</li>
+    <li><strong>Update</strong> - Update selected item.</li>
+    <li><strong>Remove </strong>- Remove selected item. </li>
+    <li><strong>Clear </strong>- Clear the attributes.</li>
+  <li><strong> Save </strong>- Save the values entered to the &quot;lookup definitions&quot; list to be used afterwards (for reuse).<br />
+  </li>
+</ul>
+<ul>
+    <li><strong>Load  lookup definitions </strong>- Loads a   pre-defined <em>Values List </em>to use in lookup. </li>
+    <li><strong>Use lookup in</strong>:<br />
+      <blockquote>
+        <table width="564" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="94" height="20"><strong>Grid</strong></td>
+            <td width="464">Apply the <em>lookup </em> in all grid types (HTML, PDF, XML , CSV e RTF).</td>
+          </tr>
+          <tr bgcolor="#FFFFCC">
+            <td><strong>Summary</strong></td>
+            <td>Apply the <em>lookup </em> only in (HTML e  PDF).</td>
+          </tr>
+          <tr>
+            <td><strong>Both</strong></td>
+            <td>Same as selecting Grid and Summary  </td>
+          </tr>
+        </table>
+      </blockquote>
+      <br />
+</li>
+</ul>
+<ul>
+  <li><strong>Default Value - </strong> Define a default value  used when the select command does not return any value. <br />
+  </li>
+  <li><strong>Display original and lookup value - </strong>Select <em><strong>No</strong>, </em>to display only t<em>he Label value </em>. Otherwise, the field  original value and the <em>Label value are displayed </em> separated by the character  defined in <em>Separated by</em>.<br />
+  </li>
+  <li><strong>Separated by   - </strong> Define  the characters used to separate the field  original value and the <em>Select Command </em> return value. Use this option when <em>Display original and lookup value </em> = <strong><em>Yes</em></strong>.</li>
+</ul>
+<p>&nbsp;</p>
+
+<br>
+</BODY>
+</HTML>

@@ -1,0 +1,93 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro its used to send e-mails.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_mail_send(SMTP, Usr, Pw, From, To, Subject, Message, Mens_Type, Copies, Copies_Type, Port, Connection_Type, Attachment)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">This macro its used to send emails.</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Parameter<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">SMTP</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">SMTP server name or IP address</span>. (String or Variable that contains the server name)<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Usr</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">SMTP user name</span>. (String or Variable that contains the user name)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Pw</td>
+<td class="corpo1" align="left" valign="top">SMTP password. (String or Variable that contains the password)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">From</td>
+<td class="corpo1" align="left" valign="top">From email. (String or Variable that contains the email)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">To</td>
+<td class="corpo1" align="left" valign="top">List of the emails that will recieve the message, it could be a string or variable that cointains one or more emails separated by ";" or one variable that contains one array of emails.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Subject</td>
+<td class="corpo1" align="left" valign="top">Message subject. (String or Variable that contains the subject)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Message</td>
+<td class="corpo1" align="left" valign="top">Message body. (String or Variable that contains the message)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Mens_Type</td>
+<td class="corpo1" align="left" valign="top">Message format: (T)ext 
+or (H)tml.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Copies</td>
+<td class="corpo1" align="left" valign="top">List of the emails that will recieve the message, it could be a string 
+or variable that cointains one or more emails separated by ";" or one 
+variable that contains one array of emails.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Copies_Type</td>
+<td class="corpo1" align="left" valign="top">Type copies: BCC (Hiden copies) or CCC (Regular copies)<span class="corpo1"><strong>.</strong></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Port</td>
+<td class="corpo1" align="left" valign="top">Server port. If omited, the ScripCase will assume the default value: 25 for not secure port and 465 for secure port.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Connection_Type</td>
+<td class="corpo1" align="left" valign="top">Connection security (S) or (N)<strong>.</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> To use safe connection <strong>its required </strong>to have the PHP "<strong>php_openssl</strong>" extension enable.</p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1</strong>:<br />sc_mail_send('smtp.meuserver.com.br', 'usr', 'pw', <a href="mailto:%27de@netmake.com.br%27">'from@netmake.com.br'</a></span><span class="corpo1">, '</span><a href="mailto:%27para@netmake.com.br%27"><span class="corpo1">to@netmake.com.br</span>'</a><span class="corpo1">, 'Test Email Subject', 'Message', 'H', 'abc@cop.com.br;zxy@cop.com.br', 'H', '', '', 'c:/test/arq.txt');</span></p>
+<p><strong><br /></strong></p>
+<p><strong>Ex. 2: Usising variables and defining the port.</strong><br />sc_mail_send([glo_smtp], [usuar], [glo_pw], {from}, {to}, {subject}, {message}, 'T', [glo_copias], 'CCC', '419', 'S', {attached});</p>
+<p><strong><br /></strong></p>
+<p><strong>Ex. 3: No user and password.</strong><br /> sc_mail_send([glo_smtp], '', '', 'from.netmake.com.br', {to}, {sunject}, {message}, 'H', '', '', '', '', [glo_att]);</p>
+<p>The amount of emails sent will be stored at the special variable "sc_mail_count".<br /><br />If any error happend when the scriptcase try to send the email, the variable "sc_mail_ok" will recieve "false" and the error message will be stored on the variavle "sc_mail_erro".</p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex.4 :</strong><br /></span><span class="corpo1">sc_mail_send([glo_smtp], '', '', <a href="mailto:%27de@netmake.com.br%27">'from@netmake.com.br'</a></span><span class="corpo1">, {to}, {subject}, {message}, 'H');</span></p>
+<p class="corpo1">if ({sc_mail_ok})<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "sent {sc_mail_count} e-mail(s) with sucess!!";<br />}<br />else<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_erro_mensagem({sc_mail_erro});<br />}</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

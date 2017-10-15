@@ -1,0 +1,150 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro allows the application to display customized messages.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_ajax_message("Message", "Title", "Parameters", "Parameters_Redir")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="cls_titulo">&nbsp;</p>
+<p>This macro allows the application to display customized messages. Its usage is restrict to <strong>form/control events</strong>.</p>
+<p>This macro is only valid in applications with <strong>AJAX support.</strong></p>
+<table class="cls_tabela     " border="0">
+<tbody>
+<tr>
+<th>Parameter</th> <th>Description</th>
+</tr>
+<tr>
+<td>Message</td>
+<td>Text displayed in the menssage body. It is a required parameter.</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Text displayed in message title. If blank the title is not displayed.</td>
+</tr>
+<tr>
+<td>Message Parameter String</td>
+<td>
+<p>Formatting parameter. <br /> Ex.: modal=Y&amp;button=Y&amp;button_label=Ok&amp;redir=form_employees.php&amp;redir_target=_blank</p>
+<p>See parameter detail in table2.</p>
+</td>
+</tr>
+<tr>
+<td>Redirecting String<br /></td>
+<td>
+<p>This property defines the values to redirect the aplication. It works only when redir is informed. The parameters should be informed using the following format: parameter=value;parameter=value.</p>
+<p>Ex.: customer_id=ALFKI;customer_name=ALBERT FRANCINET</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Table2: </strong><strong>Message </strong><strong>Parameter String<br /></strong></p>
+<table class="cls_tabela     " border="0">
+<tbody>
+<tr>
+<th>Property</th> <th>Description</th> <th>Value</th> <th>Examplo</th>
+</tr>
+<tr>
+<td>modal</td>
+<td>Flag to display the&nbsp; message in modal</td>
+<td>Y or N</td>
+<td>modal=Y</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Time in seconds to hide message. If not informed message is not hiden. This property only works if button property is disbable.</td>
+<td>Seconds</td>
+<td>timeout=5</td>
+</tr>
+<tr>
+<td>button</td>
+<td>Display a button in the message. Default operation is to close the message. When&nbsp; redir is enabled, after closing the message the aplication is redirected.</td>
+<td>Y or N</td>
+<td>button=Y</td>
+</tr>
+<tr>
+<td>button_label</td>
+<td>This option works case the button property is enable. <br /></td>
+<td>String</td>
+<td>button=Y&amp;button_label=OK</td>
+</tr>
+<tr>
+<td>top</td>
+<td>Message position value in pixels</td>
+<td>Only numbers</td>
+<td>top=300</td>
+</tr>
+<tr>
+<td>left</td>
+<td>Message position value in pixels</td>
+<td>
+<p>Only numbers</p>
+</td>
+<td>left=200</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Message witdth value in pixels</td>
+<td>Only numbers</td>
+<td>width=320</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Message height value in pixels</td>
+<td>Only numbers</td>
+<td>height=30</td>
+</tr>
+<tr>
+<td>redir</td>
+<td>
+<p>Application name or redirecting URL.</p>
+<p>This property works with button option enabled.</p>
+</td>
+<td>String</td>
+<td>button=Y&amp;redir=form_employees.php</td>
+</tr>
+<tr>
+<td>redir_target</td>
+<td>
+<p>Redirecting URL Target.</p>
+<p>This property works with redir option&nbsp; enabled</p>
+</td>
+<td>String</td>
+<td>redir=form_employees.php&amp;redir_target=_blank</td>
+</tr>
+<tr>
+<td>show_close</td>
+<td>
+<p>Flag to display the&nbsp; message close button in the title bar.</p>
+<p>When enabled forces the title bar display, even for empty titles.</p>
+</td>
+<td>Y or N</td>
+<td>show_close=Y</td>
+</tr>
+<tr>
+<td>body_icon</td>
+<td>
+<p>Flag to display the&nbsp; message body icon.</p>
+<p>When this option is enabled the icon displays depend on the theme configuration <br />for the appliaction</p>
+</td>
+<td>Y or N</td>
+<td>body_icon=N</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Import CSV</title>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+</head>
+<body> 
+<h1> Import CSV </h1>
+<p> The Import CSV feature is used to convert one or more data sources from CSV files type in a structured database, in a fast and secure way. </p>
+<p> The tool will import the data saved in CSV files to one of the following databases: MySQL, PostgreSQL, SQLite and SQL Server </p>
+ 
+<p><img src="img/imp_csv_01.jpg"></p>
+<p></p>
+<h2>1º Step - DB Fonte</h2>
+<p>In the first step we need to select the CSV data source  that we want to import, to import the CSV file you must use one of the options below to load the data source.
+<ul>
+  <li><b> Patch / File </b> - Full path of a file or directory with one or more files from the data source. The path should be located on the server where it is installed Scriptcase.</li>
+    <li><b> Select the files / Drag & Drop  </b>- Select or drag and drop one or more files from the data source to perform the upload to the server Scriptcase and add them in the conversion list.<li>
+</ul></p>
+
+<h2>2º Step – Options </h2>
+<p> In the second step we will identify the internal format of the file and choose the desired tables, review the types of data, display data and make necessary adjustments.
+<ul>
+	<li><b>First row is the column name </b>- This option is used when the first line on the CSV file will be used as column name.</li>
+	<li><b> Column delimiter </b> - Character used to separate columns in the CSV file. </li>
+    <li><b> Value delimiter </b> - Character used to separate values ​​in the CSV file. </li>
+    <li><b> End of Line  </b> -  Character used to indicate ehe end of each line of the file. </li>
+	<li><b> Table list </b> - Button used to list the tables in the datasource selected in the previous step </li>
+    
+ 
+</ul></p>
+
+<p> By moving to the second step, Scriptcase will automatically display the tables found in the previously selected source data. We have the option to select the desired tables, review the types of data, visualize data and make necessary adjustments.
+</p>
+<p>In the "Tables" tab all available tables will be displayed for import into the edit option and we can change the field names, data type, size, primary key, auto-increment and set how many rows of source data will be read. </p>
+<p><img src="img/imp_access_02.jpg"></p>
+<p></p>
+
+<p>On the "Advanced" tab, there are settings available to add DROP TABLE before creating the tables, if we wish to recreate the structure and data, if we wish to recreate or just recreate the structure only data. </p>
+<p><img src="img/imp_access_03.jpg"></p>
+<p></p>
+
+<h2>3º Step - DB Path</h2>
+<p> In the third step we will configure the connection in which we want to import the selected data source. Select a connection from the existing database design or create a new connection to receive the converted data source chosen in the previous step.
+</p>
+<p> It is possible to create a new connection for MySQL, SQLite, Postgress and MSSQL (SQL Server) banks.
+</p>
+<p><img src="img/imp_access_04.jpg"></p>
+<p></p>
+</body>
+</html>

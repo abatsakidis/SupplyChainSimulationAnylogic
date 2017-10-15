@@ -1,0 +1,140 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro altera as propriedades de execução das aplicações.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_apl_conf("Aplicação", "Propriedade", "Valor")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>&nbsp;</p>
+<p class="corpo1">Esta macro permite alterar as propriedades de execu&ccedil;&atilde;o das aplica&ccedil;&otilde;es, mudando sua forma de execu&ccedil;&atilde;o em rela&ccedil;&atilde;o ao inicialmente previsto. Desta forma, podemos for&ccedil;ar que um formul&aacute;rio inicie no modo de inclus&atilde;o, ou uma consulta inicie pelo filtro, etc.</p>
+<p class="corpo1">Esta macro pode ser utilizada, por uma aplica&ccedil;&atilde;o, para modificar as propriedades de uma outra aplica&ccedil;&atilde;o.</p>
+<p><br /><br /><span class="corpo1"><strong>Propriedades para aplica&ccedil;&otilde;es de Formul&aacute;rio</strong> </span></p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Propriedade</strong></td>
+<td width="10%" align="left" valign="top"><strong class="corpo1">Valor</strong></td>
+<td width="75%" align="left" valign="top"><strong class="corpo1">Descricao</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">start</td>
+<td class="corpo1" align="left" valign="top">new</td>
+<td class="corpo1" align="left" valign="top">For&ccedil;a o formul&aacute;rio a iniciar no modo de inclus&atilde;o de novo registro.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">insert</td>
+<td class="corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1" align="left" valign="top">Habilita (on) ou desabilita (off) o bot&atilde;o para a inclus&atilde;o de novos registros.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">update</td>
+<td class="corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1" align="left" valign="top">Habilita (on) ou desabilita (off) o bot&atilde;o para a altera&ccedil;&atilde;o de registros.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">delete</td>
+<td class="corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1" align="left" valign="top">Habilita (on) ou desabilita (off) o bot&atilde;o para a exclus&atilde;o de registros.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">field_display_off</td>
+<td class="corpo1" align="left" valign="top">campo</td>
+<td class="corpo1" align="left" valign="top">Desabilita a exibi&ccedil;&atilde;o de um campo.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">field_display_on</td>
+<td class="corpo1" align="left" valign="top">campo</td>
+<td class="corpo1" align="left" valign="top">Habilita a exibi&ccedil;&atilde;o de um campo.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">field_readonly<br /></td>
+<td class="corpo1" align="left" valign="top">campo</td>
+<td class="corpo1" align="left" valign="top">For&ccedil;a um campo para ser exibido como "readonly".</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">rows</td>
+<td class="corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1" align="left" valign="top">For&ccedil;a a quantidade de linhas por p&aacute;gina. (apenas para formul&aacute;rios de m&uacute;ltiplas linhas)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">rows_ins</td>
+<td class="corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1" align="left" valign="top">For&ccedil;a a quantidade de linhas de inclus&atilde;o. (apenas para formul&aacute;rios de m&uacute;ltiplas linhas)</td>
+</tr>
+</tbody>
+</table>
+<p><strong class="corpo1"><br />Propriedades para aplica&ccedil;&otilde;es de Consulta </strong></p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Propriedade</strong></td>
+<td width="10%" align="left" valign="top"><strong class="corpo1">Valor</strong></td>
+<td width="75%" align="left" valign="top"><strong class="corpo1">Descricao</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">start</td>
+<td class="corpo1" align="left" valign="top">filter</td>
+<td class="corpo1" align="left" valign="top">For&ccedil;a a consulta a iniciar pelo filtro.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">cols</td>
+<td class="corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1" align="left" valign="top">For&ccedil;a a quantidade de colunas (consultas tipo vertical e slide)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">rows</td>
+<td class="corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1" align="left" valign="top">For&ccedil;a a quantidade de linhas por p&aacute;gina</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">lig_edit</td>
+<td class="corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1" align="left" valign="top">Habilita (on) ou desabilita (off) o bot&atilde;o de edi&ccedil;&atilde;o do registro (lapis)</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong class="corpo1">Propriedades para todas as aplica&ccedil;&otilde;es </strong></p>
+<table border="0" width="100%" align="left">
+<tbody>
+<tr align="left">
+<td><strong class="corpo1">Propriedade</strong></td>
+<td><strong class="corpo1">Valor</strong></td>
+<td><strong class="corpo1">Descricao</strong></td>
+</tr>
+<tr align="left">
+<td class="corpo1" align="center">exit</td>
+<td class="corpo1" align="center">apl/url</td>
+<td class="corpo1" align="left">For&ccedil;a a saida da aplica&ccedil;&atilde;o para a "aplica&ccedil;&atilde;o" ou "url" informada.</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1: For&ccedil;ar a aplica&ccedil;&atilde;o "meu_formulario" a iniciar no modo de inclus&atilde;o</strong>. <br />sc_apl_conf("meu_formulario", "start", "new");</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2: N&atilde;o permite que a aplica&ccedil;&atilde;o "meu_formulario" fa&ccedil;a inclus&atilde;o de novos registros. </strong><br />sc_apl_conf("meu_formulario", "insert", "off");</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 3: Exibe "meu_campo", da aplica&ccedil;&atilde;o "meu_formulario", dinamicamente.</strong> <br />sc_apl_conf("meu_formulario", "field_display_off", "meu_campo");</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 4: For&ccedil;ar a aplica&ccedil;&atilde;o "minha_consulta" a iniciar pelo filtro. </strong><br />sc_apl_conf("minha_consulta", "start", "filter");</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 5: For&ccedil;ar a aplica&ccedil;&atilde;o "minha_consulta" a exibir 20 linhas. </strong><br />sc_apl_conf("minha_consulta", "rows", "20");</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 6: For&ccedil;ar a saida da aplica&ccedil;&atilde;o "minha_consulta" para a aplica&ccedil;&atilde;o "outra_consulta". </strong><br />sc_apl_conf("minha_consulta", "exit", "outra_consulta");</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

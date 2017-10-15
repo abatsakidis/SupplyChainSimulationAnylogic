@@ -1,0 +1,25 @@
+	<div class="block-widget">	
+		<h3 >Categories</h3>	
+	
+			<ul class="list-unstyled categories"> 
+			<?php foreach($blogcategories as $cat): ?>
+				<li> <a class="dk" href="<?php echo URL::to('blog/category/'.$cat->alias); ?>"> <i class="fa fa-caret-right"></i> <?php echo $cat->name; ?> &nbsp; (<?php echo $cat->total; ?>) </a> </li> 
+			<?php endforeach; ?>	
+			</ul>
+	</div>
+
+
+	<div class="block-widget">	
+		<h3 class="font-semibold">Recent Posts</h3>
+		<div class="line line-dashed"></div>
+		<ul class="recent-post">
+			<?php foreach($recent as $r): ?>
+			<li><a href="<?php echo URL::to('blog/read/'.$r->slug); ?>"><?php echo $r->title; ?> <br />
+				<span>On <?php echo date("F j, Y " , strtotime($r->created)); ?> </span>  </a>
+			</li>
+			<?php endforeach; ?>			
+		</ul>
+		
+		
+	</div>
+	

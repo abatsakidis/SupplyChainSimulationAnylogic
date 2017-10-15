@@ -1,0 +1,16 @@
+<HTML>
+	<HEAD>
+		<TITLE>This event occurs before the header display.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs before the header display. This event is frequentlly used when it is required to display any calculated value on report's header</p>
+<p class="corpo1">Ex. In a customer report header it is requiredd to display the customer ballance on reports header.</p>
+<p class="corpo1">Create a field called fld_customer_ballance, on fields menu&nbsp;&nbsp;</p>
+<p class="corpo1">&nbsp;sc_lookup(v_bal," select sum(debits) - sum(credits) from&nbsp;view_debits_credits &nbsp;where&nbsp;customer ='{field_customer}' ");</p>
+<p class="corpo1">&nbsp;</p>
+			</body>
+			
+</HTML>

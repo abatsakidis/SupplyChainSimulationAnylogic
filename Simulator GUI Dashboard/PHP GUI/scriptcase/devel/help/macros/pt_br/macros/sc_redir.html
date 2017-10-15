@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro tem por objetivo redirecionar para outra aplicação.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_redir(Aplicação, Parametro01; Parametro02, Target, Error)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Esta macro tem por objetivo redirecionar o processamento para outra aplica&ccedil;&atilde;o ou URL.</span></p>
+<p class="corpo1">Caso a aplica&ccedil;&atilde;o de redirecionamento utilize par&acirc;metros, estes devem ser passados da seguinte forma:</p>
+<p><strong>1.</strong> Ap&oacute;s o nome da aplica&ccedil;&atilde;o, utilizar o delimitador v&iacute;rgula (,)<br /><strong>2.</strong> Informar o nome do par&acirc;metro, o sinal de igualdade (=) e o valor ou vari&aacute;vel a ser atribuida.<br /><strong>3.</strong> Havendo mais de um par&acirc;metro, utilizar o delimitador ponto e v&iacute;rgula (;)<br /><strong>4.</strong> Poder&aacute; ser informado o target no qual a aplica&ccedil;&atilde;o ser&aacute; aberta (default=_self), podendo ser: _self, _parent ou _blank.<br /><strong>5.</strong> Paramentro opcional para definir se vai redirecionar caso existam mensagens de erro na aplica&ccedil;&atilde;o. "E" n&atilde;o redireciona caso existam erros e "F" for&ccedil;a redirecionamento mesmo se houver erro na aplica&ccedil;&atilde;o.</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong><br />Ex. 1: Aplica&ccedil;&atilde;o sem par&acirc;metros e sem target.</strong><br />if ([glo_usuario] == "teste")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(aplx.php);<br />}<br /><strong><br /><br />Ex. 2: Aplica&ccedil;&atilde;o com par&acirc;metros e sem target</strong>.<br />if ([glo_usuario] == "teste")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(aplx.php, parm1={clienteid}; parm2="xxx");<br />}<br /><br /><strong><br />Ex. 3: Aplica&ccedil;&atilde;o sem par&acirc;metros e com target.</strong><br />if ([glo_usuario] == "teste")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(aplx.php, "", "_parent");<br />}<br /><br /><strong><br />Ex. 4: Aplica&ccedil;&atilde;o com par&acirc;metros e com target.</strong><br />if ([glo_usuario] == "teste")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(aplx.php, parm1={clienteid}; parm2="xxx", "_blank");<br />}<br /><br /><br /><strong>Ex. 5: URL.</strong><br />if ([glo_usuario] == "teste")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(http://www.minha_pagina.com.br);<br />}</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,16 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre após algum registro do form multiplo registro seja deletado.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p class="titulo1">&nbsp;</p>
+<p class="corpo1">Este evento ocorre depois de excluir&nbsp;registro(s) no form de m&uacute;ltiplos registros. nao ocorre a cada exclus&atilde;o , ocorre apenas uma vez independentemente da quantidade de registros exclu&iacute;dos.</p>
+<p class="corpo1">Ex. Em um form de itens de pedido (multiplos registros) , desejamos excluir o pedido caso todos os itens da tela sejam exclu&iacute;dos.</p>
+<p class="corpo1">basta no evento OnAfterDeleteAll usar um bloco semelhante ao exibido abaixo:</p>
+<p class="corpo1">sc_exec_sql(" delete from adm_pedidos where pedido_id = {pedido} ");</p>
+			</body>
+			
+</HTML>

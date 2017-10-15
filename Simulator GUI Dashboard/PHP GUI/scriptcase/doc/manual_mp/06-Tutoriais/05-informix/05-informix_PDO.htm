@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>Configuring Informix PDO</title>
+</head>
+<body>
+<h1>Configuring Informix PDO</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/05-informix/00-informix.htm" target="_self">Informix</a> >> Configuring Informix PDOz'</td></tr></table>
+<p>To create a connection on Scriptcase using Infomix PDO is necessary to follow the steps bellow.</p>
+<p>* To use the infomix is necessary to have the "Infomix Instant Client" installed on you mahcine.</p>
+<p>&nbsp;</p>
+<p><strong>Step 1: </strong> If you already have Scriptcase installed make a full backup of it inside Options > Settings > Backup. </br> Uninstall Scriptcase completely.</p>
+<p>&nbsp;</p><p>&nbsp;</p>
+<p><strong>Step 2: </strong>Download the Zend Server CE with PHP 5.4 at <a href="http://www.zend.com/en/products/server/downloads">Zend Page.</a> </p>
+<p><img src="../img/zend_dl.jpg" ></p>
+<p>&nbsp;</p><p>&nbsp;</p>
+<p><strong> Step 3:</strong> Run the Zend installer and select the "Custom" option.</p>
+<p><img src="../img/zend_01.jpg" ></p>
+<p>&nbsp;</p><p>&nbsp;</p>
+<p><strong> Step 4:</strong> Enable the "Zend Guard Loader" and the "Infomix" extensions.</p>
+<p><img src="../img/zend_02.jpg" ></p><p>&nbsp;</p>
+<p>Proceed with the installation pressing next a few times, the Zend installer will install the Zend Guard Loader, Apache and PHP creating a small environment.</p>
+<p>We must enable the check box to run the Zend after the installation, at this time the browser will open to proceed with the installation.</p>
+<p>&nbsp;</p>
+<p><strong> Step 5:</strong> Now we must activate the Infomix extension in the Zend, so we must type: <b>localhost:10081</b> .</p>
+<p><img src="../img/zend_03.jpg" ></p><p>&nbsp;</p>
+<p>Into the "Server Setup" tab, then into the Extensions tab, we must look for the pdo_infomix and turn it on.</p>
+<p><img src="../img/zend_04.jpg" ></p><p>&nbsp;</p>
+<p>We can't forget to restart the PHP.</p>
+<p><img src="../img/zend_05.jpg" ></p><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong> Step 6:</strong> Now we must install Scriptcase using the zip file on the HTDOCS folder.</p>
+<p><img src="../img/scriptcase_01.jpg" ></p><p>&nbsp;</p>
+<p>Remember to rename the folder after the Scriptcase zip file get uncompressed and now we are ready to install Scriptcase in the new Environment.</p>
+<p><a href="http://downloads.scriptcase.com.br/downloads/v6/manual/en_us/webhelp/manual_mp/02-Instalacao/03-install_windows_manual.htm">Manual Installation Tutorial</a>.</p>
+<p>Create your first project, select the Infomix PDO connection and use this structure as host:</p>
+<p><b>ip\service_name:port</b> Example: <b>192.168.254.130\ol_ids_1150_1:9088</b></p>
+<p>* We cant use "localhost", we must use the IP of your machine on the network.</P>
+<p><img src="../img/scriptcase_02.jpg" ></p><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong> Step 7:</strong> Save the connection and create an application (form or grid), try to run your application using the default values, one error about the time zone will appear this way you can copy your time zone from the error and paste it into the php.ini file after the date.timezone tag like the picture bellow.</p>
+<p><img src="../img/php_01.jpg" ></p><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong> Step 8:</strong> SRestart you apache and your Scriptcase will be ready to be used.</p>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+{{ Form::open(array('url'=>'Values/save/'.SiteHelpers::encryptID($row['id']), 'class'=>'form-vertical','files' => true , 'parsley-validate'=>'','novalidate'=>' ','id'=> 'ValuesFormAjax')) }}
+<div class="col-md-4">
+						<fieldset><legend> Εργοστάσιο</legend>
+									
+								  <div class="form-group hidethis " style="display:none;">
+									<label for="ipt" class=" control-label "> Id    </label>									
+									  {{ Form::text('id', $row['id'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Manufacturing Setup Cost    </label>									
+									  {{ Form::text('f_ManufacturingSetupCost', $row['f_ManufacturingSetupCost'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Manufacturing Cost Per Item    </label>									
+									  {{ Form::text('f_ManufacturingCostPerItem', $row['f_ManufacturingCostPerItem'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Holding Cost Per Item Per Day    </label>									
+									  {{ Form::text('f_HoldingCostPerItemPerDay', $row['f_HoldingCostPerItemPerDay'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Shortage Cost Per Item Per Day    </label>									
+									  {{ Form::text('f_ShortageCostPerItemPerDay', $row['f_ShortageCostPerItemPerDay'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Status    </label>									
+									   
+                    <?php $Status = explode(',',$row['Status']);
+                    $Status_opt = array( '1' => 'Ενεργό' ,  '0' => 'Ανενεργό' , ); ?>
+                    <select name='Status' rows='5'   class='select2 '  >  
+                        <?php 
+                        foreach($Status_opt as $key=>$val)
+                        {
+                            echo "<option  value ='$key' ".($row['Status'] == $key ? " selected='selected' " : '' ).">$val</option>";                         
+                        }                        
+                        ?></select> 						
+								  </div> </fieldset>
+			</div>
+			
+			<div class="col-md-4">
+						<fieldset><legend> Λιανικό εμπόριο</legend>
+									
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Order Setup Cost    </label>									
+									  {{ Form::text('r_OrderSetupCost', $row['r_OrderSetupCost'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Order Cost Per Item    </label>									
+									  {{ Form::text('r_OrderCostPerItem', $row['r_OrderCostPerItem'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Shortage Cost Per Item Per Day    </label>									
+									  {{ Form::text('r_ShortageCostPerItemPerDay', $row['r_ShortageCostPerItemPerDay'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Holding Cost Per Item Per Day    </label>									
+									  {{ Form::text('r_HoldingCostPerItemPerDay', $row['r_HoldingCostPerItemPerDay'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> </fieldset>
+			</div>
+			
+			<div class="col-md-4">
+						<fieldset><legend> Χονδρέμπορας</legend>
+									
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Order Setup Cost    </label>									
+									  {{ Form::text('w_OrderSetupCost', $row['w_OrderSetupCost'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Order Cost Per Item    </label>									
+									  {{ Form::text('w_OrderCostPerItem', $row['w_OrderCostPerItem'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Holding Cost Per Item Per Day    </label>									
+									  {{ Form::text('w_HoldingCostPerItemPerDay', $row['w_HoldingCostPerItemPerDay'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ipt" class=" control-label "> Shortage Cost Per Item Per Day    </label>									
+									  {{ Form::text('w_ShortageCostPerItemPerDay', $row['w_ShortageCostPerItemPerDay'],array('class'=>'form-control', 'placeholder'=>'',   )) }} 						
+								  </div> </fieldset>
+			</div>
+			
+												
+					
+			
+<div style="clear:both"></div>	
+				
+<div class="form-group">
+	<label class="col-sm-4 text-right">&nbsp;</label>
+	<div class="col-sm-8">	
+		<button type="submit" class="btn btn-primary btn-sm ">  {{ Lang::get('core.sb_save') }} </button>
+		<button type="button" onclick="$('#sximo-modal').modal('hide')" id="submit" class="btn btn-success btn-sm">  {{ Lang::get('core.sb_cancel') }} </button>
+	</div>			
+</div> 		 
+{{ Form::close() }}
+
+			 
+   <script type="text/javascript">
+	$(document).ready(function() { 
+		 
+		
+		$('.previewImage').fancybox();	
+		$('.tips').tooltip();	
+		$(".select2").select2({ width:"98%"});	
+		$('.date').datepicker({format:'yyyy-mm-dd',autoClose:true})
+		$('.datetime').datetimepicker({format: 'yyyy-mm-dd hh:ii:ss'}); 
+		 $('.markItUp').markItUp(mySettings );				
+		
+		var form = $('#ValuesFormAjax'); 
+		form.parsley();
+		form.submit(function(){
+			
+			if(form.parsley('isValid') == true){			
+				var options = { 
+					dataType:      'json', 
+					beforeSubmit :  showRequest,
+					success:       showResponse  
+				}  
+				$(this).ajaxSubmit(options); 
+				return false;
+							
+			} else {
+				return false;
+			}		
+		
+		});
+
+	});
+	
+	function showRequest()
+	{
+		$('.formLoading').show();	
+	}  
+	function showResponse(data)  {		
+		
+		if(data.status == 'success')
+		{
+			$( ".resultData" ).html( data.message );
+			$('#sximo-modal').modal('hide')	;	
+			ajaxFilter('#{{ $pageModule }}','{{ $pageUrl }}/data');
+		} else {
+			$( ".{{ $pageModule }}FR" ).html( data.message );
+			return false;
+		}	
+	}			 
+	
+	</script>		 

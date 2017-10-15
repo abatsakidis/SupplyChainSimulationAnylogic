@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Parallax Content Slider with CSS3 and jQuery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<script src="js/modernizr.custom.28468.js"></script>
+</head>
+
+<body>
+<div id="da-slider" class="da-slider">
+  <div id="intro" class="da-slide">
+    <div class="da-title">
+      People Focused. <em>Drupal Powered.</em>
+    </div>
+    <div class="da-text">
+      A perfect blend of thoughtful user experience solutions, creative design and solid development. Bluespark creates websites and web apps that can meet your needs and exceed your expectations.
+    </div>
+    <div class="da-img">
+      <img src="/files/images/slides/1-drupal_powered.png" alt="Drupal Powered" title="Presenting the Drupalien" />
+    </div>
+  </div>
+  <div id="user-experience" class="da-slide">
+    <div class="da-title">Engaging user experiences</div>
+    <div class="da-text">
+      Creating intuitive ways for users to get what they need at exactly the right moment, our UX team designs flexible and engaging systems.
+      <br />
+      <a class="button" href="/user-experience" title="Visit the Bluespark UX Center">Experience more</a>
+    </div>
+    <div class="da-img">
+      <img src="/files/images/slides/davinci/2-user_experience.png" alt="We get User Experience" title="We get User Experience" />
+    </div>
+  </div>
+  <div id="design" class="da-slide">
+    <div class="da-title">Stunningly beautiful sites</div>
+    <div class="da-text">
+      Our creative team designs powerful visuals that affirm your brand’s identity and beautifully meet your visitor’s needs.
+      <br />
+      <a class="button" href="/creative" title="Visit the Bluespark Creative Center">See more</a>
+    </div>
+    <div class="da-img">
+      <img src="/files/images/slides/davinci/3-creative.png" alt="Bluespark does Creative Work" title="Bluespark does creative work." />
+    </div>
+  </div>
+  <div id="development" class="da-slide">
+    <div class="da-title">Rock solid development</div>
+    <div class="da-text">
+      Using advanced open source technologies and an agile methodology, our expert development team builds highly functional systems that excite, engage, and perform.
+      <br />
+      <a class="button" href="/development" title="Grok Bluespark in the Technology Center">Learn more</a>
+    </div>
+    <div class="da-img">
+      <img src="/files/images/slides/davinci/4-development.png" alt="Drupal Development" title="Bluespark does Drupal Development" />
+    </div>
+  </div>
+  <div id="challenge" class="da-slide">
+    <div class="da-title">Spark an Idea</div>
+    <div class="da-text">
+      We love the early stages of a project, where bright people, ideas, and creativity meet. Talking about, and then designing and building how people work with technology is what we do best, and we’re ready for the next challenge.
+      <br />
+      <a class="button" href="/hire-us">Challenge Us</a>
+    </div>
+    <div class="da-img">
+      <img src="/files/images/slides/5-spark_your_idea.png" alt="Spark your Idea!" title="Spark your Idea!" />
+    </div>
+  </div>
+  <div>
+    <nav class="da-arrows">
+      <span class="da-arrows-prev"></span>
+      <span class="da-arrows-next"></span>
+    </nav>
+  </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.cslider.js"></script>
+<script>
+//jQuery(document).ready(function() {
+
+$('#da-slider').cslider({
+  autoplay : true,
+  interval: 4000,
+  bgincrement : 10
+});
+
+//});
+</script>
+</body>
+</html>

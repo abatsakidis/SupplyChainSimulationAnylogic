@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro changes the color of a determined field text.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_field_color("Field", "Color")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This macros its used to change/restore <strong>a grid field</strong> text color dynamically.<br /></p>
+<p><strong>Ex. 1:</strong> Change the grid text field &ldquo;customer_id&rdquo; color.<br />sc_field_color ("customerid", "#33FF66");<br /><strong></strong><br /><br /><strong>Ex. 2: Change the "value_order&rdquo; field text color, if the value is greater that 1000. Otherwise, use the default color.</strong><br />if ({value_order} &gt; 1000)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_field_color ("value_order", "#33FF66");<br />}<br />else<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_field_color ("value_order", "");<br />}</p>
+<p><br /><strong><br />Ex. 3: Using a local variable.</strong><br />sc_field_color ("customerid", {fld_color});</p>
+<p><br /><strong><br />Ex. 4: Using a global variable.</strong><br />sc_field_color ("customerid", [glo_color]);<br /><br />&nbsp;<br /></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

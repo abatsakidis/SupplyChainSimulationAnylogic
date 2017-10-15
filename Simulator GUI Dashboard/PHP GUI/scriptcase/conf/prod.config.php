@@ -1,0 +1,1 @@
+<?php /*a:1:{s:6:"GLOBAL";a:4:{s:6:"GC_DIR";s:57:"C:\Program Files (x86)\NetMake\v8\wwwroot\scriptcase/tmp/";s:6:"GC_MIN";i:120;s:8:"SEC_PATH";s:57:"C:\Program Files (x86)\NetMake\v8\wwwroot\scriptcase/app/";s:8:"SEC_USAR";s:1:"N";}}*/ ?>

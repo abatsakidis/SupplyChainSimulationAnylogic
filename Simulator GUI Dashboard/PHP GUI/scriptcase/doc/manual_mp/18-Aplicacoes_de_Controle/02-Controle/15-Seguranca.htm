@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<META NAME="REVIEWED" CONTENT="José Arteiro, 13-05-2010">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Security</title>
+	<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>SECURITY</h1>
+<p><img src="../../comuns/seguranca/img/seguranca01.jpg" /> </p>
+<p><br />
+  Attribute:</p>
+<ul>
+  <li>
+    <p><strong>Use Security: </strong>With this option selected, the application is only accessible when enabled using the <em>sc_apl_status</em> macro. Disabled applications display the message "Unauthorized user" when accessed.<br />
+      <img src="../../comuns/seguranca/img/seg_usuario_nao_autorizado.jpg" name="figura2" border="0" align="bottom" id="figura2" /><br />
+      <br />
+    Access to applications may be granted through a control application to authenticate users. See the examples below. <br />
+    <br />
+    <strong>Example 1</strong>: Activating an application called <em>grid_categories. <br />
+    <br />
+    </em>In the login application <em>onValidate</em> event (control form application used to authenticate a user), insert the following macro call:<br />
+    <br />
+    </p>
+    <table width="60%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tabelacodigo">&nbsp;</td>
+        <td>sc_apl_status('grid_categories','on');</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+  <strong>Example 2</strong>: Creating a rule to authenticate by user type in a login form containing a field called <em>userid</em>.</li>
+</ul>
+<blockquote>
+  <p><br />
+    In the login application <em> onValidate</em> event (control form application used to authenticate a user), insert the following code:<br /> 
+    <br />
+  </p>
+  <table width="80%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tabelacodigo">&nbsp;</td>
+      <td><p><br />
+        // two users: john and mary with permission to access different applications<br />
+        if({userid} == 'john') {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status('grid_categories','on'); <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status('form_categories','on'); <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status('grid_products','on'); <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status('form_products','on'); <br />
+        <br />
+        }<br />
+        elseif({userid} == 'mary') {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status('grid_categories','on'); <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status('form_categories','on'); <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status('grid_products','off'); <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status('form_products','off'); <br />
+        } <br />
+        else{<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_error_message("Unauthorized user!");<br />
+        }<br />
+      </p></td>
+    </tr>
+  </table>
+  <p><br />
+    <br />
+    <strong>Example 3</strong>: Authenticating applications using a database table. <br />
+    <br />
+  In the login application <em>onValidate</em> event, enter the following code:<br />
+  </p>
+  <blockquote>
+    <p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <table width="80%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="tabelacodigo">&nbsp;</td>
+      <td><p><br />
+          // the table with applications is called sec_applications<br />
+          sc_lookup(dataset,"select code from sec_applications");<br />
+          <br />
+          foreach({dataset} as $line){<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$applications = $line[0];<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc_apl_status($applications,'on');<br />
+          }<br />
+          <br />
+          <br />
+      </p></td>
+    </tr>
+  </table>
+</ul>
+<p><br />
+  <br />
+  <br />
+  <br />
+</p>
+<ul>
+  <li><strong>URL output of the security (denied access URL redirection): </strong>It redirects the user to this URL, if he does not have access to the application.</li>
+  <li><strong>Use Password: </strong>An application password setting is required. (See image below).<br />
+    <br />
+    <img src="../../comuns/seguranca/img/seguranca02.jpg" /><br />
+    <br />
+    At run time a text box is displayed requiring the access password. If the password is not entered correctly, an "Unauthorized user" message is displayed. <br />
+    <img src="../../comuns/seguranca/img/seg_informe_senha.jpg" name="figura3" border="0" align="bottom" id="figura3" /><br />
+    <br />
+  </li>
+</ul>
+<blockquote>
+  <p>In the development environment it is possible to suppress the above steps purely for testing purposes, thereby avoiding repeated password requests (or access denied) for each application execution. Disable the options <em>Enable use of security </em> and Enable Use of Password in the Configuration menu | My ScriptCase. </p>
+</blockquote>
+<p><img src="../../comuns/seguranca/img/seguranca05.jpg" /></p>
+
+
+<p>
+  <hr />
+<h2>CAPTCHA</h2>
+<p>This is a feature used to increase the level of security in the form. It requires direct user interaction, through the entry of a random sequence of characters, displayed on a dynamically generated image. CAPTCHA means "<strong>C</strong>ompletely <strong>A</strong>utomated <strong>P</strong>ublic <strong>T</strong>uring test to tell <strong>C</strong>omputers and <strong>H</strong>umans <strong>A</strong>part".</p>
+<p><strong>	<img src="../../comuns/seguranca/../img/vejamais.jpg" />Read more: </strong></p>
+<ul>
+  <li><a href="http://www.scriptcase.net/siteen/samples/tutoriais/form/ctr06.php" target="_blank">Using CAPTCHA on a login form</a></li>
+</ul>
+<p><br />
+  <img src="../../comuns/seguranca/img/seguranca03.jpg" /></p>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>Use CAPTCHA </strong>- Enable CAPTCHA in the application. </li>
+  <li><strong>Quantity</strong> - Number of characters displayed in the automatically generated image. </li>
+  <li><strong>List </strong>- Characters to be used in the generated image. </li>
+  <li><strong>Label</strong> - Message containing instructions on how to use the CAPTCHA feature. </li>
+  <li><strong>Error message </strong>- Error message displayed when the user input does not match the generated image. </li>
+  <li><strong>Height </strong>- Height of the generated image in pixels.</li>
+  <li><strong>Width </strong>- Width of the generated image in pixels.</li>
+  <li><strong>Font Size - </strong>Captcha font size </li>
+  <li><strong>Reload </strong>- Option for the user to request a new code. </li>
+  <li><strong>Select one layout </strong>- This option allows the developer to set how the CAPTCHA should be displayed in the application.<br />
+  <img src="../../comuns/seguranca/img/seguranca04.jpg" /> </li>
+</ul>
+
+</p>
+</body>
+</html>

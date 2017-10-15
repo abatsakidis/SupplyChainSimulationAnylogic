@@ -1,0 +1,17 @@
+/***********************************************************
+ *			style.css
+ *		    -----------------
+ * Created		: Thr, Dec 11, 2003
+ * Copyright		: (C) LookStrike Team
+ * WebSite		: http://www.lookstrike.com
+ *
+ * $Id: style.css,v 1.1.1.1 2011-05-12 20:31:32 diogo Exp $
+ *
+ ***********************************************************/
+
+TABLE { font: 12px Arial, Helvetica, sans-serif, Verdana; color: #000000; }
+TH { font-weight: bold; font-size: 13px; color: #ffffff; height: 25px; background-color: #55598A; }
+.tableline { border: #576bb9 1px solid; }
+.table_title { background-color: #636799; }
+.row1 { background-color: #B4B5DA; }
+.row2 { background-color: #9FA1CA; }

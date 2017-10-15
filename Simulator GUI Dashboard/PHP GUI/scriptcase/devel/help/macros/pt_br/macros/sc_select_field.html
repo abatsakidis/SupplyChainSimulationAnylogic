@@ -1,0 +1,30 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro altera dinamicamente o campo que será recuperado pela consulta.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select_field({Campo})<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Esta macro modifica o SELECT dinamicamente: </span></p>
+<p class="corpo1">&Eacute; poss&iacute;vel alterar dinamicamente os campos de uma consulta, atrav&eacute;s da altera&ccedil;&atilde;o din&acirc;mica do select original.</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><span class="corpo1"><strong>Ex. 1:</strong> </span>Temos uma tabela com as colunas ano e os meses de janeiro a dezembro. Gostar&iacute;amos de ter uma consulta, que, &agrave; partir de um par&acirc;metro, exibisse os anos e apenas um determinado m&ecirc;s. Supondo que o par&acirc;metro venha informado atrav&eacute;s de uma vari&aacute;vel global de nome "exibir_mes", nossa aplica&ccedil;&atilde;o teria a seguinte estrutura:</p>
+<p class="corpo1"><strong>Cl&aacute;usula select:</strong> select ano, par_mes from tabela</p>
+<p class="corpo1">sc_select_field(par_mes) = [exibir_mes];<br />sc_label(par_mes) = [exibir_mes];</p>
+<p class="corpo1">Desta forma, al&eacute;m de alterar o select, estamos alterando o label da coluna da consulta.</p>
+<p><span class="corpo1"><br /><span style="color: #000000;"><strong>Obs:</strong> <em>Este comando deve ser implementado no evento "onInit";</em></span></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

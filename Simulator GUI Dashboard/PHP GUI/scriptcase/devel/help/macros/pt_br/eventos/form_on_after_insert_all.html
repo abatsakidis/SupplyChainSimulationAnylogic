@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esse evento ocorre após inclusão de um registro no forumulário multiplo registr.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p class="titulo1">&nbsp;</p>
+<p class="corpo1 corpo1">Este evento ocorre depois de&nbsp;incluir registro(s) no form de m&uacute;ltiplos registros.</p>
+<p class="corpo1 corpo1">Podemos&nbsp;por exemplo,&nbsp;ap&oacute;s inserir os itens de uma nota fiscal, (tb_itens_nf), em um form de m&uacute;ltiplos registros , incluir na tabela "pai" (nota_fiscal) , o valor total dos produtos, com um pequeno bloco de c&oacute;digo php escrito no evento&nbsp;&nbsp;OnAfterInsertAll, veja c&oacute;digo abaixo.</p>
+<p class="corpo1 corpo1">sc_lookup(tot," select sum(valor_item) from tb_itens_nf where num_nf = {num_nf} ");</p>
+<p class="corpo1 corpo1">{tmp_tot} = {tot[0][0]};</p>
+<p class="corpo1 corpo1">sc_exec_sql(" update tb_itens_nf set total_itens = {tmp_tot} where num_nf = {num_nf} ");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+			</body>
+			
+</HTML>

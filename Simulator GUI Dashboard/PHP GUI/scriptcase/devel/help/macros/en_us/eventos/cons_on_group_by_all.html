@@ -1,0 +1,14 @@
+<HTML>
+	<HEAD>
+		<TITLE>This event occurs after each the break.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>&nbsp;The event can be used to do sum values, accumulate values in variable and others functionalities.</p>
+<p>&nbsp;</p>
+<p>Store all the fields in one variable:<br /><br />&nbsp;OnInit:<br /><br />&nbsp; [stored_variable] = "";<br /><br /><br />OnGroupBy:<br /><br />&nbsp; [stored_variable] .= {field_X} . " - ";<br /><br /><br />OnGroupByAll:<br /><br />&nbsp; [stored_variable] = explode(' - ', [stored_variable] );<br /><br />if(array_search('valor_not_allowed', [stored_variable]) !== FALSE){<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sc_redir('app.php', error = 'ok');<br /><br />&nbsp;}</p>
+			</body>
+			
+</HTML>

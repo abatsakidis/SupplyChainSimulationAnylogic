@@ -1,0 +1,62 @@
+<HTML>
+	<HEAD>
+		<TITLE>Variables that contains all the totals (general and for grouping).</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">var_totTotalling Variables<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">During break down and summary processing, Scriptcase generates total variables to each break level. </span></p>
+<p><span class="corpo1">The&nbsp;routines are defined&nbsp;in event &ldquo;<strong>onGroupBy</strong>&rdquo; determining the break levels and avalilable to each record. Totals special variables are then referenced substituting the break name for the key word &ldquo;<strong>break</strong>&rdquo;, as in:</span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"> 
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Variables<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_ger}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Records total amount</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_parcel}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Field &ldquo;parcels&rdquo; total</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_balance}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Field &ldquo;Balance&rdquo; total</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_break}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Current break level records total</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_break_parcel}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Current break level field &ldquo;parcels&rdquo; total</span>.<br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_break_balance}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Current break level field &ldquo;Balance&rdquo; total</span>.<br /></td>
+</tr>
+</tbody>
+</table>
+</span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1:</strong> <strong>In an application with a break by state and city that totalizes a balance field, in the break totals, is possible to display the average (avg) instead of the balance as follows.</strong><br /><br />{sum_break_balance} = {sum_break_balance} / {count_break};</span></p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,101 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro é usada pra o envio de e-mails.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_mail_send(SMTP, Usr, Pw, De, Para, Assunto, Mensagem, Tipo_Mens, Cópias, Tp_Cópias, Porta, Tp_Conexao, Attachment)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro tem por finalidade o envio de e-mail.</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">SMTP</td>
+<td class="corpo1" align="left" valign="top">Endere&ccedil;o do servidor SMTP (string ou vari&aacute;vel contendo o Endere&ccedil;o do servidor SMTP).</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Usr</td>
+<td class="corpo1" align="left" valign="top">Usu&aacute;rio do servidor SMTP (string ou vari&aacute;vel contendo o Usu&aacute;rio do servidor SMTP).</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Pw</td>
+<td class="corpo1" align="left" valign="top">Senha do servidor SMTP (string ou vari&aacute;vel contendo a Senha do servidor SMTP).</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">De</td>
+<td class="corpo1" align="left" valign="top">E-mail de origem (string ou vari&aacute;vel contendo o E-mail de origem).</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Para</td>
+<td class="corpo1" align="left" valign="top">Lista de e-mails que devem receber c&oacute;pia da 
+mensagem , podendo ser uma string ou vari&aacute;vel contendo um ou mais 
+e-mail's, separados por ";", ou uma vari&aacute;vel contendo um array de 
+e-mail's.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Assunto</td>
+<td class="corpo1" align="left" valign="top">T&iacute;tulo da mensagem (string ou vari&aacute;vel contendo o t&iacute;tulo da mensagem).</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Mensagem</td>
+<td class="corpo1" align="left" valign="top">Mensagem a ser enviada (string ou vari&aacute;vel contendo a mensagem).</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Tipo_Mens</td>
+<td class="corpo1" align="left" valign="top">Tipo do texto da mensagem a ser enviada, sendo: "T" para somente texto ou "H" para texto e/ou html.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">C&oacute;pias</td>
+<td class="corpo1" align="left" valign="top">Lista de e-mails que devem receber c&oacute;pia da 
+mensagem, podendo ser uma string ou vari&aacute;vel contendo um ou mais 
+e-mail's, separados por ";", ou uma vari&aacute;vel contendo um array de 
+e-mail's.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Tp_C&oacute;pias</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Tipo de c&oacute;pias a serem enviadas: <strong>C</strong></span><span class="corpo1"><strong>C</strong></span><span class="corpo1"><strong>C</strong> para c&oacute;pias vis&iacute;veis e <strong>BCC</strong> para c&oacute;pias ocultas. Se omitido, o Scriptcase assumir&aacute; o valor default: <strong>BCC.</strong></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Porta</td>
+<td class="corpo1" align="left" valign="top">Porta utilizada pelo servidor de e-mail. Se omitido, o Scriptcase assumir&aacute; os valores default: <strong>25</strong> para porta n&atilde;o segura e <strong>465</strong> para porta segura.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Tp_Conex&atilde;o</td>
+<td class="corpo1" align="left" valign="top"><strong>tp_conexao</strong>: Indicativo de conex&atilde;o segura(criptografada) (<strong>S</strong>) ou n&atilde;o (<strong>N</strong>). Se omitido, o Scriptcase assumir&aacute; o valor default: <strong>N.</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="corpo1"><strong>OBS: </strong><em>Para utiliza&ccedil;&atilde;o de <strong>conex&atilde;o segura</strong>, a extens&atilde;o do PHP "<strong>php_openssl</strong>" dever&aacute; estar <strong>habilitada</strong>. </em><br /><br /></span><span class="corpo1"><strong><span style="font-size: small;">anexos</span></strong>: Lista de arquivos a serem anexados, podendo ser uma string ou vari&aacute;vel contendo um ou mais endere&ccedil;os de arquivos, separados por ";", ou uma vari&aacute;vel contendo um array de endere&ccedil;os de arquivos.</span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1</strong>:<br />sc_mail_send('smtp.meuserver.com.br', 'usr', 'pw', <a href="mailto:'de@netmake.com.br'">'de@netmake.com.br'</a></span><span class="corpo1">, '</span><a href="mailto:'para@netmake.com.br'"><span style="font-size: x-small;">para@netmake.com.br</span>'</a><span class="corpo1">, 'teste envio <br />de e-mail', 'mensagem', 'H', 'abc@cop.com.br;zxy@cop.com.br', 'H', '', '', 'c:/teste/arq.txt');</span></p>
+<p>&nbsp;</p>
+<p><strong>Ex. 2: Utilizando vari&aacute;veis como par&acirc;metros e definindo a porta.</strong><br />sc_mail_send([glo_smtp], [usuar], [glo_pw], {origem}, {destino}, {assunto}, {mensagem}, 'T', [glo_copias], 'CCC', '419', 'S', {anexos});</p>
+<p class="corpo1">&nbsp;</p>
+<p><strong>Ex. 3: Servidor sem usu&aacute;rio e senha e op&ccedil;&atilde;o de n&atilde;o enviar c&oacute;pias e sem informa&ccedil;&atilde;o da porta.</strong><br />sc_mail_send([glo_smtp], '', '', 'de.netmake.com.br', {destino}, {assunto}, {mensagem}, 'H', '', '', '', '', [glo_att]);</p>
+<p>A quantidade de e-mail's, efetivamente enviados, &eacute; disponibilizada atrav&eacute;s da vari&aacute;vel especial "<strong>sc_mail_count</strong>".</p>
+<p class="corpo1">Caso ocorra erro no envio do e-mail, a vari&aacute;vel especial "<strong>sc_mail_ok</strong>" retornar&aacute; como "false" e a mensagem de erro estar&aacute; dispon&iacute;vel na vari&aacute;vel especial "<strong>sc_mail_erro</strong>".</p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 4:<br /></strong>sc_mail_send([glo_smtp], '', '', 'de@netmake.com.br', {destino}, {assunto}, {mensagem}, 'H');<br />if ({sc_mail_ok})<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "Enviados {sc_mail_count} e-mail com sucesso !!";<br />}<br />else<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_erro_mensagem({sc_mail_erro});<br />}</span></p>
+<p>&nbsp;</p>
+<p class="corpo1"><strong>Observa&ccedil;&atilde;o Importante:<br /></strong><br />At&eacute; a vers&atilde;o 3.00.01.134 n&atilde;o existiam os par&acirc;metros <strong>tp_c&oacute;pias, porta, tp_conexao e anexos</strong>.<br />Para que estes par&acirc;metros funcionem, na vers&atilde;o 3.00.01.135, foi introduzida uma nova classe para envio de e-mail. <br />Verifique se no diret&oacute;rio <strong>prod/third</strong> existe o sub-diret&oacute;rio <strong>email_new</strong>. Caso n&atilde;o exista, atualize o "<strong>prod</strong>".</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

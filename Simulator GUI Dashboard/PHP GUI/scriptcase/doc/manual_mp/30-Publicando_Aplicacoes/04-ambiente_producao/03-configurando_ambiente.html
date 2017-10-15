@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Configuring the Production Environment</title>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Production Environment</h1>
+
+<p>Extract the zip file.      
+
+        <br />
+        <br />
+        <br />
+  <img src="img/new_deploy1.jpg" alt="Publicação Típica"  border="1" /><br />
+<br/><p>
+        Includes the common libraries in the Production  environment directory _lib.<br/>
+  In the example below was created a directory called &quot;system&quot; to store the applications. <br /><br/> 
+
+<br/>
+  <img src="img/new_deploy14.jpg" alt="Publicação Típica"  border="1" /><br />
+
+        <br />
+        <strong class="style10">Permissions – Reading, Write and Execution.</strong><br />
+        <br />
+        For Windows Servers using <em>Web IIS Server</em>, is necessary to  define the permissions in the directory _lib (common libraries),<br /> and in the CMD files (C:\WINDOWS\system32) for IIS users (IUSR_NOME-DO-SERVIDOR) .<br />
+<p>For Unix environment, is necessary to set common libraries   permissions recursively. (directoty _lib, subdirectories and files) <br />
+<p>Example: chmod 777 _lib -R<br />
+<p><br />
+        <span>Creating the connection with the Database using the management  interface. </span><br />
+</p>
+<hr>
+      <p><span><br />
+        <strong>Step 1:</strong></span> <span>Locate the production environment management  interface, in the directory _lib.</span></p>
+      
+<p><span> In the example: <em>http://host or ip/system/_lib/prod</em></span> 
+</p>
+      <p><br />
+        <br />
+        <br />
+  <img src="img/new_deploy2.jpg"  border="1" /><br />
+      </p>
+<p><strong>Step 2: </strong>Select <em>Create new connection.</em></p>
+  <p><br />
+  <img src="img/new_deploy3.jpg" " border="1" /><br />
+        <br />
+        <strong>Step 3:</strong> Select the DBMS. In the example was used MySQL Database.<br />
+        <br />
+        <br />
+  <img src="img/new_deploy4.jpg" border="1" /><br />
+<br/>      <strong>Step 4:</strong> Enter   Database information (server id or name).<br/>
+<br/>      
+      <strong>Step 5:</strong> Enter Database user id and password.<br/>
+      
+<br/>      
+<strong>Step 6:</strong> Enter the same connection name defined in the development  environment (ScriptCase).<br />It must be the same name since the applications are  configured to use it.<br/>
+
+<br/>      
+<strong>Step 7:</strong> Test the connection and save the configurations.<br/>
+
+<br/>      
+<strong>Step 8:</strong> Run the application to verify it.<br/>
+
+<br/>
+<em>After clicking in <b>Advanced</b>.</em><br/>
+
+<br/>      
+<strong>Step 9:</strong> Select the decimal number separator to use in the database.<br/>
+<br/>Ex: 1.21 or 1,21<br/>
+
+<br/>      
+<strong>Step 10:</strong> Choose if the connection will be <em>persistent*</em> or not.<br/>
+
+<br/>      
+<strong><em>Persistent Conexion:</em></strong> Persistent connections are connections that do not close when the execution of your script ends.<br/>
+
+<br/>      
+<strong>Step 11:</strong> If you want to change the default charset (latin1, to MySQL) to record or edit to the database select the desired encoding.<br/>
+
+<br/>
+<hr>
+<H2>Editing the connection</H2>
+
+
+<br/><strong>Step 1:</strong> Select<em> Edit connection.</em><br/>
+<br/>
+<img src = "img/new_deploy5.jpg"  border = "1" /><br/>
+
+<br/><strong>Step 2:</strong> Choose the connection and edit it.<br/>
+
+<br/><img src = "img/new_deploy4.jpg"><br/>
+
+<hr>      
+<H2>Renaming the connection</H2>
+<div align="left">
+      
+<br/><strong>Step 1:</strong> Select<em> Rename connection.</em><br/>
+
+<br/>
+  <img src = "img/new_deploy6.jpg"  border = "1"><br/>
+      
+<br/><strong>Step 2:</strong> Select the connection then rename it.<br/>
+      
+
+      
+    </p>
+      </p>
+      </p>
+      
+</div>
+</body>
+</html>

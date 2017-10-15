@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+    
+		<link rel=Stylesheet type="text/css" media=all href="../../scriptcase.css">
+			<TITLE>SQL</TITLE>
+	</HEAD>
+	<BODY>
+		<H1>SQL</H1>
+		<p>&nbsp;</P>
+		<p>Define the attributes relative to
+		the connection to the table used by the form. Define primary key, filters and ordinances for the  form.</P>
+<p><IMG SRC="img/configuracao_sql.jpg" NAME="figura1" /><BR>
+			<span class="sob_figura">Image1: SQL Settings</span>Interface</P>
+<UL>
+  <LI><strong>Select</strong>
+    <B> primary key fields - </B>In
+			this function it is displayed a combobox object with an asterisks 
+			that indicate what are the fields that are SQL table primary key fields . In the majority of cases, the Scriptcase identifies it. For cases that are not identifiable by the Scriptcase the user must  use the buttons to select the field as  key, note:
+    <UL>
+		  <LI><strong>On/Off
+				Button</strong> - Select/unselect the field as primary key displaying an asterisk at
+				its left side.
+	    <LI><strong>All
+				Button</strong> - Defines all fields as primary key.
+	    <LI><strong>None</strong> - Defines that no field is primary key (unselect all). Normally it is used to clean all
+				definitions of the On/Off and restart the process.
+	    <LI><strong>Ordinance
+				Buttons</strong> - Allows to order the  primary key fields. To order click on the field and use
+				the arrows.
+    </UL>
+		</UL>
+<UL>
+			<LI>
+			  <P><B>Where
+			Condition - </B>Enter the <B>WHERE </B> to retrieve the records to edit.</P>
+  <LI>
+			  <P><B>Order By
+			- </B>Enter the ORDER BY clause to
+			determine the order that the records are displayed. When the
+			navigation is used by default, the order is determinated
+			by the primary key.</P>
+		</UL>
+<UL>
+			<LI>
+			  <p>Connection
+			-</STRONG>Displays the connection name (database) that the application is using for its
+			execution, this connection can be replaced by another that have the
+			same tables (SQL).</P>
+  <LI>
+			  <p><B>Table
+			Name - </B></STRONG>Table
+			name that the form application is using.</P>
+			<LI>
+			  <p><STRONG>Variable
+			for Table - </STRONG>
+			Fields to allow  to be replaced  part of the table name defined in
+			the select, before the execution.
+			</P>
+			<P class="nota"><EM>Note: In the first
+			field enter the variable name. In the second field enter the part of the table name to be replaced.</EM><BR>
+		  </P>
+  </UL>
+<ul>
+		  <li><strong>Case Sensitive - </strong>Set it to &quot;No&quot; only if the database is configured for case-sensitive and it is desired that the filter does not respect this setting.<br>
+		  </li>
+	</ul>
+	</BODY>
+</HTML>

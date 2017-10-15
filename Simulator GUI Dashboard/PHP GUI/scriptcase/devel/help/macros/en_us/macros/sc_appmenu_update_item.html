@@ -1,0 +1,72 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro updates a menu item.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_appmenu_update_item("Menu_Name", "Id_Item", "Id_Parent", "Label", "Aplication", "Parameters", "Icon", "Hint", "Target")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><strong></strong></p>
+<p>Updates an application menu item dinamically.</p>
+<p>To use this macro <strong>it is necessary to execute the macro <em>sc_appmenu_create</em> before.</strong></p>
+<p>&nbsp;</p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td><strong>Parameter</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>menu_name</td>
+<td>Application menu item name <br /></td>
+</tr>
+<tr>
+<td>id_item</td>
+<td>Application menu item id</td>
+</tr>
+<tr>
+<td>id_parent</td>
+<td>Application menu item parent id. For roots the null/empty value is passed.</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Application menu item description. <br /></td>
+</tr>
+<tr>
+<td>Aplication</td>
+<td>Menu item URL or application&nbsp; name</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>String with parameter to pass to the application menu item <br /> Ex.: param1=valor;param2=valor</td>
+</tr>
+<tr>
+<td>Icon</td>
+<td>Icone path used in menu item.</td>
+</tr>
+<tr>
+<td>Hint</td>
+<td>Descriptive Hint&nbsp; for menu item.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>Target for menu item link&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong><br />sc_appmenu_update_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

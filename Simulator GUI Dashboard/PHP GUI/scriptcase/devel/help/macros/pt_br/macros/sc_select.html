@@ -1,0 +1,31 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro executa o comando SELECT informado no segundo parâmetro e retorna o dataset em uma variável.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select(dataset, "Comando SQL", "Conexão") <br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Esta macro permite que o usu&aacute;rio execute comandos SQL e tenha acesso ao "dataset" proveniente do comando. <br />Diferente da macro sc_lookup, esta macro n&atilde;o manipula o dataset, deixando-o em sua forma original, cabendo ao usu&aacute;rio toda a manipula&ccedil;&atilde;o.</span></p>
+<p class="corpo1">Caso ocorra erro na execu&ccedil;&atilde;o do comando sql, a vari&aacute;vel atribuida ao dataset retornar&aacute; como "false" e a mensagem de erro estar&aacute; dispon&iacute;vel na vari&aacute;vel "dataset_erro".</p>
+<p class="corpo1">O par&acirc;metro "conex&ccedil;&atilde;o" &eacute; opcional, sendo necess&aacute;rio se o comando for executado em uma base de dados diferente da especificada para a aplica&ccedil;&atilde;o.</p>
+<p class="corpo1">&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1:</strong><br />sc_select(meus_dados, "select clienteid, nomecliente, limitecred from clientes");<br />if ({meus_dados} === false)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "Erro de acesso. Mensagem = " . {meus_dados_erro};<br />}<br />else<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; while (!$meus_dados-&gt;EOF){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {nome_cliente} = $meus_dados-&gt;fields[1];<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $meus_dados-&gt;MoveNext();<br />&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp; $meus_dados-&gt;Close();<br />}<br /></span></p>
+<p>&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2: O comando SQL tamb&eacute;m pode ser composto de campos da aplica&ccedil;&atilde;o (vari&aacute;veis locais) ou de vari&aacute;veis globais:<br /></strong>sc_select(dataset,"select valor pedido from pedidos where clienteid = '{clienteid}' and cod_vendedor = [var_glo_vendedor]");</p>
+<p><br /><span style="color: #000000;"><em><span class="corpo1"><strong>Observa&ccedil;&atilde;o</strong>: Em qualquer circunstancia, o comando tem que ser encerrado com ponto e v&iacute;rgula ";".</span></em></span></p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

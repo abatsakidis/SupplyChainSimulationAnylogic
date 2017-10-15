@@ -1,0 +1,19 @@
+<!-- BEGIN bloco -->
+    <TD colspan="{NM_BLOCO_SPAN}" height="{NM_BLOCO_ALTURA}" {NM_CSS_BLOCK}>
+     <TABLE style="padding: 0px; spacing: 0px; border-width: 0px;" width="100%" height="100%">
+      <TR>
+       <TD align="{NM_BLOCO_HORIZ}" valign="{NM_BLOCO_VERT}" {NM_CSS_BLOCK_FONT}>{NM_BLOCO_TITULO}</TD>
+       {NM_BLOCO_HELP}
+      </TR>
+     </TABLE>
+    </TD>
+<!-- END bloco -->
+<!-- BEGIN bloco_registro -->
+   {NM_CMP_PHP}
+    <TD {NM_CSS_FORM_LABEL} {NM_STYLE_FORM_LABEL}>{NM_CAB_TITULO}</TD>
+    <TD {NM_CSS_FORM_DATA} {NM_STYLE_FORM_DATA}>{NM_CMP_CRITICA_INI}{NM_CMP_DADO}{NM_CMP_CRITICA_FIM}</TD>
+   {NM_FIM_PHP}
+<!-- END bloco_registro -->
+<!-- BEGIN bloco_limpa -->
+    <TD {NM_LIMPA_STYLE} colspan="{NM_LIMPA_SPAN}" >&nbsp;</TD>
+<!-- END bloco_limpa -->

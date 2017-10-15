@@ -1,0 +1,146 @@
+<?php /**/ usort($tableGrid, "SiteHelpers::_sort") /**/ ?>
+  <div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo $pageTitle; ?> <small><?php echo $pageNote; ?></small></h3>
+      </div>
+	  
+      <ul class="breadcrumb">
+        <li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home');; ?></a></li>
+        <li class="active"><?php echo $pageTitle; ?></li>
+      </ul>	  
+ 	
+	</div>
+	
+	<div class="page-content-wrapper">
+    <div class="toolbar-line">
+			<?php if($access['is_add'] ==1): ?>
+	   		<a href="<?php echo URL::to('users/add'); ?>" class="tips btn btn-xs btn-primary"  title="<?php echo Lang::get('core.btn_create'); ?>">
+			<i class="icon-plus-circle2"></i>&nbsp; <?php echo Lang::get('core.btn_create'); ?></a>
+			<?php endif; ?>  
+			<?php if($access['is_remove'] ==1): ?>
+			<a href="javascript://ajax"  onclick="SximoDelete();" class="tips btn btn-xs btn-danger" title="<?php echo Lang::get('core.btn_remove'); ?>">
+			<i class="icon-bubble-trash"></i>&nbsp; <?php echo Lang::get('core.btn_remove'); ?></a>
+			<?php endif; ?> 		
+			<?php if($access['is_excel'] ==1): ?>
+			<a href="<?php echo URL::to('users/download'); ?>" class="tips btn btn-xs btn-default" title="<?php echo Lang::get('core.btn_download'); ?>">
+			<i class="icon-folder-download2"></i>&nbsp;<?php echo Lang::get('core.btn_download'); ?> </a>
+			<?php endif; ?>		
+		 	<?php if(Session::get('gid') ==1): ?>
+			<a href="<?php echo URL::to('module/config/users'); ?>" class="tips btn btn-xs btn-default"  title="<?php echo Lang::get('core.btn_config'); ?>">
+			<i class="icon-cog"></i>&nbsp; <?php echo Lang::get('core.btn_config'); ?></a>
+			<?php endif; ?>  	  
+	</div>  	  
+	  
+   
+	
+	
+	
+	
+	<ul class="nav nav-tabs" style="margin-bottom:10px;">
+	  <li class="active"><a href="#"> Users </a></li>
+	  <li ><a href="<?php echo URL::to('groups'); ?>">Groups</a></li>
+	</ul>	
+		
+	<?php if(Session::has('message')): ?>	  
+		   <?php echo Session::get('message'); ?>
+	<?php endif; ?>	
+
+	
+	 <?php echo Form::open(array('url'=>'users/destroy/', 'class'=>'form-horizontal' ,'ID' =>'SximoTable' )); ?>
+	 <div class="table-responsive">
+    <table class="table table-striped  ">
+        <thead>
+			<tr>
+				<th> No </th>
+				<th> <input type="checkbox" class="checkall" /></th>
+				<th>Avatar</th>
+				<th><?php echo Lang::get('core.group'); ?></th>
+				<th><?php echo Lang::get('core.username'); ?></th>
+				<th><?php echo Lang::get('core.firstname'); ?></th>
+				<th><?php echo Lang::get('core.lastname'); ?></th>
+				<th><?php echo Lang::get('core.email'); ?></th>
+				<th>Status</th>
+				<th><?php echo Lang::get('core.btn_action'); ?></th>
+			  </tr>
+        </thead>
+
+        <tbody>
+			<tr id="sximo-quick-search" >
+				<?php if($access['is_detail'] ==1): ?><td> </td><?php endif; ?>
+				<td> </td>
+				<?php foreach ($tableGrid as $t): ?>
+					<?php if($t['view'] =='1'): ?>
+					<td>						
+						<?php echo SiteHelpers::transForm($t['field'] , $tableForm); ?>								
+					</td>
+					<?php endif; ?>
+				<?php endforeach; ?>
+				<td style="width:100px;">
+				<input type="hidden"  value="Search">
+				<button type="button"  class=" do-quick-search btn btn-sx btn-info"> GO</button></td>
+			  </tr>			
+            <?php foreach ($rowData as $row): ?>
+                <tr>
+					<td width="50"> <?php echo ++$i; ?> </td>
+					<td width="50"><input type="checkbox" class="ids" name="id[]" value="<?php echo $row->id; ?>" />  </td>								
+				 <?php foreach ($tableGrid as $field): ?>
+					 <?php if($field['view'] =='1'): ?>
+					 <td>					 
+					 	
+						<?php if($field['field'] == 'avatar'): ?>
+							<?php if( file_exists( './uploads/users/'.$row->avatar) && $row->avatar !='') { ?>
+							<img src="<?php echo URL::to('uploads/users').'/'.$row->avatar; ?> " border="0" width="40" class="img-circle" />
+							<?php  } else { ?> 
+							<img alt="" src="http://www.gravatar.com/avatar/<?php echo md5($row->email); ?>" width="40" class="img-circle" />
+							<?php } ?>					
+							
+						<?php elseif($field['field'] =='active'): ?>
+							<?php echo ($row->active ==1 ? '<lable class="label label-success">Active</label>' : '<lable class="label label-danger">Inactive</label>'); ?>
+								
+						<?php else: ?>	
+							<?php /**/ $conn = (isset($field['conn']) ? $field['conn'] : array() ) /**/ ?>
+							<?php echo SiteHelpers::gridDisplay($row->$field['field'],$field['field'],$conn); ?>	
+						<?php endif; ?>						 
+					 </td>
+					 <?php endif; ?>					 
+				 <?php endforeach; ?>
+				 <td>
+				
+					<?php /**/ $id = SiteHelpers::encryptID($row->id) /**/ ?>
+				 	<?php if($access['is_detail'] ==1): ?>
+					<a href="<?php echo URL::to('users/show/'.$id); ?>"  class="tips btn btn-xs btn-primary"  title="<?php echo Lang::get('core.btn_view'); ?>"><i class="fa  fa-search"></i> </a>
+					<?php endif; ?>
+					<?php if($access['is_edit'] ==1): ?>
+					<a  href="<?php echo URL::to('users/add/'.$id); ?>"  class="tips btn btn-xs btn-success"  title="<?php echo Lang::get('core.btn_edit'); ?>"> <i class="fa fa-edit"></i></a>
+					<?php endif; ?>
+						
+					
+				</td>				 
+                </tr>
+					<?php echo $__env->make('users.inlineview', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php endforeach; ?>
+              
+        </tbody>
+      
+    </table>
+	</div>
+	<?php echo Form::close(); ?>
+	
+	<?php echo $__env->make('footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	
+	
+	
+	</div>	
+</div>	
+<script>
+$(document).ready(function(){
+
+	$('.do-quick-search').click(function(){
+		$('#SximoTable').attr('action','<?php echo URL::to("users/multisearch"); ?>');
+		$('#SximoTable').submit();
+	});
+	
+});	
+</script>	  

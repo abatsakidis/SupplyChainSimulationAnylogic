@@ -1,0 +1,71 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro adiciona um item ao menu dinamicamente.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_appmenu_add_item("String Menu_Nome", "Id_Item", "Id_Pai", "Label", "Aplicação", "Parâmetro", "Icone", "Hint", "Target")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><strong></strong></p>
+<p>Adiciona um item dinamicamente a uma aplica&ccedil;&atilde;o de menu. Para utilizar esta macro &eacute; necess&aacute;rio <strong>que a macro <em>sc_appmenu_create</em> seja executa antes da mesma</strong>.</p>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td><strong>Parametro</strong></td>
+<td><strong>Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td>Menu_Nome</td>
+<td>Nome da aplica&ccedil;&atilde;o de menu</td>
+</tr>
+<tr>
+<td>Id_Item</td>
+<td>C&oacute;digo identificador do item do menu</td>
+</tr>
+<tr>
+<td>Id_Pai</td>
+<td>C&oacute;digo identificador do pai do item do menu. Se o item for raiz o valor para esse parametro deve ser passado em branco.</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Descri&ccedil;&atilde;o para o item do menu</td>
+</tr>
+<tr>
+<td>Aplica&ccedil;&atilde;o</td>
+<td>Nome da aplica&ccedil;&atilde;o ou URL para o item do menu</td>
+</tr>
+<tr>
+<td>Par&acirc;metro</td>
+<td>String de parametros a serem passado a aplica&ccedil;&atilde;o do item do menu. <br /> Ex.: param1=valor;param2=valor</td>
+</tr>
+<tr>
+<td>Icone</td>
+<td>Caminho para icone usado no item do menu</td>
+</tr>
+<tr>
+<td>Hint</td>
+<td>Hint descritivo para o item do menu.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>Target para o link do item do menu.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>Cria um menu com nome de menu_main.</strong><br />sc_appmenu_create('menu_main');<br /><br /><strong><br />Ex. 2:</strong> <strong>Adiciona ao menu 'menu_main' no lugar do item 1, o submenu Categoria</strong>.<br />sc_appmenu_add_item('menu_main','item_1','','Categoria','');<br /><br /><strong><br />Ex. 3:</strong> <strong>Addiciona ao menu_main de ID item_1, o form_categoria com o nome de Catergoria.</strong><br />sc_appmenu_add_item('menu_main','item_2','item_1','Categoria','form_categoria');</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

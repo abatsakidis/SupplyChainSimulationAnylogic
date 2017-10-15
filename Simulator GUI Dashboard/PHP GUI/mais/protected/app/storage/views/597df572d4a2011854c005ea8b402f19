@@ -1,0 +1,140 @@
+<?php echo HTML::style('sximo/js/plugins/fullcalendar/fullcalendar/fullcalendar.css'); ?>
+<?php echo HTML::style('sximo/js/plugins/fullcalendar/fullcalendar/fullcalendar.print.css'); ?>
+<?php echo HTML::script('sximo/js/plugins/fullcalendar/lib/moment.min.js'); ?>
+<?php echo HTML::script('sximo/js/plugins/fullcalendar/fullcalendar/fullcalendar.min.js'); ?>	
+		
+
+<?php /**/ usort($tableGrid, "SiteHelpers::_sort") /**/ ?>
+  <div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo $pageTitle; ?> <small><?php echo $pageNote; ?></small></h3>
+      </div>
+
+      <ul class="breadcrumb">
+        <li><a href="<?php echo URL::to('config/dashboard'); ?>"><?php echo Lang::get('core.home'); ?></a></li>
+        <li class="active"><?php echo $pageTitle; ?></li>
+      </ul>
+	  
+	  </div>
+	  
+	  
+	<div class="page-content-wrapper">
+		<div class="toolbar-line">
+			<?php if($access['is_add'] ==1): ?>
+			<a href="<?php echo URL::to('eventcalendar/add'); ?>" onclick="SximoModal(this.href,'New Calendar'); return false;" class="tips btn btn-xs btn-primary"  title="<?php echo Lang::get('core.btn_create'); ?>">
+			<i class="icon-plus-circle2"></i>&nbsp; <?php echo Lang::get('core.btn_create'); ?></a>
+			<?php endif; ?>  		
+			<?php if($access['is_excel'] ==1): ?>
+			<a href="<?php echo URL::to('eventcalendar/download'); ?>" class="tips btn btn-xs btn-success" title="<?php echo Lang::get('core.btn_download'); ?>">
+			<i class="icon-folder-download2"></i>&nbsp;<?php echo Lang::get('core.btn_download'); ?> </a>
+			<?php endif; ?>		
+		 	<?php if(Session::get('gid') ==1): ?>
+			<a href="<?php echo URL::to('module/config/eventcalendar'); ?>" class="tips btn btn-xs btn-default"  title="<?php echo Lang::get('core.btn_config'); ?>">
+			<i class="icon-cog"></i>&nbsp;<?php echo Lang::get('core.btn_config'); ?> </a>
+			<?php endif; ?>  
+		
+	  </ul>
+	</div>  	
+	<?php if(Session::has('message')): ?>	  
+		   <?php echo Session::get('message'); ?>
+	<?php endif; ?>	
+
+	
+	<div class="row">
+		
+	<div style="padding:10px; background:#fff;">
+		<div id='calendar' > </div>
+	</div>			
+
+	<div class="alert alert-info">
+			<ol>
+				<li> Clik on date to add new event</li>  
+				<li> Clik on event title to edit current event</li>  
+				<li> Drag event title to change event data</li> 
+			</ol>	
+	</div>
+		
+	</div>
+
+	
+	</div>	  
+
+<script>
+$(document).ready(function(){
+
+	$('.do-quick-search').click(function(){
+		$('#SximoTable').attr('action','<?php echo URL::to("eventcalendar/multisearch"); ?>');
+		$('#SximoTable').submit();
+	});
+	
+});	
+</script>	
+
+<script>
+
+	$(document).ready(function() {
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			defaultDate: '<?php echo date("Y-m-d"); ?>',
+			selectable: true,
+			selectHelper: true,
+			select: function(start, end) {
+				SximoModal('<?php echo URL::to("eventcalendar/add?s='+start+'"); ?>','Add New Events');
+				
+			},
+		   	eventClick: function(calEvent, jsEvent, view) {
+				SximoModal('<?php echo URL::to("eventcalendar/add/'+calEvent.id+'"); ?>','Edit :'+calEvent.title );				
+		
+			},			
+			editable: true,
+			events: {
+				url: '<?php echo URL::to("eventcalendar/jsondata"); ?>',
+				error: function() {
+					$('#script-warning').show();
+				}
+			},
+			eventDrop: function(event, revertFunc) {
+				if (confirm("Are you sure about this change?")) {
+					
+					$.post( '<?php echo URL::to("eventcalendar/savedrop"); ?>', 
+					{ id:event.id,start : event.start.format(),end : event.end.format()});					
+				} else {
+					revertFunc();
+				}
+		
+			}		
+		});
+		
+	});
+
+</script>
+
+<style>
+	#script-warning {
+		display: none;
+		background: #eee;
+		border-bottom: 1px solid #ddd;
+		padding: 0 10px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12px;
+		color: red;
+	}
+	.fc-event-inner { background:#0099CC; color:#fff;}
+
+	#loading {
+		display: none;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+</style>	

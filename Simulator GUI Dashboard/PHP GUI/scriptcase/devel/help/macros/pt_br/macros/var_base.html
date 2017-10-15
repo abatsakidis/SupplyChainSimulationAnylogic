@@ -1,0 +1,86 @@
+<HTML>
+	<HEAD>
+		<TITLE>Variáveis especiais que contêm os dados para acesso à base de dados.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">var_baseVariáveis de Database<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">S&atilde;o vari&aacute;veis globais que cont&ecirc;m os valores de acesso &agrave; base base de dados, que est&acirc;o sendo utilizada pela conex&atilde;o principal.</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Vari&aacute;veis<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_servidor</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o nome do servidor.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_banco</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o nome da base de dados.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_tpbanco</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o tipo do banco (mssql, oracle, mysql, etc).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_usuario</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o nome do usu&aacute;rio conectado.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_senha</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m a senha de acesso.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_senha_cript</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Indica se a senha de acesso est&aacute; criptografada (S/N).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_decimal_db</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Cont&eacute;m o separador de decimal utilizado (ponto ou v&iacute;rgula).</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1:</strong><br />$meu_banco = [sc_glo_banco];</span></p>
+<p><span class="corpo1"><br /><br />Estas vari&aacute;veis apenas informam os valores que est&atilde;o sendo utilizados, n&atilde;o permitindo atribui&ccedil;&atilde;o de valores.</span></p>
+<p><span class="corpo1">&Eacute; poss&iacute;vel definir o usu&aacute;rio e a senha a ser utilizado para conectar com a base de dados, atrav&eacute;s da alimenta&ccedil;&atilde;o das seguintes vari&aacute;veis.</span></p>
+<p><span class="corpo1"> 
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Vari&aacute;veis<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_db_master_usr</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Informa o login do usu&aacute;rio a ser utilizado.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_db_master_pass</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Informa a senha a ser utilizada.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_db_master_cript</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Inforna (S/N) se a senha est&aacute; criptografada (ver macro </span><a class="corpo1" href="#sc_encode">sc_encode</a><span class="corpo1">).</span></td>
+</tr>
+</tbody>
+</table>
+<br /></span><span class="corpo1">&Eacute; importante observar que: o uso destas vari&aacute;veis s&oacute; ter&aacute; efeito na execu&ccedil;&atilde;o das aplica&ccedil;&otilde;es posteriores, e permanecer&aacute; durante toda a sess&atilde;o (a menos que seja alterada).</span></p>
+<p><span class="corpo1"><br /><br /><strong>Ex. 2</strong>: Suponha que, em uma aplica&ccedil;&atilde;o tipo "controle", foi criado um formul&aacute;rio com informa&ccedil;&atilde;o do "login" e "senha". Estes dados devem ser utilizados para conectar a base de dados, durante a execu&ccedil;&atilde;o das aplica&ccedil;&otilde;es do sistema, e gostar&iacute;amos de manter a senha criptografada.<br /><br />$temp_pass = sc_encode({senha});<br />[sc_db_master_usr] = {login};<br />[sc_db_master_pass] = $temp_pass;<br />[sc_db_master_cript] = "S";<br /></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

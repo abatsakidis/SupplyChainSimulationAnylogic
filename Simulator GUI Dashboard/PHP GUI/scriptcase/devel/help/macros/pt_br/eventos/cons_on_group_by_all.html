@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre após todas as quebras.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>&nbsp;O evento pode ser utilizado para se fazer somat&oacute;rios,&nbsp;ou acumulo de valores,&nbsp;utilizando uma vari&aacute;vel para armazenamento.</p>
+<p>&nbsp;</p>
+<p>Armazenar todos os campo em uma vari&aacute;vel:<br /><br />OnInit:<br /><br />&nbsp; [variavel_de_armezenamento] = "";<br /><br /><br />OnGroupBy:<br /><br />&nbsp; [variavel_de_armezenamento] .= {campoX} . " - ";<br /><br /><br />OnGroupByAll:<br /><br />&nbsp; [variavel_de_armezenamento] = explode(' - ', [variavel_de_armezenamento] );<br /><br />&nbsp; if(array_search('valor_nao_permitido', [variavel_de_armezenamento]) !== FALSE){<br /><br />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; sc_redir('app.php', error = 'ok');<br /><br />&nbsp;}</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+			</body>
+			
+</HTML>

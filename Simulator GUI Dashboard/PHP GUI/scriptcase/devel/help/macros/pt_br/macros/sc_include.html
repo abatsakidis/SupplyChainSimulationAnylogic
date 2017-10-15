@@ -1,0 +1,31 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro é usada para efetuar "include" de rotinas PHP.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_include("Arquivo", "Origem")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">O Scriptcase permite que o usu&aacute;rio catalogue seus script's PHP e utilize-os em v&aacute;rias aplica&ccedil;&otilde;es. <br /><br /><strong>Para catalogar</strong> os script's, no menu principal do Scriptcase, acessar "<strong>Configura&ccedil;&atilde;o=&gt;Bibliotecas</strong>. Nesta op&ccedil;ao o usu&aacute;rio poder&aacute; escrever seu script ou fazer "upload" de um script existente.</span></p>
+<p><span class="corpo1">No momento de catalogar o script, o usu&aacute;rio dever&aacute; selecionar o contexto ao qual o script pertence, podendo ser:<br />- </span><span class="corpo1"><strong>P&uacute;blico</strong>: Todos os projetos poder&atilde;o ter acesso.<br />- <strong>Projeto</strong>: Apenas os usu&aacute;rios do projeto (que estiver logado no monento) ter&atilde;o acesso.<br />- <strong>Usu&aacute;rio</strong>: Apenas o usu&aacute;rio (que estiver logado no monento) ter&aacute; acesso.<br /></span></p>
+<p class="corpo1">Na utiliza&ccedil;&atilde;o da macro <strong>sc_include</strong>, o usu&aacute;rio dever&aacute; informar o <strong>nome do script</strong> que deseja incluir e a <strong>origem</strong> do mesmo(contexto sob o qual o script foi catalogado).</p>
+<p class="corpo1">- <strong>Nome do script</strong>: Nome do script a ser incluido na aplica&ccedil;&atilde;o.<br />- <strong>Origem</strong>: Contexto sob o qual o script foi catalogado, podendo ser:<br />- <strong>em branco</strong> = Script's a n&iacute;vel global, que acompanham a distribui&ccedil;&atilde;o do <strong>Scriptcase</strong>.<br />- <strong>pub</strong> = A n&iacute;vel P&uacute;blico<br />- <strong>prj</strong> = A n&iacute;vel do Projeto<br />- <strong>usr</strong> = A n&iacute;vel do Usu&aacute;rio</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1:</strong> <strong>Incluindo um script catalogado a n&iacute;vel globa. (Scriptcase)</strong><br />sc_include("meu_script.php");</p>
+<p><br /><span class="corpo1"><strong>Ex. 2:</strong> <strong>Incluindo um script catalogado a n&iacute;vel do projeto.</strong><br />sc_include("meu_script.php", "prj");</span></p>
+<p><br /><span class="corpo1"><strong>Ex. 3:</strong> <strong>Incluindo um script catalogado a n&iacute;vel do usu&aacute;rio.</strong><br />sc_include("meu_script.php", "usr");</span></p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

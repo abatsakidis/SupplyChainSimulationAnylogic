@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre na exibição do rodapé.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p class="titulo1">&nbsp;</p>
+<p class="corpo1">Este evento&nbsp;&eacute; utilizado quando no rodap&eacute; precisarmos exibir algum valor calculado, &eacute; neste evento que escrevemos o c&aacute;lculo necess&aacute;rio para montar algum valor que desejamos exibir.</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">&nbsp;Ex:</p>
+<p class="corpo1">Queremos no rodap&eacute; da consulta exibir o valor total dos pedidos exibidos na grid de uma nota fiscal, com um desconto de 10% , vejamos abaixo&nbsp;um exemplo de&nbsp;c&oacute;digo rodando no evento <strong>OnFooter.</strong></p>
+<p class="corpo1">sc_lookup(ret," select sum({valoritem}) from vendas_item where id_venda='{id_venda}' ");</p>
+<p class="corpo1">{campo_valnota_rodape} = {ret[0][0]} * 0,1;</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">Precisamos antes disso ter criado o campo {campo_valnota_rodape}</p>
+			</body>
+			
+</HTML>

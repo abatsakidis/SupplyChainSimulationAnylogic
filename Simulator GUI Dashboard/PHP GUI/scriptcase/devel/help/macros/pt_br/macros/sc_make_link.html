@@ -1,0 +1,43 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro cria uma string contendo os dados de um link para outra aplicação.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_make_link(Aplicação, Parâmetros)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro tem por objetivo a cria&ccedil;&atilde;o de uma string contendo os dados de um link para outra aplica&ccedil;&atilde;o, dentro dos padr&otilde;es do Scriptcase..</p>
+<p class="corpo1">O uso desta macro &eacute; para os casos em que o usu&aacute;rio esteja escrevendo seu pr&oacute;prio c&oacute;digo html e nescessite fazer um link para outra aplica&ccedil;&atilde;o Scriptcase.</p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Aplica&ccedil;&atilde;o</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Nome da aplica&ccedil;&atilde;o para a qual queremos estabelecer o link.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Par&acirc;metro</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Par&acirc;metros necess&aacute;rios para que a aplica&ccedil;&atilde;o chamada possa funcionar. </span>.<br /></td>
+</tr>
+</tbody>
+</table>
+<p><span class="corpo1"><strong>Devem ser informados:</strong> o nome do par&acirc;metro, o sinal de atribui&ccedil;&atilde;o "=" e o valor ou vari&aacute;vel a ser atribu&iacute;do. Havendo mais de um par&acirc;metro, estes dever&atilde;o ser separados por ";" (ponto e v&iacute;rgula).</span></p>
+<p><br /><strong>Ex. 1: Criando uma string com um link para a aplica&ccedil;&atilde;o dadoscli.php, sem passagem de par&acirc;metros.</strong><br />$string_link = sc_make_link(dadoscli.php);</p>
+<p><br /><strong>Ex. 2: Criando uma string com um link para a aplica&ccedil;&atilde;o dadoscli.php, com passagem de par&acirc;metros.</strong><br />$string_link = sc_make_link(dadoscli, parm1={empresa};parm2=[glo_filial]);</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

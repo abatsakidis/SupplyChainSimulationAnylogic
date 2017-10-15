@@ -1,0 +1,76 @@
+<HTML>
+	<HEAD>
+		<TITLE>Menu - Filtro - onValidate</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+<script language='JavaScript' type='text/javascript'>
+
+var str_macro = '';
+
+parent.wiz.location.href = '../../nowiz.html';
+parent.macro.location.href = '../eventos/filter_on_validate.html';
+
+function linkMacroWiz(basepath, path, macro, arqtipo, wiz) {
+		parent.wiz.location.href = '../' + basepath + wiz + arqtipo;
+		parent.macro.location.href = basepath + path + macro + arqtipo;
+		str_macro = macro;
+}
+
+function getMacro() {
+	return str_macro;
+}
+
+</script>
+<style type='text/css'>
+	BODY { margin:3px 0px 3px 0px; }
+</style>
+
+<script language='JavaScript' type='text/javascript' src='../../../../../../scriptcase/v5/desenv/prod/third/cooljstree/cooltreepro.js'></script>
+<script type="text/javascript">
+		
+			
+var TREE1_NODES = 
+[["Macros", "javascript:linkMacroWiz('../', 'eventos/', 'filter_on_validate', '.html', 'nowiz');", null, {format:{expanded:true}}, 
+	["SQL", "javascript:linkMacroWiz('../', '', 'list_filter_on_validate_1', '.html', 'nowiz');", null, 
+		['sc_lookup', "javascript:linkMacroWiz('../', 'macros/', 'sc_lookup', '.html', 'wiz');", null], 
+		['sc_select', "javascript:linkMacroWiz('../', 'macros/', 'sc_select', '.html', 'wiz');", null], 
+	],
+	["Data", "javascript:linkMacroWiz('../', '', 'list_filter_on_validate_2', '.html', 'nowiz');", null, 
+		['sc_date', "javascript:linkMacroWiz('../', 'macros/', 'sc_date', '.html', 'wiz');", null], 
+		['sc_date_conv', "javascript:linkMacroWiz('../', 'macros/', 'sc_date_conv', '.html', 'wiz');", null], 
+		['sc_date_dif', "javascript:linkMacroWiz('../', 'macros/', 'sc_date_dif', '.html', 'wiz');", null], 
+		['sc_date_dif_2', "javascript:linkMacroWiz('../', 'macros/', 'sc_date_dif_2', '.html', 'wiz');", null], 
+		['sc_date_empty', "javascript:linkMacroWiz('../', 'macros/', 'sc_date_empty', '.html', 'nowiz');", null], 
+	],
+	["Controle", "javascript:linkMacroWiz('../', '', 'list_filter_on_validate_3', '.html', 'nowiz');", null, 
+		['sc_calc_dv', "javascript:linkMacroWiz('../', 'macros/', 'sc_calc_dv', '.html', 'nowiz');", null], 
+		['sc_error_message', "javascript:linkMacroWiz('../', 'macros/', 'sc_error_message', '.html', 'wiz');", null], 
+		['sc_include', "javascript:linkMacroWiz('../', 'macros/', 'sc_include', '.html', 'nowiz');", null], 
+		['sc_mail_send', "javascript:linkMacroWiz('../', 'macros/', 'sc_mail_send', '.html', 'wiz');", null], 
+		['sc_reset_global', "javascript:linkMacroWiz('../', 'macros/', 'sc_reset_global', '.html', 'nowiz');", null], 
+		['sc_set_global', "javascript:linkMacroWiz('../', 'macros/', 'sc_set_global', '.html', 'nowiz');", null], 
+		['sc_trunc_num', "javascript:linkMacroWiz('../', 'macros/', 'sc_trunc_num', '.html', 'nowiz');", null], 
+		['sc_warning', "javascript:linkMacroWiz('../', 'macros/', 'sc_warning', '.html', 'nowiz');", null], 
+		['sc_zip_file', "javascript:linkMacroWiz('../', 'macros/', 'sc_zip_file', '.html', 'nowiz');", null], 
+	],
+	["Exibição", "javascript:linkMacroWiz('../', '', 'list_filter_on_validate_7', '.html', 'nowiz');", null, 
+		['sc_format_num', "javascript:linkMacroWiz('../', 'macros/', 'sc_format_num', '.html', 'nowiz');", null], 
+	],
+
+]];
+    
+			
+			
+var TREE1_FORMAT = [0, 0, true, ["../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_c.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_e.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_b.gif"], [ 16, 16, 0], true, ["../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_fc.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_fe.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_d.gif"], [ 16, 16], [ 0, 16, 32, 64], "#FFFFFF", "clsNode", ["nmText", "nmText", "nmText", "nmText", "nmText", "nmText"], false, [ 0, 0 ], true, ["../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_folder.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_folderopen.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_evt_macro.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_minus.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_minusbottom.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_plus.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_plusbottom.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_line.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_join.gif", "../../../../../../scriptcase/v5/desenv/devel/conf/scriptcase/img/btnnew/crystal/cool_js_joinbottom.gif"], [ 16, 16 ], true, true, [ 200, 50 ], true, true, ["#FFFFFF", "#FFFFFF", "nmText", "nmText"], 0, "top"];
+				
+			var myTree = new COOLjsTreePRO("tree1", TREE1_NODES, TREE1_FORMAT);
+
+			myTree.init();
+			myTree.collapseAll();
+			myTree.expandNode(0);
+			
+			
+</script>
+</HTML>

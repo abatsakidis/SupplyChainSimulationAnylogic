@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Firebird - Windows</title>
+<meta name="generator" / content="namo webeditor(trial)">
+</head>
+
+<body>
+<h1><strong>Creating a Firebird&nbsp;database Connection in Windows</strong></h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/04-firebird/00-firebird.htm" target="_self">Firebird</a> >> Firebird on Windows</td></tr></table>
+<p><strong>Requirements:</strong></p>
+<ul>
+  <li>Enable interbase.dll module in php.ini</li>
+  <li>Edit Windows services file and add gds_db on&nbsp;3050/tcp port.</li>
+</ul>
+<p>&nbsp;</p>
+<p>Edit the php.ini file. Run ScriptCase diagnosis and check where the file is located.</p>
+<p><img src="../img/359_1.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>In the PHP.INI, look for the word php_interbase.dll and remove the comment &quot;;&quot; to enable this module. See image.</p>
+<p>&nbsp;</p>
+<p><img src="../img/382_1.jpg" alt="" /></p>
+<p>Check if interbase module was enabled correctly. http://server:port/scriptcase/info.php</p>
+<p><img src="../img/383_2.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>Edit Windows services file fix an error when try to connect to FireBird using ScriptCase: &quot;<strong>Unable to complete network request to host &quot;localhost&quot;. Failed to locate host machine. Undefined service gds_db/tcp</strong>&quot;.</p>
+<p>Open <strong>services </strong>file (you can find it at in C:\WINDOWS\system32\drivers\etc\).</p>
+<p>Then add the following line:</p>
+<p>gds_db 3050/tcp # Firebird</p>
+<p>Save and create a ScriptCase connection.</p>
+<p class="titulo"><strong><br />
+</strong></p>
+
+<p>Once it is correctly installed we are able to create a connection on Scriptcase</p>
+<ul>
+  <li><a href="../../06-Tutoriais/04-firebird/04-firebird_sc_normal.htm" target="_self"> Creating a Connection on Scriptcase.</a></li>
+</ul>
+<p>&nbsp;</p>
+
+</body>
+</html>

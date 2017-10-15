@@ -1,0 +1,51 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta Macro verifica se existe um item do menu.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_appmenu_exist_item("Menu_Nome", "Id_Item")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Verifica se um item do menu existe e retorna um valor true ou false.&nbsp;</p>
+<table style="border=" border="0">
+<tbody>
+<tr>
+<td><strong>Par&acirc;metro</strong></td>
+<td><strong>Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td>Menu_Nome</td>
+<td>Nome da aplica&ccedil;&atilde;o de menu</td>
+</tr>
+<tr>
+<td>Id_Item</td>
+<td>C&oacute;digo identificador do item do menu</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong></p>
+<p>if(sc_appmenu_exist_item('menu_main', 'item_2')){</p>
+<blockquote>
+<p>sc_appmenu_update_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+</blockquote>
+<p>}<br /> else{</p>
+<blockquote>
+<p>sc_appmenu_add_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+</blockquote>
+<p>}</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

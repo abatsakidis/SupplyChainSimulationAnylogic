@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro troca dinamicamente as conexões das aplicações.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_change_connection("Conexao_Antiga", "Conexao_Nova")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Troca dinamicamente as conex&otilde;es das aplica&ccedil;&otilde;es</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1: Trocar as conex&otilde;es</strong>:<br />sc_change_connection("Conex&atilde;o_Antiga01", "Conex&atilde;o_Nova01" ; "Conex&atilde;o_Antiga02", "Conex&atilde;o_Nova02");<br /><br />Pode mudar v&aacute;rias no mesmo comando, usando o separador ";"</p>
+<p><br />&nbsp;<br /><strong>Ex. 2: Pode usar vari&aacute;veis:</strong> <br />sc_change_connection({Senha}, [Teste] ; "Minha_Conex&atilde;o", [Global_Conex&atilde;o]);<br />sc_change_connection([Conex&atilde;o_Global], [Nova_Conex&atilde;o]);<br /><br /><br />Pode trocar, tamb&eacute;m, a conex&atilde;o principal. <br />As trocas s&oacute; t&ecirc;m efeito nas aplica&ccedil;&otilde;es seguintes.<br /><br /><br /><strong>Ex. 3: Para apagar as trocas feitas:</strong><span style="text-decoration: underline;"><br /></span>sc_reset_change_connection();</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

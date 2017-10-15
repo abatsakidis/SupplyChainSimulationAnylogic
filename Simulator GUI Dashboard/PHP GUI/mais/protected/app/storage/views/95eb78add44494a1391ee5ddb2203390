@@ -1,0 +1,119 @@
+
+  <div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo $pageTitle; ?> <small><?php echo $pageNote; ?></small></h3>
+      </div>
+      <ul class="breadcrumb">
+        <li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home'); ?></a></li>
+		<li><a href="<?php echo URL::to('OrderItem?md='.$filtermd); ?>"><?php echo $pageTitle; ?></a></li>
+        <li class="active"><?php echo Lang::get('core.addedit'); ?> </li>
+      </ul>
+	  	  
+    </div>
+ 
+ 	<div class="page-content-wrapper">
+	<div class="panel-default panel">
+		<div class="panel-body">
+		<?php if(Session::has('message')): ?>	  
+			   <?php echo Session::get('message'); ?>
+		<?php endif; ?>	
+		<ul class="parsley-error-list">
+			<?php foreach($errors->all() as $error): ?>
+				<li><?php echo $error; ?></li>
+			<?php endforeach; ?>
+		</ul>
+		 <?php echo Form::open(array('url'=>'OrderItem/save/'.SiteHelpers::encryptID($row['OrderDetailsID']).'?md='.$filtermd.$trackUri, 'class'=>'form-horizontal','files' => true , 'parsley-validate'=>'','novalidate'=>' ')); ?>
+				<div class="col-md-12">
+						<fieldset><legend> OrderItem</legend>
+									
+								  <div class="form-group hidethis " style="display:none;">
+									<label for="OrderDetailsID" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('OrderDetailsID', (isset($fields['OrderDetailsID']['language'])? $fields['OrderDetailsID']['language'] : array())); ?> </label>
+									<div class="col-md-6">
+									  <?php echo Form::text('OrderDetailsID', $row['OrderDetailsID'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									 </div> 
+									 <div class="col-md-2">
+									 	
+									 </div>
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="OrderID" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('OrderID', (isset($fields['OrderID']['language'])? $fields['OrderID']['language'] : array())); ?> </label>
+									<div class="col-md-6">
+									  <?php echo Form::text('OrderID', $row['OrderID'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									 </div> 
+									 <div class="col-md-2">
+									 	
+									 </div>
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="ProductID" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('ProductID', (isset($fields['ProductID']['language'])? $fields['ProductID']['language'] : array())); ?> </label>
+									<div class="col-md-6">
+									  <select name='ProductID' rows='5' id='ProductID' code='{$ProductID}' 
+							class='select2 '    ></select> 
+									 </div> 
+									 <div class="col-md-2">
+									 	
+									 </div>
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="Unit Price" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('Unit Price', (isset($fields['UnitPrice']['language'])? $fields['UnitPrice']['language'] : array())); ?> </label>
+									<div class="col-md-6">
+									  <?php echo Form::text('UnitPrice', $row['UnitPrice'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									 </div> 
+									 <div class="col-md-2">
+									 	
+									 </div>
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="Quantity" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('Quantity', (isset($fields['Quantity']['language'])? $fields['Quantity']['language'] : array())); ?> </label>
+									<div class="col-md-6">
+									  <?php echo Form::text('Quantity', $row['Quantity'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									 </div> 
+									 <div class="col-md-2">
+									 	
+									 </div>
+								  </div> 					
+								  <div class="form-group  " >
+									<label for="Discount" class=" control-label col-md-4 text-left"> 
+									<?php echo SiteHelpers::activeLang('Discount', (isset($fields['Discount']['language'])? $fields['Discount']['language'] : array())); ?> </label>
+									<div class="col-md-6">
+									  <?php echo Form::text('Discount', $row['Discount'],array('class'=>'form-control', 'placeholder'=>'',   )); ?> 
+									 </div> 
+									 <div class="col-md-2">
+									 	
+									 </div>
+								  </div> </fieldset>
+			</div>
+			
+			
+			<div style="clear:both"></div>	
+				
+			  <div class="form-group">
+				<label class="col-sm-4 text-right">&nbsp;</label>
+				<div class="col-sm-8">	
+				<input type="submit" name="apply" class="btn btn-info" value="<?php echo Lang::get('core.sb_apply'); ?> " />
+				<input type="submit" name="submit" class="btn btn-primary" value="<?php echo Lang::get('core.sb_save'); ?>  " />
+				<button type="button" onclick="location.href='<?php echo URL::to('OrderItem?md='.$masterdetail["filtermd"].$trackUri); ?>' " id="submit" class="btn btn-success ">  <?php echo Lang::get('core.sb_cancel'); ?> </button>
+				</div>	  
+		
+			  </div> 
+		 
+		 <?php echo Form::close(); ?>
+		</div>
+	</div>	
+</div>	
+</div>			 
+   <script type="text/javascript">
+	$(document).ready(function() { 
+		
+		$("#ProductID").jCombo("<?php echo URL::to('OrderItem/comboselect?filter=products:ProductID:ProductName'); ?>",
+		{  selected_value : '<?php echo $row["ProductID"]; ?>' });
+		 
+	});
+	</script>		 

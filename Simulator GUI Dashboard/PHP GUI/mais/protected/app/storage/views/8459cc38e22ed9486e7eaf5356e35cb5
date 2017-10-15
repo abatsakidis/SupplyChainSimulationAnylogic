@@ -1,0 +1,32 @@
+<?php if($access['is_detail'] ==1): ?>
+<tr class="expand-open" id="exp-<?php echo SiteHelpers::encryptID($row->id); ?>" style="display:none;">
+	<td></td>
+	<td></td>
+	<td></td>
+		<td colspan="<?php echo $colspan; ?>" id="expand-<?php echo SiteHelpers::encryptID($row->id); ?>"> 
+		<table class="table table-bordered table-striped " >
+			<tbody>						
+			<?php foreach ($tableGrid as $field): ?>
+										 
+				 <?php if($field['detail'] =='1'): ?>
+				 <tr>
+				 <td width='25%' class='label-view text-right'><?php echo $field['label']; ?> </td>
+				 <td width='45%'>								 				 
+					<?php if($field['attribute']['image']['active'] =='1'): ?>
+					<img src="<?php echo asset($field['attribute']['image']['path'].'/'.$row->$field['field']); ?>" width="50" />
+					<?php else: ?>	
+						<?php /**/ $conn = (isset($field['conn']) ? $field['conn'] : array() ) /**/ ?>
+						<?php echo SiteHelpers::gridDisplay($row->$field['field'],$field['field'],$conn); ?>	
+					<?php endif; ?>												 
+				 </td>
+			</tr>
+				 <?php endif; ?>					 
+			 <?php endforeach; ?>
+
+			</tbody>
+		</table>					
+	</td>
+	<td></td>
+	
+</tr>	
+<?php endif; ?>

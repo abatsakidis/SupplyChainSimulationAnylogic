@@ -1,0 +1,63 @@
+
+
+<?php /**/ $menus = SiteHelpers::menus('top') /**/ ?>
+ 	  <ul class="nav navbar-nav navbar-collapse collapse navbar-right"  id="topmenu">
+		<?php foreach ($menus as $menu): ?>
+			 <li class="<?php if(Request::is($menu['module'])): ?> active <?php endif; ?>" >
+			 	<a 
+				<?php if($menu['menu_type'] =='external'): ?>
+					href="<?php echo URL::to($menu['url']); ?>" 
+				<?php else: ?>
+					href="<?php echo URL::to($menu['module']); ?>" 
+				<?php endif; ?>
+			 
+				 <?php if(count($menu['childs']) > 0 ): ?> class="dropdown-toggle" data-toggle="dropdown" <?php endif; ?>>
+			 		<i class="<?php echo $menu['menu_icons']; ?>"></i><span><?php echo $menu['menu_name']; ?></span>
+					<?php if(count($menu['childs']) > 0 ): ?>
+					 <b class="caret"></b> 
+					<?php endif; ?>  
+				</a> 
+				<?php if(count($menu['childs']) > 0): ?>
+					 <ul class="dropdown-menu dropdown-menu-right">
+						<?php foreach ($menu['childs'] as $menu2): ?>
+						 <li class=" 
+						 <?php if(count($menu2['childs']) > 0): ?> dropdown-submenu <?php endif; ?>
+						 <?php if(Request::is($menu2['module'])): ?> active <?php endif; ?>">
+						 	<a 
+								<?php if($menu['menu_type'] =='external'): ?>
+									href="<?php echo URL::to($menu2['url']); ?>" 
+								<?php else: ?>
+									href="<?php echo URL::to($menu2['module']); ?>" 
+								<?php endif; ?>
+											
+							>
+								<i class="<?php echo $menu2['menu_icons']; ?>"></i> <?php echo $menu2['menu_name']; ?>
+							</a> 
+							<?php if(count($menu2['childs']) > 0): ?>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<?php foreach($menu2['childs'] as $menu3): ?>
+									<li <?php if(Request::is($menu3['module'])): ?> class="active" <?php endif; ?>>
+										<a 
+											<?php if($menu['menu_type'] =='external'): ?>
+												href="<?php echo URL::to($menu3['url']); ?>" 
+											<?php else: ?>
+												href="<?php echo URL::to($menu3['module']); ?>" 
+											<?php endif; ?>										
+										
+										>
+											<span><?php echo $menu3['menu_name']; ?></span>  
+										</a>
+									</li>	
+								<?php endforeach; ?>
+							</ul>
+							<?php endif; ?>							
+							
+						</li>							
+						<?php endforeach; ?>
+					</ul>
+				<?php endif; ?>
+			</li>
+		<?php endforeach; ?>  
+	
+  </ul> 
+ 

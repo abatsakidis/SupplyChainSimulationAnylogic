@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Field Link </title>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Links - Field</h1>
+<p><img src="img/tipo_campo_ligacao.jpg" name="figura11" /><br />
+<span class="sob_figura">Image1: Selecting link type.</span></p>
+<p>Used to create a link from grid field to any existing project application. When you select link type field, a drop down list is displayed with   all  fields available (displayed) in the grid for selection. (See <a href="../../10-Aplicacoes_de_Consulta/02-Consulta/04-Selecionar_Campos.htm" target="_self">Select Fields</a>). <br />
+</p>
+<p><img src="img/ligacaodecampo.jpg" name="figura10" border="0" align="bottom" id="figura10" /></p>
+<p><br />
+</p>
+<hr />
+<p>Applications List<br />
+</p>
+<p><img src="../../comuns/img/selecao_tipo_apl_ligacao.jpg" name="figura12" border="0" align="bottom" id="figura12" /><br />
+    <span class="sob_figura">Image2:
+Link between application Interface.</span></p>
+<p>The image below display all the project applications 
+(menus, search, reports pdf, forms, grid,  tabs and control forms. Select the form application called by the   grid.</p>
+<hr />
+<p>Parameters definition<br />
+</p>
+<p><img src="../../comuns/img/ligacao_parametros.jpg" name="figura8" border="0" align="bottom" id="figura8" /><br />
+    <span class="sob_figura">Image4:
+Parameters Definition Interface.</span></p>
+<p>On the image above is displayed,in the left side,   the application form parameters (primary key, global variables). Select on the   right side, the value to pass to the parameter. The options are:</p>
+<ul>
+  <li><strong>Field </strong>- Used to pass a grid field value as parameter. </li>
+  <li><strong>Value</strong> - Used to pass a fixed value as parameter. </li>
+  <li><strong>Variable</strong> - Used to pass a global variable value, used by   the grid as parameter. </li>
+  <li><strong>Empty </strong>- No value is passed as a parameter. <br />
+    <br />
+  </li>
+</ul>
+<hr />
+<p>Link Properties<br />
+</p>
+<p>The image below display the attributes that define   the link behavior. Enter the selected option to customize the link   properties.</p>
+<p><strong>Link Properties</strong></p>
+<blockquote>
+  <p><img src="img/tipo_campo_propriedades1.jpg" name="figura14" border="0" align="bottom" id="figura14" /><br />
+    <span class="sob_figura">Image5: Link Properties Interface.</span></p>
+</blockquote>
+<ul>
+  <li>
+    <p><strong>Link Operation Mode </strong>- The   options are: </p>
+    <strong><br />
+  </strong>
+    <blockquote>
+      <table width="80%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="30%" bgcolor="#cccccc"><strong>Mode</strong></td>
+          <td width="70%" bgcolor="#cccccc"><strong>Description</strong></td>
+        </tr>
+        <tr>
+          <td>Open in same window</td>
+          <td>Display the form in the same browser window, (in another page, the form display   substitute the grid).</td>
+        </tr>
+        <tr>
+          <td bgcolor="#f4f4f4">Open in another window </td>
+          <td bgcolor="#f4f4f4">Another window is open to display the form .</td>
+        </tr>
+        <tr>
+          <td>Open in Iframe</td>
+          <td><p>The form is displayed in an frame, in the same page, below, above, right or   left to the grid.</p></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+    </blockquote>
+  </li>
+  <li><strong>Called application exit URL</strong>: Called form exit URL. Default   address (back button) is the calling grid. </li>
+  <li><strong>Link hint - </strong>Message displayed when mouse is dragged over the linking field. </li>
+  <li><strong>Label -</strong> Sets the link    title in the application.
+      Used when there is more then one link  in the same   field. <br />
+    <br />
+    <br />
+  </li>
+</ul>
+<p><strong>Form Property</strong></p>
+<blockquote>
+  <p>These options are displayed only when the called application is a form. Allow to select the buttons displayed in the form. </p>
+  <p><img src="img/tipo_campo_propriedades2.jpg" name="figura14" border="0" align="bottom" id="figura14" /></p>
+</blockquote>
+<ul>
+  <li><strong>Enable  Insert button</strong>- Enable the buttons New and Insert   in form. </li>
+    <li><strong>Enable Update button</strong> - Enable the Update   button in form . </li>
+    <li><strong>Enable Delete button</strong>- Enable the delete   button in form. </li>
+    <li>
+      <label for="id_rad_liga_form_btn_nav_ce7ab867e260196f"><strong>Enable   Navigation </strong></label>
+      <strong>buttons</strong>- Enable the navigation   buttons (First , Previous, Next, Last) in form. <br />
+      <br />
+  </li>
+</ul>
+<p><strong>Iframeproperties </strong>- Displayed only when <em>Link Operation Mode </em>is<em> Open in Iframe</em></p>
+<blockquote>
+  <p><img src="img/tipo_campo_propriedades3.jpg" name="figura14" border="0" align="bottom" id="figura14" /><br />
+</p>
+</blockquote>
+<ul><li><strong>Iframe position relative to the main application </strong>- The form   is displayed together with the grid application according to selected position.   Options are: Bellow, Above, Right and Left. </li>
+  <li><strong>IframeHeight</strong> - Iframe Height in pixels </li>
+  <li><strong>IframeWidth </strong>&nbsp;- Iframe Width in pixels. </li>
+</ul>
+<p><strong>Save Button</strong> - End the link   wizard.</p>
+<p>&nbsp;</p>
+</body>
+
+</html>

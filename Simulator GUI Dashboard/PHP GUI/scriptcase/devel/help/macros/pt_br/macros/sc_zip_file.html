@@ -1,0 +1,30 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro é usada para gerar arquivo tipo ZIP, à partir de uma lista de arquivos e/ou diretórios.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_zip_file("Arquivo", "Zip")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Esta macro &eacute; usada para gerar arquivo tipo ZIP, &agrave; partir de uma lista de arquivos e/ou diret&oacute;rios.</span></p>
+<p><span class="corpo1">No par&acirc;metro arquivo, dever&aacute; ser informado um dos seguintes conte&uacute;dos:<br /><br />- O nome de um arquivo<br />- O nome de um diret&oacute;rio <br />- Uma vari&aacute;vel contendo o nome de um arquivo ou o nome de um diret&oacute;rio<br />- Uma vari&aacute;vel contendo um array, que contenha uma lista de arquivos e/ou diret&oacute;rios</span></p>
+<p class="corpo1">No par&acirc;metro zip, dever&aacute; ser informado o nome do arquivo a ser gerado, ou uma vari&aacute;vel contendo este nome.</p>
+<p class="corpo1">&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>Apenas um arquivo.</strong><br />sc_zip_file("/teste/exemplo.htm", "/temp/teste.zip");</p>
+<p><br /><br /><strong>Ex. 2:</strong> <strong>Apenas um diret&oacute;rio.</strong><br />sc_zip_file("/teste", "/temp/teste.zip");</p>
+<p><br /><br /><strong>Ex. 3:</strong> <strong>Criando um array dos arquivos e diret&oacute;rios.</strong><br />$prep = array();<br />$prep[] = " /teste/exemplo.htm";<br />$prep[] = "/teste";<br />sc_zip_file($prep, "/temp/teste.zip");</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

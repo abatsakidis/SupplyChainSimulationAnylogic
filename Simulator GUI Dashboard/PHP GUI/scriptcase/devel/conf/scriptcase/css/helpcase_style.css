@@ -1,0 +1,106 @@
+/* Just some base styles not needed for example to function */
+*, html { /*color: black;*/ font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+body, form, ul, li, p, h1, h2, h3, h4, h5
+{
+	margin: 0;
+	padding: 0;
+}
+body { background-color: #606061; color: #ffffff; margin: 0; }
+img { border: none; }
+p
+{
+	font-size: 1em;
+	margin: 0 0 1em 0;
+}
+
+html { font-size: 100%; /* IE hack */ }
+body { font-size: 1em; /* Sets base font size to 16px */ }
+table { font-size: 100%; /* IE hack */ }
+input, select, textarea, th, td { font-size: 1em; }
+	
+/* CSS Tree menu styles */
+ol.tree
+{
+	padding: 0 0 0 30px;
+	width: 300px;
+}
+	li 
+	{ 
+		position: relative; 
+		margin-left: -15px;
+		list-style: none;
+	}
+	li.file
+	{
+		margin-left: -1px !important;
+	}
+		li.file a
+		{
+			background: url(/scriptcase8/devel/conf/scriptcase/img/btnnew/crystal/helpcase_document.png) 0 0 no-repeat;
+			color: black;
+			padding-left: 21px;
+                        padding-bottom: 1px;
+			text-decoration: none;
+			display: block;
+		}
+                li.file a:hover{color:blue}                
+		li.file a[href *= '.pdf']	{ background: url(/scriptcase8/devel/conf/scriptcase/img/btnnew/crystal/helpcase_document.png) 0 0 no-repeat; }
+		li.file a[href *= '.html']	{ background: url(/scriptcase8/devel/conf/scriptcase/img/btnnew/crystal/helpcase_document.png) 0 0 no-repeat; }
+		li.file a[href $= '.css']	{ background: url(/scriptcase8/devel/conf/scriptcase/img/btnnew/crystal/helpcase_document.png) 0 0 no-repeat; }
+                li.file a[href $= '.js']	{ background: url(/scriptcase8/devel/conf/scriptcase/img/btnnew/crystal/helpcase_document.png) 0 0 no-repeat; }
+	li input
+	{
+		position: absolute;
+		left: 0;
+		margin-left: 0;
+		opacity: 0;
+		z-index: 2;
+		cursor: pointer;
+		height: 1em;
+		width: 1em;
+		top: 0;
+	}
+		li input + ol
+		{
+			background: url(/scriptcase8/devel/conf/scriptcase/img/btnnew/crystal/helpcase_toggle-small-expand.png) 40px -3px no-repeat;
+			/*margin: -0.938em 0 0 -44px;  15px */
+			/*height: 1em;*/
+                        margin: -1.25em 0 0 -44px; /* 20px */
+                        padding: 1.563em 0 0 80px;
+                        height: auto;
+		}
+		li input + ol > li { display: none; margin-left: -14px !important; padding-left: 1px; }
+	li label, file > label
+	{
+		color:black;
+                background: url(/scriptcase8/devel/conf/scriptcase/img/btnnew/crystal/helpcase_folder-horizontal.png) 15px 3px no-repeat;
+		cursor: pointer;
+		display: block;
+		/*padding-left: 37px;*/
+                padding: 2px 0px 2px 37px;
+                margin: 0px 0px 2px 0px;
+                
+	}
+
+	li > label:hover
+	{
+            color:red;
+	}
+	.shadowlight
+	{
+            color:white;
+            border-radius: 25px;
+            box-shadow: 1px 1px 25px #888888;
+            border-radius: 25px;
+            background-color: lightgray;
+	}
+	li input:checked + ol
+	{
+		background: url(/scriptcase8/devel/conf/scriptcase/img/btnnew/crystal/helpcase_toggle-small.png) 40px -3px no-repeat;
+		margin: -1.25em 0 0 -44px; /* 20px */
+		padding: 1.563em 0 0 80px;
+		height: auto;
+	}
+		li input:checked + ol > li { display: block; margin: 0 0 0.125em;  /* 2px */}
+		li input:checked + ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }

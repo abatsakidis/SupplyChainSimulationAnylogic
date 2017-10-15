@@ -1,0 +1,85 @@
+<HTML>
+	<HEAD>
+		<TITLE>Global variables containing database access values used by main connection.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">var_baseDatabase Variables<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Global variables containing database access values used by main connection.</span></p>
+<p><span class="corpo1"> 
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Variables<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_servidor</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Server name.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_banco</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Database name.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_tpbanco</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Database type (mssql, oracle, mysql, etc).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_usuario</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Connected user name.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_senha</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Database password access.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_senha_cript</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Encrypted password (S/N).</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_glo_decimal_db</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Used decimal separator (point or comma).</span></td>
+</tr>
+</tbody>
+</table>
+</span></p>
+<p><br /><strong><br />Ex. 1:</strong><br />$my_database = [sc_glo_banco];</p>
+<p><span class="corpo1"><br /><br />These variables only reference the values without updating it (it is not possible to attribute/modify the values). To define user and the password to connect to the database, use the following variables:<br /></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Variables<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_db_master_usr</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">User login to be used.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_db_master_pass</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Password to be used.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">sc_db_master_cript</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Encrypted password (S/N) (see sc_encode macro).</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="corpo1"><strong>Important:</strong> <em>These variables only take effect during next application execution remaining valid during all the session (unless modified). </em><br /><strong></strong></span></p>
+<p><span class="corpo1"><strong><br />Ex. 2: </strong>An application type "control" with a form created with information "login" and encrypted "password". These data must be used to connect to the database, during the system applications execution.<br />$temp_pass = sc_encode({password});<br />[sc_db_master_usr] = {login};<br />[sc_db_master_pass] = $temp_pass;<br />[sc_db_master_cript] = "S";</span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

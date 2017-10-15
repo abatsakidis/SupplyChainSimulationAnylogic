@@ -1,0 +1,79 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro forces the application exit.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_exit(Option)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This <span class="corpo1">macro can be used in the ScriptCase events and created button and may return values/process after the execution. </span></p>
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Option<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit()</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Returns to the previous application without display anything.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(ok)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Displays a window with an OK button adn returns to the previous application.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(sel)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Doesn&rsquo;t display the window with an OK button and returns to the current application, repeat the application select.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(ref)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Doesn't display the window with an OK button 
+refresh data and returns to the current application.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(ok,ref)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Same of the sc_exit(ref) function; however, display the OK button</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(ok,sel)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Same of the sc_exit(sel) function; however, display the OK button</span>.</td>
+</tr>
+</tbody>
+</table>
+<p><br /><span class="corpo1">This option is only valid for Form and Control Applications.</span><br /><br /> 
+<table style="height: 81px;" border="0" width="526">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Opton<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit()</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Doesn't complete transactions in database.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(c)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Commit pending transactions.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(r)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Rollback pending transactions.</span></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p><span class="corpo1"><br /></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

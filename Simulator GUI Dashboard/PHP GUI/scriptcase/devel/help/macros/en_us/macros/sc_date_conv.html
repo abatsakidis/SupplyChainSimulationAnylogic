@@ -1,0 +1,51 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro converts the date field passed as parameter with an input format to another field with an output format. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date_conv({Field_Date}, "Input_Format", "Output_Format")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This macro converts the date field passed as parameter with an input format to another field with an output format.</p>
+<table style="border=" border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Parameter<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">A or Y<br /></td>
+<td class="corpo1" align="left" valign="top"><span id="result_box" class="short_text" lang="en"><span>Used to reference years.<br /></span></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">M</td>
+<td class="corpo1" align="left" valign="top"><span id="result_box" class="short_text" lang="en"><span>Used to reference Months.</span></span><br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">D</td>
+<td class="corpo1" align="left" valign="top"><span id="result_box" class="short_text" lang="en"><span>Used to reference Days.</span></span><br /></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Db_Format</td>
+<td class="corpo1" align="left" valign="top">Used to get the Dadabase date format.<br /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1: Converts the date from </strong><strong>"dd/mm/yyyy" format to the </strong><strong>"yyyymmdd" format.</strong><br />{field_date} = sc_date_conv({field_date}, "dd/mm/aaaa", "aaaammdd");<br /><br /></span></p>
+<p><strong>Ex. 2:</strong> <span class="corpo1"><strong>Converts the date from the </strong><strong>database native format to </strong><strong>"dd/mm/yyyy" format.</strong><br />{field_date} = sc_date_conv({field_date}, "db_format", "dd/mm/aaaa");<br /><br /></span></p>
+<p><strong>Ex. 3:</strong> <span class="corpo1"><strong>Converts the date from the </strong><strong>"dd/mm/yyyy" format to the </strong><strong>Database native format.</strong><br />{field_date} = sc_date_conv({field_date}, "dd/mm/aaaa", "db_format");<br /><br /></span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

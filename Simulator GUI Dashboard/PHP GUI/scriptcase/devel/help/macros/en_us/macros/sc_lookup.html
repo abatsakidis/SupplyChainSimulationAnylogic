@@ -1,0 +1,28 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro executes a SELECT command stored in the second parameter and returns the data in a variable. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_lookup(Dataset, "SQL Command", "Connection") <br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">This macro allows the user to <strong>execute SQL commands</strong> and returns the result to the "dataset" variable. The "dataset" structure <strong>is an array</strong> (line/column).</span></p>
+<p><span class="corpo1">The "<strong>connection</strong>" parameter is optional. Use when the command is executed in a database different from that specified for the application.<br /></span></p>
+<p><span class="corpo1"><br /><strong>Ex. 1:</strong><br />sc_lookup(dataset, "select customer_id, customer_name, credit_limit from customers" );<br /><br /><strong>To have access to the first line (Dataset), use :</strong><br />{customer_id} = {dataset[0][0]};<br />{customer_name} = {dataset[0][1]};<br />{credit_limit } = {dataset[0][2]};</span></p>
+<p><span class="corpo1"><strong>To have access to the second line (Dataset), use</strong>:<br />{customer_id} = {dataset[1][0]};<br />{customer_name} = {dataset[1][1]};<br />{credit_limit} = {dataset[1][2]};<br /><br />If occurs <strong>error in the execution of the SQL command</strong>, the variable attributed to the dataset will return as "<strong>false</strong>" and the error message will be available in the "<strong>dataset_erro</strong>" variable. It is also important to verify the select returned data, to prevent access to inexistent variables, once the output array only will be created if the select command returns data.<br /></span></p>
+<p><span class="corpo1"><br /><strong>Ex. 2:<br /></strong>sc_lookup(my_data, "select customer_id, customer_name, credit_limit from customers");<br />if ({my_data} === false)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "Access error. Message=". {my_data_erro} ;<br />}<br />elseif (empty({my_data}))<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; echo "Select command didn't return data";<br />}<br />else<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; {customer_id} = {my_data[0][0]};<br />&nbsp;&nbsp;&nbsp;&nbsp; {customer_name} = {my_data[0][1]};<br />&nbsp;&nbsp;&nbsp;&nbsp; {credit_limit} = {my_data[0][2]};<br />}<br /><br /><br /><br /><strong>Ex. 3: </strong></span><strong><span class="corpo1">The SQL command also can be composed of application fields (local variables) or of global variables:</span></strong><span class="corpo1"><br />sc_lookup(dataset, "select order_value from orders where clienteid = '{customer_id} ' and salesman_id = [var_glo_salesman]");<br /><br /><strong>Note:</strong> <em>The command must always finished with semicolon ";".</em></span></p>
+<p><strong>Note2: </strong><em>For a big result returned in the dataset we recomend the use of the macro sc_selec instead of this one.</em><span class="corpo1"><br /><br />&nbsp;</span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,31 @@
+{NM_PHP_REGINI}
+<!-- BEGIN abre_bloco -->
+  <TABLE border="{NM_TAB_LAR_BOR}" cellspacing="{NM_TAB_CEL_SPA}" cellpadding="{NM_TAB_CEL_PAD}" {NM_TAB_COR_FUN} {NM_TAB_COR_BOR} {NM_TABELA_ALIGN} width="100%" height="{NM_TAB_ALTURA}">
+   <TR>
+<!-- END abre_bloco -->
+<!-- BEGIN bloco -->
+    <TD colspan="{NM_BLOCO_SPAN}" height="{NM_BLOCO_ALTURA}" width="100%" {NM_BLOCO_IMG_FUN} BGCOLOR="{NM_BLOCO_COR_FUN}">
+     <TABLE border="0" cellpadding="0" cellspacing="0" width="100%">
+      <TR>
+       <TD align="{NM_BLOCO_HORIZ}" valign="{NM_BLOCO_VERT}"><B><FONT SIZE="{NM_BLOCO_TXT_TAM}" COLOR="{NM_BLOCO_COR_TXT}" FACE="{NM_BLOCO_TXT_TIP}">{NM_BLOCO_TITULO}</FONT></B></TD>
+      </TR>
+     </TABLE>
+    </TD>
+   </TR>
+   <TR {NM_BLOCO_COLLAPSE}>
+<!-- END bloco -->
+<!-- BEGIN bloco_limpa -->
+    <TD colspan="{NM_LIMPA_SPAN}" {NM_LIMPA_IMG_FUN} BGCOLOR="{NM_LIMPA_COR_FUN}">&nbsp;</TD>
+<!-- END bloco_limpa -->
+<!-- BEGIN bloco_abre_td -->
+     <TD {NM_DAD_IMG_FUN} bgcolor="{NM_DAD_COR_FUN}" {NM_NOWRAP} align="{NM_CMP_ALIGN}" valign="{NM_CMP_VALIGN}" {NM_DAD_WIDTH} {NM_DAD_HEIGHT}>
+<!-- END bloco_abre_td -->
+<!-- BEGIN bloco_dados -->
+{NM_CMP_PHP}
+     <FONT size="{NM_DAD_TXT_TAM}" color="{NM_DAD_COR_TXT}" face="{NM_DAD_TXT_TIP}">{NM_INI_BOLD}{NM_INI_ITAL}{NM_CMP_DADO}</FONT>{NM_FIM_ITAL}{NM_FIM_BOLD}
+{NM_FIM_PHP}
+<!-- END bloco_dados -->
+<!-- BEGIN bloco_fecha_td -->
+    </TD>
+<!-- END bloco_fecha_td -->
+{NM_PHP_REGFIM}

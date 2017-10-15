@@ -1,0 +1,90 @@
+
+  <div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo Lang::get('core.t_blastemail'); ?>  <small><?php echo Lang::get('core.t_blastemailsmall');; ?></small></h3>
+      </div>
+   
+      <ul class="breadcrumb">
+        <li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home');; ?></a></li>
+		<li><a href="<?php echo URL::to('config'); ?>"><?php echo Lang::get('core.t_blastemail'); ?></a></li>
+		
+      </ul>
+	  
+	  
+    </div>
+
+ <div class="page-content-wrapper">  
+	<?php if(Session::has('message')): ?>
+	  
+		   <?php echo Session::get('message'); ?>
+	   
+	<?php endif; ?>
+	<ul class="parsley-error-list">
+		<?php foreach($errors->all() as $error): ?>
+			<li><?php echo $error; ?></li>
+		<?php endforeach; ?>
+	</ul>		
+<div class="block-content">
+	<ul class="nav nav-tabs" >
+	  <li ><a href="<?php echo URL::to('config'); ?>"><?php echo Lang::get('core.tab_siteinfo');; ?> </a></li>
+	  <li class="active"><a href="<?php echo URL::to('config/email'); ?>" ><?php echo Lang::get('core.tab_email');; ?></a></li>
+	  <li ><a href="<?php echo URL::to('config/security'); ?>" > <?php echo Lang::get('core.tab_loginsecurity');; ?>  </a></li>
+	  <li ><a href="<?php echo URL::to('config/translation'); ?>" >  Translation  <sup class="badge " style="background:#5BC0DE" >New </sup> </a></li>
+	    <li ><a href="<?php echo URL::to('config/log'); ?>" >  Clear Cache & Logs  </a></li>
+	</ul>	
+<div class="tab-content">
+	  <div class="tab-pane active use-padding" id="info">	
+	 <?php echo Form::open(array('url'=>'config/email/', 'class'=>'form-vertical row')); ?>
+	
+	<div class="col-sm-6">
+	
+		<fieldset > <legend> New Account Registered Info </legend>
+		  <div class="form-group">
+			<label for="ipt" class=" control-label"> <?php echo Lang::get('core.tab_email');; ?> </label>		
+			<textarea rows="20" name="regEmail" class="form-control input-sm  markItUp"><?php echo $regEmail; ?></textarea>		
+		  </div>  
+		
+
+		<div class="form-group">   
+			<button class="btn btn-primary" type="submit"> <?php echo Lang::get('core.sb_savechanges');; ?></button>	 
+		</div>
+	
+  	</fieldset>
+
+
+</div> 
+
+
+	<div class="col-sm-6">
+	
+	 <fieldset> <legend> <?php echo Lang::get('core.forgotpassword');; ?> </legend>
+  
+		
+		  <div class="form-group">
+			<label for="ipt" class=" control-label "><?php echo Lang::get('core.tab_email');; ?> </label>
+			
+			<textarea rows="20" name="resetEmail" class="form-control input-sm markItUp"><?php echo $resetEmail; ?></textarea>
+			 
+		  </div> 
+	  <div class="form-group">
+		<label for="ipt" class=" control-label col-md-4">&nbsp;</label>
+		<div class="col-md-8">
+			<button class="btn btn-primary" type="submit"><?php echo Lang::get('core.sb_savechanges');; ?></button>
+		 </div> 
+	 
+	  </div>	  
+	 </fieldset>    
+ 	
+ </div>
+ <?php echo Form::close(); ?>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+

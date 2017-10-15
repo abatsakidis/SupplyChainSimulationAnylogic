@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro desativa o tratamento de erros de banco de dados, padrão do Scriptcase. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_error_continue("Evento")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Esta macro inibe o tratamento de erros de banco de dados, padr&atilde;o do Scriptcase, para o evento passado como par&acirc;metro e permite que o programador trate os erros do banco de dados.<br /><br />Pode ser usada por exemplo quando no banco de dados existem triggers/procedures que fazem valida&ccedil;&otilde;es referentes aos eventos de inclus&atilde;o, atualiza&ccedil;&atilde;o e exclus&atilde;o de registros.<br /><br />&Eacute; usada em conjunto com as vari&aacute;veis: {sc_erro_delete},{sc_erro_insert} e/ou{sc_erro_update}<br /><br />Os eventos a serem passados como par&acirc;metro s&atilde;o: inserir, delete ou update.</p>
+<p><br /><br /><strong>Ex. 1: </strong>Utilizando o evento <strong>onDelete</strong> para tratamento de mensagem devolvida por uma trigger do mssql, que cancela a exclus&atilde;o do registro e manda uma mensagem de erro no formato: [Microsoft][ODBC SQL Server Driver][SQL Server] Voc&ecirc; n&atilde;o pode apagar este registro.<br /><br />sc_error_continue("delete");<br />if (!empty({sc_erro_delete}))<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; $tmp = strrpos({sc_erro_delete}, "]");<br />&nbsp;&nbsp;&nbsp;&nbsp; if ($tmp !== false)<br />&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {sc_erro_delete} = substr({sc_erro_delete}, $tmp + 1);<br />&nbsp;&nbsp;&nbsp;&nbsp; }<br />sc_erro_mensagem({sc_erro_delete});<br />sc_erro_exit;<br />}<br /></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

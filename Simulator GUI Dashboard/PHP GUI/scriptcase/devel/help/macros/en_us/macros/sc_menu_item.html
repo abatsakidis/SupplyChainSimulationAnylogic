@@ -1,0 +1,25 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro Identifies the application selected in a menu items.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_menu_item<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This variable its only avaliable for menu application and has the objective of giving acess to a menu item that was selected, this way the user can take desicions before de called application runs.</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1: To clean global variable.</strong><br />if ({sc_menu_item} == "item_1")<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_reset_global([global1], [global2]);<br />}<br /><br /><br /><strong>Ex. 2: If an application requires a global variable another application can initialize it accordingly.</strong><br />if ({sc_menu_item} == "item_5" &amp;&amp; (!isset([glo_employ]) || empty([glo_employ])))<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_redir(apl_inf_emp);<br />}<br /></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

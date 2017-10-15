@@ -1,0 +1,70 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro dynamically creates or modifies links between grid applications and other applications.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_link(Column, Application, Parameters, "Hint", "Target", "Option",  Height, Width)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">This macro dynamically creates or modifies links between grid applications and other applications.<br /><br /><strong></strong></span></p>
+<p><span class="corpo1"><strong>Column</strong>: Grid column field name to generate the link.<br /><strong>Application</strong>: Application name to establish the link.<br /><strong>Parameters</strong>: Parameters required by the called application.<br /><br />Must be informed "=" (attribution sign) . More than one parameter must be separated by ";" (semicolon).<br /><br /><strong>Hint</strong>: Observation or tip displayed when the mouse cursor passes over the link.<br /></span><strong></strong></p>
+<p><strong>Target</strong> : <span class="short_text"><span style="color: #000000;">Where the application  will function call and may be:<br /></span></span><br /> 
+<table border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Target<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"_self"</td>
+<td class="corpo1" align="left" valign="top"><span class="short_text">For carrying on the  same page (overrides the query);</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"_blank"</td>
+<td class="corpo1" align="left" valign="top"><span class="short_text">To run on another page (pop-up);</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"iframeT"</td>
+<td class="corpo1" align="left" valign="top"><span class="short_text"><span style="color: #000000;">To run in an iframe  above the Grid (top);</span></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"iframeL"</td>
+<td class="corpo1" align="left" valign="top"><span class="short_text"><span style="color: #000000;">To run in an iframe,  the left of the Grid (Left);</span></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"iframeR"</td>
+<td class="corpo1" align="left" valign="top"><span class="short_text"><span style="color: #000000;">To run in an iframe,  the left of the Grid (Left);</span></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"iframeB"</td>
+<td class="corpo1" align="left" valign="top"><span class="short_text"><span style="color: #000000;">To run in an iframe  below the Grid (Bot);</span></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">"modal"</td>
+<td class="corpo1" align="left" valign="top"><span class="short_text"><span style="color: #000000;">Opens a new window  and blocks any interaction in the main window;</span></span></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p><strong>Option:</strong><br /> "<strong>E</strong>" - Only redirects if there is no error message.<br /> "<strong>F</strong>" - Forces the redirect.</p>
+<p><span style="color: #000000;">In the case of modal target, there are two optional parameters *: <br /><strong>*Height:</strong> Set the height of the modal window (default 440);<br /><strong>*Width:</strong> Set the width of the modal window (default 630);<br /><br /></span></p>
+<p class="corpo1"><span class="short_text"><span style="color: #000000;"><strong>Note:</strong> If omitted,  will be assigned the value "_self".</span></span></p>
+<p class="corpo1">&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>Creates a link to the costumer.php application, on the </strong><strong>Id field, passing the </strong><strong>global variable [global_costumer] as&nbsp; and the </strong><strong>product field (local variable) {Id} to the </strong><strong>costumer.php application:</strong><br />sc_link(Id, costumer.php, product=[global_costumer]; Id={Id}, "Client Data", "_blank");</p>
+<p><br /><br /><strong>Ex. 2:</strong> <strong>Creating a dynamic link to another application depeding on the field valor {costumer_type} and opening it in a modal.</strong><br />if ({costumer_type} == "F") {<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_link (costumer_type, type_f.php, product=[global_costumer]; Id={Id}," Personal Data ", "modal", 500, 700);<br />}<br />else{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_link (costumer_type, type_a.php, product=[global_costumer]; Id={Id}," Company Data ", "iframeR");<br />}</p>
+<p><br /><strong>Ex. 3:</strong> <strong>Creating a link to an URL: in this case, "paramater and target" have no effect. It will be executed redirecting to a informed URL.</strong><br />sc_link (my_field, http://www.scriptcase.com, ,"hint of the link");</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

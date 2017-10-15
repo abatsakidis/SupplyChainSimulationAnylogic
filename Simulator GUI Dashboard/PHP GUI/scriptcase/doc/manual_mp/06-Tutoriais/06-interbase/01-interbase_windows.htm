@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Configuring Interbase on Windows</title>
+</head>
+
+<body>
+<h1>Configuring Interbase on Windows</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/06-interbase/00-interbase.htm" target="_self">Interbase</a> >> Configuring Interbase on Windows</td></tr></table>
+<h2>See how to do it step by step:</h2>
+<p>Edit the php.ini file. Run ScriptCase diagnosis and check where the file is located.</p>
+<p><img src="../img/359_1.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>In PHP.INI, look for the word php_interbase.dll and remove the comment &quot;;&quot; to enable this module. See image below.</p>
+<p><img src="../img/382_1.jpg" alt="" /></p>
+<p>Check if interbase module was enabled correctly. http://server:port/scriptcase/info.php</p>
+<p><img src="../img/383_2.jpg" alt="" /></p>
+<p>If the module INTERBASE is loaded correctly in your php, go through ScriptCase to create your connection.</p>
+<p>&nbsp;</p>
+<ul>
+  <li><a href="../../06-Tutoriais/06-interbase/03-interbase_sc.htm" target="_self">Connecting to Interbase from Scriptcase.</a></li>
+</ul>
+</body>
+</html>

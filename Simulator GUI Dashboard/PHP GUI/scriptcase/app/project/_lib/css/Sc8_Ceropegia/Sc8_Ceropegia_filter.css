@@ -1,0 +1,46 @@
+.scFilterPage { background-color: #DFECE4; opacity: 1; filter: alpha(opacity=100); color: #000000; font-family: Arial, sans-serif; font-size: 13px; margin: 20px 0 20px 0; text-decoration: none }
+.scFilterBorder { background-color: #FFFFFF; opacity: 1; filter: alpha(opacity=100); border-color: #DADADA; border-style: solid; border-width: 1px; padding: 0; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; -moz-box-shadow: #000; box-shadow: 0px 2px 10px -2px; -webkit-box-shadow: #000; box-shadow: 0px 2px 10px -2px; box-shadow: #000; box-shadow: 0px 2px 10px -2px }
+.scFilterTable { background-color: #ffffff; opacity: 1; filter: alpha(opacity=100); border-collapse: collapse; border-color: #D2D2D2; border-style: none; border-width: 1px 1px 1px 1px; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scFilterTableTd { padding: 0 }
+.scFilterToolbar { background-color: #FFF; opacity: 1; filter: alpha(opacity=100); border-style: none; border-width: 0; padding: 5px 10px 5px 10px; color: #000000; font-family: Arial, sans-serif; font-size: 13px; text-decoration: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scFilterToolbarPadding { padding: 5px 10px 5px 10px }
+.scFilterToolbar_obj { background-color: #FFFFFF; opacity: 1; filter: alpha(opacity=100); border-color: #8F9F97; border-style: solid; border-width: 1px; color: #333333; font-family: Arial, sans-serif; font-size: 13px; padding: 4px 4px; text-decoration: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scFilterHeader { background-color: #B6D4C5; opacity: 1; filter: alpha(opacity=100); -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scFilterHeaderFont { color: #181818; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; padding: 5px; text-decoration: none; vertical-align: middle }
+.scFilterFooter { background-color: #B6D4C5; opacity: 1; filter: alpha(opacity=100); -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scFilterFooterFont { color: #181818; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; padding: 5px; text-decoration: none }
+.scFilterBlock { background-color: #DAEBDA; opacity: 1; filter: alpha(opacity=100); border-color: #E0E6E3; border-style: none; border-width: 1px 0 1px 0; color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; padding: 6px 14px 6px 14px; text-decoration: none; vertical-align: middle; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scFilterBlockBack { background-color: #DAEBDA; opacity: 1; filter: alpha(opacity=100); border-color: #E0E6E3; border-style: none; border-width: 1px 0 1px 0; padding: 6px 14px 6px 14px }
+.scFilterBlockFont { color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; text-decoration: none; vertical-align: middle }
+.scFilterBlockAlign { color: #000000; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; text-decoration: none }
+.scFilterLabelOdd { background-color: #F9F9F9; opacity: 1; filter: alpha(opacity=100); border-color: #CCC #DFEEE6 #CCC #DFEEE6; border-style: none; border-width: 1px; color: #000; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; padding: 4px 4px 4px 10px; text-decoration: none; vertical-align: middle }
+.scFilterLabelEven { background-color: #F9F9F9; opacity: 1; filter: alpha(opacity=100); color: #000; font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; padding: 4px 4px 4px 10px; text-decoration: none; vertical-align: middle }
+.scFilterFieldOdd { background-color: #F9F9F9; opacity: 1; filter: alpha(opacity=100); border-color: #D2D2D2; border-style: none; border-width: 1px 1px 1px 1px; color: #000; font-family: Arial, sans-serif; font-size: 13px; padding: 5px 5px; text-decoration: none; vertical-align: middle }
+.scFilterDataFontOdd { color: #000; font-family: Arial, sans-serif; font-size: 13px; text-decoration: none }
+.scFilterFieldFontOdd { color: #000; font-family: Arial, sans-serif; font-size: 13px; text-decoration: none }
+.scFilterFieldEven { background-color: #F9F9F9; opacity: 1; filter: alpha(opacity=100); border-color: #D2D2D2; border-style: none; border-width: 1px 1px 1px 1px; color: #000; font-family: Arial, sans-serif; font-size: 13px; padding: 5px 5px; text-decoration: none; vertical-align: middle }
+.scFilterFieldFontEven { color: #000; font-family: Arial, sans-serif; font-size: 13px; text-decoration: none }
+.scFilterObjectOdd { background-color: #FFFFFF; opacity: 1; filter: alpha(opacity=100); border-color: #8F9F97; border-style: solid; border-width: 1px; color: #333333; font-family: Arial, sans-serif; font-size: 13px; padding: 2px; text-decoration: none; vertical-align: middle; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scFilterObjectEven { background-color: #FFFFFF; opacity: 1; filter: alpha(opacity=100); border-color: #8F9F97; border-style: solid; border-width: 1px; color: #333333; font-family: Arial, sans-serif; font-size: 13px; padding: 2px; text-decoration: none; vertical-align: middle; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0 }
+.scFilterACTable { border-collapse: collapse; border-color: #BBBBBB #A4ADC2 #A4ADC2 #BBBBBB; border-style: solid; border-width: 1px 2px 2px 1px; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; -moz-box-shadow: css_filter_moldurapagina_box_shadow; -webkit-box-shadow: css_filter_moldurapagina_box_shadow; box-shadow: css_filter_moldurapagina_box_shadow }
+.scFilterACTitle { background-color: #f5f5f5; opacity: 1; filter: alpha(opacity=100); border-color: #AAA #AAA #777777 #AAA; border-width: 1px; color: #000000; font-family: Arial, sans-serif; font-size: 13px; text-shadow: 20px; padding: 2px 4px; text-decoration: none }
+.ac_results { background-color: #FFFFFF; opacity: 1; filter: alpha(opacity=100); border-collapse: collapse; border-color: #DADADA; border-style: solid; border-width: 1px; color: #000000; font-family: Arial, sans-serif; font-size: 13px; overflow: hidden; padding: 0; text-decoration: css_ajaxac_linha_par_text_decoration; z-index: 99999 }
+.ac_results ul { list-style: none; list-style-position: outside; margin: 0; padding: 0; width: 100% }
+.ac_results li { cursor: default; display: block; margin: 0; overflow: hidden; padding: 2px 5px; line-height: 16px }
+.ac_odd { background-color: #EAEDF2; opacity: 1; filter: alpha(opacity=100); color: #000000; font-family: Arial, sans-serif; font-size: 13px }
+.ac_over { background-color: #F0EEEE; opacity: 1; filter: alpha(opacity=100); color: #000000; font-family: Arial, sans-serif; font-size: 13px }
+.scFilterPopup { border-collapse: collapse; display: none; position: absolute; z-index: 50 }
+.scFilterPopupCorner { height: 15px; width: 19px }
+.scFilterPopupTopLeft { background-image: url(../../img/scriptcase__NM__help_topLeftCorner.png); padding: 0 }
+.scFilterPopupTop { background-image: url(../../img/scriptcase__NM__help_topLine.png); padding: 0 }
+.scFilterPopupTopRight { background-image: url(../../img/scriptcase__NM__help_topRightCorner.png); padding: 0 }
+.scFilterPopupLeft { background-image: url(../../img/scriptcase__NM__help_leftColumn.png); padding: 0 }
+.scFilterPopupRight { background-image: url(../../img/scriptcase__NM__help_rightColumn.png); padding: 0 }
+.scFilterPopupBottomLeft { background-image: url(../../img/scriptcase__NM__help_bottomLeftCorner.png); padding: 0 }
+.scFilterPopupBottom { background-image: url(../../img/scriptcase__NM__help_bottomLine.png); padding: 0; text-align: center }
+.scFilterPopupBottom img { display: block; margin: 0 auto }
+.scFilterPopupBottomRight { background-image: url(../../img/scriptcase__NM__help_bottomRightCorner.png); padding: 0 }
+.scFilterPopupContent { background-color: #FFFFFF; opacity: 1; filter: alpha(opacity=100); color: #000000; font-family: Arial, sans-serif; font-size: 13px; text-shadow: 12px; font-style: normal; text-decoration: none }
+.scFilterRequiredOdd { color: #FF0000; font-family: Arial; font-size: 12px; text-shadow: 16px }
+.scFilterRequiredEven { color: #FF0000; font-family: Arial; font-size: 12px; text-shadow: 16px }
+.scBtnPassField { margin: 5px 2px }

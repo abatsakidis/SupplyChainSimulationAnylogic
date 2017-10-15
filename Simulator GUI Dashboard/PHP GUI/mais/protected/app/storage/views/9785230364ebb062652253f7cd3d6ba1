@@ -1,0 +1,151 @@
+
+  <div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo $pageTitle; ?> <small><?php echo $pageNote; ?></small></h3>
+      </div>
+    
+
+      <ul class="breadcrumb">
+        <li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home');; ?></a></li>
+		<li><a href="<?php echo URL::to('users'); ?>"><?php echo $pageTitle; ?></a></li>
+        <li class="active"> Add </li>
+      </ul>
+	</div>  
+	<?php if(Session::has('message')): ?>	  
+		   <?php echo Session::get('message'); ?>
+	<?php endif; ?>	
+	
+	<div class="page-content-wrapper">
+		
+	<div class="panel panel-default">
+		
+		<div class="panel-body">
+
+		<ul class="parsley-error-list">
+			<?php foreach($errors->all() as $error): ?>
+				<li><?php echo $error; ?></li>
+			<?php endforeach; ?>
+		</ul>
+		 <?php echo Form::open(array('url'=>'users/save/'.SiteHelpers::encryptID($row['id']), 'class'=>'form-horizontal','files' => true ,'parsley-validate novalidate'=>'')); ?>
+		 
+		 <div class="col-md-6">
+									
+				  <div class="form-group hidethis " style="display:none;">
+					<label for="ipt" class=" control-label col-md-4 text-right"> Id </label>
+					<div class="col-md-8">
+					  <?php echo Form::text('id', $row['id'],array('class'=>'form-control', 'placeholder'=>'')); ?> 
+					 </div> 
+				  </div> 					
+				  <div class="form-group  " >
+					<label for="ipt" class=" control-label col-md-4 text-right"> <?php echo Lang::get('core.group'); ?> </label>
+					<div class="col-md-8">
+					  <select name='group_id' rows='5' id='group_id' code='{$group_id}' 
+							class='select2 '  required  ></select> 
+					 </div> 
+				  </div> 					
+				  <div class="form-group  " >
+					<label for="ipt" class=" control-label col-md-4 text-right">  <?php echo Lang::get('core.username'); ?> </label>
+					<div class="col-md-8">
+					  <?php echo Form::text('username', $row['username'],array('class'=>'form-control', 'placeholder'=>'')); ?> 
+					 </div> 
+				  </div> 					
+				  <div class="form-group  " >
+					<label for="ipt" class=" control-label col-md-4 text-right"> <?php echo Lang::get('core.firstname'); ?> </label>
+					<div class="col-md-8">
+					  <?php echo Form::text('first_name', $row['first_name'],array('class'=>'form-control', 'placeholder'=>'')); ?> 
+					 </div> 
+				  </div> 					
+				  <div class="form-group  " >
+					<label for="ipt" class=" control-label col-md-4 text-right"> <?php echo Lang::get('core.lastname'); ?> </label>
+					<div class="col-md-8">
+					  <?php echo Form::text('last_name', $row['last_name'],array('class'=>'form-control ')); ?> 
+					 </div> 
+				  </div> 					
+				  <div class="form-group  " >
+					<label for="ipt" class=" control-label col-md-4 text-right"> <?php echo Lang::get('core.email'); ?> </label>
+					<div class="col-md-8">
+					  <?php echo Form::text('email', $row['email'],array('class'=>'form-control', 'placeholder'=>'' )); ?> 
+					 </div> 
+				  </div> 										
+				  <div class="form-group  " >
+					<label for="ipt" class=" control-label col-md-4 text-right"> Status </label>
+					<div class="col-md-8">
+					  
+					<label class='checked'>
+					<input type='radio' name='active' value ='0' required <?php if($row['active'] == '0'): ?> checked="checked" <?php endif; ?> > Inactive </label>
+					<label class='checked'>
+					<input type='radio' name='active' value ='1' required <?php if($row['active'] == '1'): ?> checked="checked" <?php endif; ?> > Active </label> 
+					 </div> 
+				  </div> 					
+
+			
+			  <div class="form-group">
+				<label class="col-sm-4 text-right">&nbsp;</label>
+				<div class="col-sm-8">	
+				<button type="submit" class="btn btn-primary ">  <?php echo Lang::get('core.sb_savechanges'); ?> </button>
+				</div>	  
+		
+			  </div> 
+			
+			</div>
+			
+			
+			<div class="col-md-6">	  
+		
+	<div class="form-group">
+		
+	<label for="ipt" class=" control-label col-md-4 text-left" > </label>
+	<div class="col-md-8">
+		<?php if($row['id'] !=''): ?>
+			<?php echo Lang::get('core.notepassword'); ?>
+		<?php else: ?>
+			Create Password
+		<?php endif; ?>	 
+	</div>
+	</div>		  
+	  <div class="form-group">
+		<label for="ipt" class=" control-label col-md-4"> <?php echo Lang::get('core.newpassword'); ?> </label>
+		<div class="col-md-8">
+		<input name="password" type="password" id="password" class="form-control input-sm" value=""
+		<?php if($row['id'] ==''): ?>
+			required
+		<?php endif; ?>
+		 /> 
+		 </div> 
+	  </div>  
+	  
+	  <div class="form-group">
+		<label for="ipt" class=" control-label col-md-4"> <?php echo Lang::get('core.conewpassword'); ?> </label>
+		<div class="col-md-8">
+		<input name="password_confirmation" type="password" id="password_confirmation" class="form-control input-sm" value=""
+		<?php if($row['id'] ==''): ?>
+			required
+		<?php endif; ?>		
+		 />  
+		 </div> 
+	  </div>  				  
+				  
+			  <div class="form-group">
+				<label class="col-sm-4 text-right">&nbsp;</label>
+				<div class="col-sm-8">	
+				<button type="submit" class="btn btn-primary ">  <?php echo Lang::get('core.sb_savechanges'); ?> </button>
+				</div>	  
+		
+			  </div> 
+		 
+		 </div>
+		 <?php echo Form::close(); ?>
+		</div>
+	</div>
+	</div>
+	
+</div>				 
+   <script type="text/javascript">
+	$(document).ready(function() { 
+		$("#group_id").jCombo("<?php echo URL::to("users/comboselect?filter=tb_groups:group_id:name&limit=WHERE:level:>=:".$level);?>",
+		{  selected_value : '<?php echo $row['group_id']; ?>' });
+		 
+	});
+	</script>		 

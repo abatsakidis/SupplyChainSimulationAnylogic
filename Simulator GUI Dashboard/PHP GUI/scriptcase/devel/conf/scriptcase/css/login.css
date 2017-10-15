@@ -1,0 +1,219 @@
+*{margin:0;padding:0}
+html, body { margin: 0; padding: 0; height: 100%; width: 100%; background: #D5D6D8; font-family: Arial, Helvetica, sans-serif; }
+a { text-decoration:none; color:white; }
+form { display:inline; margin: 0; padding: 0; }
+
+body {
+    /* fallback */
+    background-color: #046a9f;
+    background-image: url(../img/login/transparent.png),url(../img/login/bg.png);
+    -webkit-background-size: cover,auto;
+    -moz-background-size: cover,auto;
+    -o-background-size: cover,auto;
+    background-position: top,center;
+    background-size: cover,auto;
+}
+
+
+#header{
+    text-align: center;
+    padding:10px;
+}
+
+#content{
+    height:100%
+}
+#middle{
+    margin: 0 auto;
+    overflow:hidden;
+    width:100%;
+    height: -moz-calc(100% - 76px);
+    height: -webkit-calc(100% - 76px);
+    height:calc(100% - 76px);
+}
+#middle_content { height:100%;}
+#side_left{
+    float: left;
+    width: -moz-calc(55% - 1px);
+    width: -webkit-calc(55% - 1px);
+    width: calc(55% - 1px);
+    text-align: right;
+    top: -moz-calc(50% - 60px);
+    top: -webkit-calc(50% - 60px);
+    top: calc(50% - 60px);
+}
+#side_right{
+    float: left;
+    width: -moz-calc(45% - 2px);
+    width: -webkit-calc(45% - 2px);
+    width: calc(45% - 2px);
+    text-align: left;
+}
+
+#separator{
+    float: left;
+    background-image: url(../img/login/separator.png);
+    width: 3px;
+    height:262px;
+    top: -moz-calc(50% - 140px);
+    top: -webkit-calc(50% - 140px);
+    top: calc(50% - 140px);
+}
+.centralizer{
+    top: -moz-calc(50% - 100px);
+    top: -webkit-calc(50% - 100px);
+    top: calc(50% - 100px);
+    position:relative;
+}
+
+#div_languages{
+    clear:both;
+    text-align: center;
+    top: -moz-calc(-24% + 80px);
+    top: -webkit-calc(-24% + 80px);
+    top: calc(-24% + 80px);
+    position: relative;
+}
+
+#footer{
+    background: #1b86ba;
+    border-top:1px solid #1b85b5;
+    border-bottom:1px solid #1b85b5 ;
+    padding:5px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 10px);
+
+}
+#footer a{color:#000000;}
+#footer img{vertical-align: middle;}
+
+#id_cp{text-align:right;}
+
+#forgotPass { color:#fff; font-size: 11px; text-align:right; padding-top: 3px; margin: 0 0 0 20px;font-style:italic; }
+
+#loginBoxForm{ padding-top:40px;padding-left:37px;}
+.loginBoxForm_input{ margin-bottom: 20px; height:23px;font-size:13px; padding-left: 9px; box-shadow: #525B60 2px 2px 4px; background-color: #FFFFFF; border-color: #f0f9fe;
+border-top:0px; border-bottom-color: #d2dbe0;font-style:italic;width: 200px;outline:none;}
+
+.loginBoxForm_input:focus{box-shadow: #56b6f3 2px 2px 4px;box-shadow: #066CA1 0px 0px 24px;}
+
+#id_field_user{background-image: url(../img/login/login_icon.png); background-repeat: no-repeat; background-position: 187px 5px;}
+#id_field_pass{background-image: url(../img/login/pass_icon.png); background-repeat: no-repeat; background-position: 188px 5px;margin-bottom: 0px !important;}
+
+#btn_login{
+    background-image: url(../img/login/btn_login.png);
+    padding-top: 4px;
+    padding-bottom: 5px;
+    width:213px;
+    text-align: center;
+    border:0px;
+    border-radius: 3px;
+    margin-top:15px;
+    cursor: pointer;
+    font-size:16px;
+    color:#FFFFFF;
+}
+#btn_login:hover{outline:none; box-shadow: #56B6F3 0px 0px 32px}
+#id_div_forgotPass{width: 214px;text-align:right;}
+
+#languages{padding:0px;margin:0px;list-style:none;}
+#languages li {display: inline; font-size: 11px;margin-left: 14px;cursor:pointer; white-space: nowrap;padding: 6px;}
+#languages li.selected{border: 1px solid #787878; background-color: rgba(255, 255, 255, 0.6);border-radius: 3px;}
+#languages li img{vertical-align: middle;margin-right: 2px;}
+
+#id_bar_right, #id_login_msg_url{
+    padding-right:40px;
+}
+#trial{
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    top: -moz-calc(-20% + 80px);
+    top: -webkit-calc(-20% + 80px);
+    top: calc(-20% + 80px);
+    font-weight: bold;
+    font-size:13px;
+}
+@media screen and (max-width : 800px) {
+        #header{display: none;}
+        #side_left{float:none;
+            top: -moz-calc(10%);
+            top: -webkit-calc(10%);
+            top:calc(10%);
+            width: 100%;
+            text-align: center;
+        }
+        #side_right{
+            float:none;
+            top: -moz-calc(10%);
+            top: -webkit-calc(10%);
+            top: calc(10%);
+            width: 100%;
+            text-align: center;
+        }
+        #separator{display:none;}
+        #id_cp{display:none;}
+
+        #id_div_forgotPass
+        {
+            width: 100%;
+            text-align: center;
+        }
+        #loginErroDiv
+        {
+            margin-left: -moz-calc( 50% - 120px);
+            margin-left: -webkit-calc(50% - 120px);
+            margin-left:calc(50% - 120px );
+        }
+}
+
+@media screen and (max-width : 450px) {
+    #side_left img{width:inherit;}
+}
+/*========================= OLD ===========================*/
+.nmLoginErroDiv
+{
+	background-color: #F2DEDE;
+	border: 1px solid #A94442;
+    width:274px;
+	padding: 10px;
+    margin:4px;
+    color:#A94442;
+	display:none;
+	border-radius: 2px;
+    border-color: #A94442;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+	box-shadow: 0px 0px 32px #56B6F3;
+	-moz-box-shadow: 0px 0px 32px #56B6F3;
+	-webkit-box-shadow: 0px 0px 32px #56B6F3;
+}
+
+
+/* Login
+		#loginPartsBox { width: 318px; height: 239px; }
+			#loginBoxForm{ padding-top:37px;padding-left:37px;padding-right:37px;padding-bottom:37px;}
+            #loginPartsLogo{text-align: center;}
+				#loginBoxForm input { font-size: 14px; font-weight: bold; color:#555555 !important; padding: 6px; width: 232px; margin-bottom: 15px; background:url(../img/login/bgFormText.png) no-repeat; }
+                #loginFormButtons { display: block; padding-top: 10px; }
+					#loginButtonsLang { float:left; width: 137px; height: 24px; font-size: 12px; color:#fff; font-weight: bold; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; cursor: pointer; }
+						#loginButtonsLang:active { }
+						#loginButtonsLang  ul { list-style-type: none; margin:0; padding: 0 0; }
+							#loginButtonsLang  ul .lang { padding: 3px 0 0 3px; }
+								#loginButtonsLang  ul .lang img {  vertical-align: middle; margin: 0 0 2px 0 }
+					#loginButtonsLogin { float:left; width: 85px; height: 20px; padding-top: 3px; margin: 0 0 0 20px; font-size: 14px; color:#fff; font-weight: bold; text-align:center; background: url(../img/login/bgFormBtLogin.png) repeat-x #5d5d5d; border: 1px solid #999999 !important;  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; cursor: pointer; text-transform: uppercase;}
+						#loginButtonsLogin:active {  background: url(../img/login/bgFormBtLoginClick.png) repeat-x #5d5d5d; }
+							#loginButtonsLogin a {  color: #fff; }
+
+		#loginPartsInfos { font-size: 12px; height: 30px; color: #5e666e; margin-top: 25px;  width: 500px; margin: 0 auto; text-align: center; }
+			#loginPartsInfos a { color: #5e666e; font-weight: bold; border:0px; }
+		#loginFooter { margin-left: auto; left:0px; right:0px; margin-right: auto; color: #FFFFFF; padding: 8px; background:url(../img/login/bg_bar.png); width:892px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}
+        #id_bar_right { float:right;}
+        #id_bar_right  a {  text-decoration: none; color:#ffffff; border: 0px;}
+         #id_bar_right  a img {  text-decoration: none; color:#ffffff; border: 0px;}
+        #id_bar_right img {vertical-align: middle;}
+        #id_login_msg a{ text-decoration: none; color:#FFF}
+        */

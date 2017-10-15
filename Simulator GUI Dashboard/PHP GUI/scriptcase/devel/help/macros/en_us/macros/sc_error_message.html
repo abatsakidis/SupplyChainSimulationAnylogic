@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro generate an error message.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_error_message("Text")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This <span class="corpo1">macro generates an error messages.<br /><br />In "<strong>Form and Control</strong>" applications, the messages are presented together with other error messages found in the application, except when using the "<strong>sc_error_exit</strong>" macro.<br /><br />In "<strong>Grid and Menu</strong>" applications the messages only will be presented through the "<strong>sc_error_exit</strong>" macro.<br /></span></p>
+<p><span class="corpo1"><br /><strong>Ex. 1:</strong><br />if ({discount} &gt; 0.10 &amp;&amp; [glo_usr] == 'operator')<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp; sc_error_message("Discounting of " . {discount} . " above of the allowed one");<br />}<br /><br />In this example, if the value in the discount field is over 0.10 and the user try to add or save this record, the operation is finished and the error message is presented.The command must finish with ");" (close parentheses and semicolon) used as delimiter for the macro interpreter.</span><br /></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

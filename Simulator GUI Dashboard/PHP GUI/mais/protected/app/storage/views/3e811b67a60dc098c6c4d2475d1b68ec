@@ -1,0 +1,11 @@
+  <ul class="nav nav-tabs" style="margin-bottom:10px;">
+    <li <?php if($active == 'general'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template'); ?>"> General </a></li>
+	<li <?php if($active == 'grid'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template/grid'); ?>"> Grid </a></li>
+    <li <?php if($active == 'typography'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template/typography'); ?>"> Typography </a></li>
+    <li <?php if($active == 'buttons'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template/button'); ?>">Buttons</a></li>
+    <li <?php if($active == 'panel'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template/panel'); ?>">Tabs & Panel </a></li>
+    <li <?php if($active == 'forms'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template/forms'); ?>">Forms </a></li>
+    <li <?php if($active == 'tables'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template/tables'); ?>">Tables </a></li>
+    <li <?php if($active == 'icons'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template/icons'); ?>">Icons </a></li>
+	<li <?php if($active == 'icon-moon'): ?> class="active" <?php endif; ?> ><a href="<?php echo URL::to('config/template/icon-moon'); ?>">Icons Moon </a></li>
+  </ul> 

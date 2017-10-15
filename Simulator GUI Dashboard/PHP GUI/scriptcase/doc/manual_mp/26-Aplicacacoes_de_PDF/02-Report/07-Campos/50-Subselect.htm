@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>New Field SubSelect</title>
+ <link href="../../../scriptcase.css" rel="stylesheet" type="text/css"></head>
+</head>
+
+<body>
+<h1>New SubSelect Field</h1>
+<p>This resource is very useful when you need to make a master-detail report, for example Categories and Products.</p>
+<p>You must create a new "Subselect" field.</p>
+<p><img src="img/sub1.jpg"  /><br>
+Step1:Create a new field.</p>
+<p>&nbsp;</p>
+<p><img src="img/sub2.jpg"  /><br>
+Step2:Choose the "Subselect" type.</p>
+<p>For this field type we can set up the following parameters:</p>
+<ul>
+  <li><strong>Increment - </strong>The space between two lines.</li>
+  <li><strong>Connection  - </strong>Detail is stored on another database </li>
+  <li><strong>Table - </strong> To write the SQL instruction to retrieve the data.</li>
+  <li><strong>Subselect - </strong>SQL example <b>SELECT
+														ProdName,
+														PriceUnit,
+														UnitsStored
+													FROM
+														adm_products
+													where
+													categoryID = {categoyid}</b> Note the parameter {categoryid} passed.
+</li>
+</ul>
+<p><img src="img/sub3.jpg"  /></p>
+<p>Now, on the fields list you can expand the SubSelect Field to see it´s 'fields'.</p>
+<p><img src="img/sub4.jpg"  /></p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</body>
+</html>

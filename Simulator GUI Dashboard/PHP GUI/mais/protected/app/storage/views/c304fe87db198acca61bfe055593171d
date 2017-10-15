@@ -1,0 +1,63 @@
+<div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo $pageTitle; ?> <small><?php echo $pageNote; ?></small></h3>
+      </div>
+
+      <ul class="breadcrumb">
+       <li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home');; ?></a></li>
+		<li><a href="<?php echo URL::to('groups'); ?>"><?php echo $pageTitle; ?></a></li>
+        <li class="active"> view </li>
+      </ul>
+	</div>  
+
+ 	<div class="page-content-wrapper">   
+	   <div class="toolbar-line">
+	   		<a href="<?php echo URL::to('groups'); ?>" class="tips btn btn-xs btn-default" title="<?php echo Lang::get('core.btn_back'); ?>"><i class="icon-table"></i>&nbsp;<?php echo Lang::get('core.btn_back'); ?></a>
+			<?php if($access['is_add'] ==1): ?>
+	   		<a href="<?php echo URL::to('groups/add/'.$id); ?>" class="tips btn btn-xs btn-primary" title="<?php echo Lang::get('core.btn_edit'); ?>"><i class="icon-pencil3"></i>&nbsp;<?php echo Lang::get('core.btn_edit'); ?></a>
+			<?php endif; ?>  
+			<?php if($access['is_remove'] ==1): ?>
+			<a href="javascript://ajax"  onclick="SximoDelete();"class="tips btn btn-xs btn-danger" title="<?php echo Lang::get('core.btn_remove'); ?>"><i class="icon-bubble-trash"></i>&nbsp;<?php echo Lang::get('core.btn_remove'); ?></a>
+			<?php endif; ?> 			   	  
+		</div>		
+	 <?php echo Form::open(array('url'=>'groups/destroy/', 'class'=>'form-horizontal' ,'ID' =>'SximoTable' )); ?>
+	 	<div style="display:none;">
+			<input type="checkbox" style="display:none" checked="checked" class="ids"  name="id[]" value="<?php echo $id; ?>" />
+		</div>
+	<?php echo Form::close(); ?>
+	<div class="table-responsive">
+	<table class="table table-striped table-bordered" >
+		<tbody>	
+	
+					<tr>
+						<td width='30%' class='label-view text-right'>ID</td>
+						<td><?php echo $row->group_id; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>Name</td>
+						<td><?php echo $row->name; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>Description</td>
+						<td><?php echo $row->description; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>Level</td>
+						<td><?php echo $row->level; ?> </td>
+						
+					</tr>
+				
+		</tbody>	
+	</table>    
+	</div>
+	</div>
+</div>
+	  

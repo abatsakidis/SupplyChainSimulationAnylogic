@@ -1,0 +1,23 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro inicializa um conjunto de transações na base de dados.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_begin_trans("Conexão")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Essa macro inicia um conjunto de transa&ccedil;&otilde;es no banco de dados.<br /><br />Nas aplica&ccedil;&otilde;es de fomul&aacute;rio, os eventos que essa macro pode rodar dependem da atualiza&ccedil;&atilde;o da base de dados (onAfterInsert, onAfterUpdate, onAfterDelete, onBeforeInsert, onBeforeUpdate or onBeforeDelete) s&atilde;o automaticamente &eacute; protegida por um controle de transa&ccedil;&atilde;o desde que a conex&atilde;o seja a mesma da aplica&ccedil;&atilde;o.<br /><br />Em outros casos, se o usu&aacute;rio deseja fazer um controle de transa&ccedil;&atilde;o, ele precisa iniciar essa macro e finalizar com "sc_commit_trans()" macro para confirar a atualiza&ccedil;&atilde;o ou o "sc_rollback_trans" para cancelar a transa&ccedil;&atilde;o.<br /><br />O par&acirc;metro "conex&atilde;o" &eacute; opicional, necess&aacute;rio apenas se o comando &eacute; executado numa base de diferente da especificada na aplica&ccedil;&atilde;o.</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

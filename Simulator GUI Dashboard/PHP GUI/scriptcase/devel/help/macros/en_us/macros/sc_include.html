@@ -1,0 +1,28 @@
+<HTML>
+	<HEAD>
+		<TITLE>This macro its used to "include" PHP routines.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_include("File", "Source")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>The <span class="corpo1">Scriptcase allows the user to catalogue his PHP scripts to use in various applications.<br /><br /><strong>To catalogue</strong> the scripts go to the ScripCase main menu at "<strong>Tools &gt; Library</strong>"&nbsp; and use the "upload" option existing in the interface. </span></p>
+<p>When a script is catalogued, the user has the option of the context choice where it will be stored, global level (Scriptcase), group level or user level.<br />- <strong>Public:</strong> All the projects will have acess.<br />- <strong>Project:</strong> Only the project users (the one's that will be loged at that time) will have acess.<br />- <strong>User:</strong> Only the user (the one's that will be loged at that time) will have acess.</p>
+<p><br />The <strong>sc_include</strong> macro, the user must inform the <strong>script name</strong> that will be included and the <strong>source</strong>.<br />- <strong>Script Name:</strong> Script name to be included.<br />- <strong>Source:</strong> Context that the script was saved, that could be:<br />- <strong>Sys or Blank:</strong> Scriptcase global level.<br />- <strong>Prj:</strong> Group level.<br />- <strong>Usr:</strong> User level.</p>
+<p><span class="corpo1"><br /><strong>Ex. 1:</strong> <strong>Including a catalogued script to global level.</strong><br />sc_include(my_script.php);</span></p>
+<p><span class="corpo1"><br /><strong><br />Ex. 2:</strong> <strong>Including a catalogued script to the group level.</strong><br />sc_include(my_script.php, grp);</span></p>
+<p><span class="corpo1"><br /><br /><strong>Ex. 3:</strong> <strong>Including a catalogued script to the user level.</strong><br />sc_include(my_script.php, usr); </span></p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

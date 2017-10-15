@@ -1,0 +1,70 @@
+/* CSS Document */
+
+body { overflow:hidden;}
+
+/* Verificar condicionais na pagina principal para IE */
+#principal { margin: 0px;overflow:hidden; }
+/* #principal { margin: 5px; height: 93.5%; } */
+/* #idmanual { width:99.5%; height:98%; border: 2px solid #DDDDDD } */
+/* - */
+
+
+#idframe {
+	width:100%; 
+	height:calc(100% - 140px); 
+}
+
+/*
+#idindice {
+	width:24%; 
+	height:92%; 
+	float:left;
+	background-color:#DDDDDD;
+}
+
+#idbody {
+	width:75%; 
+	height:92%; 
+	float:right;
+	border:none;
+}
+
+#idbarra{
+	width:1%;
+	height:92%;
+	float:left;
+	position:relative;
+	background-image:url(img/bg_barra.png);
+	background-repeat:repeat-y;
+	text-align:center;
+	vertical-align:middle;
+}
+*/
+
+a:link        {
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #FFFFFF;
+}
+
+
+a:visited        {
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+a:hover{
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #F4F4F4;
+}
+
+a:active{
+font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #FFFFFF;
+text-decoration: none;
+
+}

@@ -1,0 +1,88 @@
+<?php echo HTML::style('protected/app/views/blog/blog.css'); ?>
+
+
+	<div class="wrapper-header ">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-6">
+				  <div class="page-title">
+					<h3> <?php echo $pageTitle; ?> <small> <?php echo $pageNote; ?> </small></h3>
+				  </div>
+				</div>
+				<div class="col-sm-6 col-lg-6 ">
+				  <ul class="breadcrumb pull-right">
+					<li><a href="<?php echo URL::to(''); ?>">Home</a></li>
+					<li class="active"> <?php echo $pageTitle; ?></li>
+				  </ul>		
+				</div>
+			</div>		  
+		</div>
+	</div>
+
+
+  <div class="container">
+	<div class="row">
+
+	
+	
+	<?php if(Session::has('message')): ?>	  
+		   <?php echo Session::get('message'); ?>
+	<?php endif; ?>	
+
+	
+	<div class="col-md-9">
+	 <?php foreach ($rowData as $row): ?>
+		<div class="blog-post">
+			<div class="post-item">
+				<div class="title"><h3><a href="<?php echo URL::to('blog/read/'.$row->slug); ?>"> <?php echo $row->title; ?> </a></h3></div>
+				<div class="blog-info-small">
+					<i class="fa fa-folder icon-muted"></i> <span>  <a href="<?php echo URL::to('blog/category/'.$row->alias); ?>"><?php echo $row->name; ?></a>  </span> 
+					<i class="fa fa-user icon-muted"></i> <span> <?php echo $row->username; ?> </span>  
+					<i class="fa fa-calendar"></i> <span> <?php echo date("M j, Y " , strtotime($row->created)); ?> </span> 
+					<i class="fa fa-comments"></i> <span> <a href="<?php echo URL::to('blog/read/'.$row->slug.'#comments'); ?>"> <?php echo $row->comments; ?> comments</a> </span> 
+				</div>	
+				<div class="summary">
+				
+				<?php 
+				$content = explode("<hr />",$row->content);
+				echo SiteHelpers::renderHtml( $content[0] );
+				?>
+					<a href="<?php echo URL::to('blog/read/'.$row->slug); ?>" class="btn btn-success btn-sm"> Read More <i class="fa fa-angle-right"></i></a>
+				</div>
+			</div>	
+			
+		</div>	
+	 <?php endforeach; ?>
+	 
+	   <div class="col-sm-3">
+		<p class="text-center" style="line-height:30px;">
+		<?php echo Lang::get('core.grid_displaying'); ?> :  <b><?php echo $pagination->getFrom(); ?></b> 
+		<?php echo Lang::get('core.grid_to'); ?> <b><?php echo $pagination->getTo(); ?></b> 
+		<?php echo Lang::get('core.grid_of'); ?> <b><?php echo $pagination->getTotal(); ?></b>
+		</p>
+	   </div>
+		<div class="col-sm-4">			 
+	  <?php echo $pagination->appends($pager)->links(); ?>
+	  </div>
+	
+	</div>
+	
+	<div class="col-md-3">
+		<?php echo $__env->make('blog.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+	
+	</div>
+	
+
+	</div>	  
+	
+<script>
+$(document).ready(function(){
+
+	$('.do-quick-search').click(function(){
+		$('#SximoTable').attr('action','<?php echo URL::to("blog/multisearch"); ?>');
+		$('#SximoTable').submit();
+	});
+	
+});	
+</script>		

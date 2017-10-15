@@ -1,0 +1,14 @@
+<HTML>
+	<HEAD>
+		<TITLE>Este evento ocorre uma unica vez quando a aplicacao e carregada.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+<p>Este evento ocorre uma &uacute;nica vez antes da exibi&ccedil;&atilde;o do formulario do filtro. Podemos utilizar o evento para "setar" alguns defaults para os campos do filtro ex:</p>
+<p><span style="color: #003366;">{empresa} = [glo_empresa];</span></p>
+<p>Campos no formato data s&atilde;o tratados diferentemente, recebendo um sufixo dia, mes e/ou ano. Por exemplo, o campo {dataNasc} ser&aacute; tratado da seguinte forma:</p>
+<p><span style="color: #003366;">{dataNasc_dia}=date("d");</span></p>
+<p><span style="color: #003366;">{dataNasc_mes}=date("m");</span></p>
+<p><span style="color: #003366;">{dataNasc_ano}=date("Y");</span></p>
+<p>&nbsp;</p>
+</HTML>

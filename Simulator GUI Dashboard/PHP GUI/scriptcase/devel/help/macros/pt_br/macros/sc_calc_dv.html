@@ -1,0 +1,66 @@
+<HTML>
+	<HEAD>
+		<TITLE>Esta macro executa o cálculo de dígitos verificadores.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_calc_dv(Dígito, Resto, Valor, Módulo, Pesos, Tipo)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Esta macro tem por objetivo o c&aacute;lculo de d&iacute;gitos verificadores.</span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"> 
+<table style="border=" border="0">
+<tbody>
+<tr>
+<td width="15%" align="left" valign="top"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">D&iacute;gito</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Vari&aacute;vel na qual ser&aacute; retornado o d&iacute;gito calculado.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Resto</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Vari&aacute;vel na qual ser&aacute; retornado o "resto" da divis&atilde;o do c&aacute;lculo do d&iacute;gito.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Valor</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou Vari&aacute;vel sobre o qual ser&aacute; calculado o d&iacute;gito.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">M&oacute;dulo</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou Vari&aacute;vel contendo o m&oacute;dulo a ser utilizado. Se omitido ser&aacute; assumido o m&oacute;dulo "11".</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Pesos</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou Vari&aacute;vel contendo os pesos a serem utilizados. Se omitido ser&atilde;o assumidos os valores "98765432".</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Tipo</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou Vari&aacute;vel contendo o tipo de c&aacute;lculo das 
+parcelas a ser utilizado, sendo: 1 para soma normal dos valores das 
+parcelas e 2 para soma de cada algarismo das parcelas. Se omitido ser&aacute; 
+assumido o tipo "1". </span></td>
+</tr>
+</tbody>
+</table>
+</span></p>
+<p>&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1:</strong><br />sc_calc_dv({meu_dig}, {meu_resto}, 1234567, 11, 98765432, 1);<br />Calculo parcelas: 7x2= 14 ; 6x3=18 ; 5x4=20 ; 4x5=20 ; 3x6=18 ; 2x7=14 ; 1x8=8 <br />Soma parcelas : 14+18+20+20+18+14+8 = 112<br />Resto da divisao de 112 / 11 = 2<br />D&iacute;gito : 11 - 2 = 9</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2:</strong><br />sc_calc_dv({meu_dig}, {meu_resto}, 1234567, 10, 12, 2);<br />Calculo parcelas: 7x2= 14 ; 6x1=6 ; 5x2=10 ; 4x1=4 ; 3x2=6 ; 2x1=2 ; 1x2=2 <br />Soma parcelas : 1+ 4+6+1+0+4+6+2+2 = 26<br />Resto da divisao de 26 / 10 = 6<br />D&iacute;gito : 10 - 6 = 4</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>
