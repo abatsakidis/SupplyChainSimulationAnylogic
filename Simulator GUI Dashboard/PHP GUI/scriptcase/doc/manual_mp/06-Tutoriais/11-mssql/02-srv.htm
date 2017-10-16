@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>Connecting with MS SQL Server Native SRV - Windows</title></head>
+
+<body>
+<h1>Connecting with MS SQL Server Native SRV - Windows</h1>
+<p>&nbsp;</p>
+<p>To enable the extension MS SQL Server Native SRV is necessary to install the Native Client 2012.</p>
+<p>&nbsp;</p>
+<p>	The following operating systems are recommended:</p>
+<ul>
+  <li><strong>Operational Systems</strong></li>
+	<p>- Windows Server 2012</p>
+    <p>- Windows 8</p>
+	<p>- Windows Server 2008	</p>
+	<p>- Windows 7</p>
+	<p>&nbsp; </p>
+  <li><strong>Download of SQL Server Native Client</strong></li>
+
+  <p><a href="http://cdn1.netmake.com.br/download/Native_Client_SQL_Server2012/sqlncli_x64.msi" target="_blank">Native Client 64 bits</a></p>
+  <p><a href="http://cdn1.netmake.com.br/download/Native_Client_SQL_Server2012/sqlncli_x86.msi" target="_blank">Native Client 32 bits</a></p>
+</ul>
+<p>&nbsp;</p>
+<p>Below is the step-by-step to install<strong> Native Client SQL Server 2012</strong> and connect to Scriptcase.</p>
+<p>&nbsp;</p>
+<h2>Installing SQL Server Native Client 2012</h2>
+<p>&nbsp;</p>
+<p> After downloading the file, run the installer and follow the steps below: </p>
+<p><img src="img/client_1.jpg" /></p>
+<p>&nbsp;</p>
+<p>Accept the license agreement and click Next.</p>
+<p><img src="img/client_2.jpg" /></p>
+<p>&nbsp;</p>
+<p>Allow this option checked the option "<strong>Client Components</strong>" . </p>
+<p>Note: No need to check the option &quot;Sql Server Native Client SDK&quot;, because the components you'll need is in the first option..</p>
+<p><img src="img/client_3.jpg" /></p>
+<p>&nbsp;</p>
+<p>Click Install to begin installing the client.</p>
+<p><img src="img/client_4.jpg" /></p>
+<p>&nbsp;</p>
+<p>The program features you selected are being installed.</p>
+<p><img src="img/client_5.jpg" /></p>
+<p>&nbsp;</p>
+<p>Click Finish to exit.</p>
+<p><img src="img/client_6.jpg" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h2>Connecting on Scriptcase</h2>
+<p>&nbsp;</p>
+<p>To create the connection, choose the model DBMS:&nbsp;<em><strong>MSSQL Server NATIVE SRV</strong></em></p>
+<p> <img title="Tela de Conex&atilde;o do scriptcase" src="../img/1391_1.jpg" alt="Tela de Conex&atilde;o do scriptcase" /></p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Server/Host (Name or IP)</strong>: Enter the IP from server is located where the MS SQL Server.</li>
+<li><strong>Username</strong>: Enter the User Database.</li>
+<li><strong>Password</strong>: Enter the Password Database.</p>
+<li><strong>Database</strong>: Click "List database" and select the required database.</li>
+
+  <li><strong>Filter</strong> - Clicking on this tab, the following screen appears: </li>
+</ul>
+<p><img src="../img/aba_filter.jpg" /></p>
+<ul>
+  <li><strong>Display</strong> - Allows the display filter tables, views, system tables and procedures.</li>
+  <li><strong>Filters</strong> - Lets you define which tables and owners will be displayed. <br />
+    <br />
+  </li>
+</ul>
+<p>For more details on configuration the connection of database data click on Advanced tab.</p>
+<p><img src="../img/advanced_no_client_encoding.jpg"  /></p>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>Decinal separator</strong> - Select the type of separator between comma and point.. </li>
+  <li><strong>Persistent connection</strong> - Persistent connections are links that do not close when the execution of your script ends.</li>
+  <li><strong>Use schema before the table name</strong> - Allows the use of schemas before the names of the tables. </li>
+</ul>
+<p>To end the connection, click "Save".</p>
+</body>
+</html>

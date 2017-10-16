@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Progress</title>
+</head>
+
+<body>
+<h1>Creating the ODBC for Progress </h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/14-odbc/00-odbc.htm" target="_self">Generic ODBC</a> >> Progress</td></tr></table>
+
+<p><strong>Steps to do:</strong></p>
+<ul>
+  <li>Install Merant Progress 92 ODBC.</li>
+  <li>Create a ODBC data Source on the same ScriptCase&acute;s server. </li>
+</ul>
+<p>&nbsp;</p>
+<p class="titulo"><strong>Installing Progress</strong></p>
+<ol>
+  <li>Enable ODBC (Merant ODBC) &nbsp;option during Progress Installation.  </li>
+  <li>Set environment variables:<br />
+    DLC - C:\Program File\Progress (according to final Progress path)<br />
+    PATH - %DLC%\bin<br />
+    PROMSGS - %DLC%\promsgs<br />
+  </li>
+  <li>Create a directory to save your test database, ex.: C:\sports.</li>
+  <li>Open Progress &nbsp;"Data Dictionary" tool and choose "Create a New Database" option.</li>
+  <li>Choose "A Copy of the SPORTS Database" option and enter the full path to the file. Ex:&nbsp;C:\sports\sports.db</li>
+  <li>Edit C:\Windows\system32\drivers\etc\services file.</li>
+  <li>Add "sports" services to a free port using&nbsp;"tcp" protocol, ex: 2050</li>
+  <li> Create a load.bat file in c:\sports directory.</li>
+  <li>Put the following data in load.bat file, with the port defined in services file on the -S parameter:<br />
+    <br />
+    @echo off<br />
+    cd \<br />
+    cd c:\sports<br />
+    _mprosrv sports -n 4 -Ma 1 -Mn 21 -Mpb 10 -N tcp -S 2050<br />
+  </li>
+  <li>Run the load.bat file.</li>
+  <li>Open the Progress "Data Administration".</li>
+  <li>Open the menu&nbsp;"Database :: Connect".</li>
+  <li>On the new window, enter the database full path: C:\sports\sports.db</li>
+  <li>Click in: "Options" and inform the following:<br />
+    Network - TCP<br />
+    Service Name - sports<br />
+  </li>
+  <li>Click in OK and open the menu option "Admin :: Security :: Edit User List".</li>
+  <li>Add user "sysprogress", use "sysprogress" as password  for this example.</li>
+  <li>Close the&nbsp;"Data Administration".</li>
+</ol>
+<p class="titulo"><strong>Creating a PROGRESS ODBC</strong></p>
+<ol>
+  <li>Access Windows Control Panel to create a new ODBC Source.</li>
+</ol>
+<p class="nota">If you are using Windows 7 x64  or Windows 8 x64, you must use the Control Panel located in <b>C:/WINDOWS/SysWOW64/odbcad32.exe</b> to create the ODBC.</p>
+<ol>
+  <li>Open "System Source" tab and click "Add".</li>
+  <li>Choose "MERANT Progress SQL92" driver.</li>
+  <li>Put a name to your ODBC and set these parameters:<br />
+    Hostname - localhost<br />
+    Port Number - your port defined in&nbsp;"services", ex: 2050<br />
+    Database Name - sports<br />
+    User ID - sysprogress<br />
+    Password - sysprogress<br />
+  </li>
+  <li>Test and create the connection.</li>
+</ol>
+<p>&nbsp;</p>
+<p>Once the ODBC Data Source is created, we can proceed with the connection in Scriptcase: </p>
+<ul>
+   <li> <a href="../../06-Tutoriais/14-odbc/04-odbc_sc.htm" target="_self"> Connecting to an ODBC data source in Scriptcase. </a></li>
+</ul>
+</body>
+</html>

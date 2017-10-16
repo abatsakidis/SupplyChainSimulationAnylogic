@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>Templates</TITLE>
+	<META NAME="GENERATOR" CONTENT="BrOffice.org 2.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20061002;9264548">
+	<META NAME="CHANGED" CONTENT="20061002;9271195">
+	<STYLE>
+	<!--
+		H1 { font-family: "Tahoma", "Arial"; font-size: 15pt }
+		P { font-family: "Arial", "Helvetica", sans-serif; font-size: 9pt; text-align: justify }
+		A:visited { color: #330099 }
+		A:link { color: #330099 }
+	-->
+	</STYLE>
+    <link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+<!--
+.style1 {color: #CC0000}
+-->
+    </style>
+</HEAD>
+<BODY>
+<H1>TEMPLATES</H1>
+<p><SPAN>Templates resource allows to include HTML files to be used in Headers, Footers and Custom Grids(User defined orientation).</SPAN>   For example: billets, invoices, business cards, etc.  </p>
+<p><IMG SRC="img/templates.jpg" NAME="figura1" ALIGN=BOTTOM BORDER=0>
+  <BR>
+  <span class="sob_figura"><SPAN>Figure1: Edit Templates Interface: Heading, Free Format and Footer.</SPAN></span></P>
+<p>&nbsp;</P>
+<p>It should be a HTML file. We can stipulate where Scriptcase fields will be displayed on the HTML file using "curly brackets" {variable}. As you can see below:<br>
+  <br>
+HTML Code<br>
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;<br>
+&nbsp; &nbsp; &nbsp; &lt;tr&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width="247" height="96" align="left" valign="center"&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;font face="verdana" style="font-size:11px"&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;b&gt;{Name}&lt;/b&gt;&lt;br&gt;{Address}&lt;br&gt;{City}- {State}&lt;br&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {ZIP}<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/font&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+&nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+<br>
+Running the HTML code above.<br>
+{Name}<br>
+{Address}<br>
+{City}-{State}<br>
+{ZIP} </P>
+<br/>
+<p>
+Remember that everthing that comes insde curly brackets are making reference to the application fields, so when there is a {Name} it will be talking about the field "Name" of your application.
+</p><p>&nbsp;</P>
+
+<p> In the Template we can define a Loop feature using a flag (see in red):<br>
+  <br>
+  C&oacute;digo HTML<br>
+  &lt;table border="0" cellspacing="0" cellpadding="0"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &lt;tr&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span>&lt;!-- BEGIN bl2 --&gt;</span><br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width="247" height="96" align="left" valign="center"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;font face="verdana" style="font-size:11px"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;b&gt;{Name}&lt;/b&gt;&lt;br&gt;{Address}&lt;br&gt;{City}- {State}&lt;br&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {ZIP}<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/font&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span>&lt;!-- END bl2 --&gt;</span><br>
+  &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+  &lt;/table&gt;<br>
+  <br>
+  <br>
+  The red parts define where the loop will start and finish. The iterations amount is defined by "Columns per Page" of the Grid.<br>
+  <br>
+  eg: If "Columns per Page" is 3 so it will display the following result.<br>
+  <br>
+  HTML code<br>
+  &lt;table border="0" cellspacing="0" cellpadding="0"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &lt;tr&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width="247" height="96" align="left" valign="center"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;font face="verdana" style="font-size:11px"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;b&gt;{Name}&lt;/b&gt;&lt;br&gt;{Address}&lt;br&gt;{City}- {State}&lt;br&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {ZIP}<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/font&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width="247" height="96" align="left" valign="center"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;font face="verdana" style="font-size:11px"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;b&gt;{Name}&lt;/b&gt;&lt;br&gt;{Address}&lt;br&gt;{City}- {State}&lt;br&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {ZIP}<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/font&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td width="247" height="96" align="left" valign="center"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;font face="verdana" style="font-size:11px"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;b&gt;{Name}&lt;/b&gt;&lt;br&gt;{Address}&lt;br&gt;{City}- {State}&lt;br&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {ZIP}<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/font&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+  &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+  &lt;/table&gt;<br>
+  <br>
+  Running the HTML Code above.<br>
+</P>
+<table>
+  <tbody>
+    <tr>
+      <td valign="top">{Name}<br>
+        {Address}<br>
+        {City}-{State}<br>
+        {ZIP}</td>
+      <td valign="top">{Name}<br>
+        {Address}<br>
+        {City}-{State}<br>
+        {ZIP}</td>
+      <td valign="top">{Name}<br>
+        {Address}<br>
+        {City}-{State}<br>
+        {ZIP}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+Once ".html" file iscreated  include it in Scriptcase accessing "Tools&gt;&gt;Layout&gt;&gt;Templates".<br>
+<br>
+Select "Free Format" and Upload the file.<br>
+<br>
+Then Create a new Grid application and select "User Defined" Option in "Orienation" setting.<br>
+<br>
+Access "Grid&gt;&gt;Layout&gt;&gt;Settings" and select the "Body Template".<br>
+<br>
+Now associate the template variables with the Grid fields. (Grid&gt;&gt;Select Fields)<br>
+<br>
+Format the fields and Run.
+</BODY>
+</HTML>

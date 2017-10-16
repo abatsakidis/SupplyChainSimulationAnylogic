@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Connecting with MS SQL Server ODBC</title></head>
+
+<body>
+<h1>Connecting with MS SQL Server ODBC</h1>
+<p>&nbsp;</p>
+<p>To connect to the MS SQL Server ODBC you must create a data source system on the same Scriptcase server .</p>
+<p>For this go to: <strong>Control Panel</strong> &gt; <strong>System and Security</strong> &gt; <strong>Administrative Tools</strong> &gt; <strong>Data Sources ODBC (32 bits)</strong></p>
+<p>&nbsp;</p>
+<p>Note: The data source system must be created by <strong>&quot;data source administrator ODBC 32-bit</strong>&quot;, because PHP on Windows is compiled using <strong>32 bit</strong> architecture.</p>
+<p><img src="img/win_odbc_32.jpg" alt="" /></p>
+<p><em><strong></strong></em></p>
+<p>&nbsp;</p>
+<p>After creating the data source system, simply create a MS SQL Server ODBC connection on Scriptcase.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>CREATING SCRIPTCASE CONNECTION (MS SQL SERVER ODBC)</h2>
+<p> &nbsp;&nbsp;&nbsp; Access ScriptCase and we will create a connection to the database from MSSQL Server ODBC.<br />
+</p>
+<p><strong>Step 1: </strong>Access your ScriptCase, create a new project, and on the toolbar go to the highlighted icon in the figure below, referring to the "New Connection".</p>
+<p class="subtitulo"><br />
+  <br />
+  <img src="../img/544_11.jpg"  /></p>
+<p class="subtitulo">&nbsp;</p>
+<p><strong>Step 2: </strong>After clicking "New" will show up below the screen to create connection, click the image of MSSQL Server database.</p>
+<p>&nbsp;</p>
+<p><img src="../img/criar_conex_mssql.jpg"  /></p>
+<p>&nbsp;</p>
+<p><strong>Step 3: </strong>In the image below, fill in the required specifications:<br />
+</p>
+<p><img src="../img/criar_conex_mssq_odbc_1.jpg"  /></p>
+<ul>
+  <li><strong>Connection name</strong> - Define a name for your new connection.</li>
+  <li><strong>DBMS Type</strong> - Sets whether the type DBMS is ADO, Server, ODBC or Native SRV. </li>
+  <li><strong>Test Connection</strong> - Displays whether the connection was successful or not. </li>
+  <li><strong>ODBC Name</strong> - Inform the name of your ODBC. </li>
+  <li><strong>Username</strong> - Inform the user to get access to your MSSQL. </li>
+  <li><strong>Password</strong> - Enter the password to get access to your MSSQL. </li>
+    <li><strong>Filter</strong> - Clicking on this tab, the following screen appears: </li>
+</ul>
+<p><img src="../img/aba_filter.jpg" /></p>
+<ul>
+  <li><strong>Display</strong> - Allows the display filter tables, views, system tables and procedures.</li>
+  <li><strong>Filters</strong> - Lets you define which tables and owners will be displayed. <br />
+    <br />
+  </li>
+</ul>
+<p>For more details on configuration the connection of database data click on Advanced tab.</p>
+<p><img src="../img/advanced_no_client_encoding.jpg"  /></p>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>Decinal separator</strong> - Select the type of separator between comma and point.. </li>
+  <li><strong>Persistent connection</strong> - Persistent connections are links that do not close when the execution of your script ends.</li>
+  <li><strong>Use schema before the table name</strong> - Allows the use of schemas before the names of the tables. </li>
+</ul>
+<p><strong>Step 4:</strong> Always test your connection before completing the same. If the message "Connected successfully" appears, complete the establishment of the connection.<br />
+  If fails to connect, review the fields populated, mainly user name and password ODBC. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

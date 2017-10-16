@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+
+<title>IBM DB2</title>
+</head>
+
+<body>
+<h1>IBM DB2 Connection.</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> IBM DB2</td></tr></table>
+<p><span class="titulo"><b>Windows IBM DB2 database connection.</b></span><b><br>
+  </b><br>
+ <p>To build the ibm_db2 extension, the DB2 application development header files and libraries must be installed on your system. DB2 does not install these by default, so you may have to return to your DB2 installer and add this option. The header files are included with the DB2 Application Development Client freely available for download from the IBM DB2 Universal Database  <a href="http://www-304.ibm.com/support/docview.wss?uid=swg21256235">IBM DB2 Universal</a></p>
+      
+ <p>If you add the DB2 application development header files and libraries to a Linux or Unix operating system on which DB2 was already installed, you must issue the command <strong>db2iupdt -e</strong> to update the symbolic links to the header files and libraries in your DB2 instances.</p>
+ 
+  <p>ibm_db2 is a » PECL extension, (Repository for PHP Extensions, providing a directory of all known extensions and hosting facilities for downloading and development of PHP extensions)
+  so follow the instructions in <a href="http://www.php.net/manual/pt_BR/install.pecl.intro.php">Installation of PECL extensions</a> o install the ibm_db2 extension for PHP. Issue the configure command to point to the location of your DB2 header files and libraries as follows:</p>	<br/> <strong>bash$ ./configure --with-IBM_DB2=/path/to/DB2</strong>
+  
+<p>&nbsp;</p>
+<p>On the links below select the desired option</p>
+<p>&nbsp;</p>
+<ul>
+  <li><a href="../../06-Tutoriais/02-db2/02-db2-sc1.htm" target="_self"> Creating a Scriptcase Connection (DB2 Native).</a></li>
+  <li><a href="../../06-Tutoriais/02-db2/03-db2-sc2.htm" target="_self"> Creating a Scriptcase Connection (DB2 ODBC Native).</a></li>
+  <li><a href="../../06-Tutoriais/02-db2/04-db2-sc3.htm" target="_self"> Creating a Scriptcase Connection (DB2 ODBC Generic).</a></li>
+  </ul>
+
+</body>
+</html>

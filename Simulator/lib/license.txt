@@ -1,0 +1,27 @@
+Licensing information
+
+AnyLogic Engine Runtime License Agreement
+- see 'anylogicruntimelicense.txt' file in this directory
+
+
+
+This product includes the following software:
+
+Apache POI (http://poi.apache.org) - Copyright (c) Apache Software Foundation (license: apache-LICENSE-2.0.txt), see also apache-poi-NOTICE.txt
+
+Aviatrix3D (http://aviatrix3d.j3d.org) - (license: lgpl-2.1.txt)
+	- modified version is available here: http://www.anylogic.com/files/av3dsrc.zip
+
+J3D.org libraries (http://code.j3d.org) - Java 3D Community (license: lgpl-2.1.txt)
+	- modified jar files have the only distinction from originals - the Extension-List inside manifest.mf files
+
+Java OpenGL libraries (http://opengl.j3d.org)
+	- Copyright (c) 2005, Yumetech, Inc. (license: jogl-swt-bsd.txt)
+	- Copyright (c) 2003 Sun Microsystems, Inc. (license: jogl-sun-bsd.txt)
+
+OpenMap (http://openmap.bbn.com/) - Copyright (c) 2005 BBNT Solutions LLC. All rights reserved. (license: openmap-license.txt)
+
+URIlib library (http://www.vlc.com.au/urilib) - (c) Virtual Light Company (license: GNU lgpl, http://www.gnu.org/copyleft/lesser.html)
+
+Xj3D (http://www.xj3d.org) - a project of Web3D Consortium (license: lgpl-2.1.txt)
+	- modified version is available here: http://www.anylogic.com/files/xj3dsrc.zip

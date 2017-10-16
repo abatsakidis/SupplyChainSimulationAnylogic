@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>Enabling Oracle on Linux</title>
+</head>
+
+<body>
+<h1><strong>Enabling Oracle on Linux</strong></h1>
+<table width="100%" border="0"><tr>
+  <td align="right"><a href="../../../home.htm">Home</a> >> <a href="../../../06-Tutoriais/00-tutoriais.htm" target="_self">Connection</a> >> <a href="../../../06-Tutoriais/08-oracle/00-oracle.htm" target="_self">Oracle</a> >> Oracle on Linux</td></tr></table>
+<p>&nbsp;</p>
+<p>We will review the steps for us to enable Oracle on Linux, as well as the Oracle connection in ScriptCase.</p>
+<p>This article was based in Debian Wheezy distribution using PHP 5.4 manually compiled.</p>
+<p>&nbsp;</p>
+<p><strong>1 -</strong> Enter the Oracle's website and download the oracle instant client basic and devel (<a href="http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html" target="_blank">www.oracle.com</a>). Choose the version according to your operational system and download with .<strong>rmp</strong> extension.</p>
+<p><img src="../img/oracle_linux1.jpg"/></p>
+<p>&nbsp;</p>
+<p><strong>2 -</strong> Install the Alien program. It will convert the file from .rmp to .<strong>deb</strong>, this extension is recognized in debian.</p>
+<p><img src="../img/alien1.jpg" /></p>
+<p>&nbsp;</p>
+<p><strong>3</strong> - Now after the program is installed, run the following command to convert the .rpm file to .<strong>deb</strong></p>
+<p><img src="../img/alien2.jpg" width="613" /></p>
+<p>&nbsp;</p>
+<p><strong>4</strong> - In this step we will finally install Oracle instant client. Run the following command to perform the installation.</p>
+<p><img src="../img/alien3.jpg" /></p>
+<p>&nbsp;</p>
+<p><strong>5</strong> - Download the extension's installer for Oracle on Linux.</p>
+<a href="http://pecl.php.net/package/oci8" target="_blank">Oracle Extensions - Linux</a>
+<p>&nbsp;</p>
+<p><strong>6</strong> - Extract this file and then open the extracted folder.</p>
+<p><strong>tar xzf oci8-2.0.8.tgz</strong></p>
+<p><strong>cd oci8-2.0.8</strong></p>
+<p>&nbsp;</p>
+<p><strong>7</strong> - Now we need to configure PHP with Oracle instant client. After opening the folder oci8-2.0.8, execute the following commands:</p>
+<p><strong>./configure</strong></p>
+<p><strong>make</strong></p>
+<p><strong>make install</strong></p>
+<p>&nbsp;</p>
+<p><strong>Note</strong>: If after running the command, <strong>./configure</strong>, an error occurs, it is due to PHP havent found the path for the instant client. To correct this error only execute the following command and <strong>repeat step 7 again</strong>.</p>
+<p><img src="../img/oracle_linux2.jpg" /></p>
+<p>&nbsp;</p>
+<p><strong>8 </strong>- After all the steps above, now add in php.ini the following extent:</p>
+<p><strong>extension=oci8.so</strong></p>
+<p>&nbsp;</p>
+<p><strong>9 - </strong>Restart the web service.</p>
+<p>&nbsp;</p>
+<p><strong>10 - </strong>Check your diagnosis if your Oracle 8 is enabled.</p>
+<p><img src="../img/oracle_ok.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Connecting on Scriptcase</h2>
+<p>&nbsp;</p>
+<p>Open Scriptcase and make a new Oracle connection.</p>
+<p><img src="../img/conn_oracle8_sc.jpg"  /></p>
+<ul>
+  <li><strong>Connection Name</strong> - Set the name of your new connection.</li>
+  <li><strong>DBMS Type</strong> - Version of Oracle used. </li>
+  <li><strong>Test Connection</strong> - Displays whether the connection was successful or not. </li>
+  <li><strong>TSNAME</strong> - Should be informed the IP of the server where the database is installed and the instance name created in the Oracle installation. </li>
+  <li><strong>Username</strong> - Enter the user to grant access to your Oracle.</li>
+  <li><strong>Pasword</strong> - Enter the password to grant access to your Oracle.</li>
+</ul>
+<p>&nbsp;</p>
+<strong>Filter:</strong> Clicking on this tab, the following screen appears:
+</ul>
+<p><img src="../img/filtro_oracle8_sc.jpg"  /><br />
+</p>
+<ul>
+  <li><strong>Show</strong> - Allows the display filter tables, views, system tables and procedures.</li>
+  <li><strong>Searches</strong> - Determines which tables and owners will be displayed.</li>
+</ul>
+<p>&nbsp;</p>
+<p>For more details on configuring the database connection to the data click on the Advanced tab.<br />
+  <br />
+</p>
+<p><img src="../img/avan_oracle8_sc.jpg"  /></p>
+<p>&nbsp;</p>
+<ul>
+ <li><strong>Client encoding</strong> - Encoding for your database. </li>
+<li><strong>Decimal Separator</strong> - Select the type of separator between comma and point. </li>
+<li><strong>Persistent Connection</strong> - Persistent connections are links that do not close when the execution of your script ends.</li>
+<li><strong>Use schema before the table name</strong> - Allows the use of schemas before the names of the tables. </li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><a class="linkBack" href="../../../06-Tutoriais/08-oracle/00-oracle.htm" target="_self"> Back </a></p>
+
+</body>
+</html>

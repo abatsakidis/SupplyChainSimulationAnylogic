@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>Enabling Oracle ODBC on Windows - Manual Environment</title>
+</head>
+
+<body>
+<h1><strong>Enabling Oracle ODBC on Windows - Manual Environment </strong></h1>
+<table width="100%" border="0"><tr>
+<td align="right"><a href="../../../../home.htm">Home</a> >> <a href="../../../../06-Tutoriais/00-tutoriais.htm" target="_self">Connection</a> >> <a href="../../../../06-Tutoriais/08-oracle/00-oracle.htm" target="_self">Oracle</a> >> Oracle ODBC on Windows</td></tr></table>
+<p><br />
+</p>
+<p>We will see the steps we enable for Oracle ODBC on Windows in a manual environment, as well as the Oracle connection on the ScriptCase.</p>
+<p>&nbsp;</p>
+<p><strong>1 - </strong>First we will enter the website and download the Oracle's instant client basic and odbc (<a href="http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html" target="_blank">www.oracle.com</a>). Choose the 32-bit version because of compatibility of PHP.</p>
+
+<p><img src="../../img/oracle_odbc.jpg" /></p>
+
+
+<p>&nbsp;</p>
+<p><strong>2 - </strong>Extract the folder <strong>instant client basic</strong> in the root of your computer. (eg.: C:\instantclient_12_1)</p>
+<p></p>
+<p>&nbsp;</p>
+<p><strong>3 -</strong>Let's add on the <strong>PATH</strong> system the path of this folder:</p>
+
+<div style="padding-left: 30px;"><strong>3.1 - </strong>Go to Control Panel &gt; System &gt; Advanced System Settings. </div>
+<div style="padding-left: 30px;">&nbsp;</div>
+<div style="padding-left: 30px;"><strong>3.2 - </strong>On the Advanced tab &gt; Click on Environment Variables.</div>
+<div style="padding-left: 30px;">&nbsp;</div>
+<div style="padding-left: 30px;"><img src="../../img/oracle2.jpg" alt="" width="394" height="436" /></div>
+<p>&nbsp;</p>
+<div style="padding-left: 30px;"><strong>3.3 - </strong>Add the path as shown below:</div>
+<div style="padding-left: 30px;"><img src="../../img/oracle3.jpg" alt="" /></div>
+<p>&nbsp;</p>
+<p><strong>4 </strong>- Extract instant client odbc insert and all contained files inside the instant client folder. (eg.: C:\instantclient_12_1\)</p>
+<div style="padding-left: 30px;"><strong>4.1 - </strong><span id="result_box2" lang="en" xml:lang="en">After copied the files, open the folder C: \ instantclient_12_1 \ and run a file</span> <strong>odbc_install.exe</strong></div>
+<p>&nbsp;</p>
+<p><strong>5 - </strong>Restart the computer so that enable the environment variables.</p>
+<p>&nbsp;</p>
+<p><strong>6 - </strong>Create a data source system to the driver: <strong>Oracle in instantclient_12_1</strong></p>
+<p><strong>Obs: </strong>The Administrator of the ODBC data source should be initiated with 32 bits.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Connecting on Scriptcase</h2>
+<p>&nbsp;</p>
+<p>Open Scriptcase and make a new Oracle connection.</p>
+<p><img src="../../img/conn_oracleodbc_sc.jpg"  /></p>
+<ul>
+  <li><strong>Connection Name</strong> - Set the name of your new connection.</li>
+  <li><strong>DBMS Type</strong> - Version of Oracle used. </li>
+  <li><strong>Test Connection</strong> - Displays whether the connection was successful or not. </li>
+  <li><strong>ODBC Name</strong> - Should be informed the name of the ODBC administrator created in ODBC data sources from the operating system. </li>
+  <li><strong>Username</strong> - Enter the user to grant access to your Oracle.</li>
+  <li><strong>Pasword</strong> - Enter the password to grant access to your Oracle.</li>
+</ul>
+<p>&nbsp;</p>
+<strong>Filter:</strong> Clicking on this tab, the following screen appears:
+</ul>
+<p><img src="../../img/filtro_oracle8_sc.jpg"  /><br />
+</p>
+<ul>
+  <li><strong>Show</strong> - Allows the display filter tables, views, system tables and procedures.</li>
+  <li><strong>Searches</strong> - Determines which tables and owners will be displayed.</li>
+</ul>
+<p>&nbsp;</p>
+<p>For more details on configuring the database connection to the data click on the Advanced tab.<br />
+  <br />
+</p>
+<p><img src="../../img/avan_oracle8_sc.jpg"  /></p>
+<p>&nbsp;</p>
+<ul>
+ <li><strong>Client encoding</strong> - Encoding for your database. </li>
+<li><strong>Decimal Separator</strong> - Select the type of separator between comma and point. </li>
+<li><strong>Persistent Connection</strong> - Persistent connections are links that do not close when the execution of your script ends.</li>
+<li><strong>Use schema before the table name</strong> - Allows the use of schemas before the names of the tables. </li>
+</ul>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><a class="linkBack" href="../../../../06-Tutoriais/08-oracle/00-oracle.htm" target="_self"> Back </a></p>
+
+</body>
+</html>

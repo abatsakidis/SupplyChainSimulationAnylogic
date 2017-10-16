@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+	<meta name="create" content="José Arteiro, 27-05-2010">
+    
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<TITLE>Javascript</TITLE>
+		<link rel=Stylesheet type="text/css" media=all href="../../scriptcase.css">
+	</HEAD>
+	
+	<BODY>
+	<H1>JAVASCRIPT</H1>
+    <p>The concept of Edit Javascript is to associate to
+      the form fields events in Javascript, that means, for each field you
+      can edit actions associated to its events.</P>
+    <p><IMG SRC="img/escolher_campo_evento.jpg" NAME="figura1" BORDER=0 ALIGN=BOTTOM><BR>
+      <span class="sob_figura">Image1: Edit Javascript Interface</SPAN></P>
+    <p><STRONG>Attributes:</STRONG></P>
+    <UL>
+      <LI><STRONG>Choose	the object </STRONG>- In
+        this combobox are shown all fields that are part of the form
+        application, as the object form &ldquo;form&rdquo;.
+      <LI><STRONG><B>Choose event</B> - </STRONG>In this combobox we must choose the event associated to the field, for
+        whom we will write the Javascript code. See the available events:
+        <UL>
+          <LI><STRONG><SPAN>onclick</SPAN></STRONG><SPAN> - Occurs on the mouse click over the field <A HREF="#exemplo_onclick">See
+            Example</A></SPAN>
+          <LI><STRONG><SPAN>onblur</SPAN></STRONG><SPAN> - Occurs when the objects lose focus. <A HREF="#exemplo_onblur">See
+            example</A></SPAN>
+          <LI><STRONG><SPAN>onChange</SPAN></STRONG><SPAN> - Occurs always that the object lose focus and the value is
+            modified. <A HREF="#exemplo_onchange">See example</A></SPAN>
+          <LI><STRONG><SPAN>onFocus</SPAN></STRONG><SPAN> - Occurs always that the object gains focus. &nbsp;<A HREF="#exemplo_onfocus">See
+            example</A></SPAN>
+          <LI><STRONG><SPAN>onMouseOver
+            -</SPAN></STRONG><SPAN> Occurs always that the
+              mouse pointer is over the field. <A HREF="#exemplo_onmouseover">See
+                example</A></SPAN>
+          <LI><STRONG><SPAN>onMouseOut</SPAN></STRONG><SPAN> - Always that the mouse pointer goes out of the field. <A HREF="#exemplo_onmouseout">See example</A></SPAN><br>
+            <br>
+        </UL>
+      <LI><STRONG><SPAN>Events
+        linked to the form - </SPAN></STRONG><SPAN>The
+          events below are directly linked to the form.</SPAN>
+        <UL>
+          <LI><STRONG><SPAN><B>OnLoad
+            -</B></SPAN></STRONG> <SPAN>This
+              event occurs when the page is loaded, that means, when you navigate
+              from a register to other. When click on the buttons (new, insert,
+              previous, etc).</SPAN>
+          <LI><STRONG><SPAN><B>OnSubmit</B></SPAN></STRONG><SPAN> - This
+            event occurs when click on the buttons &ldquo;insert&rdquo;,
+            &ldquo;update&rdquo; and &ldquo;remove&rdquo;</SPAN>
+        </UL>
+    </UL>
+    <UL>
+      <LI>
+        <p><STRONG>Edit Javascript</STRONG> </P>
+    </UL>
+    <BLOCKQUOTE>Selecting the object and its event, then click on the button "Edit" opening a window to edit the javascript action that will be executed when the selected event is actioned. In this screen we can type customized javascript actions or we can use default Scriptcase events, for example: <B>nm_reload_form();</B> that do a reload on the form.</BLOCKQUOTE>
+    <BLOCKQUOTE><IMG SRC="../../comuns/img/editar_javascript.jpg" NAME="figura2" /><SPAN><BR>
+      <span class="sob_figura">Image2: Interface
+        of Javascript Edition.</span></SPAN></BLOCKQUOTE>
+    <p>Save the javascript command clicking on the
+      button "update".</P>
+    <p><b>Note:</b> Javascript language doesn't have the same behavior to each browser available in the market. If it's necessary to type a complex rotine using Javascript, we recommend to make tests in different browsers.</P>
+    <HR>
+    <P><STRONG>OnClick Example: </STRONG><a name="exemplo_onclick"></a>When click on a field of the radio type can be turned on/off a series of form fields according to the selected value.</P>
+    <p>if(document.F1.sex[0].checked){ <BR>
+      &nbsp;&nbsp;&nbsp;
+      document.F1.aux_maternity.disabled = false; <BR>
+  &nbsp;&nbsp;&nbsp;
+      document.F1.aux_maternity
+      .style.background='FFFFFF' <BR>
+      } <BR>
+      if(document.F1.sex[1].checked){ <BR>
+  &nbsp;&nbsp;
+      document.F1.aux_maternity.disabled = true; <BR>
+  &nbsp;&nbsp;
+      document.F1.aux_maternity.style.background='FCEEBC'<BR>
+      } </P>
+    <p>Note: To access a field of the radio time it is
+      necessary to use an index.</P>
+    <p><STRONG>OnBlur Example:</STRONG><a name="exemplo_onblur"></a><BR>
+      <BR>
+      We can define a criteria around the field &ldquo;weekly_hour_job&rdquo;
+      when it loose focus.</P>
+    <P>if (document.F1.tp_folha[0].checked&nbsp;
+  &amp;&amp; document.F1.weekly_hour_job.value&nbsp;&gt;
+      '20')<BR>
+      {&nbsp;&nbsp;&nbsp; <BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&quot;job
+      hour above the allowed.&quot;);<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.F1.weekly_hour_job.value
+      = &quot;&quot;;<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.F1.weekly_hour_job.focus();<BR>
+      }</P>
+    <p><STRONG>onChange examples</STRONG>:<a name="exemplo_onchange"></a></P>
+    <p>When modify the &ldquo;Salary&rdquo; of an employee
+      and go out of the field, will occur an &ldquo;onChange&rdquo;, in
+      this moment we use advantage to check if the &ldquo;position&rdquo;
+      is &ldquo;gardener&rdquo;.</P>
+    <P>if (document.F1.salary.value &gt; 5000.00
+  &amp;&amp; document.F1.position.value == 'gardener'){ 
+    <BLOCKQUOTE>alert('when you grow i want to be a gardener'); </BLOCKQUOTE>
+    <br>
+    }
+    </P>
+    <P><a name="exemplo_onfocus"></a>After informing the
+      value of the purchase and select the modality of the payment in an
+      object of the &ldquo;Select: type payment_way&rdquo;, the javascript
+      code below calculates the value of the parcel.</P>
+    <P>&nbsp;if(document.F1.payway[document.F1.payment_way.selectedIndex].text
+      == 'avista')<BR>
+      {<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.F1.parcelvalue.value
+      = document.F1.purchasevalue.value;<BR>
+      }<BR>
+      if
+      (document.F1.payway[document.F1.payment_way.selectedIndex].text
+      == '30/60')<BR>
+      {<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      document.F1.parcelvalue.value = document.F1.purchasevalue.value /
+      2;<BR>
+      }<BR>
+      if (document.F1.payway
+      [document.F1.payment_way.selectedIndex].text
+      == '30/60/90')<BR>
+      {<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      document.F1.parcelvalue.value = document.F1.purchasevalue.value /
+      3;<BR>
+      } </P>
+    <p><STRONG>onMouseOver Example</STRONG>:<a name="exemplo_onmouseover"></a></P>
+    <p>We can trade the stile (background color, font color,
+      etc.) when the mouse is over the field.</P>
+    <P>document.F1.field_name.style.bgColor =
+  &quot;0FFCCA&quot; </P>
+    <p><STRONG>onMouseOut example: </STRONG><a name="exemplo_onmouseout"></a></P>
+    <p>Set a background color when the mouse loose focus of
+      the field.</P>
+    <p>document.F1.field_name.style.bgColor
+      = &quot;FFFFFF&quot;</P>
+	</BODY>
+</HTML>

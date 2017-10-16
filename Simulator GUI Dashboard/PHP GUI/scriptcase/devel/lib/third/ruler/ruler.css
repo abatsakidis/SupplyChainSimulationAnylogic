@@ -1,0 +1,149 @@
+.ruler
+{
+    background-color: #CECECE;
+    padding:0px;
+    margin:0px;
+    font-size: 10px;
+    position: absolute;
+    display: inline-block;
+    vertical-align: top;
+    margin-left:-36px;
+    border-right:1px solid #000000;
+    z-index:1003;
+}
+
+.unselectable{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.rulerWorking
+{
+    margin-left:36px;
+    margin-top:32px;
+    /*background-image: url(img/bg.png);*/
+}
+
+/**************  VERTICAL ********************/
+.v{
+    width:35px;
+    z-index:1004;
+    overflow: hidden;
+    background:url(img/bg_v.png);
+    background-repeat: repeat-y;
+    background-position-x: 28px;
+    background-position-y: 8;
+    background-color: #CECECE;
+}
+.v span{
+    /*border-top:solid 1px #999;*/
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+    width: 8px;
+    white-space: nowrap;
+    padding-top: 18px;
+}
+/*
+.v span:nth-child(1){padding-top: 32px}
+.v span:nth-child(2){border-top:none !important}
+*/
+.v span:nth-child(1) span, .v span:last-child span{display:none;}
+.v span:nth-child(2n){border-top: solid 1px #000 !important;padding-top:17px;}
+
+
+/**************  HORIZONTAL ********************/
+
+.h{
+    padding-top: 20px;
+    border-right:none;
+    border-bottom:1px solid #000000;
+    height:11px;
+    position:fixed;
+    display: block;
+    white-space: nowrap;
+    top:0;
+    background:url(img/bg_h.png);
+    background-repeat: repeat-x;
+    background-position-y: 24px;
+    background-position-x: -1;
+    background-color: #CECECE;
+    width:100%;
+}
+.h span{
+    padding-right: 18px;
+    overflow: hidden;
+}
+.h span:nth-child(1){padding-right: 36px;}
+.h span:nth-child(1) span{display:none;}
+.h span:nth-child(2n){height:9px !important;padding-top:3px;border-left: solid 1px #000 !important;padding-right:17px}
+.h span:nth-child(2){border-left:none !important}
+
+/************ FOLLOW CURSOR *********/
+.followme{
+    position:absolute;
+    background-color:#777;
+    padding:6px;
+    opacity:0.5;
+    color:#FFF;
+    -moz-opacity: 0.65;
+    filter: alpha(opacity=65);
+    display:none;
+}
+
+/******************* GUIDE ******************************/
+.guide
+{
+    position:absolute;
+    z-index:1000;
+    border: 0px solid #ff0000;
+}
+
+.h_guide
+{
+    border-bottom-width: 1px;
+    left:0;
+}
+
+.v_guide
+{
+    border-left-width: 1px;
+    top:0;
+}
+
+
+/*************************RULER OPTIONS **********************/
+
+
+.rulerOptions{
+    background-image: url(img/ruler.png);
+    background-color: #CECECE;
+    width:30px;
+    height:26px;
+    background-repeat:no-repeat;
+    background-position-y: 2;
+}
+
+.rulerOptions ul{
+    list-style: none;
+    display:none;
+    padding: 0;
+    background-color: #FFFFFF;
+    border:1px solid #205485;
+    width:54px;
+    margin-left: 17px;
+}
+.rulerOptions ul li{
+
+    cursor: pointer;
+    border-bottom: 1px solid #CECECE;
+    padding:3px;
+}
+
+.rulerOptions ul li:hover{
+    background-color:#CECECE;
+}

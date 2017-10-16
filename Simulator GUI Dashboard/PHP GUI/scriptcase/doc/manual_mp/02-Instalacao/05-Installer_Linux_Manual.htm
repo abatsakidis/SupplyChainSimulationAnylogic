@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><title>Installer Manual Scriptcase - Linux</title>
+
+<link href="../scriptcase.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<h1>Installer Manual Scriptcase - Linux</h1>
+<p>&nbsp;</p>
+<p>This article will explain how to install and configure a PHP 5.4 and Apache 2.2 environment to receive the Scriptcase.</p>
+<p>Follow the steps below very carefully.</p>
+<p><em><strong><span style="background-color: #ffff99">Note: This article was based on Debian Wheezy distribution</span></strong></em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Preparing the environment to receive the PHP 5.4 and Apache 2.2</h2>
+<p><br />
+<br />
+First, edit the sources.list file:<br /><br />
+<strong>sudo nano /etc/apt/sources.list</strong></p>
+<p><img src="img/linux_manual_1.png" /><br /><br />Add the following line to the end of the file:<br /><br />
+<strong>deb-src http://packages.dotdeb.org wheezy all</strong></p>
+<p><img src="img/linux_manual_2.png" /><br />
+</p>
+<p><br />
+  Update your system using the following command:<br />
+  <br />
+  <strong>sudo apt-get update</strong></p>
+<p><img src="img/linux_manual_3.png" /><br />
+</p>
+<p>&nbsp;</p>
+<h2>Installing PHP 5.4</h2>
+<p>&nbsp;</p>
+<p>Use the following command to install PHP 5.4</p>
+<p><strong>sudo apt-get install php5 php5-dev</strong></p>
+<p><img src="img/linux_manual_4.png" alt="" width="571" height="27" /><br />
+</p>
+<p><br />
+ Accept the installation of the dependencies.<br />
+</p>
+<p><br />
+Check the PHP version with the command:<br />
+</p>
+<p><strong>php -v</strong></p>
+<p><img src="img/linux_manual_5.png" alt="" width="721" height="74" /></p>
+<p>&nbsp;</p>
+<p style="background-color: #ffa07a"><strong>Important</strong>: By default PHP disables some functions that are important for Scriptcase. So go to your<strong> php.ini (/etc/php5/apache2/php.ini) </strong>and change the line of <strong>disable_functions</strong> variable as shown below:</p>
+<p><img src="img/linux_manual_fuctions.png" /></p>
+<p>&nbsp;</p>
+<p><br />
+  To enable the databases, we selected some examples of installation command:<br />
+  <strong><br />
+</strong></p>
+<p><strong>MSSQL Server</strong> use the command <strong>sudo apt-get install php5-mssql</strong></p>
+<p><img src="img/linux_manual_6.png" /><br /><br />
+</p>
+<p><strong>PostgreSQL</strong> use the command <strong>sudo apt-get install php5-pgsql</strong></p>
+<p><img src="img/linux_manual_7.png" /><br /><br />
+</p>
+<p><strong>MySQL</strong> use the command <strong>sudo apt-get install php5-mysql</strong></p>
+<p><img src="img/linux_manual_8.png" /><br /><br />
+</p>
+<p><strong>SQLite</strong> use the command <strong>sudo apt-get install php5-sqlite</strong></p>
+<p><img src="img/linux_manual_9.png" /><br /><br />
+</p>
+<p><strong>Firebird</strong> use the command <strong>sudo apt-get install php5-interbase</strong></p>
+<p><img src="img/linux_manual_10.png" /><br /><br />
+</p>
+<p><strong>Odbc</strong> use the command <strong>sudo apt-get install php5-odbc</strong><br />
+</p>
+<p><img src="img/linux_manual_11.png" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Enabling GD Library</h2>
+<p>&nbsp; </p>
+<p>Use the command<strong> sudo apt-get install php5-gd</strong> to enable GD library.</p>
+<p><img src="img/linux_manual_12.png" /></p>
+<p>Accept the installation of the dependencies.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Enabling Zend Guard Loader</h2>
+<p>&nbsp;</p>
+<p>Download <strong>Zend Guard Loader</strong> for Linux, the link below and place it on <strong>/usr/lib/php5/Zend</strong>. </p>
+<p><a href="http://cdn1.netmake.com.br/download/ZendGuardLoader/Linux/ZendGuardLoader.so">Download ZendGuardLoader</a></p>
+<p>&nbsp;</p>
+<p>Set recursive 777 permissions on the folder <strong>/usr/lib/php5/Zend</strong></p>
+<p><strong>sudo chmod 777 -R /usr/lib/php5/Zend</strong><strong></strong></p>
+<p>&nbsp;</p>
+<p>Open <strong>php.ini</strong> (/etc/php5/apache2/php.ini) and at the end of file add:</p>
+<p><em><strong>[zend]<br />
+  zend_extension=/usr/lib/php5/Zend/ZendGuardLoader.so<br />zend_loader.enable=1<br />zend_loader.disable_licensing=0<br />zend_loader.license_path=</strong></em><br />
+</p>
+<p>&nbsp;</p>
+<p>After this procedure restart apache using the following commands:<br />
+  <strong>sudo /etc/init.d/apache2 stop<br />sudo /etc/init.d/apache2 start</strong><br /><br />
+</p>
+<p>&nbsp;</p>
+<h2>Installation Manual Scriptcase</h2>
+<p>&nbsp;</p>
+<p>Download Scriptcase with extension <strong>zip</strong> or <strong>tgz</strong> on <a href="http://www.scriptcase.net/download-scriptcase/"> www.scriptcase.net </a> and extract it in the root of your web environment installed previously (<strong>/var/www</strong>).</p>
+<p>After extracting, rename the folder to <strong>scriptcase</strong>.</p>
+<p>&nbsp;</p>
+<p>Access Scriptcase from your browser followed the example below:</p>
+<p><strong>Ex.: http://127.0.0.1/scriptcase</strong></p>
+<p>&nbsp;</p>
+The screen below shows a language selection (English) of the ScriptCase installation process.
+<p><img src="img/img2.jpg" /></p>
+<p>&nbsp;</p>
+<p>Here he checks the installed extensions. If you tick the checkboxes of the extensions not installed it tries to configure the php.ini file to recognize these extensions. </p>
+<p>&nbsp;</p>
+<p><img src="img/img3.jpg" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Now you will choose to enter the <b>Typical Installation</b> or <b>Custom Installation</b> <br />
+</p>
+<h2>Typical Installation</h2>
+<br />
+<img src="img/img4.jpg" />
+<p>&nbsp;</p>
+<p>Scriptcase will install everything automatically. After choosing the typical installation, you will be automatically directed to your Scriptcase environment development. By default, the user is: admin and password: admin.
+</p>
+<br />
+<img src="img/end.jpg" />
+<p>&nbsp;</p>
+<h2>Customized Installation</h2>
+<br />
+<img src="img/img6.jpg" />
+<p>&nbsp;</p>
+<p>You can choose the database where the Scriptcase will be installed and you can choose the default user and password to access your development environment.</p>
+<p>ScriptCase need some permissions to work properly, at this time it checks the permissions.<br />
+</p>
+<p>NOTE: In case of IIS Web Server, permission of Writing, Reading, and Performing For IUSR_NAMEOFSERVER user, the following directories are required:<br />
+<br />
+<br />
+1 - Directory of the PHP installation.<br />
+2 - ScriptCase directory. <br />
+3 - Windows cmd.exe file. <br />
+</p>
+<p><img src="img/img7.jpg" /></p>
+<p><br />
+<br />
+This step consists in the definition of the database where the ScriptCase be installed. The default option is SQLite, which requires only that your module is enabled in PHP, but you can install other databases by clicking 'Change Database'. Proceed to create the tables in the database chosen. <br />
+<br />
+<br />
+<img src="img/img8.jpg" /><br />
+<br />
+<br />
+</p>
+<p>The tables used by ScriptCase were created successfully.</p>
+<img src="img/img9.jpg" />
+<br />
+</p>
+<p>&nbsp;</p>
+<p>Here you create a login and password for the ScriptCase administrator. <br />
+<br />
+<img src="img/img10.jpg" />
+<p>&nbsp;</p>
+<p>If the installation was successful this screen will appear. Click continue to initialize ScriptCase.<br />
+<br />
+<img src="img/img11.jpg" />
+<p>&nbsp;</p>
+<p>Login screen to access the ScriptCase with the username and password previously reported.</p>
+<p>&nbsp;</p>
+<img src="img/end.jpg" />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body></html>

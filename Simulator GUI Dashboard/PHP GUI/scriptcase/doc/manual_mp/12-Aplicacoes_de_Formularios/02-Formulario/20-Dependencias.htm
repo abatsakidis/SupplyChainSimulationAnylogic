@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>Dependencies</TITLE>
+<link rel=Stylesheet type="text/css" media=all href="../../scriptcase.css">
+</HEAD>
+<BODY>
+<H1>DEPENDENCIES</H1>
+<p>This resource allows to associate tables, it means tables that exist dependences,
+such as the tables: orders and items. It is possible to
+remove a register from the Orders table and all its items. Lets see how to do it.</p>
+<p>&nbsp;</P>
+<p><B>1 - </B> First we must define a new dependence. In this example we will create
+a dependency between Orders (Dependent table) and the table Customer (Current application). Click on the button new
+dependency.</P>
+<p><IMG SRC="img/dependencias2.jpg"></P>
+<p>&nbsp;</P>
+<p><B>2&ordm; -</B>
+We must select the dependent table and inform the amount of fields related
+between the father and child table. In this example only one field
+will be related that it is the customer id.</P>
+<p><IMG SRC="../../comuns/img/adicionar_dependencias.jpg"></P>
+<p>&nbsp;</P>
+<p><B>3&ordm; -</B> Then we must select the key fields: customers -&gt;
+CustomerID - orders -&gt;CustomerID.</P>
+<p><IMG SRC="../../comuns/img/adicionar_dependencias2.jpg" ></P>
+<p><B>4&ordm; - </B>Now we just need to define if it will just show an error message or it will make a cascade delete.</P>
+<p><IMG SRC="../../comuns/img/adicionar_dependencias3.jpg"><br>
+</P>
+</BODY>
+</HTML>

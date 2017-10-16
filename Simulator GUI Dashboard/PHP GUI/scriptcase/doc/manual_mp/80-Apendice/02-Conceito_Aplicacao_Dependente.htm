@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Variables in Scriptcase</title>
+<link href="../scriptcase.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>VARIABLES IN SCRIPTCASE </h1>
+
+<span> Dependent Applications Concepts.</span>
+<p> 
+ ScriptCase considers dependent applications those applications (Form or Grid) that  need to receive external parameters (variables)  passed by <strong>Get</strong> or <strong>Post</strong> HTML methods.
+ </p>
+ 
+<p>To build a Dependent Grid specify which parameters receive external values by using square brackets [ ] to indicate a &quot;global variable&quot; on the WHERE or HAVING clause. For example:</p> 
+
+<p>
+  <span>SELECT
+field1,field2 FROM table_duplicates WHERE cod_client =<b> [glo_clientid]</b>
+ </span>
+</p> 
+
+<p>Scriptcase  uses variables in any application event or method. There are Local Variable and Gobal variables:</p>
+   <hr>
+  <h2>Local Variables </h2>
+  
+  It should be used as a common PHP variable (beginning with $).<br>
+  <br>
+  $var1 = 'local';<br>
+  <br>
+  It is used in only in an event or method. Its scope ends at the end of the event.<br>
+  If it is being used in onLoad event it will be used just in that event.</span><br>
+  <br>
+  <hr>
+  <h2>Global Variables</h2>
+  
+<p> Before the browser sends the information, it encodes it using a scheme called URL encoding. In this scheme, name/value pairs are joined with equal signs and different pairs are separated by the ampersand. <br>
+</p>
+<ul>
+  <li> <strong> GET Method</strong> - sends the encoded user information appended to the page request. The page and the encoded information are separated by the ? character. </li>
+  <li> <strong> POST Method</strong> -  transfers information via HTTP headers. The information is encoded as described in case of GET method and put into a header called QUERY_STRING.</li>
+</ul>
+<span>Scriptcase uses global variables  with square brackets.<br>
+    <br>
+  [var2] = 'global';<br>
+  <br>
+  It can be called in any event or method of an application.<br>
+  <br>
+  <br>
+  Note 1: A local variable can be a global variable if you use sc_set_global<br>
+  $var3 = 'testing';&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // var3 is a local variable<br>
+  sc_set_global($var3);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // transforming var3 in a global variable<br>
+  echo [var3] ." global variables";&nbsp; &nbsp; &nbsp; &nbsp;// Now we can call [var3] in any other event<br>
+  <br>
+  <hr>  
+  <h2>Session Variables</h2>
+
+  It is used like a global variable (with square brackets)<br>
+  <br>
+  [var4] = 'session';<br>
+  <br>
+  But you must access "Application&gt;&gt;Global Variables" to set var4 to be "SESSION".<br>
+  <br>
+  Session variables can be called in any event of any application.<br>
+  If created it in the login application it can be called it in any   project application.<br>
+  </span><br>
+  <br>
+  <span><span>Note 2: Accessing "Application&gt;&gt;Global Variables" you can define if a global/session variable is IN or OUT variable.<br>
+  If the application is CREATING the variable,  it should be an OUT variable.<br>
+  If the application is RECEIVING the variable from another one,  it should be an IN variable. (IN is default)<br>
+  </span><br>
+  <br>
+  <span>Note 3: Global and Session variables can be reseted using sc_reset_global macro.<br>
+sc_reset_global ([var3],[var4]); </span></span></p>
+<hr>  
+<h2>Fields Variables</h2>
+
+  Field values can be called in an event using "curly brackets".&nbsp;<br>
+  <br>
+  {field_x} = 'field_x receive this value';<br>
+  {field_y} = [var3];<br>
+{field_z} = {field_y}; </span></p>
+</body>
+</html>

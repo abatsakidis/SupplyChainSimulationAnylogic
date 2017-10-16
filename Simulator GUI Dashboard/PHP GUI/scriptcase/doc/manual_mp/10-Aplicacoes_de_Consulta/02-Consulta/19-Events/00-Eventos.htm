@@ -1,0 +1,27 @@
+<html>
+<head>
+<META NAME="REVIEWED" CONTENT="José Arteiro, 12-05-2010">
+<title>Events</title>
+<link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>EVENTS</h1>
+ <p><span>Scriptcase uses the concept of events to enable to developer to customize application code. Events allow the developer to define custom actions at a specific execution time (e.g. After a record is inserted, when it is loaded, upon submitting a form, ...) and for a specific type of application.</span></p>
+
+<p><b>OnInit</b>- This event is executed just one
+  time, before the main select of the application execution. In this scope,
+  normally, are executed the macros that update the select, as these: sc_select_field, sc_select_order,sc_select_<span>where(add) and etc.</span>
+<p><b>onRecord</b>- This event is executed before displaying each grid record.</p>
+<p><b>onHeader</b>- This event is executed immediately before displaying the grid header. Use this event to print some calculated value in the header for example.</p>
+<p><b>onFooter</b>-Used to display some
+  calculated value. Write in this event the necessary calculation to display the result in the footer.</p>
+  
+<p>Any event can use pre-defined functions (macros) that are available in and specific to Scriptcase. These functions are called "Scriptcase Macros". </p>
+<ul>
+  <li><a href="../../../28-Macros/00-macros_sc.htm">Read more about Scriptcase Macros.</a></li>
+</ul>
+
+
+</body>
+</html>

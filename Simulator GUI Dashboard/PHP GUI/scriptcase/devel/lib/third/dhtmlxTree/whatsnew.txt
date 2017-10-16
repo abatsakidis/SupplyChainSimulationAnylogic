@@ -1,0 +1,67 @@
+dhtmlxTree
+
+v.1.5 
+
++ added better smartRefresh support ( smartRefreshBranch command )
++ added special mode to resolve IE caching issue
++ added new event system
++ performance improved ( about +15% )
++ smoother initial rendering
++ quick search - navigate through the tree typing node name
++ simple drag-n-drop of any HTML element into tree
++ added ability to extend keyboard navigation routines
++ toolips shown for tree images as well
++ added ability to lock whole tree
++ added ability to set checkbox state while init from HTML
++ extended keyboard navigation (better enter/esc support)
++ updated samples to be compatible with IE7
+
+- memory leaks when item deleting
+- fixed visual problems with keyboard navigation
+- fixed initial loading visual glitches
+- fixed initialization from local file system in IE7
+- fixed onRightClick handler
+- fixed problem with common XML loader
+- fixed init from HTML for big tree
+- fixed problem with not removing old userdata
+- fixed autoscroll while drag-n-drop
+- fixed logic of open-items for half opened branches
+- fixed onOpenEnd event handler in case of usage complex dynamic loading
+- fixed updateItem function
+- fixed smartRefreshItem in case of smartXMLParsing
+- fixed loading of unused checkbox images
+
+v.1.4 build 61218
+
++ IE 7 compatibility
++ openOnItemAdding
++ additional radio button mode implemented
++ showItemCheckbox can be applied for thole tree
++ OnRightClick event extended
++ onmouseout/onmousein events
++ smartRefresh method
++ can be init from HTML (list or xml)
++ integration with dhtmlxTooltips
+- fixed incorrect calling of onLoadingEnd
+- fixed problem keyboard navigation in editable tree
+- fixed possibility to drag item in locked branch
+- fixed onClick event for moved items
+- fixed problems with dataProcessor in dynamic loading mode
+- fixed problem with selected item after tree.updateItem
+
+
+v.1.3
+
+- Editable Items
+- Ability to automaticaly update server side on tree structure changes
+- Distributed Loading
+- Keyboard navigation
+- Custom type sorting
+- Ability to move items within/between trees with script API
+- Extended Safari, Conqueror, Opera compatibility
+- Multiselect, drag-n-drop multiple items
+- Locked items
+- Right-to-left languages support
+- Error handling
+- Drag-n-drop to/from dhtmlxGrid & dhtmlxTreeGrid
+- Item Offset top

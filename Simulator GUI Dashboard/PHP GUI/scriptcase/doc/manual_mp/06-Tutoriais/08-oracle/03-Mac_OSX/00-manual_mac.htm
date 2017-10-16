@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>Enabling Oracle on Mac OSX</title>
+</head>
+
+<body>
+<h1><strong>Enabling Oracle on Mac OSX </strong></h1>
+<table width="100%" border="0"><tr>
+  <td align="right"><a href="../../../home.htm">Home</a> >> <a href="../../../06-Tutoriais/00-tutoriais.htm" target="_self">Connection</a> >> <a href="../../../06-Tutoriais/08-oracle/00-oracle.htm" target="_self">Oracle</a> >> Oracle on Mac OSX</td></tr></table>
+<p>&nbsp;</p>
+<p>We will see the steps for us to enable Oracle on Mac OSX, and also the Oracle connection with ScriptCase. </p>
+<p>This article was based on the Mavericks distribution using PHP 5.4 manually compiled.</p>
+<p>&nbsp;</p>
+<p><strong>1 - </strong> First we will enter the Oracle's website and download the Oracle instant client and sdk (<a href="http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html" target="_blank">www.oracle.com</a>). Choose the 64 bit version because of compatibility of operating system.</p>
+<p><img src="../img/oracle_mac1.jpg"/></p>
+
+
+<p>&nbsp;</p>
+<p><strong>2</strong> - Create a folder in this directory <strong>/usr/local/instantclient/11.2.0.3/</strong> and extract all content of downloaded files:</p>
+<p><strong>/usr/local/instantclient/11.2.0.3/</strong></p>
+<p>&nbsp;</p>
+<p><strong>3</strong> - Create symbolic links of the system using the following commands: </p>
+<p><strong>ln -s /usr/local/instantclient/11.2.0.3/sdk/include/*.h /usr/local/include/<br />
+  ln -s /usr/local/instantclient/11.2.0.3/*.dylib /usr/local/lib/<br />
+  ln -s /usr/local/instantclient/11.2.0.3/*.dylib.11.1 /usr/local/lib/<br />
+  ln -s /usr/local/instantclient/11.2.0.3/libclntsh.dylib.11.1 /usr/local/lib/libclntsh.dylib</strong><br />
+</p>
+<p>&nbsp;</p>
+<p><strong>4</strong> - Now install the Oracle extension for PHP using the following command: </p>
+<p><strong>pecl install oci8</strong></p>
+<p>&nbsp;</p>
+<p><strong>Note</strong>: In case it asks whats the ORACLE_HOME directory, run this command: </p>
+<p><strong>instantclient,/usr/local/instantclient/11.2.0.3/</strong></p>
+<p>&nbsp;</p>
+<p><strong>5 </strong>- After all the steps above, now add on the php.ini the following extent: </p>
+<p><strong>extension=oci8.so</strong></p>
+<p>&nbsp;</p>
+<p><strong>6 - </strong>Restart the web service. </p>
+<p>&nbsp;</p>
+<p><strong>7 - </strong>Check your diagnosis if your Oracle 8 is enabled. </p>
+<p><img src="../img/oracle_ok.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Connecting on Scriptcase</h2>
+<p>&nbsp;</p>
+<p>Open Scriptcase and make a new Oracle connection.</p>
+<p><img src="../img/conn_oracle8_sc.jpg"  /></p>
+<ul>
+  <li><strong>Connection Name</strong> - Set the name of your new connection.</li>
+  <li><strong>DBMS Type</strong> - Version of Oracle used. </li>
+  <li><strong>Test Connection</strong> - Displays whether the connection was successful or not. </li>
+  <li><strong>TSNAME</strong> - Should be informed the IP of the server where the database is installed and the instance name created in the Oracle installation. </li>
+  <li><strong>Username</strong> - Enter the user to grant access to your Oracle.</li>
+  <li><strong>Pasword</strong> - Enter the password to grant access to your Oracle.</li>
+</ul>
+<p>&nbsp;</p>
+<strong>Filter:</strong> Clicking on this tab, the following screen appears:
+</ul>
+<p><img src="../img/filtro_oracle8_sc.jpg"  /><br />
+</p>
+<ul>
+  <li><strong>Show</strong> - Allows the display filter tables, views, system tables and procedures.</li>
+  <li><strong>Searches</strong> - Determines which tables and owners will be displayed.</li>
+</ul>
+<p>&nbsp;</p>
+<p>For more details on configuring the database connection to the data click on the Advanced tab.<br />
+  <br />
+</p>
+<p><img src="../img/avan_oracle8_sc.jpg"  /></p>
+<p>&nbsp;</p>
+<ul>
+ <li><strong>Client encoding</strong> - Encoding for your database. </li>
+<li><strong>Decimal Separator</strong> - Select the type of separator between comma and point. </li>
+<li><strong>Persistent Connection</strong> - Persistent connections are links that do not close when the execution of your script ends.</li>
+<li><strong>Use schema before the table name</strong> - Allows the use of schemas before the names of the tables. </li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><a class="linkBack" href="../../../06-Tutoriais/08-oracle/00-oracle.htm" target="_self"> Back </a></p>
+
+</body>
+</html>

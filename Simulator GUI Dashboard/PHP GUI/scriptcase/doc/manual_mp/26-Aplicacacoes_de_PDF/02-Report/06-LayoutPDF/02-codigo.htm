@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Code</title>
+    <link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1> Code</h1>
+<p><img src="img/codigo.jpg" /></p>
+<p>Use a set of commands to manipulate the pdf report.</p>
+<p><br>
+  The  <strong>Report PDF</strong> application is based on the <a href="http://www.tcpdf.org/" target="_blank">TCPDF</a> class. The class methods are available to the user as well macros listed in the table bellow. Use the object<strong> $pdf</strong> with the selected method, exemplo: <strong>$pdf-&gt;AcceptPageBreak(parameters);</strong></p>
+<p><a href="http://www.tcpdf.org/">Click here </a> to access the TCPPF  a documentation.</p>
+<table cellspacing="0" cellpadding="0">
+  <col width="124">
+  <col width="191">
+  <col width="357">
+  <tr height="20">
+    <th width="124" height="20" bgcolor="#CCCCCC"><strong>Method FPDF</strong></th>
+    <th width="191" bgcolor="#CCCCCC"><strong>Macro ScriptCase</strong></th>
+    <th width="357" bgcolor="#CCCCCC"><strong>Description</strong></th>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>AcceptPageBreak</strong></td>
+    <td><strong>sc_pdf_accept_page_break</strong></td>
+    <td>Accept an automatic page break.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>AddFont</strong></td>
+    <td><strong>sc_pdf_add_font</strong></td>
+    <td>Add new font.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>AddLink</strong></td>
+    <td><strong>sc_pdf_add_link</strong></td>
+    <td>Create internal  link.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>AddPage</strong></td>
+    <td><strong>sc_pdf_add_page</strong></td>
+    <td>Add  new page.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>AliasNbPages</strong></td>
+    <td><strong>sc_pdf_alias_nb_pages</strong></td>
+    <td>Define  alias to page number.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Cell</strong></td>
+    <td><strong>sc_pdf_cell</strong></td>
+    <td>Print cell.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Close</strong></td>
+    <td><strong>sc_pdf_close:&nbsp;</strong></td>
+    <td>close the  document.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>error</strong></td>
+    <td><strong>sc_pdf_error</strong></td>
+    <td>Display  error message.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Footer</strong></td>
+    <td><strong>sc_pdf</strong></td>
+    <td>footer.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>GetStringWidth</strong></td>
+    <td><strong>sc_pdf_get_string_length</strong></td>
+    <td>Calculate string seize.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>GetX</strong></td>
+    <td><strong>sc_pdf_get_x</strong></td>
+    <td>Returns X position.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>GetY</strong></td>
+    <td><strong>sc_pdf_get_y</strong></td>
+    <td>Returns Y position . </td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Header</strong></td>
+    <td><strong>sc_pdf_header</strong></td>
+    <td>header.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Image</strong></td>
+    <td><strong>sc_pdf_image</strong></td>
+    <td>Puts an image on the page.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Line</strong></td>
+    <td><strong>sc_pdf_line</strong></td>
+    <td>Draws a line.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Link</strong></td>
+    <td><strong>sc_pdf_link</strong></td>
+    <td>Inserts link.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Ln</strong></td>
+    <td><strong>sc_pdf_ln</strong></td>
+    <td>ConImagethe line break. </td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>MultiCell</strong></td>
+    <td><strong>sc_pdf_multi_cell</strong></td>
+    <td>print text with line break.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Output</strong></td>
+    <td><strong>sc_pdf_output</strong></td>
+    <td>Saves or send a document.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>PageNo</strong></td>
+    <td><strong>sc_pdf_page_no</strong></td>
+    <td>Page number.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Rect</strong></td>
+    <td><strong>sc_pdf_rect</strong></td>
+    <td>Draws a rectangle.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetAuthor</strong></td>
+    <td><strong>sc_pdf_set_author</strong></td>
+    <td>Define  document author.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetAutoPageBreak</strong></td>
+    <td><strong>sc_pdf_set_auto_page_break</strong></td>
+    <td>Activates/deactivates  automatic page break.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetCompression</strong></td>
+    <td><strong>sc_pdf_set_compression</strong></td>
+    <td>Turns on/off page compression.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetCreator</strong></td>
+    <td><strong>sc_pdf_set_creator</strong></td>
+    <td>Define  document  creator.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetDisplayMode</strong></td>
+    <td><strong>sc_pdf_set_display_mode</strong></td>
+    <td>Define  display mode.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetDrawColor</strong></td>
+    <td><strong>sc_pdf_set_draw_color</strong></td>
+    <td>Define the color used to picture.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetFillColor</strong></td>
+    <td><strong>sc_pdf_set_fill_color</strong></td>
+    <td>Define fill color.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetFont</strong></td>
+    <td><strong>sc_pdf_set_font</strong></td>
+    <td>Define font settings.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetFontSize</strong></td>
+    <td><strong>sc_pdf_set_font_size</strong></td>
+    <td>Define  font size.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetKeywords</strong></td>
+    <td><strong>sc_pdf_set_keywords</strong></td>
+    <td>Set  document keywords.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetLeftMargin</strong></td>
+    <td><strong>sc_pdf_set_left_margin</strong></td>
+    <td>Define left margin . </td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetLineWidth</strong></td>
+    <td><strong>sc_pdf_set_line_width</strong></td>
+    <td>Define  line width.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetLink</strong></td>
+    <td><strong>sc_pdf_set_link</strong></td>
+    <td>Set internal  link.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetMargins</strong></td>
+    <td><strong>sc_pdf_set_margins</strong></td>
+    <td>Define margins.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetRightMargin</strong></td>
+    <td><strong>sc_pdf_set_right_margin</strong></td>
+    <td>Define right margin. </td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetSubject</strong></td>
+    <td><strong>sc_pdf_set_subject</strong></td>
+    <td>Define subject.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetTextColor</strong></td>
+    <td><strong>sc_pdf_set_text_color</strong></td>
+    <td>Define text color.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetTitle</strong></td>
+    <td><strong>sc_pdf_set_title</strong></td>
+    <td>Define document title.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetTopMargin</strong></td>
+    <td><strong>sc_pdf_set_top_margin</strong></td>
+    <td>Define top margin.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetX</strong></td>
+    <td><strong>sc_pdf_set_x</strong></td>
+    <td>Define X position.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetXY</strong></td>
+    <td><strong>sc_pdf_set_xy</strong></td>
+    <td>Define  XY position.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>SetY</strong></td>
+    <td><strong>sc_pdf_set_y</strong></td>
+    <td>Define  Y position.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Text</strong></td>
+    <td><strong>sc_pdf_text</strong></td>
+    <td>Print  string.</td>
+  </tr>
+  <tr height="20">
+    <td height="20"><strong>Write</strong></td>
+    <td><strong>sc_pdf_write</strong></td>
+    <td>Print characters&nbsp;string.</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Scriptcase Installer - MacOS</title>
+<link href="../scriptcase.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.warning
+{
+	font-size: 12px;
+	color: red;
+}
+.stepProcedure
+{
+	font-size: 15px;
+	font-weight: bold;
+}
+.stepProcedure span
+{
+	color: red;
+}
+em
+{
+	font-weight: bold;
+}
+.hint
+{
+	width: 670px;
+	padding: 5px;
+	border: solid 1px #666;
+	border-radius: 3px;
+	background-color: #99aaff;
+	color: #333;
+}
+.hint b
+{
+	color: #337744;
+}
+-->
+    </style>
+</head>
+
+<body>
+<h1>ScriptCase MacOS - Installer</h1>
+<p><strong>Using the scriptcase installer</strong></p>
+
+<p>ScriptCase's installer is a executable file for MacOS. An application for self-extracting and configuring APACHE,
+PHP and SCRIPTCASE on your Operating System.</p>
+<p>In order to execute the installer correctly, we need to give it "execute permissions". Scriptcase installer will
+install automatically in your computer:<br /></p>
+  <br />
+  1 - 
+  Apache Web Server 2.4.3.<br />
+  2 - 
+  PHP 5.4 with the <em>mbstring</em>, <em>zip</em> and<em> gd</em> extensions enabled.<br />
+  3 - 
+  Zend Guard Loader 3.3.<br />
+  4 - Scriptcase Version 8.<br />
+  <br />
+
+  <div style='margin: 20px; border: dashed 1px #aaa; background-color: #ebebeb; padding: 0 20px 0 30px; color: #333;'>
+	<h3 style='color: #f00; '>MacOS X 10.8 and later</h3>
+	For MacOS 10.8 and later, before running the installation program it is required to change the permission level to run applications. On the Security and Privacy settings, check the &quot;Anywhere&quot; option in &quot;Allow applications downloaded from&quot;.
+	<p style='text-align: center;'><img src='img/mac10-8.jpg' /></p>
+</div>
+  
+<p class='warning'>
+<i>* Before we proceed with the installation is recomended to do not have any other web environment (such as XAMP, Zend Server, etc...) installed on the
+machine.</i>
+<br />
+<i>* Is aways recomended to have some basic knowledgment of environment in order to use the terminal.</i>
+<br />
+<i>* We recomend the use of the SQLite database.</i>
+</p>
+
+<br />
+
+<p><strong>This mannual will teach us to install ScriptCase in 3 simple steps:</strong></p>
+
+<ol>
+	<li><b>Step 1:</b><a href='#step1'>Pick the installer's settings.</a></li>
+	<li><b>Step 2:</b><a href='#step2'>Execute ScriptCase.</a></li>
+</ol>
+
+<br />
+<br />
+<br />
+
+<h2 id='step1'>Step 1: Pick the installer's settings.</h2>
+
+<p>In the images bellow we are able to see all the installation's properties.</p>
+
+<!-- 1ş Installer Screen - BEGIN -->
+<p class='stepProcedure'><span>1 - </span>Select installer language.</p>
+<p><img src="img/mac02.jpg" /><br/></p>
+<ol>
+	<li><b>Language:</b> Select the language that will be shown on the installation process. This will not select ScriptCase's Language.</li>
+</ol>
+<p>Click "Forward" to continue...</p>
+<!-- 1ş Installer Screen - END -->
+
+<!-- 2ş Installer Screen - BEGIN -->
+<p class='stepProcedure'><span>2 - </span>Welcome message.</p>
+<p><img src="img/mac03.jpg" /><br/></p>
+<p>This screen shows the installer's welcome message</p>
+<p>Click "Forward" to continue...</p>
+<!-- 2ş Installer Screen - END -->
+
+<!-- 3ş Installer Screen - BEGIN -->
+<p class='stepProcedure'><span>3 - </span>License agreement.</p>
+<p><img src="img/mac04.jpg" /><br/></p>
+<ol>
+	<li><b>Do you accept this license?:</b> You must read and accept the terms before continuing.</li>
+</ol>
+<p>Click "Forward" to continue...</p>
+<!-- 3ş Installer Screen - END -->
+
+<!-- 4ş Installer Screen - BEGIN -->
+
+<p class='stepProcedure'><span>4 - </span>Installation directory.</p>
+<p><img src="img/mac05.jpg" /><br/></p>
+<div class='hint'><b>HINT</b><br /> 
+The default installation path is <strong>"/Applications/NetMake/v8/"</strong>. Don't change this path unless you know what you are doing.</div>
+<ol>
+	<li><b>Installation Directory:</b> Put here the path for the installation.</li>
+	<li><b>Browse:</b> This button allows you to choose from your folders for the installation path or create a new one.</li>
+</ol>
+<p>Click "Forward" to continue...</p>
+<!-- 4ş Installer Screen - END -->
+
+<!-- 5ş Installer Screen - BEGIN -->
+
+<p class='stepProcedure'><span>5 - </span>Apache Configuration.</p>
+<p><img src="img/mac06.jpg" /><br/></p>
+
+<div class="hint"><b>NOTE</b><br />
+For Scriptcase MAC OS Installer, the default port used is the 89, not the 88, differently from other installers (for Windows and Linux), that is because 88 port is already being used by the MAC OS for another service. </div><br/>
+
+<ol>
+	<li><b>Port:</b> This will define what port will Apache service run on. We recommend to use the default value.</li>
+	<li><b>Email Administrator:</b> This is the Apache's administrator e-mail. This is the configuration for Apache only, not ScriptCase.</li>
+	<li><b>Apache Domain:</b> Apache domain must be defined here. More info about Apache domains <a href='http://httpd.apache.org/docs/2.2/vhosts/examples.html'>here</a>.</li>
+</ol>
+<p>Click "Forward" to continue...</p>
+<!-- 5ş Installer Screen - END -->
+
+<!-- 6ş Installer Screen - BEGIN -->
+
+<p class='stepProcedure'><span>6 - </span>Install.</p>
+
+<p>The installer will now start the installation process.</p>
+<p><img src="img/mac07.jpg" /><br/></p>
+<p>Click "Forward" to continue...</p>
+<p><img src="img/mac08.jpg" /><br/></p>
+<ol>
+	<li><b>Progress Bar:</b> The overall installation progress.</li>
+</ol>
+<p>Click "Forward" to continue...</p>
+<!-- 6ş Installer Screen - END -->
+
+<!-- 7ş Installer Screen - BEGIN -->
+<p class='stepProcedure'><span>7 - </span>Completing Setup.</p>
+<p><img src="img/mac09.jpg" /><br/></p>
+<ol>
+	<li><b>View Readme File:</b> When you finish the installer, it will show the README file.</li>
+	<li><b>Open Scriptcase 8:</b> When you finish the installer, it will open ScriptCase.</li>
+</ol>
+<p>Click "Finish" to complete.</p>
+<!-- 7ş Installer Screen - END -->
+
+
+<h2 id='step2'>Step 2: Start Using ScriptCase.</h2> 
+<p>Now to access your scriptcase, you must access on the browser the IP adress and the port you choose for Apache.</p>
+<p>Ex:<br /> 
+<a href="http://localhost:97">http://localhost:89/scriptcase</a></p>
+<p><img src="img/end.jpg" /><br/></p>
+
+
+</body>
+</html>

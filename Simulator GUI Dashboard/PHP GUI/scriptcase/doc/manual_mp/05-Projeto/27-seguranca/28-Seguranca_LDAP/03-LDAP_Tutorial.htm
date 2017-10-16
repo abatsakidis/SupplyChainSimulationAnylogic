@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META NAME="Last REVIEWED" CONTENT="Henrique Cézar, 18/02/2013">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>LDAP Tutorial</TITLE>
+    <link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<H1>LDAP Database Creation Tutorial</H1>
+<p>In order to understand better how to use LDAP Security on ScriptCase, we are going to learn how to create a LDAP Database
+and get the data to build, on ScriptCase, a security module using it. On Windows Server, there is a native way to install and configure the Active Directory with the LDAP database:</P>
+
+<p><A href="#windows">Creating a LDAP Database on Windows Server.</A><BR>
+<p><A href="#linux">Creating a simple LDAP Database on Linux.</A><BR>
+
+<p>&nbsp;</p>
+<h2 id="windows">Creating a LDAP Database on Windows Server.</h2>
+<p><b>Server Manager</b></p>
+<p><img src="img/win01.jpg" /><br />
+<span class="sob_figura">Image 01: Server manager option on the startup menu.</span> </p>
+<p>In Windows Server is natively possible to create a LDAP database to feed an Active Directory structure. We will need to access the Server Manager to install the Active Directory service. First, locate the Server Manager on the Startup Menu and launch it.</p>
+<p>&nbsp</p>
+<p><img src="img/win02.jpg" /><br />
+<span class="sob_figura">Image 02: Server Manager Main window.</span> </p>
+<p>In its main window, access the "Roles" Option, and create a new role using "Add Roles"</p>
+<p>&nbsp;</p>
+<p><img src="img/win03.jpg" /><br />
+<span class="sob_figura">Image 03: Roles.</span> </p>
+
+<p>&nbsp</p>
+<p><b>Add Role Wizard</b></p>
+<p><img src="img/win04.jpg" /><br />
+<span class="sob_figura">Image 04: Add Role Wizard home.</span> </p>
+<p>Read and follow this page recomendations and then continue.</p>
+<p>&nbsp;</p>
+
+<p><img src="img/win05.jpg" /><br />
+<span class="sob_figura">Image 05: Choosing services to install.</span> </p>
+<p>This page allows us to choose the services we want to install to the role we are adding. Check the option "Active Directory Domain Services" and continue</p>
+<p>&nbsp;</p>
+<p><img src="img/win06.jpg" /><br />
+<span class="sob_figura">Image 06: Active Directory Domain Services.</span> </p>
+<p>There is some important notes about the Active Directory Domain Services in this page.</p>
+<p>&nbsp;</p>
+<p><img src="img/win07.jpg" /><br />
+<span class="sob_figura">Image 07: Installation.</span> </p>
+<p>This page show what will be installed from now. To proceed with the installation click the "Install" button. After the processing, there will be shown the "Results" window with the installation log.</p>
+<p>&nbsp;</p>
+<p><img src="img/win24.jpg" /><br />
+<p><img src="img/win08.jpg" /><br />
+<span class="sob_figura">Image 08: Results.</span> </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<p><b>Domain Controller</b></p>
+<p><img src="img/win09.jpg" /><br />
+<span class="sob_figura">Image 09: Active Directory role page.</span> </p>
+
+<p>&nbsp;</p>
+<p><img src="img/win10.jpg" /><br />
+<span class="sob_figura">Image 10: AD DS Install Wizzard.</span> </p>
+<p>This wizzard will create our domain(or associate an existing one).</p>
+<p>&nbsp;</p>
+<p><img src="img/win11.jpg" /><br />
+<span class="sob_figura">Image 11: OS compatibility.</span> </p>
+<p>&nbsp;</p>
+<p><img src="img/win12.jpg" /><br />
+<span class="sob_figura">Image 12: Creating a new tree.</span> </p>
+<p>To create a new tree, select the "Create a new domain in a forest" option and click "Next" to set up its name.</p>
+<p>&nbsp;</p>
+<p><img src="img/win13.jpg" /><br />
+<span class="sob_figura">Image 13: Setting up a domain Qualified Name.</span> </p>
+<p>For this example we are going to use admartini.scriptcase.com as the domain name.</p>
+<p>&nbsp;</p>
+<p><img src="img/win14.jpg" /><br />
+<span class="sob_figura">Image 14: Setting the functional level for <b>admartini.scriptcase.info.</b></span> </p>
+<p>This step will define the computers that will be able to become domain servers or delegate controllers.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/win15.jpg" /><br />
+<span class="sob_figura">Image 15: Additional options.</span> </p>
+<p>To make sure that other computers will be able to find this domain, turn it on a DNS server or use your default DNS server, relationing the domain name to the AD server's IP adress.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/win16.jpg" /><br />
+<span class="sob_figura">Image 16: Defining database, log and SYSVOL path.</span> </p>
+<p>Here you can define the path for the LDAP database, the log files and the SYSVOL. There is no need to change this in most of cases.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/win17.jpg" /><br />
+<span class="sob_figura">Image 17: Setting up a Restore Mode password.</span> </p>
+<p>This password will allow you to access the AD server's Restore Mode, it is not related with the LDAP admin password.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/win18.jpg" /><br />
+<span class="sob_figura">Image 18: Installation summary.</span> </p>
+<p>&nbsp;</p>
+<p><img src="img/win19.jpg" /><br />
+<span class="sob_figura">Image 19: Installation progress.</span> </p>
+<p>&nbsp;</p>
+<p><img src="img/win20.jpg" /><br />
+<span class="sob_figura">Image 20: Installation finished.</span> </p>
+<p>&nbsp;</p>
+
+<p><b>Creating a New User</b></p>
+<p><img src="img/win21.jpg" /><br />
+<span class="sob_figura">Image 21: Creating new user Object.</span> </p>
+<p>Select the "Active Directory Users and Computers" option under the AD DS menu, then select your domain and right click to create a new user object. Insert the user data and define a new password for it. Then confirm the changes to finish the process.</p>
+<p>&nbsp;</p>
+<p><img src="img/win22.jpg" /><br />
+<span class="sob_figura">Image 22: New User data.</span> </p>
+<p>&nbsp;</p>
+<p><img src="img/win23.jpg" /><br />
+<span class="sob_figura">Image 23: Defining user's password.</span> </p>
+<p>&nbsp;</p>
+<p><img src="img/win24.jpg" /><br />
+<span class="sob_figura">Image 24: Object Created.</span> </p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b>Results</b></p>
+<p>This tutorial created a LDAP authentication environment. The authentication data for this example are:</p>
+<table>
+  <tr>
+	<td><strong>Domain</strong></td>
+	<td>ADMARTINI</td>
+  </tr>
+  <tr>
+	<td><strong>DN</strong></td>
+	<td>DC=admartini,DC=scriptcase,DC=info</td>
+  </tr>
+  <tr>
+	<td><strong>User Name</strong></td>
+	<td>CN=Henrique C. Barros,DC=admartini,DC=scriptcase,DC=info <b>OR </b>hbarros@admartini.scriptcase.info</td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr>
+<h2 id="linux">Creating a simple LDAP Database on Linux.</h2>
+
+<p><b>Installing and configuring slapd</b></p>
+<p>We are going to use OpenLDAP(slapd) to build a LDAP database accessible for the security module WITHOUT simulating an Active Directory. This tutorial will create an LDAP server and a single user for access.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/lin01.jpg" /><br />
+<span class="sob_figura">Image 01: Installing slapd.</span> </p>
+<p>In a Debian-based system, we need to use apt-get to retrieve and install slapd.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/lin02.jpg" /><br />
+<span class="sob_figura">Image 02: Using dpkg-reconfigure to change slapd settings.</span> </p>
+<p>After the installation, we must configure the settings for the slapd. To do so, we must use dpkg-reconfigure to build.</p>
+<p>&nbsp;</p>
+<p><img src="img/lin03.jpg" /><br />
+<span class="sob_figura">Image 03: Configuring slapd.</span> </p>
+<p>Select the "No" option and press Enter to continue.</p>
+<p>&nbsp;</p>
+<p><img src="img/lin04.jpg" /><br />
+<span class="sob_figura">Image 04: Defining domain name.</span> </p>
+<p>Choose your domain name.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/lin05.jpg" /><br />
+<span class="sob_figura">Image 05: Defining organization name.</span> </p>
+<p>Type the organization name and press Enter to continue.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/lin06.jpg" /><br />
+<span class="sob_figura">Image 06: Setting up admin password.</span> </p>
+<p>Define the admin password and press Enter to confirm it.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/lin07.jpg" /><br />
+<span class="sob_figura">Image 07: Defining database engine backend.</span> </p>
+<p>This screen allows us to choose the Database backend. We recommend you to use HDB. Press enter to proceed and then choose to clean your previous DB.</p>
+
+<p>&nbsp;</p>
+<p><img src="img/lin08.jpg" /><br />
+<span class="sob_figura">Image 08: Purging previous DB.</span> </p>
+
+<p>&nbsp;</p>
+<p><img src="img/lin09.jpg" /><br />
+<span class="sob_figura">Image 09: Moving old files.</span> </p>
+
+<p><b>Adding a new user</b></p>
+
+<p><strong>First of all, you must create a LDIF file with the info about the user on it:</strong><br />
+<span class='nota'>user@computer:~$ touch hbarros.ldif</span></p>
+
+<p><strong>This is the content we are using for this sample file:</strong></p>
+<p>&nbsp;</p>
+
+<table>
+  <tr>
+	<td>
+	  # Object 1: uid=hbarros,dc=admartini,dc=scriptcase,dc=info<br />
+	  dn: uid=hbarros,dc=admartini,dc=scriptcase,dc=info<br />
+	  objectclass: account<br />
+	  objectclass: simpleSecurityObject<br />
+	  objectclass: top<br />
+	  uid: hbarros<br />
+	  userpassword: {MD5}6jAUXhUfuutm7cbFC6oVUA==
+	</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<p>Now we are ready to put it on the database itself.</p>
+<p> <strong>Get admin rights:</strong>
+<br />
+<span class='nota'>user@computer:~$ su</span></p>
+<p><strong>Stop the lapd service:</strong>
+<br />
+<span class='nota'>root@computer:/home/user# /etc/init.d/sladp stop</span></p>
+<p><strong>Use slapadd to import the file:</strong>
+<br />
+<span class='nota'>root@computer:/home/user# slapadd -l /home/user/hbarros.ldif</span></p>
+<p><strong>Restart the service.</strong>
+<br />
+<span class='nota'>root@computer:/home/user# /etc/init.d/slapd start</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<p><b>Results</b></p>
+<p>This tutorial created a LDAP authentication environment. The authentication data for this example are:</p>
+<table>
+  <tr>
+	<td><strong>Domain</strong></td>
+	<td>ADMARTINI</td>
+  </tr>
+  <tr>
+	<td><strong>DN</strong></td>
+	<td>DC=admartini,DC=scriptcase,DC=info</td>
+  </tr>
+  <tr>
+	<td><strong>User Name</strong></td>
+	<td>UID=hbarros,DC=scriptcase,DC=info</td>
+  </tr>
+</table>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META NAME="Last REVIEWED" CONTENT="Henrique Cézar, 18/02/2013">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>LDAP - Total Control</TITLE>
+    <link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<H1>LDAP - Total Control</H1>
+<p>This LDAP authentication method allows the admin to select users from LDAP who will have access to the applications and which applications will be accessible for each user.</P>
+<p>&nbsp;</p>
+<p><b>1. Connection - </b> The connection will be used to create or associate the security module.</p>
+<p><img src="img/ctrl_con.jpg" /><br />
+<span class="sob_figura">Image 1: Connection settings.</span> </p>
+<p>&nbsp;</p>
+<UL>
+  <LI><strong>Connection - </strong>Select a database connection from the project.</LI>
+  <LI><strong>Existing or Create Tables  - </strong>You can choose if Scriptcase will create the tables in your database or it it will use existent tables.</LI>
+  <LI><strong>Table prefix - </strong>Prefix used to create the table names.</LI>
+  <LI><strong>Delete tables if they exist. - </strong>Delete the tables to create new ones.</LI>
+</UL>
+
+<p>&nbsp;</p>
+<p><b>2. Associate - </b> It is just needed if you have selected the option to use "Existing Tables" in the previous step.</p>
+
+<P><STRONG>User:</STRONG></P>
+<p><img src="img/ctrl_tables.jpg" /><br />
+<UL>
+  <LI><STRONG>Table - </STRONG>Define the table "Users" used by the system.</LI>
+  <li><strong>Login - </strong>Set the field to stores the User login.</LI>
+  <li><strong>Password - </strong> Set the field to stores the User Password.<b>NOT USED</b></LI>
+  <li><strong>Name - </strong>Set the field to stores the User Name.</LI>
+  <li><strong>E-mail - </strong>Set the field to stores the E-mail.</LI>
+  <li><strong>Active - </strong>Set the field to stores if the user is active or not.</LI>
+  <li><strong>Activation code - </strong>Set the field to stores the Activation code.<b>NOT USED</b></LI>
+  <li><strong>Administrator privilege - </strong>Set the field to stores if the user has administrator privileges.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>Application:</STRONG></P>
+<p><img src="img/ctrl_tables2.jpg" /><br />
+<UL>
+  <LI><STRONG>Table - </STRONG>Set the table to store all project applications.</LI>
+  <LI><strong>Application Name - </strong> Define the field to store the code or the application name.</LI>
+  <LI><strong>Description - </strong>Set the field to store the application description.</LI>
+  <LI><strong>Type of application - </strong>Set the field to store the application type.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>User / Application:</STRONG></P>
+<p><img src="img/ctrl_tables3.jpg" /><br />
+<UL>
+  <LI><STRONG>Table - </STRONG>Set the table to store the relationship between groups and  project applications.</LI>
+  <LI><strong>Login - </strong>Define the field to store the User Login.</LI>
+  <li><strong>Application Name - </strong>Define the field to store the application name. </li>
+  <li><strong>Access Privilege - </strong>Define the field to store if the user has privilege to access the application. </li>
+  <li><strong>Insert Prvilege- </strong>Define the field to store if the user has privilege to insert new records in the application. </li>
+  <li><strong>Delete Privilege - </strong>Define the field to store if the user has privilege to delete records in the application. </li>
+  <li><strong>Update Prvilege- </strong>Define the field to store if the user has privilege to update records in the application. </li>
+  <li><strong>Export Privilege - </strong>Define the field to store if the user has privilege to export records in the application. </li>
+  <li><strong>Print Prvilege- </strong>Defines the field to store if the user has privilege to print records in the application. </li>
+</UL>
+<p>&nbsp;</p>
+
+<p><b>3. Configuration - </b>This step will define the settings used on the security module.</p>
+<p>&nbsp;</p>
+
+
+<P><STRONG>General:</STRONG></P>
+<p><img src="img/ctrl_configs.jpg" /><br />
+
+<UL>
+  <LI><STRONG>Prefix applications - </STRONG>Create the security applications with a prefix in the name.</LI>
+  <LI><strong>Encryption - </strong>Define if the password will use encryption.<b>NOT USED</b></LI>
+  <LI><strong>Enable Security - </strong>Enable the option "use security" in each application.</LI>
+  <LI><strong>Use Captcha - </strong> Enable the option to use CAPTCHA in the login screen.</LI>
+  <LI><strong>Folder - </strong>It creates a folder in the project to security applications.</LI>
+  <LI><strong>Schema - </strong>Define the theme to the applications.</LI>
+  <LI><strong>Log - </strong>Define the Log Scheme used in the security applications.</LI>
+  <LI><strong>Menu - </strong>It allows to create or select a Menu application to include the security module.</LI>
+  <LI><strong>Menu Type - </strong>Define the Menu type, if the option to create a new menu applications was set in the item above.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>Login:</STRONG></P>
+<p><img src="img/ctrl_configs2.jpg" /><br />
+
+<UL>
+  <LI><STRONG>Minimum size - </STRONG>Minimum size of characters typed by the user.</LI>
+  <LI><strong>Maximum size - </strong>Maximum size of characters typed by the user.</LI>
+  <LI><strong>Allowed Characters - </strong>Define wich characters the end-user can type.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>E-mail Settings:</STRONG></P>
+<p><img src="img/ctrl_configs3.jpg" /><br />
+<UL>
+  <LI><STRONG>SMTP Server - </STRONG>Define the SMTP server.</LI>
+  <LI><strong>SMTP Port - </strong>Define the SMTP port.</LI>
+  <LI><strong>SMTP User - </strong>Define the SMTP user.</LI>
+  <LI><strong>SMTP Password - </strong>Define the SMTP password.</LI>
+  <LI><strong>SMTP E-mail - </strong>Define the SMTP e-mail.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>LDAP:</STRONG></P>
+<p><img src="img/ctrl_configs4.jpg" /><br />
+<UL>
+  <LI><STRONG>Server - </STRONG>Define the LDAP server adress.</LI>
+  <LI><strong>Domain - </strong>Define the LDAP domain to be used.</LI>
+  <LI><strong>DN - </strong>Define LDAP's Distinguished Name to be used.</LI>
+  <LI><strong>Group - </strong>Define the LDAP Group to be used.</LI>
+</UL>
+<p>&nbsp;</p>
+
+<p><b>4. Test User - </b>The fifth step is used to activate one user as administrator.</p>
+<p>&nbsp;</p>
+<p><img src="img/login_test.jpg" /><br />
+  <span class="sob_figura"> Insert Data Interface</span></p>
+<P><STRONG>Insert data:</STRONG></P>
+<UL>
+  <LI><STRONG>Login - </STRONG>Valid LDAP user Login.</LI>
+  <LI><strong>Password - </strong>Valid LDAP user password.</LI>
+  <LI><strong>Name - </strong>User name</LI>
+  <LI><strong>E-mail - </strong>User e-mail.</LI>
+</UL>
+<p>&nbsp;</p>
+
+<p><b>5. Add applications - </b>The sixth step is used to populate the table Applications.</p>
+<p>&nbsp;</p>
+<p><img src="img/seg_add_app.jpg" /><br />
+  <span class="sob_figura">Add Applications Interface</span></p>
+<P>Checking the option, Scriptcase will insert in the Applications Table, the name of each application existing in the project.</P>
+<p>&nbsp;</p>
+
+<p><b>6. Profile - </b>The last step is used to save in a profile all settings used on the steps to be used in other projects.</p>
+<p>&nbsp;</p>
+<p><img src="img/seg_profile.jpg" /><br />
+  <span class="sob_figura">Profile Interface</span></p>
+<P>You can save a profile to any Scriptcase user, just to that user or just to be used in that project.</P>
+<p>&nbsp;</p>
+
+</BODY>
+</HTML>

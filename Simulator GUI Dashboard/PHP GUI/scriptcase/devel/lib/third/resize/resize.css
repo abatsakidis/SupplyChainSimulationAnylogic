@@ -1,0 +1,11 @@
+.resize-bottom
+{
+    background-color:#FF0000;
+    height:20px;
+    position: relative;
+    cursor: pointer;
+}
+.resize-move{
+    background-color:#FF0000;
+    position: relative;
+}

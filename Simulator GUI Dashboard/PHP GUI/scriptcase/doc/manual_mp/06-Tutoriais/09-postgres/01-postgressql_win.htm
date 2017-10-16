@@ -1,0 +1,29 @@
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Enabling MySQL (WINDOWS)</title>
+</head>
+
+<body>
+<h1>Enabling PHP extension/module PostgreSQL (WINDOWS)</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/09-postgres/00-postgressql.htm" target="_self">PostgreSQL</a> >> Enabling PostgreSQL (WINDOWS)</td></tr></table>
+<p>Edit the PHP.ini file. Run the phpinfo() function to check the  php.ini file location according to  the image below.</p>
+<p><img src="../img/359_1.jpg"/></p>
+<p><br />
+In the PHP.INI file, search for php_pgsql.dll and remove the &quot;;&quot; to enable the module PostGreSQL in PHP. See image below.</p>
+<p><img src="../img/366_1.jpg"/></p>
+<p class="nota">If you wish to use the PostgreSQL PDO connection, you should remove the semicolon from php_pdo_pgsql.dll</p>
+<p>Make sure the PostGreSQL module was enabled. See Diagnosis.</p>
+<p><img src="../img/367_2.jpg" alt="" /></p>
+<p><strong>Creating a connection in Windows Server </strong><br /><br />
+  To connect  to PostGreSQL database, check in ScriptCase  Diagnosis (menu: Help | Diagnosis)  if the PostGreSQL module is enabled, see image1. If not,  edit the file php.ini and enable the PostGreSQL module (php_pgsql.dll).  <br />
+  <br />
+If the connection is made in a different server from where PostGresSQL is located, you must check if the &quot;Allow Access Foreign&quot; is marked.</p>
+<p>&nbsp;</p>
+<p>Once the module is enabled we can create the connection to PostgreSQL from Scriptcase:</p>
+<ul>
+  <li><a href="../../06-Tutoriais/09-postgres/03-postgressql_sc.htm" target="_self">Connecting to PostgreSQL from Scriptcase.</a></li>
+</ul>
+</body>
+</html>

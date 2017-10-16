@@ -1,0 +1,162 @@
+/*button text - all levels*/
+#menu_modernstyle .menuButtonSecond td, #menu_modernstyle .menuButton td, #menu_modernstyle .menuButtondown td,#menu_modernstyle .menuButtonover td {
+	cursor:default;
+}
+/*menu text - all levels*/
+#menu_modernstyle .defaultMenuText{
+	font: 11px Tahoma,Arial;
+	padding-left:10px;
+	padding-right:5px;
+}
+/*menu caption if any*/
+#menu_modernstyle .menuName{
+	color : gray;
+	letter-spacing : 7px;
+	font : 11px Arial,sans-serif;
+	padding-left : 10px;
+	padding-right : 10px;
+}
+/*========= BUTTONS ======================*/
+
+/*plain button state - top level*/
+#menu_modernstyle .menuButton {
+	xborder : solid 1px #ece9d8;
+}
+/*down button state - top level*/
+#menu_modernstyle .menuButtondown {
+	background-color : #868686;
+	xborder: solid 1px #316ac5;
+	cursor : default;
+}
+/*mouse over button state - top level*/
+#menu_modernstyle .menuButtonover {
+	background-color : #868686;
+	xcolor:white;
+	xborder: solid 1px #316ac5;
+	cursor : default;
+}
+/*text color for pressed and over items - top level*/
+#menu_modernstyle .menuButtondown .defaultMenuText,#menu_modernstyle .menuButtonover .defaultMenuText{
+	color:white;
+}
+/*plain button state - other levels*/
+#menu_modernstyle .menuButtonSecond {
+	background-color:#F0F0F0;/*#xD4D0C8*/
+	border:2px solid #F0F0F0;
+	font:12px Arial,sans-serif;
+	xline-height:26px;
+	height:18px;
+}
+/*mouse over button and down button states - other levels*/
+#menu_modernstyle .menuButtonSecondover,#menu_modernstyle .menuButtonSeconddown {
+	background-color : #CBCBCB;
+	color:black;
+	cursor : default;
+	border:2px solid #CBCBCB;
+	font:12px Arial,sans-serif;
+}
+/*icon place style on button over/down - other levels
+.menuButtonSeconddownimg {
+	background-color : #C9D9F5;
+}*/
+
+/*text of mouse over button - other levels*/
+#menu_modernstyle .menuButtonSeconddown td {
+	 color:black;
+	 cursor:default;
+	 border:0px solid;
+}
+
+
+/*============ PANELS and DEVIDERS ===========================================*/
+
+/*manu panel - top level*/
+#menu_modernstyle .menuTable{
+	background-color : #ece9d8;
+	border: 0px solid #808080 ;
+	background-image: url(imgs/bg_menu.gif);
+	-moz-user-select : none;
+	padding : 0px;
+	height:20px;
+	
+}
+/*menu panel - other levels*/
+#menu_modernstyle .secondMenuTable{
+	background-color : #F0F0F0;
+	border: 1px solid #808080; 
+	margin : 0px;
+	-moz-user-select : none;
+	padding : 0 1 0 2;
+	margin-top:-1px;
+}
+
+/*devider - horizontal*/
+#menu_modernstyle .menuDivider {
+	background-color : #ece9d8;
+	border-left : solid #808080 1px;
+	border-right : solid #FFFFFF 1px;
+	height : 100%;
+	margin-bottom : 2px;
+	margin-top : 1px;
+	overflow : hidden;
+	vertical-align : middle;
+	width : 2px;
+}
+/*devider - vertical*/
+#menu_modernstyle .menuDividerY {
+	background-color : #ece9d8;
+	border-bottom : solid #808080 1px;
+	xborder-top : solid #808080 1px;
+	height : 2px;
+	overflow : hidden;
+	width : 100%;
+}
+
+/*================== DRAG HANDLERS ==================*/
+
+/*drag handler for menu - horizontal*/
+#menu_modernstyle .menuhandle {
+	background-color : #ece9d8;
+	border-bottom : solid #808080 1px;
+	border-left : solid #FFFFFF 1px;
+	border-right : solid #808080 1px;
+	border-top : solid #FFFFFF 1px;
+	cursor : move;
+	height : 100%;
+	overflow : hidden;
+	width : 3px;
+}
+/*drag handler for menu - vertical*/
+#menu_modernstyle .vmenuhandle {
+	background-color : #ece9d8;
+	border-bottom : solid #808080 1px;
+	border-left : solid #FFFFFF 1px;
+	border-right : solid #808080 1px;
+	border-top : solid #FFFFFF 1px;
+	cursor : move;
+	height : 3px;
+}
+
+
+/*============ ICONS and SCROLLERS ====================*/
+
+/*disabled icon - all levels*/
+#menu_modernstyle .iconGray {
+	filter : BlendTrans(Percent=50) gray(); 
+	cursor: default; 
+	border:solid 1px #ece9d8;
+}
+
+/*enabled scroller*/
+#menu_modernstyle .menuscrollerenabled{
+	background-color:#CAC8D4;
+	 cursor: pointer;	
+	 text-align:center;
+}
+/*disabled scroller*/
+#menu_modernstyle .menuscrollerdisabled{
+	background-color: #CAC8D4;
+	cursor: default;
+	visibility:hidden;
+	text-align:center;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>Connecting Access via ADO</title>
+</head>
+
+<body>
+<h1>Connecting Access via ADO</h1> 
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/01-access/00-msaccess.htm" target="_self">MS-Access</a> >> Connecting Access via ADO</td></tr></table>
+
+
+<p>To connect your Access Database using ADO, check the <strong>phpinfo ()</strong> if the COM option is enabled.&nbsp;If not install the package MDAC28SDK and restart your machine.<br />
+When the option is enabled in the COM Diagnosis proceed with the establishment of the connection</p>
+<p><img src="../img/372_1.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p>Use the following ADO driver:</p>
+<p>&nbsp;</p>
+<p>Accdb Extension - <b>MicroSoft Access Driver (*mdb, *accdb)</b> </br></br><img src="../img/accdb_ok.jpg"/></p>
+<p>&nbsp;</p>
+
+<p><strong><u>CREATING SCRIPTCASE CONNECTION (MSACCESS)</u></strong></p>
+<blockquote>
+<p><span>Now access ScriptCase to create a new connection.</span></p>
+<p><strong>Step 1: </strong>Log in&nbsp;your ScriptCase, and on the left menu you can see a tab &quot;Connection&quot;, click on the sub item &quot;New&quot;.</p>
+<p>&nbsp;</p>
+<p><img src="../img/544_11.jpg" alt="" /></p>
+<p><strong>Step 2:</strong> After you click &quot;New&quot;, will appear at the   right screen to create connection, click on the image of the MS Access   database.</p>
+<p><img src="../img/criar_conex_msaccess.jpg" /></p>
+<p><strong>Step 3:</strong> In the picture below, fill in the   required specifications:</p>
+<A NAME="conex_msaccess"></A>
+<p><img src="../img/criar_conex_msaccess2.jpg" /></p>
+<ul><li><strong>Connection name</strong> - Set the name of   your new connection.</li>
+  <li><strong>DBMS type </strong>- Set the type of the DBMS is ADO   or ODBC.</li>
+  <li><strong>Test Connection</strong> - Displays if the connection was   successful or not.</li>
+  <li><strong>PATH</strong> - PATH   Newsletter Archive. MDB (This file is on server where is installed   ScriptCase).</li>
+  <li><strong>Username</strong> - Enter the user to gain access to your MS Access.</li>
+  <li><strong>Password</strong>   - Enter the password to get access to your MS Access.</li>
+</ul>
+<p>Para mais detalhes na configura&ccedil;&atilde;o da conex&atilde;o do banco da dados clique  na aba Advanced<br />
+</p>
+<p><img src="../img/advanced_no_client_encoding.jpg" /></p>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>Decimal   separator</strong> - Select the type of separator between comma and point.</li>
+  <li><strong>Persistent connection</strong> - Persistent   connections are links that do not close when the execution of your   script ends.</li>
+  <li><strong>Use the schema name   before the table</strong> - Allows the use of schemas before the names of the   tables.</li>
+  <li><strong>Filter</strong> - Clicando nessa Aba, aparecer&aacute; a seguinte tela:</li>
+</ul>
+<p>&nbsp;</p>
+<p><img src="../img/filter_tab.jpg" /><br />
+</p>
+<ul>
+  <li><strong>View</strong> - Allows viewing   of filters on the tables, views, system tables and procedures.</li>
+  <li><strong>Filters</strong> - Allows   you to define which tables and owners will be displayed.</li>
+</ul>
+<p><strong>Step 4:</strong> Always test your connection before   completing the same, if the message &quot;Connected successfully&quot;, then   complete the establishment of the connection. If there is any connection   fails, review the fields filled in, especially the user, and password server path.</p>
+</body>
+</html>

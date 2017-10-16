@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>IBM DB2 ODBC Native</title>
+</head>
+<body>
+<h1>IBM DB2 Connection.</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/02-db2/00-db2.htm" target="_self">IBM DB2</a> >> IBM DB2 ODBC Native</td></tr></table>
+<p><span class="titulo"><b>Windows IBM DB2 database connection using ODBC Native driver.</b></span></p>
+
+<p>Now access ScriptCase to create a new connection.</p>
+<p><strong>Step 1: </strong>Log in ScriptCase, and on the top menu you can see the item &quot;Database &quot;, click on the sub item &quot;New connection&quot; or use the icon from the fast menu.</p>
+<p>&nbsp;</p>
+<p><img src="../img/544_11.jpg" alt="" /><br />
+</p>
+<p><strong>Step 2:</strong> Then you can see a screen to select the database type, click on the image of the DB2 database.</p>
+<blockquote>
+  <p>&nbsp;</p>
+</blockquote>
+<p><img src="../img/criar_conex_db2.jpg" /></p>
+<blockquote>
+  <p>&nbsp;</p>
+</blockquote>
+<p><strong>Step 3:</strong> In the picture below, fill in the   required specifications:</p>
+<blockquote>&nbsp;</blockquote>
+<p><img src="../img/criar_conex_db2_nativo_2.jpg" /></p>
+<ul>
+  <li><span id="result_box3"><span title="Nome da conex&atilde;o - Defina o nome de sua nova   conex&atilde;o."><strong>Connection name</strong> - Set the name of your new connection.</span></span></li>
+  <li><span><span title="Modelo do SGDB -   Vers&atilde;o do Oracle utilizado."><strong>DBMS Type </strong> - <span id="result_box3"><span title="Modelo do SGDB - Permite definir se o modelo   do SGDB &eacute; Nativo, Nativo ODBC ou ODBC Gen&eacute;rico.">Set the model of the   DBMS is Native, ODBC or native ODBC Generic.</span></span></span></span></li>
+  <li><span><span title="Testar conex&atilde;o -   Exibir&aacute; se a conex&atilde;o foi realizada com sucesso ou n&atilde;o."><strong>Test Connection</strong> -   Used to test if the connection is successful or not.</span></span></li>
+  <li><span id="result_box3"><span title="Servidor do SGDB -   Informe o Servidor do MySQL."><strong>Server/Host (Name or IP) - </strong></span></span>Inform the server  IP or name where the database is installed.</li>
+  <li><span><span title="Base de dados -   Informe o nome da base do seu banco."><strong>Database Name </strong> - Enter the </span></span> DB2 database instance <span><span title="Base de dados -   Informe o nome da base do seu banco."> name.</span></span></li>
+  <li><strong>Schema - </strong><span id="result_box3"><span title="Schema - Pode-se informar o   Esquema(Opcional), no caso de querer utilizar apenas as tabelas   pertencentes ao esquema.">You can tell the Schema (Optional), if you   wish to use only the tables belonging to the schema.</span></span></li>
+  <li><span><span title="Usu&aacute;rio - Informe o usu&aacute;rio para conseguir acesso ao   seu MySQL."><strong>Username</strong> - </span><span title="Usu&aacute;rio - Informe o usu&aacute;rio para conseguir acesso ao seu   Oracle.">Enter a valid database user name</span>.</span></li>
+  <li><span><span title="Senha - Informe a senha para conseguir acesso ao seu Oracle."><strong>Password</strong> - Enter the user valid password.</span></span></li>
+</ul>
+<p>&nbsp;</p>
+<p>Para mais detalhes na configura&ccedil;&atilde;o da conex&atilde;o do banco da dados clique  na aba Advanced</p>
+<p><img src="../img/criar_conex_db2_3.jpg" /></p>
+<ul>
+  <li><span id="result_box4"><strong>Decimal separator</strong><span title="Separador de decimal - Selecione o tipo do   separador, entre v&iacute;rgula e ponto."> - Select the type   of separator between comma and point.</span></span></li>
+  <li><span><span title="Conex&atilde;o Persistente   - Conex&otilde;es persistentes s&atilde;o conex&otilde;es que n&atilde;o fecham quando a execu&ccedil;&atilde;o   do seu script termina."><strong>Persistent connection</strong> - Persistent connections   are links that do not close when the execution of your script ends.</span></span></li>
+  <li><span><span title="Usar o schema   antes do nome da tabela - Permite a utiliza&ccedil;&atilde;o de schemas antes dos   nomes das tabelas."><strong>Use the schema name before the table</strong> - Allows the   use of schemas before the names of the tables.</span></span></li>
+  <li><span id="result_box4"><span title="i5_lib - Biblioteca utilizada no Sistema   Operacional i5/OS da IBM."><strong>i5_lib</strong> - Library used in IBM i5/OS Operating   System.</span></span></li>
+  <li><span><span title="Filtrar - Clicando nessa op&ccedil;&atilde;o, aparecer&aacute; a seguinte   tela:"><strong>Filter</strong> - Clicando nessa Aba, aparecer&aacute; a seguinte tela:</span></span></li>
+</ul>
+<p><img src="../img/filter_tab.jpg" /><br />
+</p>
+<ul>
+  <li><strong>Show</strong><span id="result_box5"><span title="Exibir - Permite a exibi&ccedil;&atilde;o de filtros nas   tabelas, views, tabelas de sistema e procedures."> -  Display   filters on the tables, views, system tables and procedures.</span></span></li>
+  <li><strong>Filters</strong> - Define which tables and owners will be displayed.<br />
+      <br />
+  </li>
+</ul>
+<p><span title="Passo 11: Sempre teste a sua conex&atilde;o antes   de concluir a mesma, se aparecer a mensagem &ldquo;Conex&atilde;o Realizada com   Sucesso', ent&atilde;o conclua a cria&ccedil;&atilde;o da conex&atilde;o. Se houver alguma   falha na conex&atilde;o, reveja os campos preenchidos, principalmente o   usu&aacute;rio, senha eo"><strong>Step 4:</strong></span> Always test your connection before   completing the same, if the message &quot;Connected successfully&quot; is displayed, then   complete the establishment of the connection.<br>
+    <span style='font-size:9.0pt;font-family:
+Wingdings;'><span style='font:7.0pt "Times New Roman"'>&nbsp;</span></span> </p>
+<p>&nbsp;</p>
+</body>
+</html>

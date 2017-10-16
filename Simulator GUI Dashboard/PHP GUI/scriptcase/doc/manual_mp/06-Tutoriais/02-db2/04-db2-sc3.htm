@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>IBM DB2 ODBC Generic</title>
+</head>
+<body>
+<h1>IBM DB2 Connection.</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/02-db2/00-db2.htm" target="_self">IBM DB2</a> >> IBM DB2 ODBC Generic</td></tr></table>
+<p><span class="titulo"><b>Windows IBM DB2 database connection using ODBC Generic driver.</b></span></p>
+<p><b><br>
+  Step 1:  </b>Use Windows Data Source Administrator to create ODBC, select System DSN.<br>
+</p>
+<p><img src="../img/image021.jpg" v:shapes="_x0000_s1038"><br clear=ALL>
+    <br>
+    <br>
+    <br>
+    <strong>Step</strong><b> 1.2: </b>Select    DB2 ODBC Driver.<br>
+  <br>
+  <img src="../img/image023.jpg" v:shapes="_x0000_s1039"><br clear=ALL>
+    <br>
+    <br>
+    <br>
+    <b>Step 1.3: </b>Enter ODBC  name and select the database used. <br>
+  <br>
+  <img src="../img/image025.jpg" v:shapes="_x0000_s1040"><br clear=ALL>
+  <br>
+    <br>
+    <br>
+  <b>Step 1.4:</b> Configure ODBC.<br>
+  <br>
+    <img src="../img/image028.jpg" ><br>
+</p>
+<p><br clear=ALL>
+<br>
+    <br>
+    <b>Step 1.5:</b> Enter database user name and password and test the ODBC.<br>
+  <br>
+  <img src="../img/image027.jpg" ><br>
+    <br>
+    <br>
+</p>
+<p><span>Now access ScriptCase to create a new connection.</span><br />
+</p>
+<p><span><strong>Step 1: </strong>Log in ScriptCase, and on the top menu you can see the item &quot;Database &quot;, click on the sub item &quot;New connection&quot; or use the icon from the fast menu.</span></p>
+<p>&nbsp;</p>
+<p><img src="../img/544_11.jpg" alt="" /><br />
+</p>
+<p><strong>Step 2:</strong> Then you can see a screen to select the database type, click on the image of the DB2 database.</p>
+<p>&nbsp;</p>
+<p><img src="../img/criar_conex_db2.jpg" /></p>
+<p>&nbsp;</p>
+<p><strong>Step 3:</strong> In the picture below, fill in the   required specifications:<br>
+    <br>
+</p>
+<p><img src="../img/criar_conex_db2_generico_2.jpg" /></p>
+<ul>
+  <li><span id="result_box6"><span title="Nome da conex&atilde;o - Defina o nome de sua nova   conex&atilde;o."><strong>Connection name</strong> - Set the name of your new connection.</span></span></li>
+  <li><span><span title="Modelo do SGDB -   Vers&atilde;o do Oracle utilizado."><strong>DBMS Type </strong> - <span id="result_box6"><span title="Modelo do SGDB - Permite definir se o modelo   do SGDB &eacute; Nativo, Nativo ODBC ou ODBC Gen&eacute;rico.">Set the model of the   DBMS is Native, ODBC or native ODBC Generic.</span></span></span></span></li>
+  <li><span><span title="Testar conex&atilde;o -   Exibir&aacute; se a conex&atilde;o foi realizada com sucesso ou n&atilde;o."><strong>Test Connection</strong> -   Used to test if the connection is successful or not.</span></span></li>
+  <li><strong>ODBC Name </strong>- Enter the ODBC name created in the Control Panel.</li>
+  <li><strong>Schema - </strong><span id="result_box6"><span title="Schema - Pode-se informar o   Esquema(Opcional), no caso de querer utilizar apenas as tabelas   pertencentes ao esquema.">You can tell the Schema (Optional), if you   wish to use only the tables belonging to the schema.</span></span></li>
+  <li><span><span title="Usu&aacute;rio - Informe o usu&aacute;rio para conseguir acesso ao   seu MySQL."><strong>Username</strong> - </span><span title="Usu&aacute;rio - Informe o usu&aacute;rio para conseguir acesso ao seu   Oracle.">Enter a valid database user name</span>.</span></li>
+  <li><span><span title="Senha - Informe a senha para conseguir acesso ao seu Oracle."><strong>Password</strong> - Enter the user valid password</span>.</span></li>
+</ul>
+<p>Para mais detalhes na configura&ccedil;&atilde;o da conex&atilde;o do banco da dados clique  na aba Advanced</p>
+<p><img src="../img/advanced_no_client_encoding.jpg" /></p>
+<p>&nbsp;</p>
+<ul>
+  <li><span id="result_box7"><strong>Decimal separator</strong><span title="Separador de decimal - Selecione o tipo do   separador, entre v&iacute;rgula e ponto."> - Select the type   of separator between comma and point.</span></span></li>
+  <li><span><span title="Conex&atilde;o Persistente   - Conex&otilde;es persistentes s&atilde;o conex&otilde;es que n&atilde;o fecham quando a execu&ccedil;&atilde;o   do seu script termina."><strong>Persistent connection</strong> - Persistent connections   are links that do not close when the execution of your script ends.</span></span></li>
+  <li><span><span title="Usar o schema   antes do nome da tabela - Permite a utiliza&ccedil;&atilde;o de schemas antes dos   nomes das tabelas."><strong>Use the schema name before the table</strong> - Allows the   use of schemas before the names of the tables.</span></span></li>
+  <li><span><span title="Filtrar - Clicando nessa op&ccedil;&atilde;o, aparecer&aacute; a seguinte   tela:"><strong>Filter</strong> - Clicando nessa Aba, aparecer&aacute; a seguinte tela:</span></span></li>
+</ul>
+<p><img src="../img/filter_tab.jpg" /><br />
+</p>
+<ul>
+  <li><strong>Show</strong><span id="result_box8"><span title="Exibir - Permite a exibi&ccedil;&atilde;o de filtros nas   tabelas, views, tabelas de sistema e procedures."> -  Display   filters on the tables, views, system tables and procedures.</span></span></li>
+  <li><strong>Filters</strong> - Define which tables and owners will be displayed.<br />
+      <br />
+  </li>
+</ul>
+<p><span title="Passo 11: Sempre teste a sua conex&atilde;o antes   de concluir a mesma, se aparecer a mensagem &ldquo;Conex&atilde;o Realizada com   Sucesso', ent&atilde;o conclua a cria&ccedil;&atilde;o da conex&atilde;o. Se houver alguma   falha na conex&atilde;o, reveja os campos preenchidos, principalmente o   usu&aacute;rio, senha eo"><strong>Step 4:</strong></span> Always test your connection before   completing the same, if the message &quot;Connected successfully&quot; is displayed, then   complete the establishment of the connection.<span class="titulo"><br>
+</span></p>
+</body>
+</html>

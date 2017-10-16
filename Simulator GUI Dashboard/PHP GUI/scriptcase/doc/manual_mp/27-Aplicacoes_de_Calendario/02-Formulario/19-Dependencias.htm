@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+	<meta name="create" content="José Arteiro, 27-05-2005">
+    
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<TITLE>Dependencies</TITLE>
+		<link rel=Stylesheet type="text/css" media=all href="../../scriptcase.css">
+	</HEAD>
+	<BODY>
+		<H1>DEPENDENCIES</H1>
+		<p>&nbsp;</p>
+		<p>A resource to allow to link related tables, defining a dependency between tables.
+		For example, the table of orders and items, removing a record from the table of orders, all its items also have
+		to be removed. See  an example using this
+		resource below.</P>
+		<p>&nbsp;</P>
+		<p>&nbsp;</P>
+	<p>&nbsp;</P>
+		<p><FONT SIZE=3 STYLE="font-size: 13pt"><B>1&ordm;-</B></FONT>
+		First define a new dependence. In this example we will create
+		an dependency between adm_suppliers_products (Dependent table) with
+		the table adm_supplier (Actual application). Click on the button new
+		dependency to begin.</P>
+		<p><IMG SRC="img/dependencias2.jpg" NAME="figura1" BORDER=0 ALIGN=BOTTOM></P>
+		<p>&nbsp;</P>
+		<p><FONT SIZE=3 STYLE="font-size: 13pt"><B>2&ordm; -</B></FONT>
+		Select the dependent table and inform the amount of fields related
+		to the father and child table. In this example only one field
+		is related :  the supplier code.</P>
+		<p><IMG SRC="../../comuns/img/adicionar_dependencias.jpg" NAME="figura2" BORDER=0 ALIGN=BOTTOM></P>
+		<p>&nbsp;</P>
+		<p><FONT SIZE=3 STYLE="font-size: 13pt"><B>3&ordm; -</B></FONT>
+		Select the  keys (linking fields)  : adm_suppliers -&gt;
+		supplierID - adm_suppliers_products -&gt;supplierID.</P>
+<p><IMG SRC="../../comuns/img/adicionar_dependencias2.jpg" NAME="figura3"  BORDER=0 ALIGN=BOTTOM><br>
+		</P>
+		<p><FONT SIZE=3 STYLE="font-size: 13pt"><B>4&ordm; -</B></FONT>
+		 Click on
+		the button generate Scripts to define the dependence rule.</P>
+<p><IMG SRC="../../comuns/img/adicionar_dependencias3.jpg" NAME="figura4"  BORDER=0 ALIGN=BOTTOM><br>
+		</P>
+			</BODY>
+</HTML>

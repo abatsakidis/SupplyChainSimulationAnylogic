@@ -1,0 +1,165 @@
+<html>
+<head>
+<link rel=Stylesheet type="text/css" media=all href="../../../scriptcase.css">
+<title>Link Button</title>
+
+</head>
+<body>
+<h1>Creating a Linking type button</h1>
+
+<p>
+  
+<h1> AJAX EVENTS</h1>
+ <p>Using AJAX reduces the amount of unnecessary data traffic with the server thereby speeding up application processing. It allows individual data components on a page to be updated without the need to refresh the entire page. </p>
+ <p class="sob_figura"><img src="../../../comuns/programacao/img/ajax_event_access.jpg" /><br />
+     <span style="sob_figura">Figure 1: AJAX event interface.</span></p>
+ <p>&nbsp;</p>
+<p>The following events are available in ScriptCase. </p>
+<ul>
+   <li><strong>onChange -</strong> This event fires when the field has focus and the field value is changed and the focus is then directed to another object.</li>
+   <li><strong>onClick -</strong> This events fires when the field is clicked. </li>
+   <li><strong>onBlur - </strong>This events fires when the field has focus, the field value is NOT changed and the focus is directed to another object.</li>
+   <li><strong>onFocus - </strong>This events fires when the field has focus.</li>
+</ul>
+<p class="nota">Only the onClick event is available to Grid applications.</p>
+ <p>See the example below: The user field is validated against a database (table). For valid users it returns the name. For invalid users a message is displayed. </p>
+ <p><strong>Example</strong>:</p>
+ <p><span class="cabecalho1">1 - </span>Select the field and the event used by the AJAX process, (in PHP code). Passing parameters is optional.</p>
+ <p><img src="../../../comuns/programacao/img/ajax_tut1.jpg"/><br />
+   <span class="sob_figura">Figure 2: Selecting fields and events for AJAX processing.</span> </p>
+ <p>&nbsp;</p>
+ <p><span class="cabecalho2">2 -</span>Enter the PHP business rule in the PHP editor. The code is processed by the Server and the XML result is sent to the browser.</p>
+ <p><img src="../../../comuns/programacao/img/ajax_tut2.jpg" /><br />
+   <span class="sob_figura">Figure 3: Programming PHP with AJAX.</span></p>
+  <p><b>1. PHP editor - </b>Use it to type in your PHP code.</p>
+  <p><b>2. Insert Code - </b>ScriptCase provides you with a number of predefined blocks of code that can be inserted into the PHP editor and then amended accordingly.</p>
+  <p><b>3. Parameters (Fields) - </b>Use this to create parameters retrieving field values.</p>
+</P>
+
+
+<p>To create a new button, click on "New button", enter the name and select the type of button.</p>
+  
+<IMG SRC="../../../comuns/img/new_link.jpg" BORDER=0 ALIGN=BOTTOM><SPAN><BR>
+      <span class="sob_figura">Image2: Edit button function. </span></SPAN>      
+      
+<P>&nbsp;</p>
+
+<p>
+ <font>
+ There are three types of display buttons: (Button, Image and Link).
+ </font>
+ </p>
+<br>
+
+
+<p>
+  <p>Any event can use pre-defined functions (macros) that are available in and specific to Scriptcase. These functions are called "Scriptcase Macros". </p>
+<ul>
+  <li><a href="../../../28-Macros/00-macros_sc.htm">Read more about Scriptcase Macros.</a></li>
+</ul>
+
+</P>
+  
+
+<p> The linking button requires a link associated to it. In the application menu (on the left side of the window) there is an option to create new links configure the new Linking button, and follow the steps below to create  the link required to complete the operation.</p>
+  
+  
+  
+ <h2>Creating a new Link</h2>
+
+<p>
+ <BR>
+  <STRONG><SPAN> 1 </SPAN></STRONG>
+ <SPAN>- Using the link option click in new link, as in the image below. </SPAN>
+</P>
+
+<BLOCKQUOTE>
+  <p><IMG SRC="../../../comuns/img/ligacao_btn.jpg" />
+   <BR>
+    <span class="sob_figura">Image2:Create new Linking.</span></p>
+  <p>&nbsp;</p>
+</BLOCKQUOTE>
+
+<p>
+ <strong>2 </strong><SPAN>- Select  the link type <em>Buttons</em> and click in next (as Image below).</SPAN>
+</P>
+ 
+<BLOCKQUOTE><IMG SRC="../../../comuns/img/selecao_tipo_ligacao_btn.jpg"/><SPAN><BR>
+      <span class="sob_figura">Image3: Link Type </span>Interface.</span></BLOCKQUOTE>
+<p><strong>3</strong><SPAN> - Select the application that will be called and
+  click in Next.</SPAN> </P>
+  
+<BLOCKQUOTE><IMG SRC="../../../comuns/img/selecao_tipo_apl_ligacao.jpg" /><SPAN><BR>
+      <span class="sob_figura">Image4: List of Applications Interface.</span></SPAN>
+</BLOCKQUOTE>
+
+<p><strong>4 - </strong><SPAN>Define the parameters passed. It can
+  be of three types: Field, Value or Empty.</SPAN>
+ </P>
+ 
+<UL>
+  <LI>
+    <p><STRONG><SPAN>Field</SPAN></STRONG><SPAN> - Enter the field  used
+      to pass the content.</SPAN></P>
+</UL>
+<BLOCKQUOTE><IMG SRC="../../../comuns/img/selecao_tipo_apl_campo.jpg" /><SPAN><BR>
+    <span class="sob_figura">Image5:
+Parameters Definition </span></SPAN><span>Interface - Field.</span></BLOCKQUOTE>
+<UL>
+  <LI>  <STRONG><SPAN>Fixed - </SPAN></STRONG><SPAN> Enter a fixed content to be passed.</SPAN>
+</UL>
+<blockquote>
+  <p><SPAN><img src="../../../comuns/img/selecao_tipo_apl_fixo.jpg" /><br>
+  </SPAN><SPAN>Imag<span>e6:
+  Parameters Definition Interface - Value.</span></SPAN></p>
+</blockquote>
+<UL>
+  <LI>
+    <p><STRONG>Empty</STRONG><SPAN> - No value will be pass.</SPAN></P>
+</UL>
+<BLOCKQUOTE><IMG SRC="../../../comuns/img/selecao_tipo_apl_vazio.jpg" /><SPAN><BR>
+    <span class="sob_figura">Image7: Parameters Definition Interface -  Empty.</span></SPAN></BLOCKQUOTE>
+<p><strong>5 - </strong><SPAN> Define the
+  form link properties -  Iframe display.</SPAN></P>
+<BLOCKQUOTE><IMG SRC="../../../comuns/img/selecao_propriedades_ligacao.jpg" /><BR>
+    <span class="sob_figura">Image8: Link/Form Properties Interface.</span></BLOCKQUOTE>
+<p>&nbsp;</P>
+<UL>
+  <LI>
+    <p><STRONG><SPAN>Link
+      Operation Mode -</SPAN></STRONG><SPAN> How
+  will be presented the link.</SPAN></P>  
+    <ul>
+      <li><STRONG><SPAN><B>Open
+        in the same window</B> - </SPAN></STRONG><SPAN> Show the form  in the same browser
+            window, exiting the search and going to the form.</SPAN>      </li>
+      <li><STRONG><SPAN><B>Open
+        in other window</B> - </SPAN></STRONG><SPAN> Open another window to show the form.</SPAN>      </li>
+      <li><STRONG><SPAN><B>Open
+        in a Iframe</B> - </SPAN></STRONG><SPAN> Show the form  in the same   in the same window that the search, below of
+            search an Iframe is created to display  the
+            form.</SPAN>      </li>
+    </ul>
+  <LI><strong>Output
+    URL of the called application - </strong><SPAN> web
+  address accessed when the user exit the grid.</SPAN>  
+</UL>
+<UL>
+  <LI><STRONG>Linking Link Hint</STRONG><SPAN>- 
+  Message shown when the mouse is over the selected link field.</SPAN>  
+</UL>
+<UL>
+  <li><STRONG><SPAN>Form Properties - </SPAN></STRONG><SPAN> Select the buttons that will be shown.</SPAN></li>
+</UL>
+
+
+<p>
+  <p>Any event can use pre-defined functions (macros) that are available in and specific to Scriptcase. These functions are called "Scriptcase Macros". </p>
+<ul>
+  <li><a href="../../../28-Macros/00-macros_sc.htm">Read more about Scriptcase Macros.</a></li>
+</ul>
+
+</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Enabling MySQL (WINDOWS)</title>
+</head>
+
+<body>
+<h1>Enabling PHP extension/module MySQL (WINDOWS)</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/07-mysql/00-mysql.htm" target="_self">MySQL</a> >> Enabling MySQL (WINDOWS)</td></tr></table>
+<p>To enable the PHP MySQL extension/module we must edit the PHP.ini file.<br> Run the PHP info function to check the php.ini file  location according to image below.</p>
+<p><img src="../img/359_1.jpg" alt="" /></p>
+<p>In  the PHP.INI file, look for the <strong>php_mysql.dll</strong> and remove the &quot;;&quot; to  enable the MySQL module in PHP. If you wish to use the MySQÇ PDO connection, you should remove the semicolon from <strong>php_pdo_mysql.dll</strong>.
+	  <br />Remember to restart the web server. See  image below.</p>
+<p><img src="../img/360_2.jpg" alt="" /></p>
+<p>To connect  to MySQL database, check in ScriptCase  Diagnosis (menu: Help | Diagnosis)  if the MySQL module is enabled, see image1. If not,  edit the file php.ini and enable the MySQL module (php_mysql.dll).</p>
+<p><strong>Problems enabling&nbsp; MySQL extension on Windows </strong><br />
+    <br />
+When using the Apache Web server with PHP ISAPI, in many cases the  MySQL 5 extension  is not enabled. This error occurs because Windows  cannot find the DLL libmysql.dll which is located in the folder &quot;bin&quot; on  the MySQL installation folder. Copy this DLL to the system32 Windows  directory and restart the Services. </p>
+<p>&nbsp;</p>
+<p>Once the module is enabled we can create the connection to MySQL from Scriptcase:</p>
+<ul>
+  <li><a href="../../06-Tutoriais/07-mysql/03-mysql_sc.htm" target="_self">Conecting to MySQL from Scriptcase.</a></li>
+</ul>
+</body>
+</html>

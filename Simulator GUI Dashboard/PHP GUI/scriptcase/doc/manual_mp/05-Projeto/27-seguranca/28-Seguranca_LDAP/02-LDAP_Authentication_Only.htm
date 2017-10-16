@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META NAME="Last REVIEWED" CONTENT="Henrique Cézar, 18/02/2013">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>LDAP - Authentication Only</TITLE>
+    <link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<H1>LDAP - Authentication Only</H1>
+<p>This LDAP authentication method allows the usersto get access to all applications through LDAP validation of their Login/Password.</P>
+<p>&nbsp;</p>
+<p><b>1. Connection - </b> The connection will be used to create or associate the security module.</p>
+<p><img src="img/conn_l.jpg" /><br />
+<span class="sob_figura">Image 1: Connection settings.</span> </p>
+<UL>
+  <LI><strong>Connection - </strong>Select a database connection from the project.</LI>
+</UL>
+
+<p><b>2. Configuration - </b>This step will define the settings used on the security module.</p>
+<p>&nbsp;</p>
+
+
+<P><STRONG>General:</STRONG></P>
+<p><img src="img/configs.jpg" /><br />
+
+<UL>
+  <LI><STRONG>Prefix applications - </STRONG>Create the security applications with a prefix in the name.</LI>
+  <LI><strong>Encryption - </strong>Define if the password will use encryption.<b>NOT USED</b></LI>
+  <LI><strong>Enable Security - </strong>Enable the option "use security" in each application.</LI>
+  <LI><strong>Use Captcha - </strong> Enable the option to use CAPTCHA in the login screen.</LI>
+  <LI><strong>Folder - </strong>It creates a folder in the project to security applications.</LI>
+  <LI><strong>Schema - </strong>Define the theme to the applications.</LI>
+  <LI><strong>Log - </strong>Define the Log Scheme used in the security applications.</LI>
+  <LI><strong>Menu - </strong>It allows to create or select a Menu application to include the security module.</LI>
+  <LI><strong>Menu Type - </strong>Define the Menu type, if the option to create a new menu applications was set in the item above.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>Login:</STRONG></P>
+<p><img src="img/configs2.jpg" /><br />
+
+<UL>
+  <LI><STRONG>Minimum size - </STRONG>Minimum size of characters typed by the user.</LI>
+  <LI><strong>Maximum size - </strong>Maximum size of characters typed by the user.</LI>
+  <LI><strong>Allowed Characters - </strong>Define wich characters the end-user can type.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>LDAP:</STRONG></P>
+<p><img src="img/configs3.jpg" /><br />
+<UL>
+  <LI><STRONG>Server - </STRONG>Define the LDAP server adress.</LI>
+  <LI><strong>Domain - </strong>Define the LDAP domain to be used.</LI>
+  <LI><strong>DN - </strong>Define LDAP's Distinguished Name to be used.</LI>
+  <LI><strong>Group - </strong>Define the LDAP Group to be used.</LI>
+</UL>
+<p>&nbsp;</p>
+
+<p><b>3. Test User - </b>The fifth step is used to activate one user as administrator.</p>
+<p>&nbsp;</p>
+<p><img src="img/login_test.jpg" /><br />
+  <span class="sob_figura"> Insert Data Interface</span></p>
+<P><STRONG>Insert data:</STRONG></P>
+<UL>
+  <LI><STRONG>Login - </STRONG>Valid LDAP user Login.</LI>
+  <LI><strong>Password - </strong>Valid LDAP user password.</LI>
+  <LI><strong>Name - </strong>User name</LI>
+  <LI><strong>E-mail - </strong>User e-mail.</LI>
+</UL>
+<p>&nbsp;</p>
+<p><b>4. Profile - </b>The last step is used to save in a profile all settings used on the steps to be used in other projects.</p>
+<p>&nbsp;</p>
+<p><img src="img/seg_profile.jpg" /><br />
+  <span class="sob_figura">Profile Interface</span></p>
+<P>You can save a profile to any Scriptcase user, just to that user or just to be used in that project.</P>
+<p>&nbsp;</p>
+
+</BODY>
+</HTML>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Enabling MySQL (LINUX)</title>
+</head>
+
+<body>
+<h1>Enabling PHP extension/module MySQL (LINUX)</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/07-mysql/00-mysql.htm" target="_self">MySQL</a> >> Enabling MySQL (LINUX)</td></tr></table>
+<p>To enable the PHP MySQL extension/module on a Linux environment we must compile PHP with the option mysql (see description below).</p>
+<p><strong>Setting MySQL with PHP4:</strong></p>
+<blockquote>The option <strong>--with-mysql</strong> is enabled by default. This is the standard  operation and can be disabled by setting <strong>--without-mysql</strong>. If MySQL is activated without specifying the path to the  MySQL installation directory, PHP will use the MySQL client library. <br />
+    <br />
+  Users running other applications that use  MySQL (for example, <strong>auth-mysql</strong>) should not use the library built, but  instead only specify the MySQL path to the installation directory, like this: <strong>--with-mysql=/path/to/MySQL</strong>. This will force the PHP to use the  customer libraries installed by MySQL.</blockquote>
+<p><strong>Setting MySQL with PHP5: </strong><br />
+    <br />
+  &nbsp;&nbsp;&nbsp;&nbsp; MySQL is not active by default, neither the MySQL  library is built in PHP. <br />
+    <br />
+  &nbsp;&nbsp;&nbsp;&nbsp; Use the option <strong>--with-mysql[= DIR]</strong> to enable MySQL extension.<br />
+    <br />
+  &nbsp;&nbsp;&nbsp;&nbsp; Restart the web server.<br />
+    <br />
+  &nbsp;&nbsp;&nbsp;&nbsp; For other settings, visit the site http://www.php.net/manual/pt_BR/ref.mysql.php</p>
+<p>&nbsp;</p>
+<p>Once the module is enabled we can create the connection to MySQL from Scriptcase:</p>
+<ul>
+  <li><a href="../../06-Tutoriais/07-mysql/03-mysql_sc.htm" target="_self">Conecting to MySQL from Scriptcase.</a></li>
+</ul>
+</body>
+</html>

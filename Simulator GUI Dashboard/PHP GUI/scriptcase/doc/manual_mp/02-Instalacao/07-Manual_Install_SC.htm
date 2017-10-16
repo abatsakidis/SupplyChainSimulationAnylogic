@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>ScriptCase Manual Installation</title>
+<link href="../scriptcase.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<h1>ScriptCase Manual Installation</h1>
+<p>Requirements: <br />
+  <br />
+<ul>
+  <li>Web server with PHP support, such as Apache, IIS, Abyss and more.</li>
+  <li>PHP<strong> 5.4</strong>, with modules enabled<strong> mbstring, GD2 and zip</strong> enabled.</li>
+  <li>Zend Guard Loader 3.3.0 or higher.</li>
+  <li>Standard SQL database (SQLite, MySQL, MSSQL, PostgreSQL, Oracle and DB2) available to PHP. <span class='warning'>*</span></li>
+</ul></p>
+<br />
+<p class='warning'><i>*We recommend using the SQLite database<br /></i></p>
+
+<p>
+  Related links:<br />
+    <br />
+    <a href="http://br.php.net" target="_blank">PHP (Official Site)</a>.<br />
+
+    <a href="http://www.zend.com" target="_blank">Zend (Site)</a>.<br />
+
+    <a href="http://www.apache.org" target="_blank">Apache (Official Site)</a>.<br />
+</p>
+<br />
+<p>With the environment already installed, you must download the Scriptcase .zip in the downloads section of the site <a href="http://www.scriptcase.net" target="_blank">http://www.scriptcase.net</a>.<br /></p>
+    <br />
+<p>&nbsp;</p>
+<p>After configuring your environment, extract the file to a temporary folder, using the "extract here" your file decompressor. <br />
+It will create a folder with the name: scriptcase.xxx.<br />
+Rename it to <i><em>scriptcase</em></i> and move to the root of your web server. <br />
+Finally, open the browser and access the ScriptCase to start the installation process.
+
+<br />
+    <br />
+</p>
+<p><strong>Example:</strong> http://server:port/scriptcase<br />
+</p>
+<p><br />
+The screen below shows the choice of language (English)  to use during the installation.</p>
+<p><img src="img/img2.jpg"  /></p>
+<p>&nbsp;</p>
+<p>Check enabled extensions. If you check the not installed extensions, so ScriptCase tries to configure the <em>php.ini</em> file to recognize these extensions.</p>
+<p><img src="img/img3.jpg"  /></p>
+<p>&nbsp;</p>
+
+<p>Now, you'll choose whether you prefer the <b>Typical Installation</b> or a <b>Customized installation</b>.<br />
+</p>
+
+<h2>Typical Installation</h2>
+
+<br />
+    <img src="img/img4.jpg" />
+<p>&nbsp;</p>
+
+<p>Scriptcase will install everything automatically. 
+After choosing a typical installation, you will be automatically directed to your Scriptcase development environment Scriptcase.
+By default the user is: admin and password: admin.
+</p>
+
+<br />
+    <img src="img/end.jpg"  />
+<p>&nbsp;</p>
+
+<h2>Customized Installation</h2>
+
+<br />
+    <img src="img/img6.jpg"  />
+<p>&nbsp;</p>
+
+<p>You could choose on which database you wish to install ScriptCase and the default username and password to access it. </p>
+
+<p>ScriptCase needs some permissions to work properly. Check the permissions.<br />
+  <br />
+    NOTE: In case of <em>IIS Web Server</em>, requires permission of Writing, Reading and Execution <em>IUSR_NOMEDOSERVIDOR</em> to the user, in the following directories:<br />
+  <br />
+  1 - PHP installation directory.<br />
+2 - ScriptCase Directory.<br />
+3 - File cmd.exe on Windows.<br />
+</p>
+<p><img src="img/img7.jpg" /></p>
+<p><br />  
+  <br />
+  This step consists in defining the database in which the ScriptCase is installed, the default option is SQLite (Recommended), requires only that your PHP module is enabled, but you can do the installation in other databases.<br />
+<br />
+<br />
+<img src="img/img8.jpg" /><br />
+<br />
+<br />
+</p>
+<p>The tables used by ScriptCase were created successfully.</p>
+<p><img src="img/img9.jpg" /><br />
+  <br />
+</p>
+<p>&nbsp;</p>
+
+<p>Here you create a <em>login</em> and <em>password</em> for the ScriptCase's administrator.<br />
+    <br />
+<img src="img/img10.jpg"  /></p>
+<p>&nbsp;</p>
+<p>If the installation has been successful this screen appears. Click continue to boot ScriptCase.<br />
+    <br />
+<img src="img/img11.jpg"  /></p>
+<p>&nbsp;</p>
+<p>Login screen to access the ScriptCase the username and password entered earlier.<br />
+    <br />
+    <img src="img/end.jpg"  /><br />
+</p>
+</body>
+</html>

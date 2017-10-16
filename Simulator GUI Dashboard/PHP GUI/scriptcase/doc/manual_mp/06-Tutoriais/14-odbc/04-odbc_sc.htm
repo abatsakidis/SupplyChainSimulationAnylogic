@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+
+<title>Generic ODBC connection in Scriptcase</title>
+</head>
+
+<body>
+<h1>Connecting to an ODBC data source in Scriptcase</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/14-odbc/00-odbc.htm" target="_self">Generic ODBC</a> >> Generic ODBC connection in Scriptcase</td></tr></table>
+
+<p><strong>Requirements:</strong></p>
+<ul>
+  <li>Configure an ODBC to your database.</li>
+</ul>
+
+<p>Access ScriptCase to create a new connection.</p>
+<p><strong>Step 1: </strong>Log in&nbsp;your ScriptCase, and on the left menu you can see a tab &quot;Database Connections&quot;, click on the sub item &quot;New&quot;.</p>
+<p>&nbsp;</p>
+<p><img src="../img/544_11.jpg" /></p>
+<p>&nbsp;</p>
+<p><strong>Step 2:</strong> After you click &quot;New Connection&quot;, click on the image of the Generic ODBC.</p>
+<p><img src="../img/criar_conex_odbc_generico.jpg" /> </p>
+<p>&nbsp;</p>
+<p><strong>Step 3:</strong> In the picture below, fill in the   required specifications:</p>
+<p><A NAME="conex_dbf"></A></p>
+<p><img src="../img/criar_conex_dbf2.jpg"/></p>
+<ul>
+  <li><strong>Connection Name</strong> - Set the name of your new connection.</li>
+  <li><strong>DBMS Type</strong> - Defined as ODBC Generic.</li>
+  <li><strong>Test Connection</strong> -  Displays if the connection was successful or not.</li>
+  <li><strong>ODBC Name</strong>  - Enter the name of the ODBC.</li>
+  <li><strong>Username</strong> - Enter the user name (if exist) to access your database.</li>
+  <li><strong>Password</strong> - Enter the password (if exist) to access your database.</li>
+</ul>
+<p>&nbsp;</p>
+<p>Para mais detalhes na configura&ccedil;&atilde;o da conex&atilde;o do banco da dados clique  na aba Advanced</p>
+<p><img src="../img/advanced_no_client_encoding.jpg" /></p>
+<ul>
+  <li><strong>Decimal   separator</strong> - Select the type of separator between comma and point.</li>
+  <li><strong>Persistent connection</strong> - Persistent   connections are links that do not close when the execution of your   script ends.</li>
+  <li><strong>Use the schema    before the table name</strong> - Use schemas before the tables names.</li>
+  <li><strong>Filter</strong> - Clicando nessa Aba, aparecer&aacute; a seguinte tela:</li>
+</ul>
+<p><img src="../img/filter_tab.jpg" /></p>
+<ul>
+  <li><strong>Show </strong>-  Display   filters on the tables, views, system tables and procedures.</li>
+  <li><strong>Filters</strong> - Define which tables and owners will be displayed.<br />
+      <br />
+  </li>
+</ul>
+<p><strong>Step 4:</strong>Always test your connection before completing the same, if the message &quot;Connected successfully&quot; is displayed, then complete the establishment of the connection.</p>
+<p>If there is any connection failure, check the fields filled in, especially user, password and ODBC name. </p>
+<p>&nbsp;</p>
+<p>If your ODBC is not yet created, see how to create it:</p>
+<ul>
+  <li><a href="../../06-Tutoriais/14-odbc/01-dbf.htm" target="_self"> Creating the ODBC dBase (.dbf)</a></li>
+  <li><a href="../../06-Tutoriais/14-odbc/02-progress.htm" target="_self"> Creating ODBC for Progress </a> </li>
+  <li><a href="../../06-Tutoriais/14-odbc/03-foxpro.htm" target="_self"> Creating the ODBC Visual FoxPro </a> </li>
+</ul>
+</body>
+</html>

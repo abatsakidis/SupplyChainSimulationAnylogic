@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Global Variables</title>
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <H1>GLOBAL VARIABLE</H1>
+<p>This menu shows the global variables being used within the application, the global variable is a external parameter required to application execution. The application may contain global variables in  the Where Clause, in <em>Lookups</em>, or entering a variable in Application General Data field to replace the field name, created by special fields, etc.</P>
+<p> Global variables are defined in square brackets ([variable]). These variables should be passed to the  application that is being implemented through one of the methods  (Session, Post, Get)</P>
+<p><img src="../../comuns/aplicacao/img/global_variable_access.jpg"></P>
+<p><span class="sob_figura">Image 1: Global Variables Interface.</span></P>
+<p>Example: </P>
+<p><strong>Select customerid, customername from   customers <BR>
+  where customerid  ='[v_customerid]'</strong></p>
+<p>In this case, the variables <strong>"v_customerid"</strong>  appears in the variables configuration. Select the way it is passed to the Control application.</p>
+<p>&nbsp; <IMG SRC="../../comuns/aplicacao/img/variaveis.jpg" NAME="figura1" BORDER=0 ALIGN=BOTTOM><BR>
+<span class="sob_figura">Image 2: Variables Settings Interface.</span></P>
+<p>&nbsp;</P>
+<p><STRONG>Shows all global variables used in the application.</STRONG></P>
+<ul>
+  <li><strong>Attribute - </strong>Variable name in the application.</li>
+  <li><strong>Value - </strong> Defines variables behavior, this content is subdivided in three blocks, they are:
+    <ul>
+        <li>Scope - Defines how the variable is received by the application, if has been defined that a variable is received by a Post Method and it has been passed by get method the content won't be accepted. Variable passing methods :    
+          <ul>
+            <li>Session - In this option the variable must be created as a session variable in the PHP by other application before the search call which   is being defined.</li>
+            <li>Get   - Defines that the variable   must be passed by the HTML command line, that means, being visible to the   browser.</li>
+            <li>Post - Defines that the variable must be   passed through the post method of the form.</li>
+          </ul>
+        </li>
+      <li>Settings -  Do not validate (checking)  the  variable at execution time.</li>
+        <li>Type (Input/Output)<strong> - </strong>Defines if the variable is an   input or an output. At execution time in the development environment, a   form requesting the input variables used by the   application is displayed.</li>
+    </ul>
+  </li>
+  <li><SPAN><strong>Description</strong></SPAN><strong>- </strong><SPAN>Determines where the variable was   defined.</SPAN></li>
+</ul>
+
+</body>
+</html>

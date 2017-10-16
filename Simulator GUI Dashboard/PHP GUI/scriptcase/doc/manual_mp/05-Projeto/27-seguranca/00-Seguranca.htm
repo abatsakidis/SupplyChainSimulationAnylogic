@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META NAME="Last REVIEWED" CONTENT="José Arteiro, 14/05/2010">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>Security</TITLE>
+    <link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<H1>Security Module</H1>
+<p>Making use of ScriptCase security resources you can implement access rules for the system  being developed, further decreasing development time of a project,  considering that the ScriptCase will generate access applications and  all validations automatically. </P>
+<p><img src="img/seguranca.jpg"><br>
+<span class="sob_figura">Image 1: Security Module Menu.</span> </p>
+<p>&nbsp;</p>
+<p><b>1. Type - </b> The First step is used to select the level of security. There are three security levels and each  level is based on a data model for storing information such as user  accounts, passwords, access profiles, groups, etc.</p>
+<p><IMG SRC="img/seg_01.jpg"><BR>
+<span class="sob_figura">Image2: Security Module - Type.</span></P>
+<p>&nbsp;</p>
+<P><strong>Types:</strong></P>
+<UL>
+  <LI><strong>User - </strong>It creates an application based on security for user level. Where the application is linked to user login.</LI>
+  <LI><strong>Application - </strong>It creates an application based on the application level security. Where the application is related to the user.</LI>
+  <LI><strong>Group - </strong>It creates an application based on security for the Group level. Where is defined the access of each group to certain applications.</LI>
+  
+</UL>
+<p>&nbsp;</p>
+<p><b>2. Select Connection - </b> The Second step is common for any Type and it is used to select what database connection will be used to create the Security module.</p>
+<p><img src="img/seg_conn.jpg"><br>
+<span class="sob_figura">Image 3: Security Module - Select Connection.</span> </p>
+<P><strong>Select Connection:</strong></P>
+<UL>
+  <LI><strong>Connection - </strong>Select a database connection from the project.</LI>
+  <LI><strong>Existing or Create Tables  - </strong>You can choose if Scriptcase will create the tables in your database or it it will use existent tables.</LI>
+  <LI><strong>Table prefix - </strong>Prefix used to create the table names.</LI>
+  <LI><strong>Delete tables if they exist. - </strong>Delete the tables to create new ones.</LI>
+  <LI><strong>Protect logged users. - </strong>Delete the tables to create new ones.</LI>
+</UL>
+<p>&nbsp;</p>
+<p><b>3. Associate - </b> The Third step is different to each Type of security level and it is used to associate the fields from the security module with the fields from database. So <b>it is just needed if you have selected the option to use "Existing Tables" in the last step.</b></p>
+<p>&nbsp;</p>
+
+<ul>
+<li>
+<h2>User</h2>
+<p>Based on user level security. Where the application is linked to user login.</P>
+<p><IMG SRC="img/seg_user.jpg" NAME="figura1"><br>
+<span class="sob_figura">Image 4: User Interface.</span></P>
+<P><STRONG>User:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG>Define the table "Users" used by the system.</LI>
+  <li><strong>Login - </strong>Set the field to stores the User login.</LI>
+  <li><strong>Password - </strong> Set the field to stores the User Password.</LI>
+  <li><strong>Name - </strong>Set the field to stores the User Name.</LI>
+  <li><strong>E-mail - </strong>Set the field to stores the E-mail.</LI>
+  <li><strong>Active - </strong>Set the field to stores if the user is active or not.</LI>
+  <li><strong>Activation code - </strong>Set the field to stores the Activation code.</LI>
+  <li><strong>Administrator privilege - </strong>Set the field to stores if the user has administrator privileges.</LI>
+</UL>
+<p>&nbsp;</p>
+</li>
+<li>
+<h2> User  / App</h2>
+<p>Based on application level security. Where the applications is related to the user.</P>
+  <IMG SRC="img/seg_user_app.jpg"><br>
+  <span class="sob_figura">Image 5: User / App Interface.</span></P>
+<P><STRONG>1 - User:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG>Define the table "Users" used by the system.</LI>
+  <li><strong>Login - </strong>Set the field to stores the User login.</LI>
+  <li><strong>Password - </strong> Set the field to stores the User Password.</LI>
+  <li><strong>Name - </strong>Set the field to stores the User Name.</LI>
+  <li><strong>E-mail - </strong>Set the field to stores the E-mail.</LI>
+  <li><strong>Active - </strong>Set the field to stores if the user is active or not.</LI>
+  <li><strong>Activation code - </strong>Set the field to stores the Activation code.</LI>
+  <li><strong>Administrator privilege - </strong>Set the field to stores if the user has administrator privileges.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>2 - Application:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG>Set the table to store all project applications.</LI>
+  <LI><strong>Code - </strong> Define the field to store the code or the application name.</LI>
+  <LI><strong>Description - </strong>Set the field to store the application description.</LI>
+  <LI><strong>Type of application - </strong>Set the field to store the application type.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>5 - User / Application:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG>Set the table to store the relationship between groups and  project applications.</LI>
+  <LI><strong>Login - </strong>Define the field to store the User Login.</LI>
+  <li><strong>Application Name - </strong>Define the field to store the application name. </li>
+  <li><strong>Access Privilege - </strong>Define the field to store if the user has privilege to access the application. </li>
+  <li><strong>Insert Prvilege- </strong>Define the field to store if the user has privilege to insert new records in the application. </li>
+  <li><strong>Delete Privilege - </strong>Define the field to store if the user has privilege to delete records in the application. </li>
+  <li><strong>Update Prvilege- </strong>Define the field to store if the user has privilege to update records in the application. </li>
+  <li><strong>Export Privilege - </strong>Define the field to store if the user has privilege to export records in the application. </li>
+  <li><strong>Print Prvilege- </strong>Defines the field to store if the user has privilege to print records in the application. </li>
+</UL>
+<p>&nbsp;</p>
+</li>
+<li>
+<h2> User / Group / App</h2>
+<p>Based on security for the Group level. Where is defined the access of each group to certain applications.</p>
+<p><IMG SRC="img/seg_user_grp.jpg""><br>
+<span class="sob_figura">Image 6: User / Group / App Interface.</span></p>
+<P><STRONG>1 - User:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG>Define the table "Users" used by the system.</LI>
+  <li><strong>Login - </strong>Set the field to stores the User login.</LI>
+  <li><strong>Password - </strong> Set the field to stores the User Password.</LI>
+  <li><strong>Name - </strong>Set the field to stores the User Name.</LI>
+  <li><strong>E-mail - </strong>Set the field to stores the E-mail.</LI>
+  <li><strong>Active - </strong>Set the field to stores if the user is active or not.</LI>
+  <li><strong>Activation code - </strong>Set the field to stores the Activation code.</LI>
+  <li><strong>Administrator privilege - </strong>Set the field to stores if the user has administrator privileges.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>2 - Group:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG> Set the table to stores the groups created in the system.</LI>
+  <LI><strong>ID - </strong>Define the field that will store the  group code. </LI>
+  <LI><strong>Description - </strong> Set  the field that will store the  group description.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>3 - Application:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG>Set the table to store all project applications.</LI>
+  <LI><strong>Code - </strong> Define the field to store the code or the application name.</LI>
+  <LI><strong>Description - </strong>Set the field to store the application description.</LI>
+  <LI><strong>Type of application - </strong>Set the field to store the application type.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>4 - User / Group:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG>Set the table to store the relationship between users and groups in the project.</LI>
+  <LI><strong>Login - </strong>Set the field to store your login.</LI>
+  <LI><strong>Group Code - </strong>Define the field to store the group code.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>5 - Group / Application:</STRONG></P>
+<UL>
+  <LI><STRONG>Table - </STRONG>Set the table to store the relationship between groups and  project applications.</LI>
+  <LI><strong>Group Code - </strong>Define the field to store the group code.</LI>
+  <li><strong>Application Name - </strong>Define the field to store the application name. </li>
+  <li><strong>Access Privilege - </strong>Define the field to store if the group has privilege to access the application. </li>
+  <li><strong>Insert Prvilege- </strong>Define the field to store if the group has privilege to insert new records in the application. </li>
+  <li><strong>Delete Privilege - </strong>Define the field to store if the group has privilege to delete records in the application. </li>
+  <li><strong>Update Prvilege- </strong>Define the field to store if the group has privilege to update records in the application. </li>
+  <li><strong>Export Privilege - </strong>Define the field to store if the group has privilege to export records in the application. </li>
+  <li><strong>Print Prvilege- </strong>Define the field to store if the group has privilege to print records in the application. </li>
+</UL>
+</li>
+</ul>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p><b>4. Configuration - </b>The fourth step is used to inform the settings used on the security module.</p>
+<p>&nbsp;</p>
+<p><img src="img/seg_conf.jpg"><br><span class="sob_figura">Image 7: Settings Interface</span></p>
+<ul>
+<P><STRONG>1 - General:</STRONG></P>
+<UL>
+  <LI><STRONG>Prefix applications - </STRONG>Create the security applications with a prefix in the name.</LI>
+  <LI><strong>Encryption - </strong>Define if the password will use encryption.</LI>
+  <LI><strong>Enable Security - </strong>Enable the option "use security" in each application.</LI>
+  <LI><strong>Use Captcha - </strong> Enable the option to use CAPTCHA in the login screen.</LI>
+  <LI><strong>Folder - </strong>It creates a folder in the project to security applications.</LI>
+  <LI><strong>Theme - </strong>Define the theme to the applications.</LI>
+  <LI><strong>Log - </strong>Define the Log Scheme used in the security applications.</LI>
+  <LI><strong>Menu - </strong>It allows to create or select a Menu application to include the security module.</LI>
+  <LI><strong>Menu Type - </strong>Define the Menu type, if the option to create a new menu applications was set in the item above.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>2 - Login:</STRONG></P>
+<UL>
+  <LI><STRONG>Minimum size - </STRONG>Minimum size of characters typed by the user.</LI>
+  <LI><strong>Maximum size - </strong>Maximum size of characters typed by the user.</LI>
+  <LI><strong>Send e-mail link for new password - </strong>Define wich characters the end-user can type.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>3 - Retrieve Password:</STRONG></P>
+<UL>
+  <LI><STRONG>Send email with password - </STRONG>Define if the user can retrieve the password receiving it by e-mail.</LI>
+  <LI><strong>Reset password and send new email - </strong>Define if the user can retrieve the password reseting the old and receiving a new one by e-mail.</LI>
+  <LI><strong>Send e-mail link for new password - </strong>Define if the user can retrieve the password receiving a link by e-mail to register a new password.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>4 - New Users:</STRONG></P>
+<UL>
+  <LI><STRONG>Allows the registration of new users - </STRONG>A link is created on the login screen allowing the new users registration.</LI>
+  <LI><strong>Requires activation by email - </strong>New users receive an activation link by email.</LI>
+  <LI><strong>Send email to administrator - </strong>When a new user is registered, the administrator receives an email to allows or not that user to access the system.</LI>
+</UL>
+<p>&nbsp;</p>
+<P><STRONG>5 - E-mail Settings:</STRONG></P>
+<UL>
+  <LI><STRONG>SMTP Server - </STRONG>Define the SMTP server.</LI>
+  <LI><strong>SMTP Port - </strong>Define the SMTP port.</LI>
+  <LI><strong>SMTP User - </strong>Define the SMTP user.</LI>
+  <LI><strong>SMTP Password - </strong>Define the SMTP password.</LI>
+  <LI><strong>SMTP E-mail - </strong>Define the SMTP e-mail.</LI>
+</UL>
+<p>&nbsp;</p>
+</ul>
+
+<p><b>5. Insert data - </b>The fifth step is used to populate the tables Users and Groups.</p>
+<p>&nbsp;</p>
+<p><img src="img/seg_insert.jpg"><br>
+  <span class="sob_figura">Image 8: Insert Data Interface</span></p>
+  <p><img src="img/seg_insert1.jpg"><br>
+  <span class="sob_figura">Image 9: Insert Data Interface</span></p>
+<P><STRONG>Insert data:</STRONG></P>
+<UL>
+  <LI><STRONG>Login - </STRONG>User Login.</LI>
+  <LI><strong>Password - </strong>User password.</LI>
+  <LI><strong>Name - </strong>User name</LI>
+  <LI><strong>E-mail - </strong>User e-mail.</LI>
+  <LI><strong>Active - </strong>Activate the user.</LI>
+  <LI><strong>Administrator privileges - </strong>Define if the user has administrator privileges ( all features enabled ).</LI>
+  <LI><strong>Group - </strong>Name of the administrator group.</LI>
+</UL>
+<p>&nbsp;</p>
+
+<p><b>6. Add applications - </b>The sixth step is used to populate the table Applications.</p>
+<p class="nota">Note: This step is not needed if you are using the "User" security type.</p>
+<p>&nbsp;</p>
+<p><img src="img/seg_add_app.jpg"><br>
+  <span class="sob_figura">Image 10: Add Applications Interface</span></p>
+<P>Checking the option, Scriptcase will insert in the Applications Table, the name of each application existing in the project.</P>
+<p>&nbsp;</p>
+
+<p><b>7. Profile - </b>The last step is used to save in a profile all settings used on the steps to be used in other projects.</p>
+<p>&nbsp;</p>
+<p><img src="img/seg_profile.jpg"><br>
+  <span class="sob_figura">Image 11: Profile Interface</span></p>
+<P>You can save a profile to any Scriptcase user, just to that user or just to be used in that project.</P>
+<p>&nbsp;</p>
+
+<!--LDAP-->
+<h2>LDAP</h2>
+<p>See the LDAP documentation:</p>
+<UL>
+  <LI><STRONG><a href='../../05-Projeto/27-seguranca/28-Seguranca_LDAP/00-Visao_Geral.htm' target="_self">LDAP Documentation</a></STRONG></LI>
+</UL>
+</BODY>
+</HTML>

@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<TITLE>PayPal</TITLE>
+    <link href="../../../scriptcase.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+<h1>PayPal</h1>
+<p><img src="img/pp1.jpg"><br>
+<span class="sob_figura">Image1: PayPal authentication Fields.</span></p>
+
+<p>When creating a PayPal Authentication Button, you need to fill these fields:</p>
+
+<ul>
+  <li><strong>PayPal URL</strong> - This url may be to the PayPal SandBox or the PayPal API itself. The SandBox is the place for tests before the application runs in a real environment.</li>
+  <li><strong>Id</strong> - The PayPal ID to receive the payment.</li>
+  <li><strong>Order number</strong> - This order number must .</li>
+  <li><strong>Customized field</strong> - URL to where PayPal must redirect the user with the data retrieved.</li>
+  <li><strong>Variable with the description</strong> - Here will be.</li>
+  <li><strong>Variable with the Total amount</strong> - Method to be ran when PayPal service return the data requested.</li>
+  <li><strong>Paypal Method</strong> - Method to be ran when PayPal service return the data requested.</li>
+  <li><strong>Method Cancel</strong> - Method to be ran when the user cancel the purchase.</li>
+  <li><strong>Method IPN</strong> - Method to be ran when PayPal service confirm the payment. This method is comonly used to modify the database and register the purchase as complete.</li>
+</ul>
+<p><img src="img/pp2.jpg"><br>
+<span class="sob_figura">Image2: PayPal developpers page. (01/29/2013)</span></p>
+<br />
+<p>To create a PayPal payment method you must fill the fields correctly. In order to test your application, you must use the PayPal SandBox and create a fake PayPal account:</p>
+<b>
+<ol>
+  <li>Go to <a href="https://developer.paypal.com/">https://developer.paypal.com/</a> and register your account</li>
+  <li>Click on "create a preconfigured account".</li>
+  <li>Enter the test account details as asked and save the changes.
+  <p><img src="img/pp3.jpg"><br>
+  </b>
+  <span class="sob_figura">Image3: Test account details.</span></p>
+  <b></li>
+  <li>On the Test Accounts page, activate your newly created account.
+  <p><img src="img/pp4.jpg"><br>
+  </b>
+  <span class="sob_figura">Image4: Info about the test account</span></p>
+  </li>
+  <b>
+</ol>
+</b>
+<p>The variables returned by the request can be find below:</p>
+
+<table> 
+  <tr> 
+	<td> 
+	[mc_gross] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[invoice] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[protection_eligibility] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[address_status]  
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[payer_id]  
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[tax] => 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[address_street]   
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[payment_date]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[payment_status]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[charset] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[address_zip]
+  	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[first_name] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[mc_fee] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[address_country_code]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[address_name] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[notify_version]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[custom] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[payer_status] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[business] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[address_country] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[address_city] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[quantity] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[verify_sign] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[payer_email] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[txn_id]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[payment_type]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[last_name]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[address_state]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[receiver_email]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[payment_fee]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[receiver_id]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[txn_type]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[item_name]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[mc_currency]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[item_number]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[residence_country] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[test_ipn]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[handling_amount]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[transaction_subject]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[payment_gross]
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[shipping] 
+	</td> 
+	<td>
+	  
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+  	[ipn_track_id]
+	</td> 
+	<td> 
+	</td> 
+  </tr>
+</table>
+
+</BODY>
+</HTML>

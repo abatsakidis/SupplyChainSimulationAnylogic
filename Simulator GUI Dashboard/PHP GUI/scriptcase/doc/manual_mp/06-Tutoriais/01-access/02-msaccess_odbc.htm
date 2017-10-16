@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>Connecting Access via ODBC</title>
+</head>
+
+<body>
+<h1>Connecting Access via ODBC</h1> 
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/01-access/00-msaccess.htm" target="_self">MS-Access</a> >> Connecting Access via ODBC</td></tr></table>
+
+
+<p>The Microsoft Access, also known as MSAccess, is a management system database from Microsoft, packaged with Microsoft Office Professional which combines the Microsoft Database Engine with a graphical user interface.
+</p>
+<p>To create a connection with your ScriptCase and your Access Database using an ODBC, you must create an ODBC Connection in your Windows Panel 
+Control  (ODBC must be created on the same server where you installed the ScriptCase).</p>
+ <p>Entering the ODBC Data Source Administrator, select the ABA Source Data System and create your connection
+  with your Access Database.
+ After creating the ODBC in Windows Control Panel , you must use the Microsoft Access Database Engine component so there is connection to the Access database.
+</p></br>
+<h2 id="tutorial">Installing the Microsoft Access Database Engine component</h2></br>
+<p><strong>1.</strong> To check whether the 32-bit Microsoft Access Database Engine drivers are installed, go to C:\Windows\SysWOW64\odbcad32.exe. If on a 32-bit machine, go to C:\Windows\System32\odbcad32.exe to access the utility. Go to the drivers tab. If the Microsoft Access Driver lists .mdb and .accdb, 
+then the correct drivers are installed. In this case, click <a href="#continue">here</a></p>    </p>
+<p><strong>2.</strong> If Microsoft Access Driver only lists the .mdb, the required driver is not installed.
+<ul>
+<li>For the 2007 Microsoft Office System (Windows 8, Windows 7, Windows Server 2003, Windows Server 2008, Windows Vista, Windows XP), the
+<a href="http://www.microsoft.com/en-us/download/details.aspx?id=23734" target="_blank">2007 Access Database Engine</a> must be installed. </li>
+<li>For the 2010 Microsoft Office System (Windows 8, Windows 7, Windows Server 2003 R2 (32-Bit x86), x64 editions of Windows Server 2003 R2, Windows Server 2008 R2, Windows Server 2008 Service Pack 2, Windows Vista Service Pack 1,  Windows XP Service Pack 3), the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=13255" target="_blank">2010 Access Database Engine</a> must be installed.</p></li>
+<p class="nota">For more information, see the site of <a href="http://office.microsoft.com/en-us/access/" target="_blank">Microsoft Access.</a></p>
+</ul>
+<p><strong>3.</strong> After installing the Engine, many new drivers appear in your ODBC Data Source Administrator. The Microsoft Access Driver now list .accdb as a file it supports, as we can see in the images below.
+
+<p><img src="../img/access.jpg"  /><br />
+  <span class="sob_figura">Image1: Before you install Microsoft Access Database Engine (only supports .mdb). </span></p>
+
+<p><img src="../img/access2.jpg"  /><br />
+<span class="sob_figura">Image: After install Microsoft Access Database Engine  (supports .mdb and .accdb). </span></p>
+
+
+<p id="continue"><strong>Now, you can use the following ODBC driver:</strong></p>
+<p>&nbsp;</p>
+<p>Accdb Extension - <b>MicroSoft Access Driver (*mdb, *accdb)</b> </br></br><img src="../img/accdb_ok2.jpg"/></p>
+<p class="nota"> To work with MS Access version lower than 2007/2010, click <a href="#tutorial">here</a> to see what you have to do.<br></p></p>
+<p>MDB Extension - <b>MicroSoft Access Driver (*mdb)</b> </br></br><img src="../img/mdb_ok.jpg"/></p>
+<p>&nbsp;</p>
+<p>After creating the ODBC, follow the steps below to create the connection:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong><u>CREATING SCRIPTCASE CONNECTION (MSACCESS)</u></strong></p>
+<blockquote>
+  <p><br />
+    <span>Now access ScriptCase to create a new connection.</span></p>
+</blockquote>
+<p><br />
+    <span><strong>Step 1: </strong>Log in&nbsp;your ScriptCase, and on the left menu you can see a tab &quot;Connection&quot;, click on the sub item &quot;New&quot;.</span></p>
+<p>&nbsp;</p>
+<p><img src="../img/544_11.jpg" alt="" /><br />
+</p>
+<p><strong>Step 2:</strong> After you click &quot;New&quot;, will appear at the   right screen to create connection, click on the image of the MS Access   database.<br />
+    <br />
+</p>
+<p><img src="../img/criar_conex_msaccess.jpg" /><br />
+</p>
+<p><strong>Step 3:</strong> In the picture below, fill in the   required specifications:<br />
+</p>
+<p><img src="../img/criar_conex_msaccess_odbc2.jpg" /></p>
+<ul>
+  <li><strong>Connection name</strong> - Set the name of your new connection.</li>
+  <li><strong>DBMS type </strong>- Set the type of the DBMS : ADO or ODBC.</li>
+  <li><strong>Test Connection</strong> - Used to test if the connection is successful or not.</li>
+  <li><strong>ODBCName</strong> - Enter the ODBC created in   the Windows Control Panel.</li>
+  <li><strong>Username</strong> - Enter a valid database user name.</li>
+  <li><strong>Password</strong> - Enter the valid password.</span></span></li>
+</ul>
+<p>Para mais detalhes na configura&ccedil;&atilde;o da conex&atilde;o do banco da dados clique  na aba Advanced<br />
+</p>
+<p><img src="../img/advanced_no_client_encoding.jpg" /></p>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>Decimal   separator</strong> - Select the type of separator between comma and point.</li>
+  <li><strong>Persistent connection</strong> - Persistent   connections are links that do not close when the execution of your   script ends.</li>
+  <li><strong>Use the schema name   before the table</strong> - Allows the use of schemas before the names of the   tables.</li>
+  <li><strong>Filter</strong> - Clicando nessa Aba, aparecer&aacute; a seguinte tela:</li>
+</ul>
+<p>&nbsp;</p>
+<p><img src="../img/filter_tab.jpg" /></p>
+<ul>
+  <li><strong>Show </strong>-  Display   filters on the tables, views, system tables and procedures.</li>
+  <li><strong>Filters</strong> - Define which tables and owners will be displayed.</li>
+</ul>
+<p><strong>Step 4:</strong></span> Always test your connection before   completing the same, if the message &quot;Connected successfully&quot; is displayed, then   complete the establishment of the connection.</p>
+</body>
+</html>

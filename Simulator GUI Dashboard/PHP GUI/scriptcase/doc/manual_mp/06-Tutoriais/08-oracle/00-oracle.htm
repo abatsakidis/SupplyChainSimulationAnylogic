@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+
+<title>Connecting to Oracle Database</title>
+
+<script>
+	function os_system(op) {
+     	if (op == 1) {
+		document.getElementById('op_so').style.display="none";
+		document.getElementById('op_win').style.display="block";
+		document.getElementById('ambiente_auto').style.display="none";
+		document.getElementById('ambiente_manual').style.display="none";
+		}else {
+		document.getElementById('op_so').style.display="block";
+		document.getElementById('op_win').style.display="none";
+		document.getElementById('ambiente_auto').style.display="none";
+		document.getElementById('ambiente_manual').style.display="none";
+		}
+    }
+	
+	function op_ambiente(op) {
+		if (op == 1) {
+		document.getElementById('op_so').style.display="none";
+		document.getElementById('op_win').style.display="none";
+		document.getElementById('ambiente_auto').style.display="block";
+		document.getElementById('ambiente_manual').style.display="none";
+		}else {
+		document.getElementById('op_so').style.display="none";
+		document.getElementById('op_win').style.display="none";
+		document.getElementById('ambiente_auto').style.display="none";
+		document.getElementById('ambiente_manual').style.display="block";
+		}
+    }
+</script>
+
+</head>
+
+<body>
+<h1>Connecting to Oracle Database</h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> Oracle</td></tr></table>
+
+<div id="op_so">
+	<p>To connect with Oracle database, its necessary to install and configure some additional programs.</p>
+	<p>Select the Operational System which Scriptcase was installed.</p>
+	<p>&nbsp;</p>
+
+	<table class="options" align="center" width="800">
+		<tr>
+			<td align="center" width="260"><a href="#" onclick="os_system(1);"><img src='img/icon-win.png' /></a></td>
+			<td align="center" width="260"><a href="../../06-Tutoriais/08-oracle/02-Linux/00-manual_linux.htm" target="_self"><img src='img/icon-linux.png' /></a></td>
+			<td align="center" width="260"><a href="../../06-Tutoriais/08-oracle/03-Mac_OSX/00-manual_mac.htm" target="_self"><img src='img/icon-apple.png' /></a></td>
+		</tr>
+		<tr>
+			<td align="center" width="260"><strong>Windows</strong></td>
+			<td align="center" width="260"><strong>Linux</strong></td>
+			<td align="center" width="260"><strong>Mac OS</strong></td>
+		</tr>
+	</table>
+</div>
+
+<div id="op_win" style="display:none;">
+	<p>Select how Scriptcase was installed.</p>
+	<p>&nbsp;</p>
+	<table class="options" align="center" width="800">
+		<tr>
+			<td align="center" width="400"><a href="#" onclick="op_ambiente(1);"><img src='img/icon-sc.png' /></a></td>
+			<td align="center" width="400"><a href="#" onclick="op_ambiente(2);"><img src='img/icon-terminal.png' /></a></td>
+		</tr>
+		<tr>
+			<td align="center" width="400"><strong>Scriptcase Installer</strong></td>
+			<td align="center" width="400"><strong>Manual Environment</strong></td>
+			
+		</tr>
+	</table>
+
+	<p><a class="linkBack" href="#" onclick="os_system(2);"> Back </a></p>
+</div>
+
+<div id="ambiente_auto" style="display:none;">
+	<p>Select which module you want to enable.</p>
+<p>&nbsp;</p>
+<table class="options" align="center" width="800">
+	<tr>
+		<td align="center" width="400"><a href="../../06-Tutoriais/08-oracle/01-Windows/00-Instalador_Scriptcase/00-automatico_win.htm" target="_self"><img src='img/oracle.png' /></a></td>
+		<td align="center" width="400"><a href="../../06-Tutoriais/08-oracle/01-Windows/00-Instalador_Scriptcase/01-automatico_win_odbc.htm" target="_self"><img src='img/odbc.png' /></a></td>
+	</tr>
+	<tr>
+		<td align="center" width="400"><strong>Oracle 8</strong></td>
+		<td align="center" width="400"><strong>Oracle ODBC</strong></td>
+	</tr>
+</table>
+
+<p><a class="linkBack" href="#" onclick="os_system(1);"> Back </a></p>
+</div>
+
+<div id="ambiente_manual" style="display:none;">
+	<p>Select which module you want to enable.</p>
+	<p>&nbsp;</p>
+	<table class="options" align="center" width="800">
+		<tr>
+			<td align="center" width="400"><a href="../../06-Tutoriais/08-oracle/01-Windows/01-Ambiente_Manual/00-manual_win.htm" target="_self"><img src='img/oracle.png' /></a></td>
+			<td align="center" width="400"><a href="../../06-Tutoriais/08-oracle/01-Windows/01-Ambiente_Manual/01-manual_win_odbc.htm" target="_self"><img src='img/odbc.png' /></a></td>
+		</tr>
+		<tr>
+			<td align="center" width="400"><strong>Oracle 8</strong></td>
+			<td align="center" width="400"><strong>Oracle ODBC</strong></td>
+		</tr>
+	</table>
+
+	<p><a class="linkBack" href="#" onclick="os_system(1);"> Back </a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../scriptcase.css" rel="stylesheet" type="text/css">
+<title>Oracle - Creating a Connection on Scriptcase</title></head>
+
+<body>
+<h1><strong>Creating a Connection on Scriptcase</strong></h1>
+<table width="100%" border="0"><tr><td align="right"><a href="../../home.htm">Home</a> >> <a href="../../06-Tutoriais/00-tutoriais.htm" target="_self">Connections</a> >> <a href="../../06-Tutoriais/08-oracle/00-oracle.htm" target="_self">Oracle</a> >> Connecting from scriptcase.</td></tr></table>
+
+<p><u><strong>CREATING SCRIPTCASE CONNECTION (ORACLE)</strong></u></p>
+<blockquote>
+  <p><br />
+    <span>Now access ScriptCase to create a new connection.</span></p>
+</blockquote>
+<p><br />
+    <span><strong>Step 1: </strong>Log in&nbsp;your ScriptCase, and on the left menu you can see a tab &quot;Database Connections&quot;, click on the sub item &quot;New&quot;.</span></p>
+<p>&nbsp;</p>
+<p><img src="../img/544_11.jpg" alt="" /></p>
+<p><br />
+</p>
+<p><span id="result_box"><span title="Passo 2: Ap&oacute;s clicar em &ldquo;Nova&rdquo;, ir&aacute;   aparecer ao lado direito a tela de cria&ccedil;&atilde;o de conex&atilde;o, clique na imagem   do banco Oracle."><strong>Step 2:</strong> After you click &quot;New&quot;, will appear at the   right a screen to create connection, click on the image of the Oracle   database.</span></span></p>
+<p>&nbsp;</p>
+<p><img src="../img/criar_conex_oracle.jpg" /></p>
+<p>&nbsp;</p>
+<p><span id="result_box"><span title="Passo 3: Na imagem a seguir, preencha as   especifica&ccedil;&otilde;es pedidas:"><strong>Step 3:</strong> In the picture below, fill in the   required specifications:<br />
+</span></span><A NAME="conex_oracle_win"></A></p>
+<p><img src="../img/criar_conex_oracle2.jpg" /></p>
+<ul><li><span id="result_box"><span title="Nome da conex&atilde;o - Defina o nome de sua nova   conex&atilde;o."><strong>Connection name</strong> - Set the name of your new connection.</span></span></li>
+  <li><span><span title="Modelo do SGDB -   Vers&atilde;o do Oracle utilizado."><strong> DBMS Type</strong> - Oracle version used.</span></span></li>
+  <li><span><span title="Testar conex&atilde;o -   Exibir&aacute; se a conex&atilde;o foi realizada com sucesso ou n&atilde;o."><strong>Test Connection</strong> -   Used to test if the connection is successful or not.</span></span></li>
+  <li><span><span title="Nome do TSNAME -   Deve se informa o IP do servidor onde o banco de dados est&aacute; instalado eo   nome da inst&acirc;ncia criada na instala&ccedil;&atilde;o do Oracle."><strong>TSNAME</strong> - Inform the IP of the server where the database is installed and   the instance name created in the Oracle installation.</span></span></li>
+  <li><span><span title="Usu&aacute;rio - Informe o usu&aacute;rio para conseguir acesso ao seu   Oracle."><strong>Username</strong> - Enter a valid database user name</span>.</span></li>
+  <li><span><span title="Senha - Informe a senha para conseguir acesso ao seu Oracle."><strong>Password</strong>   - Enter the valid password.</span></span></li>
+</ul>
+<p>&nbsp;</p>
+<p>Para mais detalhes na configura&ccedil;&atilde;o da conex&atilde;o do banco da dados clique  na aba Advanced<br />
+    <br />
+</p>
+<p><img src="../img/advanced_client_encoding.jpg" /></p>
+<p>&nbsp;</p>
+<ul><li><span id="result_box"><span title="Separador de   decimal - Selecione o tipo do separador, entre v&iacute;rgula e ponto."><strong>Decimal   separator</strong> - Select the type of separator between comma and point.</span></span></li>
+  <li><span><span title="Conex&atilde;o   Persistente - Conex&otilde;es persistentes s&atilde;o conex&otilde;es que n&atilde;o fecham quando a   execu&ccedil;&atilde;o do seu script termina."><strong>Persistent connection</strong> - Persistent   connections are links that do not close when the execution of your   script ends.</span></span></li>
+  <li><span><span title="Usar o schema antes do nome da tabela - Permite a   utiliza&ccedil;&atilde;o de schemas antes dos nomes das tabelas."><strong>Use the schema    before the table name</strong> - Use schemas before the tables names.</span></span></li>
+  <li><span><span title="Cliente encoding - Codifica&ccedil;&atilde;o do seu banco de dados."><strong>Client   encoding</strong> -<span><span title="Cliente encoding - Codifica&ccedil;&atilde;o do seu banco de dados."> </span></span>Encoding used on your database</span></span></li>
+  <li><span><span title="Filtrar - Clicando   nessa op&ccedil;&atilde;o, aparecer&aacute; a seguinte tela:"><strong>Filter</strong> - Clicando nessa Aba, aparecer&aacute; a seguinte tela:</span></span></li>
+</ul>
+<p>&nbsp;</p>
+<p><img src="../img/filter_tab.jpg" /><br />
+</p>
+<ul>
+  <li><strong>Show</strong><span id="result_box"><span title="Exibir - Permite a exibi&ccedil;&atilde;o de filtros nas   tabelas, views, tabelas de sistema e procedures."> -  Display   filters on the tables, views, system tables and procedures.</span></span></li>
+  <li><strong>Filters</strong> - Define which tables and owners will be displayed.<br />
+    <br />
+  </li>
+</ul>
+<p><span id="result_box"><span title="Passo 11: Sempre teste a sua conex&atilde;o antes   de concluir a mesma, se aparecer a mensagem &ldquo;Conex&atilde;o Realizada com   Sucesso', ent&atilde;o conclua a cria&ccedil;&atilde;o da conex&atilde;o. Se houver alguma   falha na conex&atilde;o, reveja os campos preenchidos, principalmente o   usu&aacute;rio, senha eo"><strong>Step 4:</strong> Always test your connection before   completing the same, if the message &quot;Connected successfully&quot; is displayed, then   complete the establishment of the connection.</span></span></p>
+<p>&nbsp;  </p>
+</body>
+</html>

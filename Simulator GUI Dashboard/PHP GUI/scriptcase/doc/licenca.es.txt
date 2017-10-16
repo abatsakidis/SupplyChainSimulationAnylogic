@@ -1,0 +1,212 @@
+﻿Contrato de licencia Para el usuario final de ScriptCase 8 y versiones superiores ("Software")
+
+Copyright (c) 1997-2014 Netmake Ltda. Todos los derechos reservados
+
+
+
+AL DESCARGAR Y / O APLICACIÓN DE ESTE SOFTWARE USTED ESTÁ DE ACUERDO CON LA SIGUIENTE
+
+LICENCIA:
+
+DEFINICIONES
+
+"Usted" y "Usuario" se refiere a la persona, entidad u organización que utiliza el software conocido como
+
+"ScriptCase", y cualquier sucesor o asignatario de los mismos.
+
+"Netmake" se refiere a Netmake, Ltda. y sus sucesores, o por el fabricante y propietario de este Software.
+
+
+
+ACUERDO
+
+Después de leer este acuerdo cuidadosamente, si usted (el "Cliente") no está de acuerdo con todos los términos de este contrato, no podrá utilizar este Software. A menos que tenga un acuerdo de licencia firmado por Netmake diferente que cubre esta copia del Software, el uso de este software implica la aceptación de este acuerdo de licencia y garantía.
+
+Todas las actualizaciones del Software se considerará parte del Software y sujeto a los términos de este Acuerdo.
+
+Cambios a este Acuerdo podrán acompañar las modificaciones del Software, en cuyo caso la instalación de dicha actualización
+
+Cliente acepta las condiciones del Acuerdo con las modificaciones. El Acuerdo no se encuentre sujeto a la adición, rectificación, modificación o excepción a menos que por escrito y firmado por un funcionario del Cliente y Netmake.
+
+Si usted no desea aceptar los términos de este Acuerdo, no instale ni use este software.
+
+
+
+ 
+
+1. PROPIEDAD DEL SOFTWARE Y DERECHOS DE AUTOR.
+
+El Software está protegido por copyright y están protegidos por las leyes de Brasil y otros países, y las disposiciones de tratados internacionales. No puedes eliminar ningún aviso de copyright del Software.
+
+Netmake puede modificar la software en cualquier momento sin previo aviso, pero no está obligado a apoyar o actualizar el software.
+
+Salvo que se indique expresamente lo contrario, Netmake no concede derecho explícito o implícito sobre las patentes Netmake, derechos de autor, marcas u otros derechos de propiedad intelectual. Usted puede transferir el Software si el receptor quede completamente sujeto a estos términos y si no conserva ninguna copia del Software.
+
+
+
+2. CONCESIÓN DE LICENCIA Y PROHIBICIONES.
+
+La titularidad de todas las copias del Software pertenece a Netmake.
+
+Este software está licenciado para usted. Usted no está obteniendo el título del Software o cualquier derecho de autor. Usted no puede sublicenciar, alquilar, arrendar, transmitir, traducir, descompilar o desensamblar el Software para cualquier propósito.
+
+La licencia puede ser transferido a otro cliente solo si mantiene ninguna copia del Software. El permiso debe ser obtenido antes de la duplicación o la redistribución de las copias de evaluación del Software.
+
+No se puede convertir este Software o sus partes a un lenguaje de programación diferente o el medio ambiente, ya sea manualmente, o utilizando una herramienta de conversión automática, de tal manera que este software o cualquier modificación de los mismos se ejecutará en cualquier lenguaje, software, o programa que no sea implementado por Netmake . Usted acepta que cualquier modificación hecha a este Software pertenecen a Netmake y sean autorizadas para su uso exclusivo durante la vigencia de este contrato de licencia y no pueden ser transferidos, vendidos o licenciados a otra entidad.
+
+  
+
+
+
+
+
+
+
+3. USO Y PERIODO DE EVALUACIÓN.
+
+Usted podrá instalar y utilizar una copia de este software en un equipo cliente con fines de desarrollo de software.
+
+Las instalaciones posteriores requieren la obtención de licencias adicionales a menos que va a transferir este Software a otro equipo.
+
+No puedes conectar en red el Software ni utilizarlo en más de un computador o terminal de computador al mismo tiempo.
+
+Usted no podrá arrendar o alquilar el Software de otra manera.
+
+Usted no puede sublicenciar ni permitir el uso simultáneo del Software por más de un usuario.
+
+Si está evaluando este software, usted puede utilizar una copia de evaluación por un máximo de veinte (20) días, a fin de determinar si hay que comprar este software. Después de que su licencia de evaluación ha expirado, usted puede visitar www.scriptcase.net para comprar su licencia del Software.
+
+
+
+4. GARANTÍA LIMITADA.
+
+EL SOFTWARE SE ENTREGA TAL CUAL Y NETMAKE NIEGA TODAS LAS GARANTÍAS RELATIVAS A ESTE SOFTWARE, YA SEAN EXPLÍCITA O IMPLÍCITAS, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS IMPLÍCITAS DE COMERCIALIZACIÓN Y ADAPTABILIDAD PARA UN PROPÓSITO PARTICULAR.
+
+  
+
+
+
+5. LIMITACIÓN DE DAÑOS.
+
+NI NETMAKE NI NADIE INVOLUCRADO EN LA CREACIÓN, PRODUCCIÓN O ENTREGA DE ESTE SOFTWARE SE HACE RESPONSABLE POR CUALQUIER DAÑO INDIRECTO, CONSECUENTE O FORTUITO DERIVADO DEL USO O IMPOSIBILIDAD DE USAR SOFTWARE AUN CUANDO NETMAKE HA SIDO ADVERTIDO DE LA POSIBILIDAD DE TALES DAÑOS O RECLAMOS. EN NINGÚN CASO ES RESPONSABILIDAD DE LA NETMAKE POR CUALQUIER DAÑO SUPERIOR AL PRECIO PAGADO POR LA LICENCIA DE USO DEL SOFTWARE, INDEPENDIENTEMENTE DE LA FORMA DE RECLAMO. LA PERSONA QUE EL USO DEL SOFTWARE LLEVA TODO EL RIESGO EN CUANTO A LA CALIDAD Y RENDIMIENTO DEL SOFTWARE.
+
+EN NINGÚN CASO, NETMAKE SERÁN RESPONSABLES POR NINGÚN MONTO SUPERIOR A LO QUE REALMENTE PAGADO POR EL SOFTWARE.
+
+
+
+  
+
+6. TERMINACIÓN.
+
+Este acuerdo será efectivo hasta que sea terminado.
+
+El presente Acuerdo expirará en la fecha de la primera aparición de cualquiera de los siguientes eventos:
+(1) La expiración de un mes a partir de la notificación escrita de la terminación de atención al cliente para Netmake, o
+(2) En cualquier momento si usted viola los términos de este Acuerdo. Al finalizar, usted deberá destruir el material escrito y todas las copias del Software, incluidas las copias modificadas, si los hubiere. El usuario acepta que los daños monetarios por sí solas no es un alivio adecuado y justo que resulten de cualquier violación de esta Licencia, que una orden judicial que prohíba cualquier incumplimiento posterior de esta licencia es necesaria para evitar más daños, y que no se opondrá a cualquier solicitud razonable de un orden de restricción temporal, medidas cautelares o cualquier otra reparación solicitada por Netmake en caso de incumplimiento de esta licencia.
+
+Netmake no estará obligado a notificarle de cualquier incumplimiento, ni hacer ninguna demanda o reclamo contra usted como resultado de dicho incumplimiento, o para una demanda para detener cualquier uso o distribución en violación de los términos de esta Licencia, y usted acepta que cualquier incumplimiento de esta licencia y los daños derivados de ellas se refieren de nuevo a de la primer infracción más temprana y de los mismos. La falta de Netmake hacer valer sus derechos de conformidad con esta Licencia no constituirá una renuncia a tales derechos, y no afectará a Netmake en cualquier aplicación posterior de sus derechos o los derechos de reclamar daños del mismo.
+
+  
+
+
+
+
+7. ACTUALIZACIONES.
+
+Si adquirió el Software como una actualización de una versión anterior, este Acuerdo sustituye y reemplaza cualquier acuerdo anterior. Puede seguir utilizando la versión anterior del Software, siempre que tanto la versión anterior y la actualización se instalan en el mismo equipo en todo momento. Puede que no tenga una versión anterior y la versión de actualización relacionado que se instale en equipos distintos en cualquier momento.
+
+  
+
+
+
+8. DETALLES DE LA LICENCIA
+
+  8.1 La licencia ScriptCase es exclusiva y no puede ser transferida.
+
+  8.2 El código fuente generado por el ScriptCase es de su propiedad, usted puede volver a distribuir sin restricciones.
+
+  8.2 El ScriptCase se registra en un solo equipo y se puede acceder mediante un navegador http de los demás.
+
+  8.3 La transferencia de licencia a otro equipo deberá ser solicitada a través de correo electrónico a Netmake sales@scriptcase.net. La solicitud será respondida dentro de las 24 horas.
+
+  8.4 No se puede modificar este programa de cualquier manera, incluyendo cambios o eliminaciones de cualquier mensaje o ventanas.
+
+  8.5 Usted no puede descompilar este software o publicar o distribuir cualquier parte de él, excepto el código fuente de su aplicación generada y la carpeta "libs común".
+
+
+
+
+
+9. ACUERDO COMPLETO
+
+Este Acuerdo de Usuario Final es el acuerdo completo entre usted y Netmake con relación al Software con licencia, y reemplaza a todas las declaraciones anteriores escritos u orales, promesas, declaraciones y acuerdos.
+
+  
+
+10. DERECHOS DE AUTOR
+
+ScriptCase tiene derechos de autor a Netmake Soluções em Informática Ltda., ubicada en Recife, estado de Pernambuco, Brasil, está registrada en el INPI - Instituto Nacional de Propriedade Industrial (Instituto Nacional Brasileño de Propiedad Industria), número de registro n º 00049650
+
+  
+
+11. LEGISLACIÓN APLICABLE.
+
+El acuerdo se rige por las leyes del Estado de Pernambuco, Brasil. Cualquier acción o procedimiento de cualquiera de las partes contra la otra, que surja fuera de él relacionada con este acuerdo será llevado ante un tribunal estatal o federal de jurisdicción competente ubicada en Recife, Pernambuco. Las partes se somete a la jurisdicción personal de dichos tribunales. Contratista: 
+
+Netmake Soluções em informática, LTDA. 
+
+  1001 Presidente Kennedy Av. Block A - Room 301 
+
+  Olinda, PE 53230-630
+
+  BRAZIL 
+
+  e-mail: sales@scriptcase.net 
+
+
+
+
+
+===================================================================================================
+
+ESTE SOFTWARE SE DISTRIBUYE SIN NINGUNA GARANTÍA DE NINGÚN TIPO. EL RIESGO DE UTILIZAR ESTE SOFTWARE
+ES TOTALMENTE ASUMIDO POR USTED. ESTE PROGRAMA NO ES TOLERANTE A LA FALLA Y NO DEBE SER USADO EN
+AMBIENTES QUE REQUIEREN EL, COMO EN LÍNEA DE CONTROL DE TRÁNSITO AÉREO. EN NINGÚN MOMENTO EL SOFTWARE 
+DE NETMAKE SOLUÇÕES EM INFORMÁTICA PUEDE SER ACUSADO POR ALTERACIONESINDIRECTOS, O POR CONSECUENCIAS 
+DE DAÑOS, INCLUYENDO LA PÉRDIDA DE TRABAJO, INGRESOS, BENEFICIOS, USO, DATOS O OTRAS VENTAJAS 
+ECONÓMICAS, AUNQUE EL SOFTWARE DE NETMAKE Soluções em INFORMÁTICA SER INFORMADO PREVIAMENTE DE 
+LA POSIBILIDAD DE DAÑO.
+
+===================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*******
+
+Generador de código de barras está incluido en esta versión.
+
+Barcode Generator te permite generar códigos de barras.
+
+Usted está autorizado a utilizar el Generador de código de barras en el contexto de esta solicitud.
+
+
+
+Está prohibido utilizar el Generador de códigos de barras fuera de esta aplicación
+
+sin adquisición de una licencia comercial en http://www.barcodephp.com
