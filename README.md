@@ -1,6 +1,6 @@
 ## Description ##
 
-This master thesis concerns the modeling methods of System Dynamics and Simulation using the Anylogic software. <br>
+This master thesis concerns the modeling methods of System Dynamics and Simulation using the Anylogic software. <br><br>
 The purpose is to show how to use software to provide answers to supply chain issues, in particular inventory policy. <br>
 We developed a supply chain simulation model that connects a retailer, a wholesaler and a factory. Using an optimization experiment we tried to find the optimal inventory policy for specific operating costs. Due to the interaction of the members of a supply chain, it is impossible to find a solution to the above problem without the use of modeling / simulation software. Based on this, we attempted to answer the problem using the Anylogic software.
 The supply chain model operates 24 hours a day and consists of four departments: customers, retailer, wholesaler, and factory.<br><br>
