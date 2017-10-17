@@ -11,12 +11,12 @@ Using actual data will add more precision to the model and simulation. This feat
 
 ## Directories ##
 
-* **Anylogic Project File** directory contains the simulation project file (Anylogic 7.X)
-* **Simulator GUI Dashboard** directory contains the files for Web based Simulator Dashboard (PHP-Laravel)
-* **Simulator** directory contains the Anylogic simulator output (Java)
-* **Simulator Optimization Experiment** directory contains the Anylogic Optimization output (Java)
-* **Screenshots** directory conatins screenshots from the project
-* **Conference Poster** directory contains the poster which was published in picoBest Conference (Kavala, Greece, 06/10/2017)
+* **Anylogic Project File** : contains the simulation project file (Anylogic 7.X)
+* **Simulator GUI Dashboard** : contains the files for Web based Simulator Dashboard (PHP-Laravel)
+* **Simulator** : contains the Anylogic simulator output (Java)
+* **Simulator Optimization Experiment** : contains the Anylogic Optimization output (Java)
+* **Screenshots** : contains screenshots from the project
+* **Conference Poster** : contains the poster which was published in picoBest Conference (Kavala, Greece, 06/10/2017)
 <br>
 
 
