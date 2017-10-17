@@ -3,14 +3,11 @@
 This master thesis concerns the modeling methods of System Dynamics and Simulation using the Anylogic software. <br>
 The purpose is to show how to use software to provide answers to supply chain issues, in particular inventory policy. <br>
 We developed a supply chain simulation model that connects a retailer, a wholesaler and a factory. Using an optimization experiment we tried to find the optimal inventory policy for specific operating costs. Due to the interaction of the members of a supply chain, it is impossible to find a solution to the above problem without the use of modeling / simulation software. Based on this, we attempted to answer the problem using the Anylogic software.
-The supply chain model operates 24 hours a day and consists of four departments: customers, retailer, wholesaler, and factory.<br>
-Using modeling and simulation of stock policy in a supply chain, it has become understandable that stock-related decisions are affected by all those involved in the chain.<br>
-Our model showed that an agent's stock policy cannot be taken in isolation because it is influenced by other supply chain agents. To solve the above problem, an optimization <br>
-experiment was performed, which, considering the experimental stock policies of all agents, calculated the optimal stock policy solution.
-Using modeling and simulation have gave us the ability to study and improve our supply chain by providing us with information that we could not otherwise have.<br>
-Our model is based on customer-based variables and their orders. The above method was chosen because there were no actual product’s demand data where we could base our simulation model.<br>
-Using actual data will add more precision to the model and simulation. This feature can be achieved by linking the model to an ERP database with real-life data. In this way, the result of <br>
-the optimization experiment will be even closer to the actual optimal stock policy value than now, where odds are being used.<br>
+The supply chain model operates 24 hours a day and consists of four departments: customers, retailer, wholesaler, and factory.<br><br>
+Using modeling and simulation of stock policy in a supply chain, it has become understandable that stock-related decisions are affected by all those involved in the chain.<br><br>
+Our model showed that an agent's stock policy cannot be taken in isolation because it is influenced by other supply chain agents. To solve the above problem, an optimization experiment was performed, which, considering the experimental stock policies of all agents, calculated the optimal stock policy solution. Using modeling and simulation have gave us the ability to study and improve our supply chain by providing us with information that we could not otherwise have.<br>
+Our model is based on customer-based variables and their orders. The above method was chosen because there were no actual productâ€™s demand data where we could base our simulation model.<br><br>
+Using actual data will add more precision to the model and simulation. This feature can be achieved by linking the model to an ERP database with real-life data. In this way, the result of the optimization experiment will be even closer to the actual optimal stock policy value than now, where odds are being used.<br><br>
 
 ![Alt text](/Screenshots/topology.png?raw=true "Suply Chain")
 
