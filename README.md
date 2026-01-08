@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/107040756.svg)](https://doi.org/10.5281/zenodo.18184823)
+
 ## Description ##
 
 This master thesis concerns the modeling methods of System Dynamics and Simulation using the Anylogic software. <br><br>
